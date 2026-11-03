@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Openkart — amatieru kartinga sacensības</title>
+  <meta name="description" content="Openkart — amatieru kartinga kustība Latvijā kopš 2007. gada. Rezultāti, kalendārs, dalībnieki un jaunumi.">
+  <meta name="theme-color" content="#0b0c0f">
+  <link rel="icon" href="assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Piekļuves brīdinājums (kā oriģinālajā lapā) -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
+    <div class="gate__card">
+      <div class="gate__flag" aria-hidden="true"></div>
+      <p class="eyebrow">Uzmanību!</p>
+      <h2 id="gate-title">Piekļuve mājas lapai paredzēta tikai Openkart kopienas dalībniekiem</h2>
+      <div class="gate__actions">
+        <button class="btn btn--red" id="gate-ok">Turpināt</button>
+        <a class="btn btn--ghost" href="https://google.com">Iziet</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Augšējā josla -->
+  <div class="topbar">
+    <div class="wrap topbar__in">
+      <span class="topbar__date" id="today">Otrdiena, 03. nov., 2026</span>
+      <div class="topbar__right">
+        <a href="https://openkart.lv/users/sign_in?locale=lv">Autorizēties</a>
+        <a href="https://openkart.lv/users/sign_up?locale=lv" class="topbar__reg">Reģistrēties</a>
+        <span class="lang"><a href="https://openkart.lv/?locale=lv" class="is-on">LV</a><a href="https://openkart.lv/?locale=en">EN</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Galvene -->
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a href="#" class="logo" aria-label="Openkart sākumlapa"><img src="assets/img/logo-red.png" alt="Openkart 20 — amatieru kartinga kustība" width="1158" height="246"></a>
+      <button class="burger" id="burger" aria-label="Izvēlne" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <a href="https://openkart.lv/lv/results">Rezultāti</a>
+        <a href="https://openkart.lv/lv/races">Kalendārs</a>
+        <a href="https://openkart.lv/lv/racers">Dalībnieki</a>
+        <a href="https://openkart.lv/lv/stats">Statistika</a>
+        <div class="dd">
+          <button class="dd__btn" aria-expanded="false">Jaunumi</button>
+          <div class="dd__menu">
+            <a href="https://openkart.lv/lv/jaunumi/cempionats/r">Čempionāts</a>
+            <a href="https://openkart.lv/lv/jaunumi/attistibas-liga/r">Attīstības līga</a>
+            <a href="https://openkart.lv/lv/jaunumi/xl-riga-junior-cup/r">XL Rīga Junior Cup</a>
+            <a href="https://openkart.lv/lv/jaunumi/indoor-cup/r">Indoor Cup</a>
+            <a href="https://openkart.lv/lv/jaunumi/joker-karting-challenge/r">Joker Karting Challenge</a>
+            <a href="https://openkart.lv/lv/jaunumi/team-race/r">Team Race</a>
+            <a href="https://openkart.lv/lv/jaunumi/sws-sprint-cup/r">SWS Sprint Cup</a>
+            <a href="https://openkart.lv/lv/jaunumi/b-liga/r">B līga</a>
+            <a href="https://openkart.lv/lv/jaunumi/sws-endurance-cup/r">SWS Endurance Cup</a>
+            <a href="https://openkart.lv/lv/jaunumi/kausa-izcina/r">Kausa izcīņa</a>
+            <a href="https://openkart.lv/lv/jaunumi/eopenkart-slotcar-racing/r">eOpenkart SlotCar Racing</a>
+            <a href="https://openkart.lv/lv/jaunumi/uznemumu-kauss/r">Uzņēmumu kauss</a>
+            <a href="https://openkart.lv/lv/jaunumi/musejie-pasaule/r">Mūsējie Pasaulē</a>
+          </div>
+        </div>
+        <a href="https://openkart.lv/lv/s/7-nolikums">Nolikums</a>
+        <a href="https://openkart.lv/lv/s/6-slavas-zale">Slavas zāle</a>
+        <a href="https://www.flickr.com/photos/147056524@N03/albums" class="nav__media">Foto</a>
+        <a href="https://www.youtube.com/@Openkartkustiba/featured" class="nav__media">Video</a>
+        <a href="#kalendars" class="btn btn--red nav__cta">Pieteikties</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO: nākamā sacīkste -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__stripes"></div>
+        <div class="hero__check"></div>
+      </div>
+      <div class="wrap hero__in">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="live-dot"></span> Nākamā sacīkste · 20. sezona</p>
+          <h1>Čempionāta <span class="red">20. posms</span></h1>
+          <p class="hero__where">
+            <strong>Svētdien, 08.11.2026</strong> · Serbentu kartodroms „MANDE”, Šauļi, LT
+          </p>
+
+          <div class="lights" id="lights" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i>
+          </div>
+
+          <div class="countdown" id="countdown" aria-label="Laiks līdz starta">
+            <div><b data-k="d">00</b><span>dienas</span></div>
+            <div><b data-k="h">00</b><span>stundas</span></div>
+            <div><b data-k="m">00</b><span>minūtes</span></div>
+            <div><b data-k="s">00</b><span>sekundes</span></div>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--red btn--lg" href="https://openkart.lv/lv/races/1607-2026-cempionats-20/race_signups">Pieteikties sacīkstei</a>
+            <a class="btn btn--ghost btn--lg" href="https://openkart.lv/lv/races/1607-2026-cempionats-20/online_payments">Apmaksa tiešsaistē</a>
+          </div>
+          <p class="hero__count"><b>38</b> braucēji jau pieteikušies</p>
+        </div>
+
+        <aside class="hero__card">
+          <div class="hero__card-head">
+            <span>Dienas grafiks</span>
+            <span class="chip">Kvalifikācija + fināls</span>
+          </div>
+          <ol class="timeline">
+            <li><time>10:00</time><span>Reģistrācija</span></li>
+            <li><time>10:30</time><span>Treniņi</span></li>
+            <li class="is-key"><time>12:00</time><span>Sacīkstes sākums</span></li>
+          </ol>
+          <div class="hero__fees">
+            <div><small>Sacīkste</small><b>65 €</b></div>
+            <div><small>Treniņš · 7 min</small><b>16 €</b></div>
+            <div><small>Kopā uz trases</small><b>26 min</b></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Kopvērtējuma ticker -->
+    <div class="ticker" aria-label="Čempionāta līderi">
+      <div class="ticker__label">Čempionāts 2026</div>
+      <div class="ticker__track"><div class="ticker__run" id="ticker"></div></div>
+    </div>
+
+    <!-- JAUNUMI -->
+    <section class="section" id="jaunumi">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="title"><span>01</span>Jaunumi</h2>
+          <a class="more" href="https://openkart.lv/lv/jaunumi/cempionats/r">Vairāk rakstu →</a>
+        </div>
+
+        <div class="news">
+          <article class="news__main">
+            <a href="https://openkart.lv/lv/jaunumi/cempionats/r/1722-laipnieks-uzvar-vucans-openkart-aizsardzibas-ministrs" class="news__img">
+              <img src="assets/img/news-main.jpeg" alt="19. posma pjedestāls Jelgavas Rullītī" loading="lazy">
+              <span class="tag">19. posms</span>
+            </a>
+            <div class="news__body">
+              <p class="meta">25.10.2026 · EF</p>
+              <h3><a href="https://openkart.lv/lv/jaunumi/cempionats/r/1722-laipnieks-uzvar-vucans-openkart-aizsardzibas-ministrs">Laipnieks uzvar, Vucāns Openkart aizsardzības ministrs</a></h3>
+              <p>Sestdien, 24. oktobrī, Sporta kompleksā "Rullītis" notika Openkart 20. sezonas 19. posms. Uzvaru, startējot no trešās vietas un aizvadot ļoti aizraujošu cīņu ar savu komandas biedru Dāvi Zalmanu, izcīnīja desmitkārtējais čempions Andrejs Laipnieks (Movers.lv). Ja cīņa par pirmo vietu izšķīrās pēdējos piecos apļos, tad par…</p>
+              <a class="btn btn--line" href="https://openkart.lv/lv/jaunumi/cempionats/r/1722-laipnieks-uzvar-vucans-openkart-aizsardzibas-ministrs">Lasīt vairāk</a>
+            </div>
+          </article>
+
+          <div class="news__side">
+            <a class="news__card" href="https://openkart.lv/lv/jaunumi/cempionats/r/1720-sestdien-24-oktobri-jelgavas-rulliti-19-posms">
+              <img src="assets/img/news-2.png" alt="" loading="lazy">
+              <div><p class="meta">22.10.2026</p><h4>Sestdien, 24. oktobrī, Jelgavas Rullītī 19. posms</h4></div>
+            </a>
+            <a class="news__card" href="https://openkart.lv/lv/jaunumi/cempionats/r/1719-versickas-ar-savu-pirmo-uzvaru-nodrosina-gada-debitanta-titulu">
+              <img src="assets/img/news-3.jpeg" alt="" loading="lazy">
+              <div><p class="meta">19.10.2026</p><h4>Veršickas ar savu pirmo uzvaru nodrošina Gada debitanta titulu</h4></div>
+            </a>
+            <ul class="news__list" id="news-list"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KOPVĒRTĒJUMS -->
+    <section class="section section--dark" id="rezultati">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="title"><span>02</span>Kopvērtējums 2026</h2>
+          <a class="more" id="standings-link" href="https://openkart.lv/lv/results/2026/cempionats">Pilns saraksts →</a>
+        </div>
+        <div class="tabs" id="tabs" role="tablist"></div>
+        <div class="standings" id="standings">
+          <div class="podium" id="podium"></div>
+          <ol class="rows" id="rows"></ol>
+        </div>
+        <p class="note">Iekavās — kopējie punkti pirms sliktāko rezultātu atmešanas.</p>
+      </div>
+    </section>
+
+    <!-- KALENDĀRS -->
+    <section class="section" id="kalendars">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="title"><span>03</span>Gaidāmās sacīkstes</h2>
+          <a class="more" href="https://openkart.lv/lv/races">Viss kalendārs →</a>
+        </div>
+
+        <div class="races">
+          <article class="race">
+            <header class="race__head">
+              <div class="race__date"><b>08</b><span>nov</span></div>
+              <div>
+                <p class="eyebrow">Čempionāts</p>
+                <h3>20. posms</h3>
+                <p class="race__track">📍 Serbentu kartodroms MANDE, Šauļi, LT</p>
+              </div>
+              <div class="race__entries"><b>38</b><span>pieteikušies</span></div>
+            </header>
+            <dl class="race__facts">
+              <div><dt>Grafiks</dt><dd>Reģistrācija 10:00 · Treniņi 10:30 · Starts 12:00</dd></div>
+              <div><dt>Formāts</dt><dd>Kvalifikācija + fināls, kopā 26 minūtes. Trases konfigurācija un virziens TBA</dd></div>
+              <div><dt>Dalība</dt><dd>Dzimšanas gads vismaz 2014, svars ar ekipējumu vismaz 40 kg. Divas SWS Sprint Cup un Junior Cup ieskaites.</dd></div>
+            </dl>
+
+            <div class="pay">
+              <p class="pay__title">Apmaksa tiešsaistē <small>līdz 7. nov. pl. 22:00</small></p>
+              <div class="pay__grid">
+                <a href="https://openkart.lv/lv/races/1607-2026-cempionats-20/online_payments"><span>Tikai dalība</span><b>65 €</b></a>
+                <a href="https://openkart.lv/lv/races/1607-2026-cempionats-20/online_payments"><span>+ 1 treniņš</span><b>81 €</b></a>
+                <a href="https://openkart.lv/lv/races/1607-2026-cempionats-20/online_payments"><span>+ 2 treniņi</span><b>97 €</b></a>
+                <a href="https://openkart.lv/lv/races/1607-2026-cempionats-20/online_payments"><span>+ 3 treniņi</span><b>113 €</b></a>
+                <a href="https://openkart.lv/lv/races/1607-2026-cempionats-20/online_payments" class="is-best"><span>+ 4 treniņi</span><b>129 €</b></a>
+              </div>
+              <p class="pay__hint">Samaksājot laicīgi, vari garantēt vairāk treniņbraucienu. Maksājot obligāti norādi <b>braucēja vārdu un uzvārdu</b>.</p>
+            </div>
+            <a class="btn btn--red btn--block" href="https://openkart.lv/lv/races/1607-2026-cempionats-20/race_signups">Pieteikties</a>
+          </article>
+
+          <article class="race race--junior">
+            <header class="race__head">
+              <div class="race__date"><b>15</b><span>nov</span></div>
+              <div>
+                <p class="eyebrow">XL Rīga Junior Cup</p>
+                <h3>1. posms</h3>
+                <p class="race__track">📍 XL Rīga kartinga nams, Rīga</p>
+              </div>
+              <div class="race__entries"><b>20</b><span>pieteikušies</span></div>
+            </header>
+            <dl class="race__facts">
+              <div><dt>Sākums</dt><dd>15.11.2026 plkst. 09:00</dd></div>
+              <div><dt>Formāts</dt><dd>Time Attack — 6 × 4 min, ātrāko apļu laiku summa ar katru no kartiem. Sodi RT8 un LR5 (bērnu karti).</dd></div>
+              <div><dt>Dalība</dt><dd>2011. gadā dzimušie un jaunāki. Divas SWS Junior Cup ieskaites.</dd></div>
+              <div><dt>Dalības maksa</dt><dd><b class="price">45 €</b></dd></div>
+            </dl>
+            <a class="btn btn--red btn--block" href="https://openkart.lv/lv/races/1710-2026-xl-riga-junior-cup-1/race_signups">Pieteikties</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERI -->
+    <section class="section section--partners">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="title"><span>04</span>Trases un partneri</h2>
+        </div>
+        <div class="partners">
+          <a href="https://kartodroms.lv/"><img src="assets/partners/Kandavas-kartodroms_normal.png" alt="Kandavas kartodroms" loading="lazy"></a>
+          <a href="https://rullitis.lv"><img src="assets/partners/Jelgava_normal.png" alt="Jelgava Rullītis" loading="lazy"></a>
+          <a href="https://driftgo.lt/en/home/"><img src="assets/partners/Baciunu_normal.jpeg" alt="Bačiūnų kartodromas" loading="lazy"></a>
+          <a href="https://www.facebook.com/MadonasIresKartinguTrase"><img src="assets/partners/Madona_normal.png" alt="Madonas kartinga trase" loading="lazy"></a>
+          <a href="https://driftgo.lt/en/home/"><img src="assets/partners/Serbentu_normal.jpeg" alt="Serbentų kartodromas" loading="lazy"></a>
+          <a href="https://kartings.lv"><img src="assets/partners/kartings_lv_normal.png" alt="kartings.lv" loading="lazy"></a>
+          <a href="https://kartinganams.lv/"><img src="assets/partners/XL-Riga_normal.png" alt="XL Rīga kartinga nams" loading="lazy"></a>
+          <a href="https://laitserallypark.ee/en/"><img src="assets/partners/LaitseRallyPark_normal.png" alt="Laitse Rally Park" loading="lazy"></a>
+          <a href="https://sodiwseries.com/"><img src="assets/partners/sws-sprint_normal.png" alt="SWS Sprint" loading="lazy"></a>
+          <a href="https://sodiwseries.com/"><img src="assets/partners/sws-junior_normal.png" alt="SWS Junior" loading="lazy"></a>
+          <a href="http://parups.com"><img src="assets/partners/parups_normal.png" alt="Parups" loading="lazy"></a>
+          <a href="https://coort.app"><img src="assets/partners/coort-logo_normal.png" alt="Coort" loading="lazy"></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__flag" aria-hidden="true"></div>
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="assets/img/logo-red.png" alt="Openkart" width="1158" height="246" loading="lazy">
+        <p>Amatieru kartinga kustība. 20 sezonas uz trases.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="https://openkart.lv/lv/s/7-nolikums">Nolikums</a>
+        <a href="https://openkart.lv/lv/s/2-kontakti">Kontakti</a>
+        <a href="https://openkart.lv/lv/s/4-par-openkart">Par Openkart</a>
+        <a href="https://openkart.lv/lv/s/6-slavas-zale">Slavas zāle</a>
+      </nav>
+      <div class="footer__social">
+        <a href="http://www.facebook.com/pages/Openkart/156203434346" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.4H7.6V14h2.7v8h3.2z"/></svg>
+        </a>
+        <a href="https://instagram.com/openkart.lv/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy wrap">© 2026, openkart.lv. Visas tiesības paturētas</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
