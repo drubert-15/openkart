@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>23. septembrī &quot;333&quot; Openkart Team Race — Openkart</title>
+  <meta name="description" content="Openkart — amatieru kartinga kustība Latvijā.">
+  <meta name="theme-color" content="#0b0c0f">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&amp;family=Titillium+Web:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Piekļuves brīdinājums (kā oriģinālajā lapā) -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
+    <div class="gate__card">
+      <div class="gate__flag" aria-hidden="true"></div>
+      <p class="eyebrow">Uzmanību!</p>
+      <h2 id="gate-title">Piekļuve mājas lapai paredzēta tikai Openkart kopienas dalībniekiem</h2>
+      <div class="gate__actions">
+        <button class="btn btn--red" id="gate-ok">Turpināt</button>
+        <a class="btn btn--ghost" href="https://google.com">Iziet</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Augšējā josla -->
+  <div class="topbar">
+    <div class="wrap topbar__in">
+      <span class="topbar__date" id="today">Otrdiena, 03. nov., 2026</span>
+      <div class="topbar__right">
+        <a href="https://openkart.lv/users/sign_in?locale=lv">Autorizēties</a>
+        <a href="https://openkart.lv/users/sign_up?locale=lv" class="topbar__reg">Reģistrēties</a>
+        <span class="lang"><a href="../index.html" class="is-on">LV</a><a href="../index.html">EN</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Galvene -->
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a href="../index.html" class="logo" aria-label="Openkart sākumlapa"><img src="../assets/img/logo-red.png" alt="Openkart 20 — amatieru kartinga kustība" width="1158" height="246"></a>
+      <button class="burger" id="burger" aria-label="Izvēlne" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <a href="../lapas/rezultati.html">Rezultāti</a>
+        <a href="../lapas/kalendars.html">Kalendārs</a>
+        <a href="../lapas/dalibnieki.html">Dalībnieki</a>
+        <a href="../lapas/stats.html">Statistika</a>
+        <div class="dd">
+          <button class="dd__btn" aria-expanded="false">Jaunumi</button>
+          <div class="dd__menu">
+            <a href="../lapas/jaunumi_cempionats_r.html">Čempionāts</a>
+            <a href="../lapas/jaunumi_attistibas-liga_r.html">Attīstības līga</a>
+            <a href="../lapas/jaunumi_xl-riga-junior-cup_r.html">XL Rīga Junior Cup</a>
+            <a href="../lapas/jaunumi_indoor-cup_r.html">Indoor Cup</a>
+            <a href="../lapas/jaunumi_joker-karting-challenge_r.html">Joker Karting Challenge</a>
+            <a href="../lapas/jaunumi_team-race_r.html">Team Race</a>
+            <a href="../lapas/jaunumi_sws-sprint-cup_r.html">SWS Sprint Cup</a>
+            <a href="../lapas/jaunumi_b-liga_r.html">B līga</a>
+            <a href="../lapas/jaunumi_sws-endurance-cup_r.html">SWS Endurance Cup</a>
+            <a href="../lapas/jaunumi_kausa-izcina_r.html">Kausa izcīņa</a>
+            <a href="../lapas/jaunumi_eopenkart-slotcar-racing_r.html">eOpenkart SlotCar Racing</a>
+            <a href="../lapas/jaunumi_uznemumu-kauss_r.html">Uzņēmumu kauss</a>
+            <a href="../lapas/jaunumi_musejie-pasaule_r.html">Mūsējie Pasaulē</a>
+          </div>
+        </div>
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+        <a href="https://www.flickr.com/photos/147056524@N03/albums" class="nav__media">Foto</a>
+        <a href="https://www.youtube.com/@Openkartkustiba/featured" class="nav__media">Video</a>
+        <a href="../index.html#kalendars" class="btn btn--red nav__cta">Pieteikties</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="page">
+  <section class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Jaunumi</p>
+      <h1>23. septembrī &quot;333&quot; Openkart Team Race</h1>
+    </div>
+  </section>
+  <div class="wrap content">
+<div class="article">
+
+<div class="row">
+<div class="col-md-8">
+
+
+<p class="small">21.09.2020, Uldis Galdiņš</p>
+<a href="https://openkart.lv/uploads/articles/1260/20190707_201510%280%29_original.jpg" rel="prettyPhoto" title="">
+<img class="rounded img-fluid img-bordered" id="image_1345" loading="lazy" src="https://openkart.lv/uploads/articles/1260/20190707_201510%280%29_normal.jpg"/>
+</a>
+<p>Trešdien, 23. septembrī, Sporta kompeksa mazās trases un poligona kombinācijā notiks šogad vienīgās Openkart komandu sacensības, jeb sauktas kā Openkart Team Race. Sacīkstes garums šoreiz ilgāks - 3 stundas, kas līdzīgi kā pagājušosezon būs sadalīta stundu garās daļās, lai būtu iespējams katru daļu atsevišķi iekļaut Sodi World Series Endurance Cup ieskaitē. Šogad būs 3 daļas un tās gan būs mazāk nodalītas kā iepriekšējās sezonās pierasts. Tāpat kā pērn arī šogad dalības maksā iekļauti treniņi (kas vienlaicīgi ir kvalifikācija) - 30 minūtes katrai komandai.</p><p>Pirms gada notika trīs komandu sacīkstes, bet ceļazīmi uz SWS Endurance kausa finālu ieguva "Baltie Veterāni" ar Krišu Jaunzemi, Mareku Štolcermani, Kristapu Grīnieku un Hariju Cīruli sastāvā.</p><ul>
+<li><a href="https://openkart.lv/lv/races/901-2020-team-race-1/team_signups">PIETEIKTIES</a> </li><li><a href="https://openkart.lv/system/redactor_assets/documents/279/Openkart-Team-Race-2020-NOLIKUMS.pdf">NOLIKUMS</a> </li></ul><p>Papildus pamatsacīkstēm šoreiz būs viena ieskaite: 93+ ieskaite. Apbalvotas tiks Openkart Team Race sacensību kopējās ieskaites 3 labākās komandas un 93+ uzvarētājkomanda. SWS Endurance Cup atsevišķa apbalvošana nav paredzēta.</p><h3>Pamatprincipi</h3><ul>
+<li>Komandā 3 līdz 6 dalībnieki</li><li>30 minūšu treniņi, katram no komandas jāveic vismaz viens aplis, kopā neatkarīgi no komandas dalībnieku skaita ir jābūt vismaz 5 maiņām, pie braucēju maiņas tiek mainīti gokarti</li><li>Treniņos uzrādītais labākais apļa laiks ir kvalifikācijas laiks, lai noteiktu starta vietas pirmajā braucienā</li><li>Sacensību braucieni - 3 stundas, sadalītas trijās 1 stundu garās daļās</li><li>Katrā daļā 4 obligātās maiņas (var būt vairāk)</li><li>Noteikts braucēja maksimālais un minimālais kopējais braukšanas (skatīt nolikumu)</li><li>Stintu laiks nav ierobežots</li><li>Pie katras maiņas notiek arī gokartu maiņa, gokartu maiņa bez braucēja maiņas ir aizliegta</li><li>Boksu celiņš maiņām tiek slēgts 5 minūtes pirms katras sacensību daļas beigām</li><li>Atsvari katram braucējam līdz 80 kg, solis 5 kg</li><li>Gokartu izloze nebūs, bet gokarti tiks sadalīti atbilstoši starta un gokartu secībai boksu celiņā pirms katra no sacīkšu braucieniem</li><li>Starta secība - 1. sacensību daļā pēc treniņu &amp; kvalifikācijas brauciena rezultātiem, savukārt , 2. un 3. sacensību daļā - pēc iepriekšējās daļas rezultātiem.</li><li>Openkart Team Race rezultāts ir visu trīs daļu rezultātu summa distances laika izteiksmē</li><li>Dalības maksa 270 EUR (210 trases minūtes) no komandas neatkarīgi no braucēju skaita komandā</li></ul><p>Vēršam uzmanību komandām uz vienu aktuālu jautājumu - nodrošināt saziņu ar braucēju, kurš ir trasē, lai uz vietas nav jāimprovizē. Trases shēmā ar zaļu norādīta vieta trasē, kur ir atļauts piekļūt vistuvāk - starta-finiša taisnē vai citviet atrasties pie trases braucamās daļas, drošības apsvērumu dēļ, ir aizliegts. Var dot signālu no boksu celiņa, protams, ja ir pārliecība, ka nostrādās. Var izmantot arī radio komunikācijas rīkus.</p><h3>Dienaskārtība</h3><ul>
+<li>17.00 Ierašanās sacensību norises vietā, komandu reģistrācija, dalībnieku svēršanās</li><li>17.30 Dalībnieku sapulce</li><li>18.00 Treniņa &amp; kvalifikācijas brauciens (30min)</li><li>18.40 Pirmā sacensību daļa (60 minūtes)</li><li>19.45 Otrā sacensību daļa (60 minūtes)</li><li>20.50 Trešā sacensību daļa (60 minūtes)</li><li>22.10 Apbalvošanas ceremonija</li></ul><h3>Trases konfigurācija un virziens</h3><p><img loading="lazy" src="https://openkart.lv/system/redactor_assets/pictures/280/WhatsApp_Image_2020-09-18_at_00.19.07.jpeg"/></p>
+<div class="clearfix"></div>
+<div id="articles-list">
+<div class="float-end">
+<a class="btn btn-sm btn-outline-secondary" href="#top">
+<i aria-hidden="true" class="fas fa-arrow-up"></i>
+Uz augšu
+</a>
+</div>
+<h3>Team Race</h3>
+<div class="clearfix"></div>
+<ul class="list-unstyled striped articles">
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">02.09.2022</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1427-baciunai-6-hrs-sws-endurance-cup-sacikste-saulos-24-dot-09.html">Baciunai 6 HRS SWS Endurance Cup sacīkste Šauļos 24.09</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1427_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">24.09.2020</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1346-dramatiski-episka-team-race-sacikste-uzvar-pirmie-foto-papildu-statistika.html">Dramatiski episkā Team Race sacīkstē uzvar "Pirmie" (foto, papildu statistika)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1346_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">21.09.2020</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1345-23-septembri-333-openkart-team-race.html">23. septembrī "333" Openkart Team Race</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1345_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">06.10.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1305-baltie-veterani-uzvar-un-izcina-celazimi-uz-dubaiju-visi-aplu-laiki.html">"Baltie Veterāni" uzvar un izcīna ceļazīmi uz Dubaiju (visi apļu laiki)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1305_comment_badge">1</span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">02.10.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1304-6-oktobri-rulliti-tresas-openkart-team-race-sacensibas-nolikums-sws-pieteiksanas.html">6. oktobrī "Rullītī" trešās Openkart Team Race sacensības (Nolikums, SWS pieteikšanās)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1304_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">19.08.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1297-baltie-veterani-tuvu-celazimei-uz-sws-endurance-cup-pasaules-finalu-papildinats-ar-mainu-statistiku.html">"Baltie Veterāni" tuvu ceļazīmei uz SWS Endurance Cup Pasaules finālu (papildināts ar maiņu statistiku)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1297_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">08.08.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1296-svetdien-18-augusta-openkart-team-race-2-un-sws-endurance-sacikste-333.html">Svētdien, 18. augustā, Openkart Team Race 2 un SWS Endurance sacīkste "333" </a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1296_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">08.07.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1290-team-race-pirmaja-sacikste-triumfe-movers-dot-lv-bildes-rezultati.html">Team Race pirmajā sacīkstē triumfē "Movers.lv" (bildes, rezultāti)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1290_comment_badge">2</span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">04.07.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1289-svetdien-openkart-team-race-un-sws-endurance-sacikste-333.html">Svētdien Openkart Team Race un SWS Endurance sacīkste "333"</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1289_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">16.06.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1285-openkart-team-race-un-sws-endurance-cup-7-julija-333.html">Openkart Team Race un SWS Endurance Cup 7. jūlijā "333"</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1285_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">13.07.2018</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1225-movers-dot-lv-parliecinosi-uzvar-jelgavas-gp-komandu-sacikste-lap-chart-aplu-laiki.html">Movers.lv pārliecinoši uzvar Jelgavas GP komandu sacīkstē (Lap Chart, Apļu laiki)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1225_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">18.06.2018</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1221-12-dot-julija-lemans-komandu-sacikste-jelgavas-grand-prix-konfiguracija.html">12.jūlijā LeMans komandu sacīkste Jelgavas Grand Prix (konfigurācija)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1221_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">23.07.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1160-lemans-kandavas-grand-prix-triumfe-jtsvc.html">LeMans Kandavas Grand Prix triumfē JTSVC</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1160_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">12.07.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1159-23-dot-julija-lemans-komandu-sprinta-sacikste-kandavas-grand-prix.html">23.jūlijā LeMans komandu sprinta sacīkste Kandavas Grand Prix</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1159_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">22.09.2016</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1107-baltie-spraiga-cina-uzvar-un-saglaba-realas-izredzes-uz-cempiontitulu.html">Baltie spraigā cīņā uzvar un saglabā reālas izredzes uz čempiontitulu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1107_comment_badge">1</span>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<nav><ul class="pagination"><li class="page-item disabled"><span class="page-link">←</span></li> <li class="page-item active"><span class="page-link">1</span></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/team-race/r/1345-23-septembri-333-openkart-team-race?page=2" rel="next">2</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/team-race/r/1345-23-septembri-333-openkart-team-race?page=3">3</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/team-race/r/1345-23-septembri-333-openkart-team-race?page=4">4</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/team-race/r/1345-23-septembri-333-openkart-team-race?page=5">5</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/team-race/r/1345-23-septembri-333-openkart-team-race?page=6">6</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/team-race/r/1345-23-septembri-333-openkart-team-race?page=2" rel="next">→</a></li></ul></nav>
+</div>
+</div>
+<div class="col-md-4">
+<div id="comments">
+<div class="alert alert-danger">
+<b>Komentēt var tikai reģistrēti lietotāji</b>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</main>
+  <footer class="footer">
+    <div class="footer__flag" aria-hidden="true"></div>
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="../assets/img/logo-red.png" alt="Openkart" width="1158" height="246" loading="lazy">
+        <p>Amatieru kartinga kustība. 20 sezonas uz trases.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_2-kontakti.html">Kontakti</a>
+        <a href="../lapas/s_4-par-openkart.html">Par Openkart</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+      </nav>
+      <div class="footer__social">
+        <a href="http://www.facebook.com/pages/Openkart/156203434346" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.4H7.6V14h2.7v8h3.2z"/></svg>
+        </a>
+        <a href="https://instagram.com/openkart.lv/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy wrap">© 2026, openkart.lv. Visas tiesības paturētas</p>
+  </footer>
+
+  <script>window.OK_ROOT = "../";</script>
+  <script src="../assets/js/pages.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

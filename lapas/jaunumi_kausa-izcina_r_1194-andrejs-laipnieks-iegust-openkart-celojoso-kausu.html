@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Andrejs Laipnieks iegūst Openkart ceļojošo kausu — Openkart</title>
+  <meta name="description" content="Openkart — amatieru kartinga kustība Latvijā.">
+  <meta name="theme-color" content="#0b0c0f">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&amp;family=Titillium+Web:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Piekļuves brīdinājums (kā oriģinālajā lapā) -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
+    <div class="gate__card">
+      <div class="gate__flag" aria-hidden="true"></div>
+      <p class="eyebrow">Uzmanību!</p>
+      <h2 id="gate-title">Piekļuve mājas lapai paredzēta tikai Openkart kopienas dalībniekiem</h2>
+      <div class="gate__actions">
+        <button class="btn btn--red" id="gate-ok">Turpināt</button>
+        <a class="btn btn--ghost" href="https://google.com">Iziet</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Augšējā josla -->
+  <div class="topbar">
+    <div class="wrap topbar__in">
+      <span class="topbar__date" id="today">Otrdiena, 03. nov., 2026</span>
+      <div class="topbar__right">
+        <a href="https://openkart.lv/users/sign_in?locale=lv">Autorizēties</a>
+        <a href="https://openkart.lv/users/sign_up?locale=lv" class="topbar__reg">Reģistrēties</a>
+        <span class="lang"><a href="../index.html" class="is-on">LV</a><a href="../index.html">EN</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Galvene -->
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a href="../index.html" class="logo" aria-label="Openkart sākumlapa"><img src="../assets/img/logo-red.png" alt="Openkart 20 — amatieru kartinga kustība" width="1158" height="246"></a>
+      <button class="burger" id="burger" aria-label="Izvēlne" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <a href="../lapas/rezultati.html">Rezultāti</a>
+        <a href="../lapas/kalendars.html">Kalendārs</a>
+        <a href="../lapas/dalibnieki.html">Dalībnieki</a>
+        <a href="../lapas/stats.html">Statistika</a>
+        <div class="dd">
+          <button class="dd__btn" aria-expanded="false">Jaunumi</button>
+          <div class="dd__menu">
+            <a href="../lapas/jaunumi_cempionats_r.html">Čempionāts</a>
+            <a href="../lapas/jaunumi_attistibas-liga_r.html">Attīstības līga</a>
+            <a href="../lapas/jaunumi_xl-riga-junior-cup_r.html">XL Rīga Junior Cup</a>
+            <a href="../lapas/jaunumi_indoor-cup_r.html">Indoor Cup</a>
+            <a href="../lapas/jaunumi_joker-karting-challenge_r.html">Joker Karting Challenge</a>
+            <a href="../lapas/jaunumi_team-race_r.html">Team Race</a>
+            <a href="../lapas/jaunumi_sws-sprint-cup_r.html">SWS Sprint Cup</a>
+            <a href="../lapas/jaunumi_b-liga_r.html">B līga</a>
+            <a href="../lapas/jaunumi_sws-endurance-cup_r.html">SWS Endurance Cup</a>
+            <a href="../lapas/jaunumi_kausa-izcina_r.html">Kausa izcīņa</a>
+            <a href="../lapas/jaunumi_eopenkart-slotcar-racing_r.html">eOpenkart SlotCar Racing</a>
+            <a href="../lapas/jaunumi_uznemumu-kauss_r.html">Uzņēmumu kauss</a>
+            <a href="../lapas/jaunumi_musejie-pasaule_r.html">Mūsējie Pasaulē</a>
+          </div>
+        </div>
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+        <a href="https://www.flickr.com/photos/147056524@N03/albums" class="nav__media">Foto</a>
+        <a href="https://www.youtube.com/@Openkartkustiba/featured" class="nav__media">Video</a>
+        <a href="../index.html#kalendars" class="btn btn--red nav__cta">Pieteikties</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="page">
+  <section class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Jaunumi</p>
+      <h1>Andrejs Laipnieks iegūst Openkart ceļojošo kausu</h1>
+    </div>
+  </section>
+  <div class="wrap content">
+<div class="article">
+
+<div class="row">
+<div class="col-md-8">
+
+
+<p class="small">14.01.2018, Uldis Galdiņš</p>
+<a href="https://openkart.lv/uploads/articles/820/WhatsApp_Image_2018-01-14_at_17.07.49_original.jpeg" rel="prettyPhoto" title="Foto - Toms Kalnītis">
+<img class="rounded img-fluid img-bordered" id="image_1194" loading="lazy" src="https://openkart.lv/uploads/articles/820/WhatsApp_Image_2018-01-14_at_17.07.49_normal.jpeg"/>
+</a>
+<p>Ar 2015.gada čempiona Andreja Laipnieka uzvaru svētdien, 14.janvārī, noslēdzās tradicionālā Openkart ceļojošā kausa izcīņa. Desmit braucienu summā no uzvarētāja tikai par 0,27 sekundēm atpalika un otro vietu izcīnīja divkārtējais čempions un divkārtējais kausa ieguvējs Krišs Jaunzemis, bet 0,49 sekundes Harijs Cīrulis, kurš uz kausa izcīņas pjedestāla kāpa pirmo reizi. Andrejam nu ir pilns komplekts ar 1., 2. un 3.vietu, savukārt Krišam jau piektais pjedestāls kausa izcīņā.</p><p>Interesanti, ka vēl pirms nedēļas Laipnieks bija attālākos rezervistos, taču veselības likstas piemeklēja Izaicinājuma kausa ieguvēju Kasparu Zuģicki, pirmie rezervisti vairs nepaspēja sakārtot plānus, lai atbrauktu uz sacīksti un Andrejs bija pirmais ar Wild Card, kuru izmantoja pēc pilnas programmas. Pagājušā gada kausa ieguvējs Dāniels Lācis, lai arī bija ātrākais ar diviem kartingiem, beigu beigās ieņēma 5.vietu, bet ceturtais, tikai 0,14 sekundes aiz pjedestāla Renārs Paiders, kurš vēl pirms pēdējā brauciena bija trešais. Čempions Kristaps Grīnieks šoreiz sestais.</p><p>Krišs un Andrejs bija ātrākie ar trim kartingiem, Dāniels ar diviem, bet Harijs un Grīnieks ar vienu.</p><p>Pilni <a href="https://openkart.lv/lv/results/2017/kausa-izcina/1" target="_blank">REZULTĀTI<br/></a></p><p>Kausa izcīņas rezultāti</p>
+<div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody><tr><td>1</td><td>Andrejs Laipnieks</td><td>6:03.95</td><td>-</td><td>-</td><td>100.00%</td><td>.</td><td>36.40</td><td>-</td><td>-</td><td>.</td><td>35.91</td><td>(1)</td></tr><tr><td>2</td><td>Krišs Jaunzemis</td><td>6:04.22</td><td>+0.27</td><td>+0.27</td><td>100.07%</td><td>.</td><td>36.42</td><td>+0.03</td><td>+0.03</td><td>.</td><td>36.04</td><td>(3)</td></tr><tr><td>3</td><td>Harijs Cīrulis</td><td>6:04.44</td><td>+0.49</td><td>+0.22</td><td>100.13%</td><td>.</td><td>36.44</td><td>+0.05</td><td>+0.02</td><td>.</td><td>36.09</td><td>(4)</td></tr><tr><td>4</td><td>Renārs Paiders</td><td>6:04.58</td><td>+0.63</td><td>+0.14</td><td>100.17%</td><td>.</td><td>36.46</td><td>+0.06</td><td>+0.01</td><td>.</td><td>36.01</td><td>(2)</td></tr><tr><td>5</td><td>Dāniels Lācis</td><td>6:04.99</td><td>+1.04</td><td>+0.41</td><td>100.29%</td><td>.</td><td>36.50</td><td>+0.10</td><td>+0.04</td><td>.</td><td>36.11</td><td>(6)</td></tr><tr><td>6</td><td>Kristaps Grīnieks</td><td>6:05.29</td><td>+1.34</td><td>+0.30</td><td>100.37%</td><td>.</td><td>36.53</td><td>+0.13</td><td>+0.03</td><td>.</td><td>36.10</td><td>(5)</td></tr><tr><td>7</td><td>Artūrs Freimanis</td><td>6:06.02</td><td>+2.07</td><td>+0.73</td><td>100.57%</td><td>.</td><td>36.60</td><td>+0.21</td><td>+0.07</td><td>.</td><td>36.30</td><td>(9)</td></tr><tr><td>8</td><td>Ričards Freibergs</td><td>6:06.86</td><td>+2.91</td><td>+0.84</td><td>100.80%</td><td>.</td><td>36.69</td><td>+0.29</td><td>+0.08</td><td>.</td><td>36.30</td><td>(10)</td></tr><tr><td>9</td><td>Jurijs Fedorenko</td><td>6:07.47</td><td>+3.52</td><td>+0.61</td><td>100.97%</td><td>.</td><td>36.75</td><td>+0.35</td><td>+0.06</td><td>.</td><td>36.29</td><td>(8)</td></tr><tr><td>10</td><td>Kristaps Ķilkuts</td><td>6:07.48</td><td>+3.53</td><td>+0.01</td><td>100.97%</td><td>.</td><td>36.75</td><td>+0.35</td><td>+0.00</td><td>.</td><td>36.34</td><td>(11)</td></tr><tr><td>11</td><td>Jānis Olle</td><td>6:07.52</td><td>+3.57</td><td>+0.04</td><td>100.98%</td><td>.</td><td>36.75</td><td>+0.36</td><td>+0.00</td><td>.</td><td>36.25</td><td>(7)</td></tr><tr><td>12</td><td>Edgars Sproģis</td><td>6:08.37</td><td>+4.42</td><td>+0.85</td><td>101.21%</td><td>.</td><td>36.84</td><td>+0.44</td><td>+0.09</td><td>.</td><td>36.46</td><td>(13)</td></tr><tr><td>13</td><td>Kristaps Mietulis</td><td>6:08.70</td><td>+4.75</td><td>+0.33</td><td>101.31%</td><td>.</td><td>36.87</td><td>+0.47</td><td>+0.03</td><td>.</td><td>36.52</td><td>(16)</td></tr><tr><td>14</td><td>Toms Kalnītis</td><td>6:08.89</td><td>+4.94</td><td>+0.19</td><td>101.36%</td><td>.</td><td>36.89</td><td>+0.49</td><td>+0.02</td><td>.</td><td>36.43</td><td>(12)</td></tr><tr><td>15</td><td>Jānis Čudovs</td><td>6:09.15</td><td>+5.20</td><td>+0.26</td><td>101.43%</td><td>.</td><td>36.92</td><td>+0.52</td><td>+0.03</td><td>.</td><td>36.52</td><td>(17)</td></tr><tr><td>16</td><td>Sergejs Glanenko</td><td>6:09.27</td><td>+5.32</td><td>+0.12</td><td>101.46%</td><td>.</td><td>36.93</td><td>+0.53</td><td>+0.01</td><td>.</td><td>36.48</td><td>(15)</td></tr><tr><td>17</td><td>Kaspars Ritums</td><td>6:09.55</td><td>+5.60</td><td>+0.28</td><td>101.54%</td><td>.</td><td>36.96</td><td>+0.56</td><td>+0.03</td><td>.</td><td>36.63</td><td>(19)</td></tr><tr><td>18</td><td>Kaspars Cikmačs</td><td>6:10.10</td><td>+6.15</td><td>+0.55</td><td>101.69%</td><td>.</td><td>37.01</td><td>+0.61</td><td>+0.05</td><td>.</td><td>36.58</td><td>(18)</td></tr><tr><td>19</td><td>Oļegs Moskals</td><td>6:10.74</td><td>+6.79</td><td>+0.64</td><td>101.87%</td><td>.</td><td>37.07</td><td>+0.68</td><td>+0.06</td><td>.</td><td>36.46</td><td>(14)</td></tr><tr><td>20</td><td>Daniils Verins</td><td>6:13.68</td><td>+9.73</td><td>+2.94</td><td>102.67%</td><td>.</td><td>37.37</td><td>+0.97</td><td>+0.29</td><td>.</td><td>36.92</td><td>(20)</td></tr>
+</tbody></table></div>
+<div class="clearfix"></div>
+<div id="articles-list">
+<div class="float-end">
+<a class="btn btn-sm btn-outline-secondary" href="#top">
+<i aria-hidden="true" class="fas fa-arrow-up"></i>
+Uz augšu
+</a>
+</div>
+<h3>Kausa izcīņa</h3>
+<div class="clearfix"></div>
+<ul class="list-unstyled striped articles">
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">30.05.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1688-zalmans-partrauc-laipnieka-dominanci-celojosa-kausa-izcina.html">Zalmans pārtrauc Laipnieka dominanci Ceļojošā kausa izcīņā</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1688_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">30.01.2025</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1577-laipnieks-piekto-reizi-triumfe-openkart-celojosa-kausa-izcina.html">Laipnieks piekto reizi triumfē Openkart Ceļojošā kausa izcīņā</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1577_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">06.03.2024</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1511-gdanska-laipnieks-ceturto-reizi-izcina-openkart-celojoso-kausu-video.html">Gdaņskā Laipnieks ceturto reizi izcīna Openkart Ceļojošo kausu (VIDEO)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1511_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">18.01.2023</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1437-laipnieks-treso-reizi-iegust-openkart-celojoso-kausu.html">Laipnieks trešo reizi iegūst Openkart Ceļojošo kausu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1437_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">06.09.2021</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1375-kriss-jaunzemis-triumfe-atliktaja-celojosa-kausa-izcina-papildinats.html">Krišs Jaunzemis triumfē atliktajā Ceļojošā kausa izcīņā (papildināts)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1375_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">16.01.2020</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1321-dramatiska-cina-harijs-cirulis-pirmo-reizi-izcina-openkart-celojoso-kausu-foto-video-rezultati.html">Dramatiskā cīņā Harijs Cīrulis pirmo reizi izcīna Openkart Ceļojošo kausu (FOTO, VIDEO, REZULTĀTI)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1321_comment_badge">2</span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">13.01.2020</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1320-ceturtdien-16-dot-janvari-xi-openkart-celojosa-kausa-izcina.html">Ceturtdien, 16.janvārī, XI Openkart Ceļojošā kausa izcīņa</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1320_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">16.12.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1317-kausa-izcinas-dalibnieku-sastavs-un-statistika.html">Kausa izcīņas dalībnieku sastāvs un statistika</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1317_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">13.01.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1260-laipnieks-domine-un-celojoso-kausu-patur-uz-vel-vienu-gadu.html">Laipnieks dominē un Ceļojošo kausu patur uz vēl vienu gadu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1260_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">08.01.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1259-apstiprinatais-celojosa-kausa-izcinas-sastavs-un-statistika.html">Apstiprinātais Ceļojošā kausa izcīņas sastāvs un statistika</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1259_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">03.01.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1258-13-janvari-desmito-reizi-notiks-openkart-celojosa-kausa-izcina.html">13. janvārī desmito reizi notiks Openkart Ceļojošā kausa izcīņa </a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1258_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">14.01.2018</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1194-andrejs-laipnieks-iegust-openkart-celojoso-kausu.html">Andrejs Laipnieks iegūst Openkart ceļojošo kausu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1194_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">08.01.2018</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1193-kausa-izcinas-dalibnieku-sastava-izmainas-zugicka-vieta-laipnieks.html">Kausa izcīņas dalībnieku sastāvā izmaiņas - Zuģicka vietā Laipnieks</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1193_comment_badge">1</span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">14.11.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1188-zinami-openkart-celojosa-kausa-dalibnieki-un-tuvakie-rezervisti.html">Zināmi Openkart ceļojošā kausa dalībnieki un tuvākie rezervisti</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1188_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">07.01.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1123-lacis-parspej-jaunzemi-un-izcina-openkart-celojoso-kausu-foto-video.html">Lācis pārspēj Jaunzemi un izcīna Openkart ceļojošo kausu (FOTO, VIDEO)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1123_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<nav><ul class="pagination"><li class="page-item disabled"><span class="page-link">←</span></li> <li class="page-item active"><span class="page-link">1</span></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/kausa-izcina/r/1194-andrejs-laipnieks-iegust-openkart-celojoso-kausu?page=2" rel="next">2</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/kausa-izcina/r/1194-andrejs-laipnieks-iegust-openkart-celojoso-kausu?page=2" rel="next">→</a></li></ul></nav>
+</div>
+</div>
+<div class="col-md-4">
+<div id="comments">
+<div class="alert alert-danger">
+<b>Komentēt var tikai reģistrēti lietotāji</b>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</main>
+  <footer class="footer">
+    <div class="footer__flag" aria-hidden="true"></div>
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="../assets/img/logo-red.png" alt="Openkart" width="1158" height="246" loading="lazy">
+        <p>Amatieru kartinga kustība. 20 sezonas uz trases.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_2-kontakti.html">Kontakti</a>
+        <a href="../lapas/s_4-par-openkart.html">Par Openkart</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+      </nav>
+      <div class="footer__social">
+        <a href="http://www.facebook.com/pages/Openkart/156203434346" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.4H7.6V14h2.7v8h3.2z"/></svg>
+        </a>
+        <a href="https://instagram.com/openkart.lv/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy wrap">© 2026, openkart.lv. Visas tiesības paturētas</p>
+  </footer>
+
+  <script>window.OK_ROOT = "../";</script>
+  <script src="../assets/js/pages.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

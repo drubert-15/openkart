@@ -1,0 +1,4476 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Statistika — Openkart</title>
+  <meta name="description" content="Openkart — amatieru kartinga kustība Latvijā.">
+  <meta name="theme-color" content="#0b0c0f">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&amp;family=Titillium+Web:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Piekļuves brīdinājums (kā oriģinālajā lapā) -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
+    <div class="gate__card">
+      <div class="gate__flag" aria-hidden="true"></div>
+      <p class="eyebrow">Uzmanību!</p>
+      <h2 id="gate-title">Piekļuve mājas lapai paredzēta tikai Openkart kopienas dalībniekiem</h2>
+      <div class="gate__actions">
+        <button class="btn btn--red" id="gate-ok">Turpināt</button>
+        <a class="btn btn--ghost" href="https://google.com">Iziet</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Augšējā josla -->
+  <div class="topbar">
+    <div class="wrap topbar__in">
+      <span class="topbar__date" id="today">Otrdiena, 03. nov., 2026</span>
+      <div class="topbar__right">
+        <a href="https://openkart.lv/users/sign_in?locale=lv">Autorizēties</a>
+        <a href="https://openkart.lv/users/sign_up?locale=lv" class="topbar__reg">Reģistrēties</a>
+        <span class="lang"><a href="../index.html" class="is-on">LV</a><a href="../index.html">EN</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Galvene -->
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a href="../index.html" class="logo" aria-label="Openkart sākumlapa"><img src="../assets/img/logo-red.png" alt="Openkart 20 — amatieru kartinga kustība" width="1158" height="246"></a>
+      <button class="burger" id="burger" aria-label="Izvēlne" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <a href="../lapas/rezultati.html">Rezultāti</a>
+        <a href="../lapas/kalendars.html">Kalendārs</a>
+        <a href="../lapas/dalibnieki.html">Dalībnieki</a>
+        <a href="../lapas/stats.html">Statistika</a>
+        <div class="dd">
+          <button class="dd__btn" aria-expanded="false">Jaunumi</button>
+          <div class="dd__menu">
+            <a href="../lapas/jaunumi_cempionats_r.html">Čempionāts</a>
+            <a href="../lapas/jaunumi_attistibas-liga_r.html">Attīstības līga</a>
+            <a href="../lapas/jaunumi_xl-riga-junior-cup_r.html">XL Rīga Junior Cup</a>
+            <a href="../lapas/jaunumi_indoor-cup_r.html">Indoor Cup</a>
+            <a href="../lapas/jaunumi_joker-karting-challenge_r.html">Joker Karting Challenge</a>
+            <a href="../lapas/jaunumi_team-race_r.html">Team Race</a>
+            <a href="../lapas/jaunumi_sws-sprint-cup_r.html">SWS Sprint Cup</a>
+            <a href="../lapas/jaunumi_b-liga_r.html">B līga</a>
+            <a href="../lapas/jaunumi_sws-endurance-cup_r.html">SWS Endurance Cup</a>
+            <a href="../lapas/jaunumi_kausa-izcina_r.html">Kausa izcīņa</a>
+            <a href="../lapas/jaunumi_eopenkart-slotcar-racing_r.html">eOpenkart SlotCar Racing</a>
+            <a href="../lapas/jaunumi_uznemumu-kauss_r.html">Uzņēmumu kauss</a>
+            <a href="../lapas/jaunumi_musejie-pasaule_r.html">Mūsējie Pasaulē</a>
+          </div>
+        </div>
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+        <a href="https://www.flickr.com/photos/147056524@N03/albums" class="nav__media">Foto</a>
+        <a href="https://www.youtube.com/@Openkartkustiba/featured" class="nav__media">Video</a>
+        <a href="../index.html#kalendars" class="btn btn--red nav__cta">Pieteikties</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="page">
+  <section class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Statistika</p>
+      <h1>Statistika</h1>
+    </div>
+  </section>
+  <div class="wrap content">
+
+
+
+<div class="card card-header mb-3">
+<div class="row">
+<div class="col-sm">
+<b class="hidden-xs">Gads</b>
+<select class="form-select" data-active-select="https://openkart.lv/lv/stats/__template__" id="year" name="year"><option value="overall">Kopsavilkums</option>
+<option selected="selected" value="2026">2026</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option></select>
+</div>
+<div class="col-sm">
+<b class="hidden-xs">Ieskaite</b>
+<select class="form-select" data-active-select="https://openkart.lv/lv/stats/2026/__template__" id="championship" name="championship"><option value="cempionats">Čempionāts</option>
+<option value="izaicinajuma-kauss">Izaicinājuma kauss</option>
+<option value="debitanti">Debitanti</option>
+<option value="95-plus">95+</option>
+<option value="juniori">Juniori</option>
+<option value="damas">Dāmas</option>
+<option value="attistibas-liga">Attīstības līga</option>
+<option value="xl-riga-junior-cup">XL Rīga Junior Cup</option>
+<option value="indoor-cup">Indoor Cup</option>
+<option value="joker-karting-challenge">Joker Karting Challenge</option></select>
+</div>
+</div>
+</div>
+<ul class="nav nav-pills mb-3">
+<li class="nav-item">
+<a class="nav-link active" data-bs-toggle="tab" href="#race_counts">
+GP skaits
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-bs-toggle="tab" href="#race_wins">
+Uzvaras
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-bs-toggle="tab" href="#race_top3">
+Pjedestāli
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-bs-toggle="tab" href="#race_pts">
+Punkti
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-bs-toggle="tab" href="#qual_wins">
+Uzvaras kvalifikācijā
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-bs-toggle="tab" href="#grid_wins">
+Pirmā starta vieta
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-bs-toggle="tab" href="#flap_wins">
+Ātrākie apļi
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-bs-toggle="tab" href="#flapx_wins">
+Ātrākie apļi pusfinālos
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-bs-toggle="tab" href="#bonus_points">
+Papildpunkti
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-bs-toggle="tab" href="#lead_laps">
+Apļi sacīkstes vadībā
+</a>
+</li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="race_counts">
+<h2>GP skaits</h2>
+<div class="tablewrap"><table class="table table-striped table-sm">
+<thead>
+<tr>
+<th class="nw pr_1">#</th>
+<th class="nw">
+Dalībnieks
+</th>
+<th class="nw">
+GP skaits
+</th>
+</tr>
+</thead>
+<tr>
+<td class="nw">1.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andrejs Laipnieks</td>
+<td class="nw">19</td>
+</tr>
+<tr>
+<td class="nw">2.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Niks Vucāns</td>
+<td class="nw">19</td>
+</tr>
+<tr>
+<td class="nw">3.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Leo Elsbergs</td>
+<td class="nw">19</td>
+</tr>
+<tr>
+<td class="nw">4.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ainārs Pumpišs</td>
+<td class="nw">19</td>
+</tr>
+<tr>
+<td class="nw">5.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Ziediņš</td>
+<td class="nw">19</td>
+</tr>
+<tr>
+<td class="nw">6.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Nils Kūla</td>
+<td class="nw">19</td>
+</tr>
+<tr>
+<td class="nw">7.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ričards Alekss Švaglis</td>
+<td class="nw">18</td>
+</tr>
+<tr>
+<td class="nw">8.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Armands Mednis</td>
+<td class="nw">18</td>
+</tr>
+<tr>
+<td class="nw">9.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sergejs Ļesiks</td>
+<td class="nw">18</td>
+</tr>
+<tr>
+<td class="nw">10.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Bogdans Ježovs</td>
+<td class="nw">18</td>
+</tr>
+<tr>
+<td class="nw">11.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ralfs Dambergs</td>
+<td class="nw">18</td>
+</tr>
+<tr>
+<td class="nw">12.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Davids Kvacantiradze</td>
+<td class="nw">18</td>
+</tr>
+<tr>
+<td class="nw">13.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Otīlija Grandberga</td>
+<td class="nw">17</td>
+</tr>
+<tr>
+<td class="nw">14.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Raivis Liberts</td>
+<td class="nw">17</td>
+</tr>
+<tr>
+<td class="nw">15.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ričards Krēmers</td>
+<td class="nw">17</td>
+</tr>
+<tr>
+<td class="nw">16.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Benas De La Mare</td>
+<td class="nw">17</td>
+</tr>
+<tr>
+<td class="nw">17.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ričards Mednis</td>
+<td class="nw">17</td>
+</tr>
+<tr>
+<td class="nw">18.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Zalmans</td>
+<td class="nw">17</td>
+</tr>
+<tr>
+<td class="nw">19.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ingus Mednis</td>
+<td class="nw">17</td>
+</tr>
+<tr>
+<td class="nw">20.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ādams Šics</td>
+<td class="nw">16</td>
+</tr>
+<tr>
+<td class="nw">21.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gustavs Narvaišs</td>
+<td class="nw">16</td>
+</tr>
+<tr>
+<td class="nw">22.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Liudvikas Kvedaravičius</td>
+<td class="nw">16</td>
+</tr>
+<tr>
+<td class="nw">23.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Atis Praudiņš</td>
+<td class="nw">16</td>
+</tr>
+<tr>
+<td class="nw">24.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristers Saldābols</td>
+<td class="nw">16</td>
+</tr>
+<tr>
+<td class="nw">25.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ralfs Liepiņš</td>
+<td class="nw">16</td>
+</tr>
+<tr>
+<td class="nw">26.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Vincentas Kvedaravicius</td>
+<td class="nw">16</td>
+</tr>
+<tr>
+<td class="nw">27.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksandrs Špatcs</td>
+<td class="nw">16</td>
+</tr>
+<tr>
+<td class="nw">28.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Rozenvalds</td>
+<td class="nw">16</td>
+</tr>
+<tr>
+<td class="nw">29.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Oskars Lielgalvis</td>
+<td class="nw">16</td>
+</tr>
+<tr>
+<td class="nw">30.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Henriks Dovguško</td>
+<td class="nw">16</td>
+</tr>
+<tr>
+<td class="nw">31.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edgars Lielgalvis</td>
+<td class="nw">15</td>
+</tr>
+<tr>
+<td class="nw">32.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edžus Jasenovičs</td>
+<td class="nw">15</td>
+</tr>
+<tr>
+<td class="nw">33.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artūrs Dilis</td>
+<td class="nw">15</td>
+</tr>
+<tr>
+<td class="nw">34.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Markuss Neimanis</td>
+<td class="nw">15</td>
+</tr>
+<tr>
+<td class="nw">35.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artūrs Tūcis</td>
+<td class="nw">15</td>
+</tr>
+<tr>
+<td class="nw">36.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Matvejs Ščerbakovs</td>
+<td class="nw">15</td>
+</tr>
+<tr>
+<td class="nw">37.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Oļegs Moskals</td>
+<td class="nw">15</td>
+</tr>
+<tr>
+<td class="nw">38.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Roberts Užulis</td>
+<td class="nw">15</td>
+</tr>
+<tr>
+<td class="nw">39.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rolands Dripe</td>
+<td class="nw">14</td>
+</tr>
+<tr>
+<td class="nw">40.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Simas Veršickas</td>
+<td class="nw">14</td>
+</tr>
+<tr>
+<td class="nw">41.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sofija Anna Gisiča</td>
+<td class="nw">14</td>
+</tr>
+<tr>
+<td class="nw">42.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristaps Ķilkuts</td>
+<td class="nw">14</td>
+</tr>
+<tr>
+<td class="nw">43.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ruslans Dzenis</td>
+<td class="nw">13</td>
+</tr>
+<tr>
+<td class="nw">44.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Emīls Sinkevičs</td>
+<td class="nw">13</td>
+</tr>
+<tr>
+<td class="nw">45.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Erman Keskin</td>
+<td class="nw">13</td>
+</tr>
+<tr>
+<td class="nw">46.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Augustas Kniažauskis</td>
+<td class="nw">13</td>
+</tr>
+<tr>
+<td class="nw">47.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Olivers Tams</td>
+<td class="nw">12</td>
+</tr>
+<tr>
+<td class="nw">48.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kaspars Ritums</td>
+<td class="nw">12</td>
+</tr>
+<tr>
+<td class="nw">49.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Hugo Kimonts</td>
+<td class="nw">12</td>
+</tr>
+<tr>
+<td class="nw">50.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Kornis</td>
+<td class="nw">12</td>
+</tr>
+<tr>
+<td class="nw">51.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Karlīna Gladiševa</td>
+<td class="nw">11</td>
+</tr>
+<tr>
+<td class="nw">52.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Georgs Odinecs</td>
+<td class="nw">11</td>
+</tr>
+<tr>
+<td class="nw">53.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Miķelis Džuibe</td>
+<td class="nw">10</td>
+</tr>
+<tr>
+<td class="nw">54.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Pafrats</td>
+<td class="nw">10</td>
+</tr>
+<tr>
+<td class="nw">55.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Matīss Apsīts</td>
+<td class="nw">10</td>
+</tr>
+<tr>
+<td class="nw">56.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Patriks Gerasimovs</td>
+<td class="nw">10</td>
+</tr>
+<tr>
+<td class="nw">57.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Broks</td>
+<td class="nw">10</td>
+</tr>
+<tr>
+<td class="nw">58.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sergejs Glanenko</td>
+<td class="nw">10</td>
+</tr>
+<tr>
+<td class="nw">59.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Tālmanis</td>
+<td class="nw">10</td>
+</tr>
+<tr>
+<td class="nw">60.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristaps Lucavs</td>
+<td class="nw">10</td>
+</tr>
+<tr>
+<td class="nw">61.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edgars Sproģis</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">62.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ralfs Dzenis</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">63.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Elīza Vanaga</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">64.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Indriķis Siliņš</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">65.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edvards Feldmanis</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">66.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Ivan Syrcin</td>
+<td class="nw">8</td>
+</tr>
+<tr>
+<td class="nw">67.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Pēteris Olekšs</td>
+<td class="nw">8</td>
+</tr>
+<tr>
+<td class="nw">68.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Robert Dedov</td>
+<td class="nw">8</td>
+</tr>
+<tr>
+<td class="nw">69.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Toms Pumpišs</td>
+<td class="nw">7</td>
+</tr>
+<tr>
+<td class="nw">70.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edvards Keziks</td>
+<td class="nw">7</td>
+</tr>
+<tr>
+<td class="nw">71.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Paula Daņiļeviča</td>
+<td class="nw">7</td>
+</tr>
+<tr>
+<td class="nw">72.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Georgs Rožoks</td>
+<td class="nw">7</td>
+</tr>
+<tr>
+<td class="nw">73.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Māris Liepiņš</td>
+<td class="nw">7</td>
+</tr>
+<tr>
+<td class="nw">74.</td>
+<td class="nw"><span class="flag-icon flag-icon-fr"></span> Rem Vasilenko</td>
+<td class="nw">7</td>
+</tr>
+<tr>
+<td class="nw">75.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andris Pavārs</td>
+<td class="nw">7</td>
+</tr>
+<tr>
+<td class="nw">76.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Līva Bietaga</td>
+<td class="nw">7</td>
+</tr>
+<tr>
+<td class="nw">77.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Vadims Bergfelds</td>
+<td class="nw">7</td>
+</tr>
+<tr>
+<td class="nw">78.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Māris Pafrats</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">79.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Normunds Saukāns</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">80.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ibrahimhalils Hanahmedovs</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">81.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Ilja Udre</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">82.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Alise Apsīte</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">83.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Edgar Kunicki</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">84.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Taavi Altpuu</td>
+<td class="nw">5</td>
+</tr>
+<tr>
+<td class="nw">85.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Lauris Lapiņš</td>
+<td class="nw">5</td>
+</tr>
+<tr>
+<td class="nw">86.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Nikolajs Sinnikovs</td>
+<td class="nw">5</td>
+</tr>
+<tr>
+<td class="nw">87.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Orestas Burgaila</td>
+<td class="nw">5</td>
+</tr>
+<tr>
+<td class="nw">88.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Aleksandr Svjatnoi</td>
+<td class="nw">5</td>
+</tr>
+<tr>
+<td class="nw">89.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Maija Gomberga</td>
+<td class="nw">5</td>
+</tr>
+<tr>
+<td class="nw">90.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristaps Pagrabs</td>
+<td class="nw">5</td>
+</tr>
+<tr>
+<td class="nw">91.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Krišs Eihvalds</td>
+<td class="nw">5</td>
+</tr>
+<tr>
+<td class="nw">92.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andris Tions</td>
+<td class="nw">5</td>
+</tr>
+<tr>
+<td class="nw">93.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Adrians Tions</td>
+<td class="nw">5</td>
+</tr>
+<tr>
+<td class="nw">94.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andris Rubenis</td>
+<td class="nw">5</td>
+</tr>
+<tr>
+<td class="nw">95.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Zigmārs Krūmiņš</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">96.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Emils Daugavins</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">97.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dmitrijs Minajevs</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">98.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Laimonas Skrodenis</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">99.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Bērziņš</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">100.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Asko Viira</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">101.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Kristjan Salvet</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">102.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Joosep Lehtmaa</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">103.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Mārtiņš Pavlovičs</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">104.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Māris Bulāns</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">105.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ralfs Gailis</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">106.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Anete Tomiņa</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">107.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gints Zvirbulis</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">108.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dzintars Trubiņš</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">109.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristofers Caune</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">110.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Damir Mingazov</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">111.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Arminas Vyšniauskas</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">112.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rodrigo Kākers</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">113.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Henrijs Soltums</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">114.</td>
+<td class="nw"><span class="flag-icon flag-icon-se"></span> Dins Dranšteins</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">115.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rihards Rozītis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">116.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aigars Cibuļskis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">117.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Lukas Bendoraitis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">118.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dmitrijs Petrašs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">119.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Laimonas Starkevičius</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">120.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Matas Grytė</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">121.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gusts Strods</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">122.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ruslans Ševčuks</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">123.</td>
+<td class="nw"><span class="flag-icon flag-icon-tw"></span> Kyle Hsu</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">124.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Šamsudin Mussajev</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">125.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Oskars Šēlis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">126.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artūrs Grigorjevs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">127.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ģirts Raģelis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">128.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edvards Arbacevskis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">129.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Toms Judvaitis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">130.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Reinis Dukāts</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">131.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rūdolfs Bukolds</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">132.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gatis Glāznieks</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">133.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Evelīna Glāzniece</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">134.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kārlis Alsiņš</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">135.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Lukas Tark</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">136.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Gvidas Šlianderis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">137.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aigars Liepiņš</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">138.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Daniels Ungurs</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">139.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Jasenovičs</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">140.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristers Andersons</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">141.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Meda Mickeliūnaitė</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">142.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Deividas Steponkus</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">143.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Mantas Burgaila</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">144.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristofers Laķis</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">145.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Aurelijus Haenel</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">146.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Andreas Oopkaup</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">147.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Cameron Korkka</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">148.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Bert-Anders Unt</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">149.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Alekss Purmalis</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">150.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Armands Ikvilds</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">151.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Alens Štendenbergs</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">152.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Raivo Kokarevičs</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">153.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Nils Niklāvs Plūmiņš</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">154.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ralfs Štauers</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">155.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Mārtiņš Janovskis</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">156.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Matīss Akmens</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">157.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Daniel Požarickij</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">158.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Bruno Justs</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">159.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jegors Siņņikovs</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">160.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Adrians Gailitis</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">161.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Roberts Žolna</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">162.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristers Gulbis</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">163.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rolands Mauriņš</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">164.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Miks Užulis</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">165.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kārlis Mālmeisters</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">166.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Eduards Steinerts</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">167.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Raitis Dambergs</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">168.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dmitrijs Ļeščovs</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">169.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Reinis Jansons</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">170.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Vitalijs Kolotikovs</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">171.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristians Eltermanis</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">172.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kirils Trasko</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">173.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Iļja Trasko</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">174.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Ken Druppa</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">175.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Mia Druppa</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">176.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Ketter Sassi</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">177.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Illar Jürgenson</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">178.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Klāvs Hāns</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">179.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Juris Šics</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">180.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Dzērve</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">181.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kirils Dmitrijevs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">182.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kaspars Zuģickis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">183.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Renārs Vilnis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">184.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artūrs Freimanis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">185.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gabriels Kajs Tautkums</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">186.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Karlīne Ķirsone</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">187.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Viesturs Kavacs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">188.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sergejs Lenskis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">189.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edgars Silanžs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">190.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ričards Adambergs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">191.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Emīls Markuss</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">192.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artūrs Zaharovs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">193.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Rolandas Kaa</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">194.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Jokubas Kaminskas</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">195.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Paulius Sapragonas</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">196.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Mantas Matulaitis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">197.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Danielius Haenel</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">198.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Justas Jančauskas</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">199.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Saulius Jonaitis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">200.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Augustas Gedžiūnas</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">201.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksandrs Zuta</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">202.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Elanas Rutkauskas</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">203.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Māris Grandbergs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">204.</td>
+<td class="nw"> Mārtiņš Strazdiņš</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">205.</td>
+<td class="nw"><span class="flag-icon flag-icon-va"></span> Pauls Ēriks Schütz</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">206.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Glebs Klopovs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">207.</td>
+<td class="nw"><span class="flag-icon flag-icon-ge"></span> Dāvids Meladze</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">208.</td>
+<td class="nw"> Kristaps Balderis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">209.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Konutis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">210.</td>
+<td class="nw"><span class="flag-icon flag-icon-de"></span> Mathias Kucharczewski</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">211.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Anna Linde</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">212.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Silvestrs Piekūns</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">213.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Grīnbergs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">214.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dmitrijs Šapels</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">215.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Reinis Stakēns</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">216.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ralfs Lejiņš</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">217.</td>
+<td class="nw"><span class="flag-icon flag-icon-ua"></span> Alex Zemik</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">218.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edgars Ozoliņš</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">219.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Tāls Meļķis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">220.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jēkabs Martinovs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">221.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Endijs Bernics</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">222.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Pēteris Zavickis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">223.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Krišjānis Martinovs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">224.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sandris Staņevičis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">225.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Varis Baumanis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">226.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edvards Lejins</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">227.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Jansons</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">228.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aivis Strods</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">229.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Maksims Sļotovs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">230.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Roberts Rausis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">231.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Valts Damroze-Zondaks</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">232.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rihards Kupcis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">233.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Markuss Paškauskis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">234.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Oskars Andersons</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">235.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Niks Širins</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">236.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artis Jansons</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">237.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kaspars Mazurs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">238.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dainis Safonovs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">239.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Tālis Rožkalns</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">240.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Daniels Pēteris Bērziņš</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">241.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Bruno Pērle</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">242.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artjoms Šestakovs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">243.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Henrijs Lapše</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">244.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edvards Ķimenis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">245.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gustavs Feldmanis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">246.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristians Lazdans</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">247.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Miķelis Lapše</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">248.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ralfs Igals</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">249.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Mārtiņš Rode</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">250.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Lauris Kolnejs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">251.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Mārtiņš Jenčs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">252.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Martins Baranovskis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">253.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Krists Burkovskis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">254.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksandrs Vāle</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">255.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rolands Surgofts</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">256.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Girts Bergmanis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">257.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ģirts Dubinskis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">258.</td>
+<td class="nw"><span class="flag-icon flag-icon-se"></span> Shaun Benjamin Buzijans</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">259.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Hugo Broks</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">260.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Kirsanovs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">261.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Roberts Luste</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">262.</td>
+<td class="nw"> Kristaps Apeinis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">263.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Raivis Reinsons</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">264.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artūrs Broks</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">265.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andris Kalējs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">266.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gustavs Šics</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">267.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Lauris Liberts</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">268.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gusts Zeleznevs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">269.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jēkabs Jurševics</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">270.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Stela Kukevičiūtė</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">271.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Toms Zeleznevs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">272.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Alise Štolcermane</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">273.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dominiks Kizilovs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">274.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Krists Indrišonoks</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">275.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Matīss Spaile</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">276.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Elvijs Antonišķis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">277.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gustavs Bernards Grīnvalds</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">278.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Matīss Valujevs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">279.</td>
+<td class="nw"> Pēteris Albužis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">280.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Astičs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">281.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Elvis Klāvs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">282.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ilmars Ozols</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">283.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristaps Ozols</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">284.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ingus Pētersons</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">285.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Tomass Kristians Barševskis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">286.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristofers Barševskis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">287.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rūdolfs Rupainis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">288.</td>
+<td class="nw"><span class="flag-icon flag-icon-ua"></span> Bohdan Salamakha</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">289.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Mareks Astašovs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">290.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Eduards Banga</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">291.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Roberts Kļava</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">292.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Mihails Hafizovs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">293.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Yaro Malahov</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">294.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edgars Siliņš</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">295.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Kristiāns Paušus</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">296.</td>
+<td class="nw"> Kārlis Priedītis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">297.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Niedols</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">298.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Matas Ignatavicius</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">299.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artur Zhelieznov</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">300.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Sergey Korsikov</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">301.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Artur Ploom</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">302.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Tristan Tamme</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">303.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Oskar-Oliver Levkoi</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">304.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Rihhard Leheroo</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">305.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Andreas Talts</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">306.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kārlis Elmanis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">307.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Risto Kappet</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">308.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Konrad Järvemets</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">309.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Oliver Musten</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">310.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Kristo Kappet</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">311.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Sander Sasi</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">312.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Raul Podersalu</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">313.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Vahur Vollmann</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">314.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Aleksander Bazanov</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">315.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Robert Koppel</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">316.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristofers Konovalovs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">317.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kārlis Skirmanis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">318.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ričards Perts</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">319.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rihards Kurenkovs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">320.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksandr Panesh</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">321.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristers Šmits</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">322.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Markuss Šube</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">323.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristaps Skirmanis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">324.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artūrs Daņiļevskis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">325.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristofers Kitovs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">326.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristers Siliņš</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">327.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dairis Beļaks</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">328.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gundars Ašaks</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">329.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksejs Aņņenko</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">330.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Uldis Zarins</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">331.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Iveta Akmeņkalne</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">332.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Igors Dreijers</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">333.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Daniels Bucis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">334.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Hāns</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">335.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kārlis Ozols</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">336.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Emīls Vaitekūns</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">337.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ričards Laukšteins</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">338.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Zintis Grandbergs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">339.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksejs Trasko</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">340.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rihards Rūniks</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">341.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gabriels Rāts</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">342.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Mihails Trasko</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">343.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Bušs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">344.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Karlīna Kalniņa</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">345.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Nauris Bružuks</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">346.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rinalds Elksnis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">347.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Judvaitis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">348.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Daniils Kulmamedovs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">349.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Agnis Rozītis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">350.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Keita Miščenko</td>
+<td class="nw">1</td>
+</tr>
+</table></div>
+</div>
+<div class="tab-pane" id="race_wins">
+<h2>Uzvaras</h2>
+<div class="tablewrap"><table class="table table-striped table-sm">
+<thead>
+<tr>
+<th class="nw pr_1">#</th>
+<th class="nw">
+Dalībnieks
+</th>
+<th class="nw">
+Uzvaras
+</th>
+</tr>
+</thead>
+<tr>
+<td class="nw">1.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andrejs Laipnieks</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">2.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Rolandas Kaa</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">3.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksandrs Špatcs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">4.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rodrigo Kākers</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">5.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Zalmans</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">6.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kaspars Ritums</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">7.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Benas De La Mare</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">8.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Orestas Burgaila</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">9.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Kristjan Salvet</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">10.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Otīlija Grandberga</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">11.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Simas Veršickas</td>
+<td class="nw">1</td>
+</tr>
+</table></div>
+</div>
+<div class="tab-pane" id="race_top3">
+<h2>Pjedestāli</h2>
+<div class="tablewrap"><table class="table table-striped table-sm">
+<thead>
+<tr>
+<th class="nw pr_1">#</th>
+<th class="nw">
+Dalībnieks
+</th>
+<th class="nw">
+Pjedestāli
+</th>
+</tr>
+</thead>
+<tr>
+<td class="nw">1.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andrejs Laipnieks</td>
+<td class="nw">13</td>
+</tr>
+<tr>
+<td class="nw">2.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Niks Vucāns</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">3.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Zalmans</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">4.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kaspars Ritums</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">5.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ruslans Dzenis</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">6.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ādams Šics</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">7.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Otīlija Grandberga</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">8.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Benas De La Mare</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">9.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Erman Keskin</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">10.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sergejs Ļesiks</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">11.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Orestas Burgaila</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">12.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gustavs Narvaišs</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">13.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ričards Alekss Švaglis</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">14.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rodrigo Kākers</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">15.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksandrs Špatcs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">16.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Mārtiņš Janovskis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">17.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Jokubas Kaminskas</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">18.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Rolandas Kaa</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">19.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Kristjan Salvet</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">20.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Asko Viira</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">21.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Sergey Korsikov</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">22.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Armands Mednis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">23.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Simas Veršickas</td>
+<td class="nw">1</td>
+</tr>
+</table></div>
+</div>
+<div class="tab-pane" id="race_pts">
+<h2>Punkti</h2>
+<div class="tablewrap"><table class="table table-striped table-sm">
+<thead>
+<tr>
+<th class="nw pr_1">#</th>
+<th class="nw">
+Dalībnieks
+</th>
+<th class="nw">
+Punkti
+</th>
+</tr>
+</thead>
+<tr>
+<td class="nw">1.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andrejs Laipnieks</td>
+<td class="nw">1134</td>
+</tr>
+<tr>
+<td class="nw">2.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Niks Vucāns</td>
+<td class="nw">905</td>
+</tr>
+<tr>
+<td class="nw">3.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Zalmans</td>
+<td class="nw">856</td>
+</tr>
+<tr>
+<td class="nw">4.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ričards Alekss Švaglis</td>
+<td class="nw">852</td>
+</tr>
+<tr>
+<td class="nw">5.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sergejs Ļesiks</td>
+<td class="nw">839</td>
+</tr>
+<tr>
+<td class="nw">6.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Otīlija Grandberga</td>
+<td class="nw">811</td>
+</tr>
+<tr>
+<td class="nw">7.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Armands Mednis</td>
+<td class="nw">763</td>
+</tr>
+<tr>
+<td class="nw">8.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ādams Šics</td>
+<td class="nw">720</td>
+</tr>
+<tr>
+<td class="nw">9.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Benas De La Mare</td>
+<td class="nw">699</td>
+</tr>
+<tr>
+<td class="nw">10.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksandrs Špatcs</td>
+<td class="nw">696</td>
+</tr>
+<tr>
+<td class="nw">11.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gustavs Narvaišs</td>
+<td class="nw">679</td>
+</tr>
+<tr>
+<td class="nw">12.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Simas Veršickas</td>
+<td class="nw">607</td>
+</tr>
+<tr>
+<td class="nw">13.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Erman Keskin</td>
+<td class="nw">598</td>
+</tr>
+<tr>
+<td class="nw">14.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kaspars Ritums</td>
+<td class="nw">590</td>
+</tr>
+<tr>
+<td class="nw">15.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ruslans Dzenis</td>
+<td class="nw">586</td>
+</tr>
+<tr>
+<td class="nw">16.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Leo Elsbergs</td>
+<td class="nw">578</td>
+</tr>
+<tr>
+<td class="nw">17.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edgars Lielgalvis</td>
+<td class="nw">572</td>
+</tr>
+<tr>
+<td class="nw">18.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ričards Krēmers</td>
+<td class="nw">536</td>
+</tr>
+<tr>
+<td class="nw">19.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rolands Dripe</td>
+<td class="nw">525</td>
+</tr>
+<tr>
+<td class="nw">20.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Oļegs Moskals</td>
+<td class="nw">517</td>
+</tr>
+<tr>
+<td class="nw">21.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristaps Ķilkuts</td>
+<td class="nw">513</td>
+</tr>
+<tr>
+<td class="nw">22.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Liudvikas Kvedaravičius</td>
+<td class="nw">465</td>
+</tr>
+<tr>
+<td class="nw">23.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Markuss Neimanis</td>
+<td class="nw">368</td>
+</tr>
+<tr>
+<td class="nw">24.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sergejs Glanenko</td>
+<td class="nw">366</td>
+</tr>
+<tr>
+<td class="nw">25.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Bogdans Ježovs</td>
+<td class="nw">359</td>
+</tr>
+<tr>
+<td class="nw">26.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Ziediņš</td>
+<td class="nw">353</td>
+</tr>
+<tr>
+<td class="nw">27.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artūrs Dilis</td>
+<td class="nw">352</td>
+</tr>
+<tr>
+<td class="nw">28.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Henriks Dovguško</td>
+<td class="nw">349</td>
+</tr>
+<tr>
+<td class="nw">29.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Nils Kūla</td>
+<td class="nw">346</td>
+</tr>
+<tr>
+<td class="nw">30.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Karlīna Gladiševa</td>
+<td class="nw">345</td>
+</tr>
+<tr>
+<td class="nw">31.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Raivis Liberts</td>
+<td class="nw">339</td>
+</tr>
+<tr>
+<td class="nw">32.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Augustas Kniažauskis</td>
+<td class="nw">328</td>
+</tr>
+<tr>
+<td class="nw">33.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edgars Sproģis</td>
+<td class="nw">327</td>
+</tr>
+<tr>
+<td class="nw">34.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Matīss Apsīts</td>
+<td class="nw">312</td>
+</tr>
+<tr>
+<td class="nw">35.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ričards Mednis</td>
+<td class="nw">302</td>
+</tr>
+<tr>
+<td class="nw">36.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Olivers Tams</td>
+<td class="nw">293</td>
+</tr>
+<tr>
+<td class="nw">37.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Miķelis Džuibe</td>
+<td class="nw">293</td>
+</tr>
+<tr>
+<td class="nw">38.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ainārs Pumpišs</td>
+<td class="nw">288</td>
+</tr>
+<tr>
+<td class="nw">39.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sofija Anna Gisiča</td>
+<td class="nw">286</td>
+</tr>
+<tr>
+<td class="nw">40.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Kornis</td>
+<td class="nw">273</td>
+</tr>
+<tr>
+<td class="nw">41.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Rozenvalds</td>
+<td class="nw">267</td>
+</tr>
+<tr>
+<td class="nw">42.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Orestas Burgaila</td>
+<td class="nw">267</td>
+</tr>
+<tr>
+<td class="nw">43.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Patriks Gerasimovs</td>
+<td class="nw">250</td>
+</tr>
+<tr>
+<td class="nw">44.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Ilja Udre</td>
+<td class="nw">242</td>
+</tr>
+<tr>
+<td class="nw">45.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edvards Feldmanis</td>
+<td class="nw">241</td>
+</tr>
+<tr>
+<td class="nw">46.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Emīls Sinkevičs</td>
+<td class="nw">234</td>
+</tr>
+<tr>
+<td class="nw">47.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Edgar Kunicki</td>
+<td class="nw">225</td>
+</tr>
+<tr>
+<td class="nw">48.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edvards Keziks</td>
+<td class="nw">224</td>
+</tr>
+<tr>
+<td class="nw">49.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Roberts Užulis</td>
+<td class="nw">204</td>
+</tr>
+<tr>
+<td class="nw">50.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Atis Praudiņš</td>
+<td class="nw">194</td>
+</tr>
+<tr>
+<td class="nw">51.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Pēteris Olekšs</td>
+<td class="nw">193</td>
+</tr>
+<tr>
+<td class="nw">52.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Māris Liepiņš</td>
+<td class="nw">188</td>
+</tr>
+<tr>
+<td class="nw">53.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristaps Lucavs</td>
+<td class="nw">186</td>
+</tr>
+<tr>
+<td class="nw">54.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Kristjan Salvet</td>
+<td class="nw">185</td>
+</tr>
+<tr>
+<td class="nw">55.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Aleksandr Svjatnoi</td>
+<td class="nw">176</td>
+</tr>
+<tr>
+<td class="nw">56.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Matvejs Ščerbakovs</td>
+<td class="nw">171</td>
+</tr>
+<tr>
+<td class="nw">57.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Laimonas Skrodenis</td>
+<td class="nw">170</td>
+</tr>
+<tr>
+<td class="nw">58.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Adrians Tions</td>
+<td class="nw">170</td>
+</tr>
+<tr>
+<td class="nw">59.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristofers Caune</td>
+<td class="nw">168</td>
+</tr>
+<tr>
+<td class="nw">60.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Asko Viira</td>
+<td class="nw">165</td>
+</tr>
+<tr>
+<td class="nw">61.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Vadims Bergfelds</td>
+<td class="nw">165</td>
+</tr>
+<tr>
+<td class="nw">62.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artūrs Tūcis</td>
+<td class="nw">153</td>
+</tr>
+<tr>
+<td class="nw">63.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edžus Jasenovičs</td>
+<td class="nw">146</td>
+</tr>
+<tr>
+<td class="nw">64.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Damir Mingazov</td>
+<td class="nw">145</td>
+</tr>
+<tr>
+<td class="nw">65.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rodrigo Kākers</td>
+<td class="nw">139</td>
+</tr>
+<tr>
+<td class="nw">66.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Davids Kvacantiradze</td>
+<td class="nw">134</td>
+</tr>
+<tr>
+<td class="nw">67.</td>
+<td class="nw"><span class="flag-icon flag-icon-fr"></span> Rem Vasilenko</td>
+<td class="nw">130</td>
+</tr>
+<tr>
+<td class="nw">68.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Laimonas Starkevičius</td>
+<td class="nw">121</td>
+</tr>
+<tr>
+<td class="nw">69.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Mārtiņš Janovskis</td>
+<td class="nw">113</td>
+</tr>
+<tr>
+<td class="nw">70.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Vincentas Kvedaravicius</td>
+<td class="nw">110</td>
+</tr>
+<tr>
+<td class="nw">71.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Mārtiņš Pavlovičs</td>
+<td class="nw">104</td>
+</tr>
+<tr>
+<td class="nw">72.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Lukas Tark</td>
+<td class="nw">100</td>
+</tr>
+<tr>
+<td class="nw">73.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Georgs Odinecs</td>
+<td class="nw">94</td>
+</tr>
+<tr>
+<td class="nw">74.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Ivan Syrcin</td>
+<td class="nw">94</td>
+</tr>
+<tr>
+<td class="nw">75.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Cameron Korkka</td>
+<td class="nw">90</td>
+</tr>
+<tr>
+<td class="nw">76.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Joosep Lehtmaa</td>
+<td class="nw">88</td>
+</tr>
+<tr>
+<td class="nw">77.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ralfs Liepiņš</td>
+<td class="nw">86</td>
+</tr>
+<tr>
+<td class="nw">78.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andris Tions</td>
+<td class="nw">85</td>
+</tr>
+<tr>
+<td class="nw">79.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ruslans Ševčuks</td>
+<td class="nw">84</td>
+</tr>
+<tr>
+<td class="nw">80.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Oskars Lielgalvis</td>
+<td class="nw">77</td>
+</tr>
+<tr>
+<td class="nw">81.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Toms Pumpišs</td>
+<td class="nw">76</td>
+</tr>
+<tr>
+<td class="nw">82.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Hugo Kimonts</td>
+<td class="nw">76</td>
+</tr>
+<tr>
+<td class="nw">83.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Pafrats</td>
+<td class="nw">75</td>
+</tr>
+<tr>
+<td class="nw">84.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Matas Grytė</td>
+<td class="nw">73</td>
+</tr>
+<tr>
+<td class="nw">85.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Taavi Altpuu</td>
+<td class="nw">72</td>
+</tr>
+<tr>
+<td class="nw">86.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Arminas Vyšniauskas</td>
+<td class="nw">70</td>
+</tr>
+<tr>
+<td class="nw">87.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ralfs Dzenis</td>
+<td class="nw">69</td>
+</tr>
+<tr>
+<td class="nw">88.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristers Saldābols</td>
+<td class="nw">68</td>
+</tr>
+<tr>
+<td class="nw">89.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ralfs Dambergs</td>
+<td class="nw">67</td>
+</tr>
+<tr>
+<td class="nw">90.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Ken Druppa</td>
+<td class="nw">66</td>
+</tr>
+<tr>
+<td class="nw">91.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Rolandas Kaa</td>
+<td class="nw">65</td>
+</tr>
+<tr>
+<td class="nw">92.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Jokubas Kaminskas</td>
+<td class="nw">62</td>
+</tr>
+<tr>
+<td class="nw">93.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Deividas Steponkus</td>
+<td class="nw">62</td>
+</tr>
+<tr>
+<td class="nw">94.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Meda Mickeliūnaitė</td>
+<td class="nw">61</td>
+</tr>
+<tr>
+<td class="nw">95.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Bērziņš</td>
+<td class="nw">60</td>
+</tr>
+<tr>
+<td class="nw">96.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Andreas Oopkaup</td>
+<td class="nw">60</td>
+</tr>
+<tr>
+<td class="nw">97.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Indriķis Siliņš</td>
+<td class="nw">59</td>
+</tr>
+<tr>
+<td class="nw">98.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Daniels Ungurs</td>
+<td class="nw">58</td>
+</tr>
+<tr>
+<td class="nw">99.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ingus Mednis</td>
+<td class="nw">57</td>
+</tr>
+<tr>
+<td class="nw">100.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Sergey Korsikov</td>
+<td class="nw">57</td>
+</tr>
+<tr>
+<td class="nw">101.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Broks</td>
+<td class="nw">54</td>
+</tr>
+<tr>
+<td class="nw">102.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Artur Ploom</td>
+<td class="nw">53</td>
+</tr>
+<tr>
+<td class="nw">103.</td>
+<td class="nw"><span class="flag-icon flag-icon-tw"></span> Kyle Hsu</td>
+<td class="nw">52</td>
+</tr>
+<tr>
+<td class="nw">104.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Elīza Vanaga</td>
+<td class="nw">50</td>
+</tr>
+<tr>
+<td class="nw">105.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Tālmanis</td>
+<td class="nw">47</td>
+</tr>
+<tr>
+<td class="nw">106.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Tristan Tamme</td>
+<td class="nw">47</td>
+</tr>
+<tr>
+<td class="nw">107.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Matīss Akmens</td>
+<td class="nw">46</td>
+</tr>
+<tr>
+<td class="nw">108.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Alise Štolcermane</td>
+<td class="nw">46</td>
+</tr>
+<tr>
+<td class="nw">109.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Dzērve</td>
+<td class="nw">45</td>
+</tr>
+<tr>
+<td class="nw">110.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andris Pavārs</td>
+<td class="nw">45</td>
+</tr>
+<tr>
+<td class="nw">111.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Mantas Burgaila</td>
+<td class="nw">44</td>
+</tr>
+<tr>
+<td class="nw">112.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Mia Druppa</td>
+<td class="nw">44</td>
+</tr>
+<tr>
+<td class="nw">113.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Oskar-Oliver Levkoi</td>
+<td class="nw">42</td>
+</tr>
+<tr>
+<td class="nw">114.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Rihhard Leheroo</td>
+<td class="nw">41</td>
+</tr>
+<tr>
+<td class="nw">115.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Andreas Talts</td>
+<td class="nw">40</td>
+</tr>
+<tr>
+<td class="nw">116.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dainis Safonovs</td>
+<td class="nw">39</td>
+</tr>
+<tr>
+<td class="nw">117.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artūrs Daņiļevskis</td>
+<td class="nw">39</td>
+</tr>
+<tr>
+<td class="nw">118.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Tālis Rožkalns</td>
+<td class="nw">38</td>
+</tr>
+<tr>
+<td class="nw">119.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Klāvs Hāns</td>
+<td class="nw">36</td>
+</tr>
+<tr>
+<td class="nw">120.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gints Zvirbulis</td>
+<td class="nw">35</td>
+</tr>
+<tr>
+<td class="nw">121.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Māris Pafrats</td>
+<td class="nw">30</td>
+</tr>
+<tr>
+<td class="nw">122.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Lauris Lapiņš</td>
+<td class="nw">29</td>
+</tr>
+<tr>
+<td class="nw">123.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Jasenovičs</td>
+<td class="nw">28</td>
+</tr>
+<tr>
+<td class="nw">124.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aigars Cibuļskis</td>
+<td class="nw">28</td>
+</tr>
+<tr>
+<td class="nw">125.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Gvidas Šlianderis</td>
+<td class="nw">28</td>
+</tr>
+<tr>
+<td class="nw">126.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kārlis Elmanis</td>
+<td class="nw">28</td>
+</tr>
+<tr>
+<td class="nw">127.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kirils Dmitrijevs</td>
+<td class="nw">27</td>
+</tr>
+<tr>
+<td class="nw">128.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Georgs Rožoks</td>
+<td class="nw">27</td>
+</tr>
+<tr>
+<td class="nw">129.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Paulius Sapragonas</td>
+<td class="nw">27</td>
+</tr>
+<tr>
+<td class="nw">130.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Alise Apsīte</td>
+<td class="nw">27</td>
+</tr>
+<tr>
+<td class="nw">131.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Matīss Valujevs</td>
+<td class="nw">27</td>
+</tr>
+<tr>
+<td class="nw">132.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Emils Daugavins</td>
+<td class="nw">26</td>
+</tr>
+<tr>
+<td class="nw">133.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Robert Dedov</td>
+<td class="nw">26</td>
+</tr>
+<tr>
+<td class="nw">134.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gatis Glāznieks</td>
+<td class="nw">26</td>
+</tr>
+<tr>
+<td class="nw">135.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Krišs Eihvalds</td>
+<td class="nw">25</td>
+</tr>
+<tr>
+<td class="nw">136.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Māris Bulāns</td>
+<td class="nw">24</td>
+</tr>
+<tr>
+<td class="nw">137.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Daniels Pēteris Bērziņš</td>
+<td class="nw">24</td>
+</tr>
+<tr>
+<td class="nw">138.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kaspars Zuģickis</td>
+<td class="nw">23</td>
+</tr>
+<tr>
+<td class="nw">139.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aigars Liepiņš</td>
+<td class="nw">23</td>
+</tr>
+<tr>
+<td class="nw">140.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Zigmārs Krūmiņš</td>
+<td class="nw">22</td>
+</tr>
+<tr>
+<td class="nw">141.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Renārs Vilnis</td>
+<td class="nw">21</td>
+</tr>
+<tr>
+<td class="nw">142.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Paula Daņiļeviča</td>
+<td class="nw">21</td>
+</tr>
+<tr>
+<td class="nw">143.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Mantas Matulaitis</td>
+<td class="nw">21</td>
+</tr>
+<tr>
+<td class="nw">144.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Alens Štendenbergs</td>
+<td class="nw">21</td>
+</tr>
+<tr>
+<td class="nw">145.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Līva Bietaga</td>
+<td class="nw">21</td>
+</tr>
+<tr>
+<td class="nw">146.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Māris Grandbergs</td>
+<td class="nw">20</td>
+</tr>
+<tr>
+<td class="nw">147.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Maija Gomberga</td>
+<td class="nw">20</td>
+</tr>
+<tr>
+<td class="nw">148.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Risto Kappet</td>
+<td class="nw">20</td>
+</tr>
+<tr>
+<td class="nw">149.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Nauris Bružuks</td>
+<td class="nw">20</td>
+</tr>
+<tr>
+<td class="nw">150.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Evelīna Glāzniece</td>
+<td class="nw">19</td>
+</tr>
+<tr>
+<td class="nw">151.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Konrad Järvemets</td>
+<td class="nw">19</td>
+</tr>
+<tr>
+<td class="nw">152.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Normunds Saukāns</td>
+<td class="nw">18</td>
+</tr>
+<tr>
+<td class="nw">153.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ibrahimhalils Hanahmedovs</td>
+<td class="nw">18</td>
+</tr>
+<tr>
+<td class="nw">154.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Jansons</td>
+<td class="nw">17</td>
+</tr>
+<tr>
+<td class="nw">155.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Bruno Pērle</td>
+<td class="nw">17</td>
+</tr>
+<tr>
+<td class="nw">156.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Ketter Sassi</td>
+<td class="nw">17</td>
+</tr>
+<tr>
+<td class="nw">157.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Illar Jürgenson</td>
+<td class="nw">17</td>
+</tr>
+<tr>
+<td class="nw">158.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Henrijs Soltums</td>
+<td class="nw">16</td>
+</tr>
+<tr>
+<td class="nw">159.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Oliver Musten</td>
+<td class="nw">16</td>
+</tr>
+<tr>
+<td class="nw">160.</td>
+<td class="nw"><span class="flag-icon flag-icon-se"></span> Dins Dranšteins</td>
+<td class="nw">15</td>
+</tr>
+<tr>
+<td class="nw">161.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Nikolajs Sinnikovs</td>
+<td class="nw">15</td>
+</tr>
+<tr>
+<td class="nw">162.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristofers Laķis</td>
+<td class="nw">15</td>
+</tr>
+<tr>
+<td class="nw">163.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edvards Arbacevskis</td>
+<td class="nw">15</td>
+</tr>
+<tr>
+<td class="nw">164.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristaps Pagrabs</td>
+<td class="nw">15</td>
+</tr>
+<tr>
+<td class="nw">165.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andris Rubenis</td>
+<td class="nw">15</td>
+</tr>
+<tr>
+<td class="nw">166.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rihards Rozītis</td>
+<td class="nw">14</td>
+</tr>
+<tr>
+<td class="nw">167.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artūrs Freimanis</td>
+<td class="nw">14</td>
+</tr>
+<tr>
+<td class="nw">168.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Oskars Šēlis</td>
+<td class="nw">14</td>
+</tr>
+<tr>
+<td class="nw">169.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Grīnbergs</td>
+<td class="nw">14</td>
+</tr>
+<tr>
+<td class="nw">170.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Matas Ignatavicius</td>
+<td class="nw">13</td>
+</tr>
+<tr>
+<td class="nw">171.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dmitrijs Minajevs</td>
+<td class="nw">12</td>
+</tr>
+<tr>
+<td class="nw">172.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ralfs Gailis</td>
+<td class="nw">12</td>
+</tr>
+<tr>
+<td class="nw">173.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Anete Tomiņa</td>
+<td class="nw">12</td>
+</tr>
+<tr>
+<td class="nw">174.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dzintars Trubiņš</td>
+<td class="nw">12</td>
+</tr>
+<tr>
+<td class="nw">175.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rolands Surgofts</td>
+<td class="nw">11</td>
+</tr>
+<tr>
+<td class="nw">176.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristofers Kitovs</td>
+<td class="nw">11</td>
+</tr>
+<tr>
+<td class="nw">177.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Juris Šics</td>
+<td class="nw">11</td>
+</tr>
+<tr>
+<td class="nw">178.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Danielius Haenel</td>
+<td class="nw">10</td>
+</tr>
+<tr>
+<td class="nw">179.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Toms Judvaitis</td>
+<td class="nw">10</td>
+</tr>
+<tr>
+<td class="nw">180.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rūdolfs Rupainis</td>
+<td class="nw">10</td>
+</tr>
+<tr>
+<td class="nw">181.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Kristo Kappet</td>
+<td class="nw">10</td>
+</tr>
+<tr>
+<td class="nw">182.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rinalds Elksnis</td>
+<td class="nw">10</td>
+</tr>
+<tr>
+<td class="nw">183.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Lukas Bendoraitis</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">184.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dmitrijs Petrašs</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">185.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gusts Strods</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">186.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Šamsudin Mussajev</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">187.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artūrs Grigorjevs</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">188.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ģirts Raģelis</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">189.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Reinis Dukāts</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">190.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artjoms Šestakovs</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">191.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rūdolfs Bukolds</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">192.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kārlis Alsiņš</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">193.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Lauris Liberts</td>
+<td class="nw">7</td>
+</tr>
+<tr>
+<td class="nw">194.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristers Andersons</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">195.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Aurelijus Haenel</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">196.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Bert-Anders Unt</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">197.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Alekss Purmalis</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">198.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Armands Ikvilds</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">199.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Raivo Kokarevičs</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">200.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Nils Niklāvs Plūmiņš</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">201.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ralfs Štauers</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">202.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Henrijs Lapše</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">203.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Daniel Požarickij</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">204.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Bruno Justs</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">205.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jegors Siņņikovs</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">206.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Adrians Gailitis</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">207.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Roberts Žolna</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">208.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristers Gulbis</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">209.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rolands Mauriņš</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">210.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Miks Užulis</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">211.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kārlis Mālmeisters</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">212.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Eduards Steinerts</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">213.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Raitis Dambergs</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">214.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dmitrijs Ļeščovs</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">215.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Reinis Jansons</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">216.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Vitalijs Kolotikovs</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">217.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristians Eltermanis</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">218.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kirils Trasko</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">219.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Iļja Trasko</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">220.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Sander Sasi</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">221.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristofers Konovalovs</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">222.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristers Siliņš</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">223.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dairis Beļaks</td>
+<td class="nw">5</td>
+</tr>
+<tr>
+<td class="nw">224.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dmitrijs Šapels</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">225.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kārlis Skirmanis</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">226.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gundars Ašaks</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">227.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gabriels Kajs Tautkums</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">228.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Karlīne Ķirsone</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">229.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Viesturs Kavacs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">230.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sergejs Lenskis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">231.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edgars Silanžs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">232.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ričards Adambergs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">233.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Emīls Markuss</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">234.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artūrs Zaharovs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">235.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Justas Jančauskas</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">236.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Saulius Jonaitis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">237.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Augustas Gedžiūnas</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">238.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksandrs Zuta</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">239.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Elanas Rutkauskas</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">240.</td>
+<td class="nw"> Mārtiņš Strazdiņš</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">241.</td>
+<td class="nw"><span class="flag-icon flag-icon-va"></span> Pauls Ēriks Schütz</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">242.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Glebs Klopovs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">243.</td>
+<td class="nw"><span class="flag-icon flag-icon-ge"></span> Dāvids Meladze</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">244.</td>
+<td class="nw"> Kristaps Balderis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">245.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Konutis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">246.</td>
+<td class="nw"><span class="flag-icon flag-icon-de"></span> Mathias Kucharczewski</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">247.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Anna Linde</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">248.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Silvestrs Piekūns</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">249.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Reinis Stakēns</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">250.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ralfs Lejiņš</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">251.</td>
+<td class="nw"><span class="flag-icon flag-icon-ua"></span> Alex Zemik</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">252.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edgars Ozoliņš</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">253.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Tāls Meļķis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">254.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jēkabs Martinovs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">255.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Endijs Bernics</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">256.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Pēteris Zavickis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">257.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Krišjānis Martinovs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">258.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sandris Staņevičis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">259.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Varis Baumanis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">260.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edvards Lejins</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">261.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aivis Strods</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">262.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Maksims Sļotovs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">263.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Roberts Rausis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">264.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Valts Damroze-Zondaks</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">265.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rihards Kupcis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">266.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Markuss Paškauskis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">267.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Oskars Andersons</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">268.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Niks Širins</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">269.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artis Jansons</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">270.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kaspars Mazurs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">271.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edvards Ķimenis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">272.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gustavs Feldmanis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">273.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristians Lazdans</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">274.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Miķelis Lapše</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">275.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ralfs Igals</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">276.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Mārtiņš Rode</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">277.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Lauris Kolnejs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">278.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Mārtiņš Jenčs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">279.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Martins Baranovskis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">280.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Krists Burkovskis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">281.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksandrs Vāle</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">282.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Girts Bergmanis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">283.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ģirts Dubinskis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">284.</td>
+<td class="nw"><span class="flag-icon flag-icon-se"></span> Shaun Benjamin Buzijans</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">285.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Hugo Broks</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">286.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Kirsanovs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">287.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Roberts Luste</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">288.</td>
+<td class="nw"> Kristaps Apeinis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">289.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Raivis Reinsons</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">290.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artūrs Broks</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">291.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andris Kalējs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">292.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gustavs Šics</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">293.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gusts Zeleznevs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">294.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jēkabs Jurševics</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">295.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Stela Kukevičiūtė</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">296.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Toms Zeleznevs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">297.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dominiks Kizilovs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">298.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Krists Indrišonoks</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">299.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Matīss Spaile</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">300.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Elvijs Antonišķis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">301.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gustavs Bernards Grīnvalds</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">302.</td>
+<td class="nw"> Pēteris Albužis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">303.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Astičs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">304.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Elvis Klāvs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">305.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ilmars Ozols</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">306.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristaps Ozols</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">307.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ingus Pētersons</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">308.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Tomass Kristians Barševskis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">309.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristofers Barševskis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">310.</td>
+<td class="nw"><span class="flag-icon flag-icon-ua"></span> Bohdan Salamakha</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">311.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Mareks Astašovs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">312.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Eduards Banga</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">313.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Roberts Kļava</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">314.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Mihails Hafizovs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">315.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Yaro Malahov</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">316.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edgars Siliņš</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">317.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Kristiāns Paušus</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">318.</td>
+<td class="nw"> Kārlis Priedītis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">319.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Niedols</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">320.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artur Zhelieznov</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">321.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Raul Podersalu</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">322.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Vahur Vollmann</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">323.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Aleksander Bazanov</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">324.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Robert Koppel</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">325.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ričards Perts</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">326.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rihards Kurenkovs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">327.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksandr Panesh</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">328.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristers Šmits</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">329.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Markuss Šube</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">330.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kristaps Skirmanis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">331.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksejs Aņņenko</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">332.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Uldis Zarins</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">333.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Iveta Akmeņkalne</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">334.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Igors Dreijers</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">335.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Daniels Bucis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">336.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Hāns</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">337.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kārlis Ozols</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">338.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Emīls Vaitekūns</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">339.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ričards Laukšteins</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">340.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Zintis Grandbergs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">341.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksejs Trasko</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">342.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Rihards Rūniks</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">343.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gabriels Rāts</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">344.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Mihails Trasko</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">345.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Bušs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">346.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Karlīna Kalniņa</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">347.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Jānis Judvaitis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">348.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Daniils Kulmamedovs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">349.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Agnis Rozītis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">350.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Keita Miščenko</td>
+<td class="nw">3</td>
+</tr>
+</table></div>
+</div>
+<div class="tab-pane" id="qual_wins">
+<h2>Uzvaras kvalifikācijā</h2>
+<div class="tablewrap"><table class="table table-striped table-sm">
+<thead>
+<tr>
+<th class="nw pr_1">#</th>
+<th class="nw">
+Dalībnieks
+</th>
+<th class="nw">
+Uzvaras kvalifikācijā
+</th>
+</tr>
+</thead>
+<tr>
+<td class="nw">1.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andrejs Laipnieks</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">2.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sergejs Ļesiks</td>
+<td class="nw">5</td>
+</tr>
+<tr>
+<td class="nw">3.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kaspars Ritums</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">4.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Laimonas Skrodenis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">5.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Orestas Burgaila</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">6.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Kristjan Salvet</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">7.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Miķelis Džuibe</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">8.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Zalmans</td>
+<td class="nw">1</td>
+</tr>
+</table></div>
+</div>
+<div class="tab-pane" id="grid_wins">
+<h2>Pirmā starta vieta</h2>
+<div class="tablewrap"><table class="table table-striped table-sm">
+<thead>
+<tr>
+<th class="nw pr_1">#</th>
+<th class="nw">
+Dalībnieks
+</th>
+<th class="nw">
+Pirmā starta vieta
+</th>
+</tr>
+</thead>
+<tr>
+<td class="nw">1.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andrejs Laipnieks</td>
+<td class="nw">6</td>
+</tr>
+<tr>
+<td class="nw">2.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sergejs Ļesiks</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">3.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kaspars Ritums</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">4.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Laimonas Skrodenis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">5.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksandrs Špatcs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">6.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Orestas Burgaila</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">7.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Kristjan Salvet</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">8.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Miķelis Džuibe</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">9.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Simas Veršickas</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">10.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Zalmans</td>
+<td class="nw">1</td>
+</tr>
+</table></div>
+</div>
+<div class="tab-pane" id="flap_wins">
+<h2>Ātrākie apļi</h2>
+<div class="tablewrap"><table class="table table-striped table-sm">
+<thead>
+<tr>
+<th class="nw pr_1">#</th>
+<th class="nw">
+Dalībnieks
+</th>
+<th class="nw">
+Ātrākie apļi
+</th>
+</tr>
+</thead>
+<tr>
+<td class="nw">1.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andrejs Laipnieks</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">2.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksandrs Špatcs</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">3.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ruslans Dzenis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">4.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sergejs Ļesiks</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">5.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Simas Veršickas</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">6.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Edgar Kunicki</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">7.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Otīlija Grandberga</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">8.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Zalmans</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">9.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kaspars Ritums</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">10.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Benas De La Mare</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">11.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Erman Keskin</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">12.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Cameron Korkka</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">13.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ādams Šics</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">14.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Adrians Tions</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">15.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gustavs Narvaišs</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">16.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sofija Anna Gisiča</td>
+<td class="nw">1</td>
+</tr>
+</table></div>
+</div>
+<div class="tab-pane" id="flapx_wins">
+<h2>Ātrākie apļi pusfinālos</h2>
+<div class="tablewrap"><table class="table table-striped table-sm">
+<thead>
+<tr>
+<th class="nw pr_1">#</th>
+<th class="nw">
+Dalībnieks
+</th>
+<th class="nw">
+Ātrākie apļi pusfinālos
+</th>
+</tr>
+</thead>
+<tr>
+<td class="nw">1.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Edgar Kunicki</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">2.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Matīss Apsīts</td>
+<td class="nw">1</td>
+</tr>
+</table></div>
+</div>
+<div class="tab-pane" id="bonus_points">
+<h2>Papildpunkti</h2>
+<div class="tablewrap"><table class="table table-striped table-sm">
+<thead>
+<tr>
+<th class="nw pr_1">#</th>
+<th class="nw">
+Dalībnieks
+</th>
+<th class="nw">
+Papildpunkti
+</th>
+</tr>
+</thead>
+<tr>
+<td class="nw">1.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andrejs Laipnieks</td>
+<td class="nw">41</td>
+</tr>
+<tr>
+<td class="nw">2.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sergejs Ļesiks</td>
+<td class="nw">20</td>
+</tr>
+<tr>
+<td class="nw">3.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Zalmans</td>
+<td class="nw">14</td>
+</tr>
+<tr>
+<td class="nw">4.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kaspars Ritums</td>
+<td class="nw">11</td>
+</tr>
+<tr>
+<td class="nw">5.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Otīlija Grandberga</td>
+<td class="nw">9</td>
+</tr>
+<tr>
+<td class="nw">6.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ādams Šics</td>
+<td class="nw">8</td>
+</tr>
+<tr>
+<td class="nw">7.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Niks Vucāns</td>
+<td class="nw">7</td>
+</tr>
+<tr>
+<td class="nw">8.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Simas Veršickas</td>
+<td class="nw">7</td>
+</tr>
+<tr>
+<td class="nw">9.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksandrs Špatcs</td>
+<td class="nw">5</td>
+</tr>
+<tr>
+<td class="nw">10.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Edgar Kunicki</td>
+<td class="nw">5</td>
+</tr>
+<tr>
+<td class="nw">11.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Orestas Burgaila</td>
+<td class="nw">4</td>
+</tr>
+<tr>
+<td class="nw">12.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ruslans Dzenis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">13.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ričards Alekss Švaglis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">14.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Miķelis Džuibe</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">15.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Kristjan Salvet</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">16.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Erman Keskin</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">17.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Laimonas Skrodenis</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">18.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Gustavs Narvaišs</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">19.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Benas De La Mare</td>
+<td class="nw">3</td>
+</tr>
+<tr>
+<td class="nw">20.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sofija Anna Gisiča</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">21.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Matīss Apsīts</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">22.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Adrians Tions</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">23.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Jokubas Kaminskas</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">24.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Armands Mednis</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">25.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Asko Viira</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">26.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Cameron Korkka</td>
+<td class="nw">2</td>
+</tr>
+<tr>
+<td class="nw">27.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Artūrs Dilis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">28.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edgars Sproģis</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">29.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Liudvikas Kvedaravičius</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">30.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Lukas Tark</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">31.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ričards Krēmers</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">32.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Oļegs Moskals</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">33.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Edvards Keziks</td>
+<td class="nw">1</td>
+</tr>
+<tr>
+<td class="nw">34.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Andreas Oopkaup</td>
+<td class="nw">1</td>
+</tr>
+</table></div>
+</div>
+<div class="tab-pane" id="lead_laps">
+<h2>Apļi sacīkstes vadībā</h2>
+<div class="tablewrap"><table class="table table-striped table-sm">
+<thead>
+<tr>
+<th class="nw pr_1">#</th>
+<th class="nw">
+Dalībnieks
+</th>
+<th class="nw">
+Apļi sacīkstes vadībā
+</th>
+</tr>
+</thead>
+<tr>
+<td class="nw">1.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Andrejs Laipnieks</td>
+<td class="nw">119.0</td>
+</tr>
+<tr>
+<td class="nw">2.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Kaspars Ritums</td>
+<td class="nw">22.0</td>
+</tr>
+<tr>
+<td class="nw">3.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Niks Vucāns</td>
+<td class="nw">15.0</td>
+</tr>
+<tr>
+<td class="nw">4.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Sergejs Ļesiks</td>
+<td class="nw">15.0</td>
+</tr>
+<tr>
+<td class="nw">5.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Aleksandrs Špatcs</td>
+<td class="nw">13.0</td>
+</tr>
+<tr>
+<td class="nw">6.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Dāvis Zalmans</td>
+<td class="nw">13.0</td>
+</tr>
+<tr>
+<td class="nw">7.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Kristjan Salvet</td>
+<td class="nw">11.0</td>
+</tr>
+<tr>
+<td class="nw">8.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Simas Veršickas</td>
+<td class="nw">11.0</td>
+</tr>
+<tr>
+<td class="nw">9.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Orestas Burgaila</td>
+<td class="nw">7.0</td>
+</tr>
+<tr>
+<td class="nw">10.</td>
+<td class="nw"><span class="flag-icon flag-icon-ee"></span> Asko Viira</td>
+<td class="nw">7.0</td>
+</tr>
+<tr>
+<td class="nw">11.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Laimonas Skrodenis</td>
+<td class="nw">5.0</td>
+</tr>
+<tr>
+<td class="nw">12.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Rolandas Kaa</td>
+<td class="nw">4.0</td>
+</tr>
+<tr>
+<td class="nw">13.</td>
+<td class="nw"><span class="flag-icon flag-icon-lt"></span> Benas De La Mare</td>
+<td class="nw">1.0</td>
+</tr>
+<tr>
+<td class="nw">14.</td>
+<td class="nw"><span class="flag-icon flag-icon-lv"></span> Ričards Alekss Švaglis</td>
+<td class="nw">1.0</td>
+</tr>
+</table></div>
+</div>
+</div>
+
+  </div>
+</main>
+  <footer class="footer">
+    <div class="footer__flag" aria-hidden="true"></div>
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="../assets/img/logo-red.png" alt="Openkart" width="1158" height="246" loading="lazy">
+        <p>Amatieru kartinga kustība. 20 sezonas uz trases.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_2-kontakti.html">Kontakti</a>
+        <a href="../lapas/s_4-par-openkart.html">Par Openkart</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+      </nav>
+      <div class="footer__social">
+        <a href="http://www.facebook.com/pages/Openkart/156203434346" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.4H7.6V14h2.7v8h3.2z"/></svg>
+        </a>
+        <a href="https://instagram.com/openkart.lv/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy wrap">© 2026, openkart.lv. Visas tiesības paturētas</p>
+  </footer>
+
+  <script>window.OK_ROOT = "../";</script>
+  <script src="../assets/js/pages.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

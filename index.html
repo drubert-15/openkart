@@ -4,16 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Openkart — amatieru kartinga sacensības</title>
-  <meta name="description" content="Openkart — amatieru kartinga kustība Latvijā kopš 2007. gada. Rezultāti, kalendārs, dalībnieki un jaunumi.">
+  <meta name="description" content="Openkart — amatieru kartinga kustība Latvijā.">
   <meta name="theme-color" content="#0b0c0f">
   <link rel="icon" href="assets/img/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&amp;family=Titillium+Web:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
   <!-- Piekļuves brīdinājums (kā oriģinālajā lapā) -->
   <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
     <div class="gate__card">
@@ -34,7 +35,7 @@
       <div class="topbar__right">
         <a href="https://openkart.lv/users/sign_in?locale=lv">Autorizēties</a>
         <a href="https://openkart.lv/users/sign_up?locale=lv" class="topbar__reg">Reģistrēties</a>
-        <span class="lang"><a href="https://openkart.lv/?locale=lv" class="is-on">LV</a><a href="https://openkart.lv/?locale=en">EN</a></span>
+        <span class="lang"><a href="index.html" class="is-on">LV</a><a href="index.html">EN</a></span>
       </div>
     </div>
   </div>
@@ -42,36 +43,36 @@
   <!-- Galvene -->
   <header class="header" id="header">
     <div class="wrap header__in">
-      <a href="#" class="logo" aria-label="Openkart sākumlapa"><img src="assets/img/logo-red.png" alt="Openkart 20 — amatieru kartinga kustība" width="1158" height="246"></a>
+      <a href="index.html" class="logo" aria-label="Openkart sākumlapa"><img src="assets/img/logo-red.png" alt="Openkart 20 — amatieru kartinga kustība" width="1158" height="246"></a>
       <button class="burger" id="burger" aria-label="Izvēlne" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
       <nav class="nav" id="nav">
-        <a href="https://openkart.lv/lv/results">Rezultāti</a>
-        <a href="https://openkart.lv/lv/races">Kalendārs</a>
-        <a href="https://openkart.lv/lv/racers">Dalībnieki</a>
-        <a href="https://openkart.lv/lv/stats">Statistika</a>
+        <a href="lapas/rezultati.html">Rezultāti</a>
+        <a href="lapas/kalendars.html">Kalendārs</a>
+        <a href="lapas/dalibnieki.html">Dalībnieki</a>
+        <a href="lapas/stats.html">Statistika</a>
         <div class="dd">
           <button class="dd__btn" aria-expanded="false">Jaunumi</button>
           <div class="dd__menu">
-            <a href="https://openkart.lv/lv/jaunumi/cempionats/r">Čempionāts</a>
-            <a href="https://openkart.lv/lv/jaunumi/attistibas-liga/r">Attīstības līga</a>
-            <a href="https://openkart.lv/lv/jaunumi/xl-riga-junior-cup/r">XL Rīga Junior Cup</a>
-            <a href="https://openkart.lv/lv/jaunumi/indoor-cup/r">Indoor Cup</a>
-            <a href="https://openkart.lv/lv/jaunumi/joker-karting-challenge/r">Joker Karting Challenge</a>
-            <a href="https://openkart.lv/lv/jaunumi/team-race/r">Team Race</a>
-            <a href="https://openkart.lv/lv/jaunumi/sws-sprint-cup/r">SWS Sprint Cup</a>
-            <a href="https://openkart.lv/lv/jaunumi/b-liga/r">B līga</a>
-            <a href="https://openkart.lv/lv/jaunumi/sws-endurance-cup/r">SWS Endurance Cup</a>
-            <a href="https://openkart.lv/lv/jaunumi/kausa-izcina/r">Kausa izcīņa</a>
-            <a href="https://openkart.lv/lv/jaunumi/eopenkart-slotcar-racing/r">eOpenkart SlotCar Racing</a>
-            <a href="https://openkart.lv/lv/jaunumi/uznemumu-kauss/r">Uzņēmumu kauss</a>
-            <a href="https://openkart.lv/lv/jaunumi/musejie-pasaule/r">Mūsējie Pasaulē</a>
+            <a href="lapas/jaunumi_cempionats_r.html">Čempionāts</a>
+            <a href="lapas/jaunumi_attistibas-liga_r.html">Attīstības līga</a>
+            <a href="lapas/jaunumi_xl-riga-junior-cup_r.html">XL Rīga Junior Cup</a>
+            <a href="lapas/jaunumi_indoor-cup_r.html">Indoor Cup</a>
+            <a href="lapas/jaunumi_joker-karting-challenge_r.html">Joker Karting Challenge</a>
+            <a href="lapas/jaunumi_team-race_r.html">Team Race</a>
+            <a href="lapas/jaunumi_sws-sprint-cup_r.html">SWS Sprint Cup</a>
+            <a href="lapas/jaunumi_b-liga_r.html">B līga</a>
+            <a href="lapas/jaunumi_sws-endurance-cup_r.html">SWS Endurance Cup</a>
+            <a href="lapas/jaunumi_kausa-izcina_r.html">Kausa izcīņa</a>
+            <a href="lapas/jaunumi_eopenkart-slotcar-racing_r.html">eOpenkart SlotCar Racing</a>
+            <a href="lapas/jaunumi_uznemumu-kauss_r.html">Uzņēmumu kauss</a>
+            <a href="lapas/jaunumi_musejie-pasaule_r.html">Mūsējie Pasaulē</a>
           </div>
         </div>
-        <a href="https://openkart.lv/lv/s/7-nolikums">Nolikums</a>
-        <a href="https://openkart.lv/lv/s/6-slavas-zale">Slavas zāle</a>
+        <a href="lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="lapas/s_6-slavas-zale.html">Slavas zāle</a>
         <a href="https://www.flickr.com/photos/147056524@N03/albums" class="nav__media">Foto</a>
         <a href="https://www.youtube.com/@Openkartkustiba/featured" class="nav__media">Video</a>
-        <a href="#kalendars" class="btn btn--red nav__cta">Pieteikties</a>
+        <a href="index.html#kalendars" class="btn btn--red nav__cta">Pieteikties</a>
       </nav>
     </div>
   </header>
@@ -103,8 +104,8 @@
           </div>
 
           <div class="hero__actions">
-            <a class="btn btn--red btn--lg" href="https://openkart.lv/lv/races/1607-2026-cempionats-20/race_signups">Pieteikties sacīkstei</a>
-            <a class="btn btn--ghost btn--lg" href="https://openkart.lv/lv/races/1607-2026-cempionats-20/online_payments">Apmaksa tiešsaistē</a>
+            <a class="btn btn--red btn--lg" href="lapas/races_1607-2026-cempionats-20_race_signups.html">Pieteikties sacīkstei</a>
+            <a class="btn btn--ghost btn--lg" href="lapas/races_1607-2026-cempionats-20_online_payments.html">Apmaksa tiešsaistē</a>
           </div>
           <p class="hero__count"><b>38</b> braucēji jau pieteikušies</p>
         </div>
@@ -139,29 +140,29 @@
       <div class="wrap">
         <div class="section__head">
           <h2 class="title"><span>01</span>Jaunumi</h2>
-          <a class="more" href="https://openkart.lv/lv/jaunumi/cempionats/r">Vairāk rakstu →</a>
+          <a class="more" href="lapas/jaunumi_cempionats_r.html">Vairāk rakstu →</a>
         </div>
 
         <div class="news">
           <article class="news__main">
-            <a href="https://openkart.lv/lv/jaunumi/cempionats/r/1722-laipnieks-uzvar-vucans-openkart-aizsardzibas-ministrs" class="news__img">
+            <a href="lapas/jaunumi_cempionats_r_1722-laipnieks-uzvar-vucans-openkart-aizsardzibas-ministrs.html" class="news__img">
               <img src="assets/img/news-main.jpeg" alt="19. posma pjedestāls Jelgavas Rullītī" loading="lazy">
               <span class="tag">19. posms</span>
             </a>
             <div class="news__body">
               <p class="meta">25.10.2026 · EF</p>
-              <h3><a href="https://openkart.lv/lv/jaunumi/cempionats/r/1722-laipnieks-uzvar-vucans-openkart-aizsardzibas-ministrs">Laipnieks uzvar, Vucāns Openkart aizsardzības ministrs</a></h3>
+              <h3><a href="lapas/jaunumi_cempionats_r_1722-laipnieks-uzvar-vucans-openkart-aizsardzibas-ministrs.html">Laipnieks uzvar, Vucāns Openkart aizsardzības ministrs</a></h3>
               <p>Sestdien, 24. oktobrī, Sporta kompleksā "Rullītis" notika Openkart 20. sezonas 19. posms. Uzvaru, startējot no trešās vietas un aizvadot ļoti aizraujošu cīņu ar savu komandas biedru Dāvi Zalmanu, izcīnīja desmitkārtējais čempions Andrejs Laipnieks (Movers.lv). Ja cīņa par pirmo vietu izšķīrās pēdējos piecos apļos, tad par…</p>
-              <a class="btn btn--line" href="https://openkart.lv/lv/jaunumi/cempionats/r/1722-laipnieks-uzvar-vucans-openkart-aizsardzibas-ministrs">Lasīt vairāk</a>
+              <a class="btn btn--line" href="lapas/jaunumi_cempionats_r_1722-laipnieks-uzvar-vucans-openkart-aizsardzibas-ministrs.html">Lasīt vairāk</a>
             </div>
           </article>
 
           <div class="news__side">
-            <a class="news__card" href="https://openkart.lv/lv/jaunumi/cempionats/r/1720-sestdien-24-oktobri-jelgavas-rulliti-19-posms">
+            <a class="news__card" href="lapas/jaunumi_cempionats_r_1720-sestdien-24-oktobri-jelgavas-rulliti-19-posms.html">
               <img src="assets/img/news-2.png" alt="" loading="lazy">
               <div><p class="meta">22.10.2026</p><h4>Sestdien, 24. oktobrī, Jelgavas Rullītī 19. posms</h4></div>
             </a>
-            <a class="news__card" href="https://openkart.lv/lv/jaunumi/cempionats/r/1719-versickas-ar-savu-pirmo-uzvaru-nodrosina-gada-debitanta-titulu">
+            <a class="news__card" href="lapas/jaunumi_cempionats_r_1719-versickas-ar-savu-pirmo-uzvaru-nodrosina-gada-debitanta-titulu.html">
               <img src="assets/img/news-3.jpeg" alt="" loading="lazy">
               <div><p class="meta">19.10.2026</p><h4>Veršickas ar savu pirmo uzvaru nodrošina Gada debitanta titulu</h4></div>
             </a>
@@ -176,7 +177,7 @@
       <div class="wrap">
         <div class="section__head">
           <h2 class="title"><span>02</span>Kopvērtējums 2026</h2>
-          <a class="more" id="standings-link" href="https://openkart.lv/lv/results/2026/cempionats">Pilns saraksts →</a>
+          <a class="more" id="standings-link" href="lapas/rezultati.html?y=2026&amp;c=cempionats">Pilns saraksts →</a>
         </div>
         <div class="tabs" id="tabs" role="tablist"></div>
         <div class="standings" id="standings">
@@ -192,7 +193,7 @@
       <div class="wrap">
         <div class="section__head">
           <h2 class="title"><span>03</span>Gaidāmās sacīkstes</h2>
-          <a class="more" href="https://openkart.lv/lv/races">Viss kalendārs →</a>
+          <a class="more" href="lapas/kalendars.html">Viss kalendārs →</a>
         </div>
 
         <div class="races">
@@ -215,15 +216,15 @@
             <div class="pay">
               <p class="pay__title">Apmaksa tiešsaistē <small>līdz 7. nov. pl. 22:00</small></p>
               <div class="pay__grid">
-                <a href="https://openkart.lv/lv/races/1607-2026-cempionats-20/online_payments"><span>Tikai dalība</span><b>65 €</b></a>
-                <a href="https://openkart.lv/lv/races/1607-2026-cempionats-20/online_payments"><span>+ 1 treniņš</span><b>81 €</b></a>
-                <a href="https://openkart.lv/lv/races/1607-2026-cempionats-20/online_payments"><span>+ 2 treniņi</span><b>97 €</b></a>
-                <a href="https://openkart.lv/lv/races/1607-2026-cempionats-20/online_payments"><span>+ 3 treniņi</span><b>113 €</b></a>
-                <a href="https://openkart.lv/lv/races/1607-2026-cempionats-20/online_payments" class="is-best"><span>+ 4 treniņi</span><b>129 €</b></a>
+                <a href="lapas/races_1607-2026-cempionats-20_online_payments.html"><span>Tikai dalība</span><b>65 €</b></a>
+                <a href="lapas/races_1607-2026-cempionats-20_online_payments.html"><span>+ 1 treniņš</span><b>81 €</b></a>
+                <a href="lapas/races_1607-2026-cempionats-20_online_payments.html"><span>+ 2 treniņi</span><b>97 €</b></a>
+                <a href="lapas/races_1607-2026-cempionats-20_online_payments.html"><span>+ 3 treniņi</span><b>113 €</b></a>
+                <a href="lapas/races_1607-2026-cempionats-20_online_payments.html" class="is-best"><span>+ 4 treniņi</span><b>129 €</b></a>
               </div>
               <p class="pay__hint">Samaksājot laicīgi, vari garantēt vairāk treniņbraucienu. Maksājot obligāti norādi <b>braucēja vārdu un uzvārdu</b>.</p>
             </div>
-            <a class="btn btn--red btn--block" href="https://openkart.lv/lv/races/1607-2026-cempionats-20/race_signups">Pieteikties</a>
+            <a class="btn btn--red btn--block" href="lapas/races_1607-2026-cempionats-20_race_signups.html">Pieteikties</a>
           </article>
 
           <article class="race race--junior">
@@ -242,7 +243,7 @@
               <div><dt>Dalība</dt><dd>2011. gadā dzimušie un jaunāki. Divas SWS Junior Cup ieskaites.</dd></div>
               <div><dt>Dalības maksa</dt><dd><b class="price">45 €</b></dd></div>
             </dl>
-            <a class="btn btn--red btn--block" href="https://openkart.lv/lv/races/1710-2026-xl-riga-junior-cup-1/race_signups">Pieteikties</a>
+            <a class="btn btn--red btn--block" href="lapas/races_1710-2026-xl-riga-junior-cup-1_race_signups.html">Pieteikties</a>
           </article>
         </div>
       </div>
@@ -280,10 +281,10 @@
         <p>Amatieru kartinga kustība. 20 sezonas uz trases.</p>
       </div>
       <nav class="footer__links">
-        <a href="https://openkart.lv/lv/s/7-nolikums">Nolikums</a>
-        <a href="https://openkart.lv/lv/s/2-kontakti">Kontakti</a>
-        <a href="https://openkart.lv/lv/s/4-par-openkart">Par Openkart</a>
-        <a href="https://openkart.lv/lv/s/6-slavas-zale">Slavas zāle</a>
+        <a href="lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="lapas/s_2-kontakti.html">Kontakti</a>
+        <a href="lapas/s_4-par-openkart.html">Par Openkart</a>
+        <a href="lapas/s_6-slavas-zale.html">Slavas zāle</a>
       </nav>
       <div class="footer__social">
         <a href="http://www.facebook.com/pages/Openkart/156203434346" aria-label="Facebook">
@@ -297,6 +298,8 @@
     <p class="footer__copy wrap">© 2026, openkart.lv. Visas tiesības paturētas</p>
   </footer>
 
+  <script>window.OK_ROOT = "";</script>
+  <script src="assets/js/pages.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

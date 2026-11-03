@@ -15,7 +15,11 @@
     "Alise Apsīte": 2997, "Ruslans Dzenis": 2219, "Edgars Lielgalvis": 1653,
   };
   const slug = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-");
-  const racerUrl = (n) => racers[n] ? `${BASE}/lv/racers/${racers[n]}-${slug(n)}` : `${BASE}/lv/racers`;
+  const ROOT = window.OK_ROOT || "";
+  const PAGES = window.OK_PAGES || {};
+  // openkart.lv ceļš -> vietējā lapa, ja tāda ir, citādi saite uz openkart.lv
+  const href = (path) => (window.OK_LINK ? window.OK_LINK(path) : BASE + path);
+  const racerUrl = (n) => href(racers[n] ? `/lv/racers/${racers[n]}-${slug(n)}` : "/lv/racers");
 
   const standings = [
     { id: "cempionats", name: "Čempionāts", rows: [["Andrejs Laipnieks", 972, 1134], ["Dāvis Zalmans", 787, 856], ["Niks Vucāns", 767, 905], ["Ričards Alekss Švaglis", 754, 852], ["Sergejs Ļesiks", 744, 839]] },
@@ -47,13 +51,14 @@
 
   /* ---------- Piekļuves logs ---------- */
   const gate = $("#gate");
+  const isHome = !!$("#countdown");
   let accepted = false;
   try { accepted = localStorage.getItem("ok-gate") === "1"; } catch (e) {}
   if (!accepted) gate.hidden = false;
   $("#gate-ok").addEventListener("click", () => {
     gate.hidden = true;
     try { localStorage.setItem("ok-gate", "1"); } catch (e) {}
-    startLights();
+    if (isHome) startLights();
   });
 
   /* ---------- Datums ---------- */
@@ -82,6 +87,9 @@
     document.querySelectorAll(".dd.is-open").forEach((dd) => { if (!dd.contains(e.target) && window.innerWidth > 980) dd.classList.remove("is-open"); });
   });
 
+  initCommon();
+  if (!isHome) return;
+
   /* ---------- Taimeris līdz startam (08.11.2026 12:00 Lietuvas laiks) ---------- */
   const target = new Date("2026-11-08T12:00:00+02:00").getTime();
   const cd = {};
@@ -98,7 +106,7 @@
 
   /* ---------- Starta gaismas ---------- */
   const lights = $("#lights");
-  let lightsTimer;
+  var lightsTimer;
   function startLights() {
     clearTimeout(lightsTimer);
     const bulbs = [...lights.children];
@@ -124,7 +132,7 @@
 
   /* ---------- Jaunumu saraksts ---------- */
   $("#news-list").innerHTML = news.map(([d, s, t]) =>
-    `<li><a href="${BASE}/lv/jaunumi/cempionats/r/${s}"><time>${d}</time><span>${esc(t)}</span></a></li>`).join("");
+    `<li><a href="${href("/lv/jaunumi/cempionats/r/" + s)}"><time>${d}</time><span>${esc(t)}</span></a></li>`).join("");
 
   /* ---------- Kopvērtējums ---------- */
   const tabs = $("#tabs"), podium = $("#podium"), rows = $("#rows"), link = $("#standings-link");
@@ -139,7 +147,7 @@
   function render(i) {
     const cat = standings[i];
     tabs.querySelectorAll("button").forEach((b) => b.setAttribute("aria-selected", b.dataset.i == i));
-    link.href = BASE + (cat.link || `/lv/results/2026/${cat.id}`);
+    link.href = href(cat.link || `/lv/results/2026/${cat.id}`);
     const order = [1, 0, 2];
     podium.innerHTML = order.map((k) => {
       const r = cat.rows[k];
@@ -161,4 +169,56 @@
     if (b) render(+b.dataset.i);
   });
   render(0);
+
+  /* ---------- Kopīgais visām apakšlapām ---------- */
+  function initCommon() {
+    // Bootstrap stila cilnes (braucēju profili, statistika u.c.)
+    document.querySelectorAll('[data-bs-toggle="tab"]').forEach((a) => {
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        const id = a.getAttribute("href");
+        const pane = id && document.querySelector(id);
+        if (!pane) return;
+        const nav = a.closest(".nav");
+        nav && nav.querySelectorAll(".nav-link").forEach((l) => l.classList.toggle("active", l === a));
+        [...pane.parentElement.children].forEach((p) => p.classList.toggle("active", p === pane));
+      });
+    });
+
+    // Rezultātu izvēlnes (gads / ieskaite / posms)
+    document.querySelectorAll("select[data-active-select]").forEach((sel) => {
+      sel.addEventListener("change", () => {
+        if (!sel.value) return;
+        const url = sel.dataset.activeSelect.replace("__template__", sel.value);
+        location.href = href(url.replace(/^https?:\/\/openkart\.lv/, ""));
+      });
+    });
+
+    // Modālie logi
+    document.querySelectorAll('[data-bs-toggle="modal"]').forEach((b) => {
+      b.addEventListener("click", (e) => {
+        const m = document.querySelector(b.dataset.bsTarget || b.getAttribute("href"));
+        if (m) { e.preventDefault(); m.classList.add("show"); }
+      });
+    });
+    document.querySelectorAll(".modal").forEach((m) => {
+      m.addEventListener("click", (e) => {
+        if (e.target === m || e.target.closest('[data-bs-dismiss="modal"]')) m.classList.remove("show");
+      });
+    });
+
+    // Braucēju meklēšana
+    const q = $("#racer-q");
+    if (q) {
+      const items = [...document.querySelectorAll("#racer-list li")];
+      const fold = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+      items.forEach((li) => (li.dataset.n = fold(li.textContent)));
+      q.addEventListener("input", () => {
+        const v = fold(q.value.trim());
+        let n = 0;
+        items.forEach((li) => { const ok = !v || li.dataset.n.includes(v); li.hidden = !ok; if (ok) n++; });
+        $("#racer-n").textContent = n;
+      });
+    }
+  }
 })();

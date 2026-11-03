@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pirmajā eOpenkart slotkāru sacīkstē dominē Ivars Vilkens — Openkart</title>
+  <meta name="description" content="Openkart — amatieru kartinga kustība Latvijā.">
+  <meta name="theme-color" content="#0b0c0f">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&amp;family=Titillium+Web:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Piekļuves brīdinājums (kā oriģinālajā lapā) -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
+    <div class="gate__card">
+      <div class="gate__flag" aria-hidden="true"></div>
+      <p class="eyebrow">Uzmanību!</p>
+      <h2 id="gate-title">Piekļuve mājas lapai paredzēta tikai Openkart kopienas dalībniekiem</h2>
+      <div class="gate__actions">
+        <button class="btn btn--red" id="gate-ok">Turpināt</button>
+        <a class="btn btn--ghost" href="https://google.com">Iziet</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Augšējā josla -->
+  <div class="topbar">
+    <div class="wrap topbar__in">
+      <span class="topbar__date" id="today">Otrdiena, 03. nov., 2026</span>
+      <div class="topbar__right">
+        <a href="https://openkart.lv/users/sign_in?locale=lv">Autorizēties</a>
+        <a href="https://openkart.lv/users/sign_up?locale=lv" class="topbar__reg">Reģistrēties</a>
+        <span class="lang"><a href="../index.html" class="is-on">LV</a><a href="../index.html">EN</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Galvene -->
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a href="../index.html" class="logo" aria-label="Openkart sākumlapa"><img src="../assets/img/logo-red.png" alt="Openkart 20 — amatieru kartinga kustība" width="1158" height="246"></a>
+      <button class="burger" id="burger" aria-label="Izvēlne" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <a href="../lapas/rezultati.html">Rezultāti</a>
+        <a href="../lapas/kalendars.html">Kalendārs</a>
+        <a href="../lapas/dalibnieki.html">Dalībnieki</a>
+        <a href="../lapas/stats.html">Statistika</a>
+        <div class="dd">
+          <button class="dd__btn" aria-expanded="false">Jaunumi</button>
+          <div class="dd__menu">
+            <a href="../lapas/jaunumi_cempionats_r.html">Čempionāts</a>
+            <a href="../lapas/jaunumi_attistibas-liga_r.html">Attīstības līga</a>
+            <a href="../lapas/jaunumi_xl-riga-junior-cup_r.html">XL Rīga Junior Cup</a>
+            <a href="../lapas/jaunumi_indoor-cup_r.html">Indoor Cup</a>
+            <a href="../lapas/jaunumi_joker-karting-challenge_r.html">Joker Karting Challenge</a>
+            <a href="../lapas/jaunumi_team-race_r.html">Team Race</a>
+            <a href="../lapas/jaunumi_sws-sprint-cup_r.html">SWS Sprint Cup</a>
+            <a href="../lapas/jaunumi_b-liga_r.html">B līga</a>
+            <a href="../lapas/jaunumi_sws-endurance-cup_r.html">SWS Endurance Cup</a>
+            <a href="../lapas/jaunumi_kausa-izcina_r.html">Kausa izcīņa</a>
+            <a href="../lapas/jaunumi_eopenkart-slotcar-racing_r.html">eOpenkart SlotCar Racing</a>
+            <a href="../lapas/jaunumi_uznemumu-kauss_r.html">Uzņēmumu kauss</a>
+            <a href="../lapas/jaunumi_musejie-pasaule_r.html">Mūsējie Pasaulē</a>
+          </div>
+        </div>
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+        <a href="https://www.flickr.com/photos/147056524@N03/albums" class="nav__media">Foto</a>
+        <a href="https://www.youtube.com/@Openkartkustiba/featured" class="nav__media">Video</a>
+        <a href="../index.html#kalendars" class="btn btn--red nav__cta">Pieteikties</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="page">
+  <section class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Jaunumi</p>
+      <h1>Pirmajā eOpenkart slotkāru sacīkstē dominē Ivars Vilkens</h1>
+    </div>
+  </section>
+  <div class="wrap content">
+<div class="article">
+
+<div class="row">
+<div class="col-md-8">
+
+
+<p class="small">27.04.2017, Uldis Galdiņš</p>
+<a href="https://openkart.lv/uploads/articles/657/18159979_1524990920867237_1867018033_o_original.jpg" rel="prettyPhoto[prod_1140]" title="">
+<img class="rounded img-fluid img-bordered" id="image_1140" loading="lazy" src="https://openkart.lv/uploads/articles/657/18159979_1524990920867237_1867018033_o_normal.jpg"/>
+</a>
+<div class="row mt-2 mb-3">
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/658/18160203_1524991414200521_751642051_o_original.jpg" rel="prettyPhoto[prod_1140]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/658/18160203_1524991414200521_751642051_o_thumb.jpg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/659/18175892_1524991740867155_241701007_o_original.jpg" rel="prettyPhoto[prod_1140]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/659/18175892_1524991740867155_241701007_o_thumb.jpg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/660/18176088_1524992164200446_796996659_o_original.jpg" rel="prettyPhoto[prod_1140]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/660/18176088_1524992164200446_796996659_o_thumb.jpg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/661/IMG_4639_original.JPG" rel="prettyPhoto[prod_1140]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/661/IMG_4639_thumb.JPG"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/662/IMG_4640_original.JPG" rel="prettyPhoto[prod_1140]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/662/IMG_4640_thumb.JPG"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/663/IMG_4641_original.JPG" rel="prettyPhoto[prod_1140]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/663/IMG_4641_thumb.JPG"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/664/IMG_4643_original.JPG" rel="prettyPhoto[prod_1140]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/664/IMG_4643_thumb.JPG"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/665/IMG_4645_original.JPG" rel="prettyPhoto[prod_1140]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/665/IMG_4645_thumb.JPG"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/666/IMG_4649_original.JPG" rel="prettyPhoto[prod_1140]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/666/IMG_4649_thumb.JPG"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/667/IMG_4655_original.JPG" rel="prettyPhoto[prod_1140]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/667/IMG_4655_thumb.JPG"/>
+</a>
+</div>
+</div>
+<p>
+	Ar Ivara Vilkena dominējošu uzvaru Rīgas Motormuzeja Slotkāru trasē Sergeja Eizenšteina ielā 16 noslēdzās eOpenkart slotkāru čemionāta 1.posms. Uz vēsturiskajām pirmajām šada veida Openkart sacīkstēm ieradās 24 dalībnieki, kuri aizraujošā cīņa, aizraujošā formātā un ar pilnīgi beigtiem nerviem noskaidroja labākos. Sastāvs bija raibu raibais, sākot no pilnīgiem šī automodelisma sporta veida iesācējiem un openkartistu atvasēm, beidzot ar pieredzējušiem bukiem, kas apostījuši arī starptautisku sacensību gaisotni. Otro vietu ar par mata tiesu izcīnīja Tāls Meļķis, bet trešais Andris Šebins. Ivars finālā 12 minūšu laikā veica 85,39 apļus, bet Tāla un Andra dueli vajadzēja izšķirt ar linēalu - atstarpe tikai viena apļa simtdaļa, jeb 82,80 pret 82,79. Labākais no pārējiem šajā posmā Dzintars Raits ar 77,70 apļiem, bet aiz viņa Jānis Repša (77,64) un Uldis Galdiņš (76,49). Finālastotnieku noslēdza Bruno Freibergs un Miķelis Lukša.
+</p>
+<p>
+	Sacīkstes ātrākais aplis Ivaram 7,549, bet septiņās sekundēs izdevās iebraukt vēl pieci braucēji un nebūt ne visi no A fināla. Lielisku laiku 7,809 uzbrauca Egils Pārups, kurš ar slotkāriem nodarbojies ir pirms vairāk nekā 40 gadiem tālajā Austrālijā, un, iespējams vispārsteidzošākais, Jānis Keišs, kurš finišēja otrais C finālā - viņam laiks 7,860.
+</p>
+<p>
+	Kvalifikācijā pirmā vieta Ivaram ar nobrauktiem 80,90 apļiem, viņš arī vienīgais, kurš sasniedza 80 apļu atzīmi. Otrais viņa sīvākais konkurents no alfistu slotkāru čempionāta Tāls, kurš zaudēja gandrīz precīzi vienu apli, bet trešais Andris Šebins.
+</p><p><em>Finālbraucienu rezultāti</em></p>
+<div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+</td>
+<td>
+		"A" FINĀLS
+	</td>
+<td>
+		apļi
+	</td>
+<td>
+		laiks
+	</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+		B" FINĀLS
+	</td>
+<td>
+		apļi
+	</td>
+<td>
+		laiks
+	</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+		"C" FINĀLS
+	</td>
+<td>
+		apļi
+	</td>
+<td>
+		laiks
+	</td>
+</tr>
+<tr>
+<td>
+		1.
+	</td>
+<td>
+		Ivars Vilkens
+	</td>
+<td>
+		85,39
+	</td>
+<td>
+		7,549
+	</td>
+<td>
+</td>
+<td>
+		1.
+	</td>
+<td>
+		Uldis Galdiņš
+	</td>
+<td>
+		78,38
+	</td>
+<td>
+		8,257
+	</td>
+<td>
+</td>
+<td>
+		1.
+	</td>
+<td>
+		Mareks Astašovs
+	</td>
+<td>
+		70,12
+	</td>
+<td>
+		8,474
+	</td>
+</tr>
+<tr>
+<td>
+		2.
+	</td>
+<td>
+		Tāls Meļķis
+	</td>
+<td>
+		82,80
+	</td>
+<td>
+		7,571
+	</td>
+<td>
+</td>
+<td>
+		2.
+	</td>
+<td>
+		Krišjānis Rolis
+	</td>
+<td>
+		74,06
+	</td>
+<td>
+		8,552
+	</td>
+<td>
+</td>
+<td>
+		2.
+	</td>
+<td>
+		Jānis Keišs
+	</td>
+<td>
+		65,32
+	</td>
+<td>
+		7,860
+	</td>
+</tr>
+<tr>
+<td>
+		3.
+	</td>
+<td>
+		Andris Šebins
+	</td>
+<td>
+		82,79
+	</td>
+<td>
+		7,692
+	</td>
+<td>
+</td>
+<td>
+		3.
+	</td>
+<td>
+		Kaspars Zuģickis
+	</td>
+<td>
+		72,96
+	</td>
+<td>
+		8,491
+	</td>
+<td>
+</td>
+<td>
+		3.
+	</td>
+<td>
+		Gustavs Zuģickis
+	</td>
+<td>
+		64,90
+	</td>
+<td>
+		8,829
+	</td>
+</tr>
+<tr>
+<td>
+		4.
+	</td>
+<td>
+		Dzintars Raits
+	</td>
+<td>
+		77,70
+	</td>
+<td>
+		8,017
+	</td>
+<td>
+</td>
+<td>
+		4.
+	</td>
+<td>
+		Egils Pārups
+	</td>
+<td>
+		72,08
+	</td>
+<td>
+		7,809
+	</td>
+<td>
+</td>
+<td>
+		4.
+	</td>
+<td>
+		Reinis Igovens
+	</td>
+<td>
+		64,55
+	</td>
+<td>
+		9,208
+	</td>
+</tr>
+<tr>
+<td>
+		5.
+	</td>
+<td>
+		Jānis Repša
+	</td>
+<td>
+		77,64
+	</td>
+<td>
+		8,238
+	</td>
+<td>
+</td>
+<td>
+		5.
+	</td>
+<td>
+		Aigvars Eglītis
+	</td>
+<td>
+		71,53
+	</td>
+<td>
+		8,214
+	</td>
+<td>
+</td>
+<td>
+		5.
+	</td>
+<td>
+		Kristaps Igovens
+	</td>
+<td>
+		60,16
+	</td>
+<td>
+		8,744
+	</td>
+</tr>
+<tr>
+<td>
+		6.
+	</td>
+<td>
+		Uldis Galdiņš
+	</td>
+<td>
+		76,49
+	</td>
+<td>
+		8,012
+	</td>
+<td>
+</td>
+<td>
+		6.
+	</td>
+<td>
+		Alvils Zilemanis
+	</td>
+<td>
+		71,52
+	</td>
+<td>
+		8,360
+	</td>
+<td>
+</td>
+<td>
+		6.
+	</td>
+<td>
+		Jānis Rozenvalds
+	</td>
+<td>
+		58,69
+	</td>
+<td>
+		9,407
+	</td>
+</tr>
+<tr>
+<td>
+		7.
+	</td>
+<td>
+		Bruno Freibergs
+	</td>
+<td>
+		76,42
+	</td>
+<td>
+		7,787
+	</td>
+<td>
+</td>
+<td>
+		7.
+	</td>
+<td>
+		Lauris Rozenvalds
+	</td>
+<td>
+		70,37
+	</td>
+<td>
+		8,376
+	</td>
+<td>
+</td>
+<td>
+		7.
+	</td>
+<td>
+		Sabīne Liepiņa
+	</td>
+<td>
+		57,37
+	</td>
+<td>
+		8,930
+	</td>
+</tr>
+<tr>
+<td>
+		8.
+	</td>
+<td>
+		Miķelis Lukša
+	</td>
+<td>
+		72,38
+	</td>
+<td>
+		8,135
+	</td>
+<td>
+		.
+	</td>
+<td>
+		8.
+	</td>
+<td>
+		Dzintars Trubiņš
+	</td>
+<td>
+		68,50
+	</td>
+<td>
+		8,397
+	</td>
+<td>
+		.
+	</td>
+<td>
+		8.
+	</td>
+<td>
+		Katrīne Liepiņa
+	</td>
+<td>
+		48,99
+	</td>
+<td>
+		9,531
+	</td>
+</tr>
+</tbody>
+</table></div>
+<p>
+	Fomāts sacīkstei bija sekojošs - 24 dalībnieki tika sadalīti 3 grupās pa 8 braucējiem. Pirmā sesija bija 2 minūšu brīvie treniņi, kam sekoja oficiālā 1 minūtes iesildīšanās sesija, kuras beigās jau jādodas uz startu. Gan kvalifikācijas brauciens, gan finālbrauciens bija astoņi pusotru minūti gari iebraucieni, katram izbraucot pa katru no astoņiem celiņiem, summējot nobrauktos apļus. Pēc kvalifikācijas rezultāta dalībnieki tika sadalīti C, B un A finālos. Šoreiz no C un B finālu uzvarētājs netika pārcelts, bet tādēl, ka Edgars Beļakovs finālbraucienā nepiedalījās, tad B finālu veica kvalifikācijas 8-16.vieta (bez Edgara) un šī brauciena uzvarētājs ieguva tiesības startēt finālā.
+</p>
+<ul>
+<li><a href="https://openkart.lv/lv/results/2017/eopenkart-slotcar-racing/1" target="_blank">1.posma rezultāti</a></li>
+<li><a href="https://openkart.lv/lv/results/2017/eopenkart-slotcar-racing" target="_blank">kopvērtējums</a></li>
+</ul>
+<p>
+	Nākamais posms paredzēts jūnija vidū.
+</p>
+<div class="clearfix"></div>
+<div id="articles-list">
+<div class="float-end">
+<a class="btn btn-sm btn-outline-secondary" href="#top">
+<i aria-hidden="true" class="fas fa-arrow-up"></i>
+Uz augšu
+</a>
+</div>
+<h3>eOpenkart SlotCar Racing</h3>
+<div class="clearfix"></div>
+<ul class="list-unstyled striped articles">
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">16.02.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1262-melkis-treso-gadu-pec-kartas-uzvar-gada-balvas-slotkaru-sacikste.html">Meļķis trešo gadu pēc kārtas uzvar Gada balvas slotkāru sacīkstē</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1262_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">07.12.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1190-tals-melkis-klust-par-eopenkart-slotkaru-cempionu.html">Tāls Meļķis kļūst par eOpenkart slotkāru čempionu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1190_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">06.12.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1189-7-dot-decembri-uzzinasim-eopenkart-slotkaru-cempiona-vardu.html">7.decembrī uzzināsim eOpenkart slotkāru čempiona vārdu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1189_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">31.08.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1171-edgars-belakovs-parsteidzosi-uzvar-eopenkart-3-dot-posma.html">Edgars Beļakovs pārsteidzoši uzvar eOpenkart 3.posmā</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1171_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">28.08.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1170-slotkaru-sacensibu-eopenkart-3-dot-posma-brauksim-preteja-virziena.html">Slotkāru sacensību "eOpenkart" 3.posmā brauksim pretējā virzienā</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1170_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">29.06.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1155-ari-otraja-eopenkart-posma-domine-vilkens-un-melkis.html">Arī otrajā eOpenkart posmā dominē Vilkens un Meļķis</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1155_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">26.06.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1153-28-dot-junija-eopenkart-slotkaru-kausa-2-dot-posms.html">28.jūnijā eOpenkart slotkāru kausa 2.posms</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1153_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">27.04.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1140-pirmaja-eopenkart-slotkaru-sacikste-domine-ivars-vilkens.html">Pirmajā eOpenkart slotkāru sacīkstē dominē Ivars Vilkens</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1140_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">20.04.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1138-eopenkart-1-dot-posms-26-dot-aprili.html">eOpenkart 1.posms 26.aprīlī</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1138_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-md-4">
+<div id="comments">
+<div class="alert alert-danger">
+<b>Komentēt var tikai reģistrēti lietotāji</b>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</main>
+  <footer class="footer">
+    <div class="footer__flag" aria-hidden="true"></div>
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="../assets/img/logo-red.png" alt="Openkart" width="1158" height="246" loading="lazy">
+        <p>Amatieru kartinga kustība. 20 sezonas uz trases.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_2-kontakti.html">Kontakti</a>
+        <a href="../lapas/s_4-par-openkart.html">Par Openkart</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+      </nav>
+      <div class="footer__social">
+        <a href="http://www.facebook.com/pages/Openkart/156203434346" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.4H7.6V14h2.7v8h3.2z"/></svg>
+        </a>
+        <a href="https://instagram.com/openkart.lv/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy wrap">© 2026, openkart.lv. Visas tiesības paturētas</p>
+  </footer>
+
+  <script>window.OK_ROOT = "../";</script>
+  <script src="../assets/js/pages.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
