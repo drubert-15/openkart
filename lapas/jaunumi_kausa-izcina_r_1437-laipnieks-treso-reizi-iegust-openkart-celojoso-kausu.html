@@ -1,0 +1,2073 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laipnieks trešo reizi iegūst Openkart Ceļojošo kausu — Openkart</title>
+  <meta name="description" content="Openkart — amatieru kartinga kustība Latvijā.">
+  <meta name="theme-color" content="#0b0c0f">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&amp;family=Titillium+Web:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Piekļuves brīdinājums (kā oriģinālajā lapā) -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
+    <div class="gate__card">
+      <div class="gate__flag" aria-hidden="true"></div>
+      <p class="eyebrow">Uzmanību!</p>
+      <h2 id="gate-title">Piekļuve mājas lapai paredzēta tikai Openkart kopienas dalībniekiem</h2>
+      <div class="gate__actions">
+        <button class="btn btn--red" id="gate-ok">Turpināt</button>
+        <a class="btn btn--ghost" href="https://google.com">Iziet</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Augšējā josla -->
+  <div class="topbar">
+    <div class="wrap topbar__in">
+      <span class="topbar__date" id="today">Otrdiena, 03. nov., 2026</span>
+      <div class="topbar__right">
+        <a href="https://openkart.lv/users/sign_in?locale=lv">Autorizēties</a>
+        <a href="https://openkart.lv/users/sign_up?locale=lv" class="topbar__reg">Reģistrēties</a>
+        <span class="lang"><a href="../index.html" class="is-on">LV</a><a href="../index.html">EN</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Galvene -->
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a href="../index.html" class="logo" aria-label="Openkart sākumlapa"><img src="../assets/img/logo-red.png" alt="Openkart 20 — amatieru kartinga kustība" width="1158" height="246"></a>
+      <button class="burger" id="burger" aria-label="Izvēlne" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <a href="../lapas/rezultati.html">Rezultāti</a>
+        <a href="../lapas/kalendars.html">Kalendārs</a>
+        <a href="../lapas/dalibnieki.html">Dalībnieki</a>
+        <a href="../lapas/stats.html">Statistika</a>
+        <div class="dd">
+          <button class="dd__btn" aria-expanded="false">Jaunumi</button>
+          <div class="dd__menu">
+            <a href="../lapas/jaunumi_cempionats_r.html">Čempionāts</a>
+            <a href="../lapas/jaunumi_attistibas-liga_r.html">Attīstības līga</a>
+            <a href="../lapas/jaunumi_xl-riga-junior-cup_r.html">XL Rīga Junior Cup</a>
+            <a href="../lapas/jaunumi_indoor-cup_r.html">Indoor Cup</a>
+            <a href="../lapas/jaunumi_joker-karting-challenge_r.html">Joker Karting Challenge</a>
+            <a href="../lapas/jaunumi_team-race_r.html">Team Race</a>
+            <a href="../lapas/jaunumi_sws-sprint-cup_r.html">SWS Sprint Cup</a>
+            <a href="../lapas/jaunumi_b-liga_r.html">B līga</a>
+            <a href="../lapas/jaunumi_sws-endurance-cup_r.html">SWS Endurance Cup</a>
+            <a href="../lapas/jaunumi_kausa-izcina_r.html">Kausa izcīņa</a>
+            <a href="../lapas/jaunumi_eopenkart-slotcar-racing_r.html">eOpenkart SlotCar Racing</a>
+            <a href="../lapas/jaunumi_uznemumu-kauss_r.html">Uzņēmumu kauss</a>
+            <a href="../lapas/jaunumi_musejie-pasaule_r.html">Mūsējie Pasaulē</a>
+          </div>
+        </div>
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+        <a href="https://www.flickr.com/photos/147056524@N03/albums" class="nav__media">Foto</a>
+        <a href="https://www.youtube.com/@Openkartkustiba/featured" class="nav__media">Video</a>
+        <a href="../index.html#kalendars" class="btn btn--red nav__cta">Pieteikties</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="page">
+  <section class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Jaunumi</p>
+      <h1>Laipnieks trešo reizi iegūst Openkart Ceļojošo kausu</h1>
+    </div>
+  </section>
+  <div class="wrap content">
+<div class="article">
+
+<div class="row">
+<div class="col-md-8">
+
+
+<p class="small">18.01.2023, Uldis Galdiņš</p>
+<a href="https://openkart.lv/uploads/articles/1667/Cup-02-pjedestals_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" id="image_1437" loading="lazy" src="https://openkart.lv/uploads/articles/1667/Cup-02-pjedestals_normal.jpeg"/>
+</a>
+<div class="row mt-2 mb-3">
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1666/Cup-01-kopbilde_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1666/Cup-01-kopbilde_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1664/Cup-kopbilde_original.png" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1664/Cup-kopbilde_thumb.png"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1665/Cup-balvas_original.png" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1665/Cup-balvas_thumb.png"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1668/Cup-04vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1668/Cup-04vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1669/Cup-05vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1669/Cup-05vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1670/Cup-06vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1670/Cup-06vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1671/Cup-07vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1671/Cup-07vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1672/Cup-08vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1672/Cup-08vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1673/Cup-09vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1673/Cup-09vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1674/Cup-10vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1674/Cup-10vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1675/Cup-11vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1675/Cup-11vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1676/Cup-12vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1676/Cup-12vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1677/Cup-13vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1677/Cup-13vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1678/Cup-14vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1678/Cup-14vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1679/Cup-15vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1679/Cup-15vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1680/Cup-16vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1680/Cup-16vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1681/Cup-17vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1681/Cup-17vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1682/Cup-18vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1682/Cup-18vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1683/Cup-19vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1683/Cup-19vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1684/Cup-20vieta_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1684/Cup-20vieta_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1685/Pie-rezultatiem_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1685/Pie-rezultatiem_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1686/pardomas_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1686/pardomas_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1687/Barbora_original.jpeg" rel="prettyPhoto[prod_1437]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1687/Barbora_thumb.jpeg"/>
+</a>
+</div>
+</div>
+<p>
+	Tieši pirms nedēļas, trešdien, 11. janvārī, "XL Rīga" kartinga namā notika 13. Openkart Ceļojošā kausa izcīņa. Sešu braucienu summā, ar 0,735 sekunžu pārsvaru pārspējot Edgaru Sproģi, trešo reizi savā īpašumā Openkart Ceļojošo kausu ieguva seškārtējais Openkart čempions Andrejs Laipnieks. Sproģim otro gadu pēc kārtas otrā vieta, bet pēdējā brīdī trešo vietu un pirmo pjedestālu šajās sacīkstēs izcīnīja Ruslans Dzenis. Labs sacīkstes sākums ar pārliecinošām pretenzijām uz pjedestālu padevās Dmitrijam Mokinam, taču kaut kas īsti nesanāca noslēdzošajos braucienos un, neskatoties uz dienas ātrāko apli, vienīgajam iebraucot 37 sekundēs, jau otro reizi bija jāsamierinās ar ceturto vietu un atkal tikai dažas simtdaļas no pjedestāla, līdzīgi kā pirms trim gadiem. Interesanti, ka tikai pirms divām nedēļām <em>Joker Karting Challenge</em> posmā Dmitrijam tāda paša formāta sacīkstē izdevās, lai arī par četrām sekundes simtdaļām, bet tomēr pārspēt Andreju un uzvarēt.
+</p>
+<p>
+	Openkart Ceļojošais kauss pirmo reizi notika 2009. gada decembrī, kad uzvaru izcīnīja tā gada neapstrīdamais čempions Dāvis Tobiass. Pati kausa izcīņa un šāds formāts, kad katrs braucējs veic braucienu ar katru no kartiem un kopā tiek skaitīta labāko laiku summa, ir ar vēl tālāku vēsturi nekā 2009. gads. Pirmo reizi šādu ideju realizēja Openkart priekštecis "F1 līdzjutēju klubs" 2002. gada nogalē, kad pēc sezonas kopvērtējuma desmit labākie mazajā Cēsu kartinga hallītē izcīnīja pirmo Kausu. Starp citu, pirmo no savām trim kluba kausa izcīņas uzvarām guva 2010. gada Openkart čempions Daniels Mančinskis, bet mums visiem zināmais Lauris Rozenvalds triumfēja četras reizes.
+</p>
+<p>
+	Sākot jau no nākamās sezonas, Openkart Kausa izcīņa norisinājās jau nākamā kalendārā gada janvāra pirmajā pusē. Šo tradīciju gan lauza pandēmija - 2020. gada Kausa izcīņa tika aizvadīta vien nākamā gada septembrī, bet 2021. gada sacīkste vispār tika atcelta, tāpēc īpašs prieks, ka pēc trīs gadu pārtraukuma tā atkal ir savā vietā tieši pa vidu starp iepriekšējo un nākamo sezonu. 
+</p>
+<p>
+	Arī 2022. gada kausa izcīņai tika aicināti sezonas 20 labākie braucēji pēc kopvērtējuma. Kāds gan netika, citam īsti pie sirds neiet telpu trases, beigās vēl slimība iejaucās, līdz ar to pie Wild Card tika Moskins un brāļi Lielgalvji. Žēl, ka slimība liedza Krišam Jaunzemim iespēju aizstāvēt 2021. gadā gūto uzvaru. 
+</p>
+<p>
+	Atgriežotie pie rezultātiem, lielisks sniegums 2022. gada debitantam Kristoferam Caunem, kurš finišēja piektais un diezgan tuvu bija Ruslanam un Dmitrijam cīņā par trešo vietu. Trīskārtējais vicečmpions Dāvis Zalmans sestais, taču īpaši gribas uzteikt abus smagsvarus Andri Lielgalvi un Nauri Agafonovu, kuri ierindojās attiecīgi 7. un 9. vietā. Ja vēl Andra sniegums nebija pārteigums, jo tomēr sava trase un aktīvi piedalās starpsezonas <em>Joker Karting Cahllenge</em> seriālā, tad Nauris bija īsta 'bomba', jo kartingā vispār nebija sēdies kopš čempionāta priekšpēdējā posma oktobra sākumā Jelgavā - 3 mēnešus un 2 dienas. 
+</p>
+<p>
+	Pirmajā desmitniekā vēl arī Sergejs Glaņenko 8. un Matīss Valujevs 10. vietā. Starp citu Matīss 2022. gadu noslēdza pirmajā vietā nacionālajā Sodi World Series eSprint Cup kopvērtējumā (tas ir ar elektrokartingiem) un ir labas izredzes iegūt ceļazīmi uz Pasaules finālu aprīļa beigās Gēteburgā Zviedrijā.
+</p>
+<h3>
+2022. gada Openkart Ceļojošā Kausa izcīņas rezultāti
+</h3>
+<ul>
+<li>
+	Pilni rezultāti (pdf) - 
+	<a href="https://openkart.lv/system/redactor_assets/documents/388/CUP-2022-REZULTATI.pdf">CUP-2022-REZULTATI.pdf</a>
+</li>
+<li>
+	Rezultāti Openkart 
+	<a href="https://openkart.lv/lv/results/2022/kausa-izcina/1">WEB LAPĀ<br/>
+</a>
+</li>
+</ul>
+<div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+		Vieta
+	</td>
+<td>
+		Dalībnieks
+	</td>
+<td>
+		Laiks
+	</td>
+<td>
+		no labākā
+	</td>
+<td>
+		no iepr.
+	</td>
+<td>
+		% no labākā
+	</td>
+<td>
+		# 3
+	</td>
+<td>
+<br/>
+</td>
+<td>
+		# 4
+	</td>
+<td>
+</td>
+<td>
+		# 5
+	</td>
+<td>
+</td>
+<td>
+		# 6
+	</td>
+<td>
+</td>
+<td>
+		# 7
+	</td>
+<td>
+</td>
+<td>
+		# 9
+	</td>
+<td>
+</td>
+<td>
+		Ātr.aplis
+	</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+		1.
+	</td>
+<td>
+		Andrejs Laipnieks
+	</td>
+<td>
+		3:50,788
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		100,00%
+	</td>
+<td>
+		38,705
+	</td>
+<td>
+		(1)
+	</td>
+<td>
+		38,017
+	</td>
+<td>
+		(2)
+	</td>
+<td>
+		38,802
+	</td>
+<td>
+		(1)
+	</td>
+<td>
+		38,505
+	</td>
+<td>
+		(2)
+	</td>
+<td>
+		38,681
+	</td>
+<td>
+		(2)
+	</td>
+<td>
+		38,078
+	</td>
+<td>
+		(1)
+	</td>
+<td>
+		38,017
+	</td>
+<td>
+		(2)
+	</td>
+</tr>
+<tr>
+<td>
+		2.
+	</td>
+<td>
+		Edgars Sproģis
+	</td>
+<td>
+		3:51,523
+	</td>
+<td>
+		+0,735
+	</td>
+<td>
+		+0,735
+	</td>
+<td>
+		100,32%
+	</td>
+<td>
+		38,952
+	</td>
+<td>
+		(3)
+	</td>
+<td>
+		38,230
+	</td>
+<td>
+		(3)
+	</td>
+<td>
+		39,045
+	</td>
+<td>
+		(5)
+	</td>
+<td>
+		38,260
+	</td>
+<td>
+		(1)
+	</td>
+<td>
+		38,798
+	</td>
+<td>
+		(4)
+	</td>
+<td>
+		38,238
+	</td>
+<td>
+		(3)
+	</td>
+<td>
+		38,230
+	</td>
+<td>
+		(3)
+	</td>
+</tr>
+<tr>
+<td>
+		3.
+	</td>
+<td>
+		Ruslans Dzenis
+	</td>
+<td>
+		3:52,440
+	</td>
+<td>
+		+1,652
+	</td>
+<td>
+		+0,917
+	</td>
+<td>
+		100,72%
+	</td>
+<td>
+		39,015
+	</td>
+<td>
+		(5)
+	</td>
+<td>
+		38,317
+	</td>
+<td>
+		(5)
+	</td>
+<td>
+		38,867
+	</td>
+<td>
+		(2)
+	</td>
+<td>
+		39,041
+	</td>
+<td>
+		(8)
+	</td>
+<td>
+		38,861
+	</td>
+<td>
+		(8)
+	</td>
+<td>
+		38,339
+	</td>
+<td>
+		(4)
+	</td>
+<td>
+		38,317
+	</td>
+<td>
+		(5)
+	</td>
+</tr>
+<tr>
+<td>
+		4.
+	</td>
+<td>
+		Dmitrijs Moskins
+	</td>
+<td>
+		3:52,485
+	</td>
+<td>
+		+1,697
+	</td>
+<td>
+		+0,045
+	</td>
+<td>
+		100,74%
+	</td>
+<td>
+		39,474
+	</td>
+<td>
+		(12)
+	</td>
+<td>
+		37,945
+	</td>
+<td>
+		(1)
+	</td>
+<td>
+		39,041
+	</td>
+<td>
+		(4)
+	</td>
+<td>
+		38,737
+	</td>
+<td>
+		(5)
+	</td>
+<td>
+		39,105
+	</td>
+<td>
+		(11)
+	</td>
+<td>
+		38,183
+	</td>
+<td>
+		(2)
+	</td>
+<td>
+		37,945
+	</td>
+<td>
+		(1)
+	</td>
+</tr>
+<tr>
+<td>
+		5.
+	</td>
+<td>
+		Kristofers Caune
+	</td>
+<td>
+		3:52,672
+	</td>
+<td>
+		+1,884
+	</td>
+<td>
+		+0,187
+	</td>
+<td>
+		100,82%
+	</td>
+<td>
+		39,122
+	</td>
+<td>
+		(6)
+	</td>
+<td>
+		38,294
+	</td>
+<td>
+		(4)
+	</td>
+<td>
+		39,527
+	</td>
+<td>
+		(11)
+	</td>
+<td>
+		38,631
+	</td>
+<td>
+		(3)
+	</td>
+<td>
+		38,681
+	</td>
+<td>
+		(2)
+	</td>
+<td>
+		38,417
+	</td>
+<td>
+		(5)
+	</td>
+<td>
+		38,294
+	</td>
+<td>
+		(4)
+	</td>
+</tr>
+<tr>
+<td>
+		6.
+	</td>
+<td>
+		Dāvis Zalmans
+	</td>
+<td>
+		3:53,391
+	</td>
+<td>
+		+2,603
+	</td>
+<td>
+		+0,719
+	</td>
+<td>
+		101,13%
+	</td>
+<td>
+		39,145
+	</td>
+<td>
+		(7)
+	</td>
+<td>
+		38,805
+	</td>
+<td>
+		(11)
+	</td>
+<td>
+		39,221
+	</td>
+<td>
+		(7)
+	</td>
+<td>
+		39,130
+	</td>
+<td>
+		(10)
+	</td>
+<td>
+		38,543
+	</td>
+<td>
+		(1)
+	</td>
+<td>
+		38,547
+	</td>
+<td>
+		(6)
+	</td>
+<td>
+		38,543
+	</td>
+<td>
+		(8)
+	</td>
+</tr>
+<tr>
+<td>
+		7.
+	</td>
+<td>
+		Andris Lielgalvis
+	</td>
+<td>
+		3:53,469
+	</td>
+<td>
+		+2,681
+	</td>
+<td>
+		+0,078
+	</td>
+<td>
+		101,16%
+	</td>
+<td>
+		39,294
+	</td>
+<td>
+		(10)
+	</td>
+<td>
+		38,607
+	</td>
+<td>
+		(9)
+	</td>
+<td>
+		38,972
+	</td>
+<td>
+		(3)
+	</td>
+<td>
+		38,701
+	</td>
+<td>
+		(4)
+	</td>
+<td>
+		38,812
+	</td>
+<td>
+		(5)
+	</td>
+<td>
+		39,083
+	</td>
+<td>
+		(13)
+	</td>
+<td>
+		38,607
+	</td>
+<td>
+		(10)
+	</td>
+</tr>
+<tr>
+<td>
+		8.
+	</td>
+<td>
+		Sergejs Glanenko
+	</td>
+<td>
+		3:54,117
+	</td>
+<td>
+		+3,329
+	</td>
+<td>
+		+0,648
+	</td>
+<td>
+		101,44%
+	</td>
+<td>
+		38,951
+	</td>
+<td>
+		(2)
+	</td>
+<td>
+		39,192
+	</td>
+<td>
+		(16)
+	</td>
+<td>
+		39,147
+	</td>
+<td>
+		(6)
+	</td>
+<td>
+		38,739
+	</td>
+<td>
+		(6)
+	</td>
+<td>
+		39,306
+	</td>
+<td>
+		(14)
+	</td>
+<td>
+		38,782
+	</td>
+<td>
+		(9)
+	</td>
+<td>
+		38,739
+	</td>
+<td>
+		(12)
+	</td>
+</tr>
+<tr>
+<td>
+		9.
+	</td>
+<td>
+		Nauris Agafonovs
+	</td>
+<td>
+		3:54,277
+	</td>
+<td>
+		+3,489
+	</td>
+<td>
+		+0,160
+	</td>
+<td>
+		101,51%
+	</td>
+<td>
+		39,647
+	</td>
+<td>
+		(14)
+	</td>
+<td>
+		38,580
+	</td>
+<td>
+		(8)
+	</td>
+<td>
+		39,292
+	</td>
+<td>
+		(8)
+	</td>
+<td>
+		39,041
+	</td>
+<td>
+		(8)
+	</td>
+<td>
+		38,846
+	</td>
+<td>
+		(7)
+	</td>
+<td>
+		38,871
+	</td>
+<td>
+		(11)
+	</td>
+<td>
+		38,580
+	</td>
+<td>
+		(9)
+	</td>
+</tr>
+<tr>
+<td>
+		10.
+	</td>
+<td>
+		Matīss Valujevs
+	</td>
+<td>
+		3:54,661
+	</td>
+<td>
+		+3,873
+	</td>
+<td>
+		+0,384
+	</td>
+<td>
+		101,68%
+	</td>
+<td>
+		39,243
+	</td>
+<td>
+		(9)
+	</td>
+<td>
+		38,459
+	</td>
+<td>
+		(6)
+	</td>
+<td>
+		39,453
+	</td>
+<td>
+		(10)
+	</td>
+<td>
+		39,143
+	</td>
+<td>
+		(11)
+	</td>
+<td>
+		39,279
+	</td>
+<td>
+		(12)
+	</td>
+<td>
+		39,084
+	</td>
+<td>
+		(14)
+	</td>
+<td>
+		38,459
+	</td>
+<td>
+		(6)
+	</td>
+</tr>
+<tr>
+<td>
+		11.
+	</td>
+<td>
+		Edgars Lielgalvis
+	</td>
+<td>
+		3:55,063
+	</td>
+<td>
+		+4,275
+	</td>
+<td>
+		+0,402
+	</td>
+<td>
+		101,85%
+	</td>
+<td>
+		38,954
+	</td>
+<td>
+		(4)
+	</td>
+<td>
+		38,847
+	</td>
+<td>
+		(13)
+	</td>
+<td>
+		39,535
+	</td>
+<td>
+		(12)
+	</td>
+<td>
+		40,053
+	</td>
+<td>
+		(18)
+	</td>
+<td>
+		38,816
+	</td>
+<td>
+		(6)
+	</td>
+<td>
+		38,858
+	</td>
+<td>
+		(10)
+	</td>
+<td>
+		38,816
+	</td>
+<td>
+		(14)
+	</td>
+</tr>
+<tr>
+<td>
+		12.
+	</td>
+<td>
+		Viljams Plešs
+	</td>
+<td>
+		3:55,255
+	</td>
+<td>
+		+4,467
+	</td>
+<td>
+		+0,192
+	</td>
+<td>
+		101,94%
+	</td>
+<td>
+		39,512
+	</td>
+<td>
+		(13)
+	</td>
+<td>
+		38,823
+	</td>
+<td>
+		(12)
+	</td>
+<td>
+		39,555
+	</td>
+<td>
+		(13)
+	</td>
+<td>
+		39,624
+	</td>
+<td>
+		(17)
+	</td>
+<td>
+		38,999
+	</td>
+<td>
+		(9)
+	</td>
+<td>
+		38,742
+	</td>
+<td>
+		(7)
+	</td>
+<td>
+		38,742
+	</td>
+<td>
+		(13)
+	</td>
+</tr>
+<tr>
+<td>
+		13.
+	</td>
+<td>
+		Kaspars Ritums
+	</td>
+<td>
+		3:55,466
+	</td>
+<td>
+		+4,678
+	</td>
+<td>
+		+0,211
+	</td>
+<td>
+		102,03%
+	</td>
+<td>
+		39,805
+	</td>
+<td>
+		(16)
+	</td>
+<td>
+		38,476
+	</td>
+<td>
+		(7)
+	</td>
+<td>
+		39,661
+	</td>
+<td>
+		(15)
+	</td>
+<td>
+		39,225
+	</td>
+<td>
+		(13)
+	</td>
+<td>
+		39,018
+	</td>
+<td>
+		(10)
+	</td>
+<td>
+		39,281
+	</td>
+<td>
+		(18)
+	</td>
+<td>
+		38,476
+	</td>
+<td>
+		(7)
+	</td>
+</tr>
+<tr>
+<td>
+		14.
+	</td>
+<td>
+		Aurelijus Skromovas
+	</td>
+<td>
+		3:55,712
+	</td>
+<td>
+		+4,924
+	</td>
+<td>
+		+0,246
+	</td>
+<td>
+		102,13%
+	</td>
+<td>
+		39,779
+	</td>
+<td>
+		(15)
+	</td>
+<td>
+		38,670
+	</td>
+<td>
+		(10)
+	</td>
+<td>
+		39,871
+	</td>
+<td>
+		(17)
+	</td>
+<td>
+		38,978
+	</td>
+<td>
+		(7)
+	</td>
+<td>
+		39,635
+	</td>
+<td>
+		(16)
+	</td>
+<td>
+		38,779
+	</td>
+<td>
+		(8)
+	</td>
+<td>
+		38,670
+	</td>
+<td>
+		(11)
+	</td>
+</tr>
+<tr>
+<td>
+		15.
+	</td>
+<td>
+		Didzis Grāvītis
+	</td>
+<td>
+		3:55,733
+	</td>
+<td>
+		+4,945
+	</td>
+<td>
+		+0,021
+	</td>
+<td>
+		102,14%
+	</td>
+<td>
+		39,148
+	</td>
+<td>
+		(8)
+	</td>
+<td>
+		39,423
+	</td>
+<td>
+		(18)
+	</td>
+<td>
+		39,427
+	</td>
+<td>
+		(9)
+	</td>
+<td>
+		39,255
+	</td>
+<td>
+		(14)
+	</td>
+<td>
+		39,289
+	</td>
+<td>
+		(13)
+	</td>
+<td>
+		39,191
+	</td>
+<td>
+		(17)
+	</td>
+<td>
+		39,148
+	</td>
+<td>
+		(17)
+	</td>
+</tr>
+<tr>
+<td>
+		16.
+	</td>
+<td>
+		Rolands Dripe
+	</td>
+<td>
+		3:56,617
+	</td>
+<td>
+		+5,829
+	</td>
+<td>
+		+0,884
+	</td>
+<td>
+		102,53%
+	</td>
+<td>
+		39,329
+	</td>
+<td>
+		(11)
+	</td>
+<td>
+		39,115
+	</td>
+<td>
+		(15)
+	</td>
+<td>
+		39,745
+	</td>
+<td>
+		(16)
+	</td>
+<td>
+		39,173
+	</td>
+<td>
+		(12)
+	</td>
+<td>
+		40,372
+	</td>
+<td>
+		(20)
+	</td>
+<td>
+		38,883
+	</td>
+<td>
+		(12)
+	</td>
+<td>
+		38,883
+	</td>
+<td>
+		(15)
+	</td>
+</tr>
+<tr>
+<td>
+		17.
+	</td>
+<td>
+		Ričards Alekss Švaglis
+	</td>
+<td>
+		3:56,927
+	</td>
+<td>
+		+6,139
+	</td>
+<td>
+		+0,310
+	</td>
+<td>
+		102,66%
+	</td>
+<td>
+		40,359
+	</td>
+<td>
+		(19)
+	</td>
+<td>
+		38,966
+	</td>
+<td>
+		(14)
+	</td>
+<td>
+		39,613
+	</td>
+<td>
+		(14)
+	</td>
+<td>
+		39,307
+	</td>
+<td>
+		(16)
+	</td>
+<td>
+		39,596
+	</td>
+<td>
+		(15)
+	</td>
+<td>
+		39,086
+	</td>
+<td>
+		(15)
+	</td>
+<td>
+		38,966
+	</td>
+<td>
+		(16)
+	</td>
+</tr>
+<tr>
+<td>
+		18.
+	</td>
+<td>
+		Jānis Kornis
+	</td>
+<td>
+		3:59,892
+	</td>
+<td>
+		+9,104
+	</td>
+<td>
+		+2,965
+	</td>
+<td>
+		103,94%
+	</td>
+<td>
+		40,020
+	</td>
+<td>
+		(18)
+	</td>
+<td>
+		40,013
+	</td>
+<td>
+		(19)
+	</td>
+<td>
+		40,738
+	</td>
+<td>
+		(19)
+	</td>
+<td>
+		39,297
+	</td>
+<td>
+		(15)
+	</td>
+<td>
+		40,286
+	</td>
+<td>
+		(19)
+	</td>
+<td>
+		39,538
+	</td>
+<td>
+		(20)
+	</td>
+<td>
+		39,297
+	</td>
+<td>
+		(19)
+	</td>
+</tr>
+<tr>
+<td>
+		19.
+	</td>
+<td>
+		Kristaps Ķilkuts
+	</td>
+<td>
+		4:00,174
+	</td>
+<td>
+		+9,386
+	</td>
+<td>
+		+0,282
+	</td>
+<td>
+		104,07%
+	</td>
+<td>
+		39,907
+	</td>
+<td>
+		(17)
+	</td>
+<td>
+		40,101
+	</td>
+<td>
+		(20)
+	</td>
+<td>
+		40,188
+	</td>
+<td>
+		(18)
+	</td>
+<td>
+		40,664
+	</td>
+<td>
+		(20)
+	</td>
+<td>
+		39,909
+	</td>
+<td>
+		(17)
+	</td>
+<td>
+		39,405
+	</td>
+<td>
+		(19)
+	</td>
+<td>
+		39,405
+	</td>
+<td>
+		(20)
+	</td>
+</tr>
+<tr>
+<td>
+		20.
+	</td>
+<td>
+		Tālis Rožkalns
+	</td>
+<td>
+		4:00,452
+	</td>
+<td>
+		+9,664
+	</td>
+<td>
+		+0,278
+	</td>
+<td>
+		104,19%
+	</td>
+<td>
+		40,663
+	</td>
+<td>
+		(20)
+	</td>
+<td>
+		39,310
+	</td>
+<td>
+		(17)
+	</td>
+<td>
+		41,187
+	</td>
+<td>
+		(20)
+	</td>
+<td>
+		40,139
+	</td>
+<td>
+		(19)
+	</td>
+<td>
+		39,977
+	</td>
+<td>
+		(18)
+	</td>
+<td>
+		39,176
+	</td>
+<td>
+		(16)
+	</td>
+<td>
+		39,176
+	</td>
+<td>
+		(18)
+	</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Ātrākais apļa laiks - Moskins 37,945 (#4), otrais laiks Laipnieks 38,017 (#4), trešais laiks Sproģis 38,230 (#4)</li>
+<li>Uzvaras ar kartiem - Laipnieks 3 (#3, #5, #9), Moskins 1 (#4), Sproģis 1 (#6), Zalmans 1 (#9)</li>
+<li>Top3 ar kartiem - Laipnieks 6, Sproģis 4, Moskins un Caune 2, Dzenis, Zalmans, A.Lielgalvis un Glaņenko pa 1.</li>
+</ul>
+<h3>
+	Vēsturiskā statistika 
+</h3>
+<p>
+	Tātad Openkat Ceļojošā kausa izcīņa notika 13. reizi. Pa trim uzvarām ir Jaunzemim un Laipniekam, bet septiņiem braucējiem ir izdevies uzvarēt pa reizei. Visvairāk reižu piedalījies ir Jaunzemis - 8, bet pieci braucēji pa 7 reizēm - Kristaps Grīnieks, Ivars Strencis, Renārs Paiders un tagad arī Laipnieks un Sproģis. Astoņiem braucējiem šogad bija debija kausa izcīņā, bet kopā piedalījušies ir 102 dalībnieki. Uz pjedestāla Krišs un Andrejs ir kāpuši pa 7 reizēm, kas ir pārliecinoši labākais rādītājs, 4 pjedestāli Kirilovam un Rozenvaldam. No 11. janvāra sacīkstes dalībniekiem 2 pjedestāli ir Sproģim, 1 Kristapam Ķilkutam, bet Ruslans kļuva par 17. dalībnieku, kas kāpj uz kausa izcīņas pjedestāla. Labā ziņa Ruslanam - visi, kas ir kāpuši uz Ceļojošā Kausa Izcīņas pjedestāla, jau pirms tam vai pēc tam, bet agrāk vai vēlāk ir spējuši izcīnīt uzvaru Openkart čempionāta posmos. Ruslans jau vairākas reizes ir bijis tuvu tam, tas ir tikai laika jautājums. Moskins kļuva par 8. braucēju, kas uzrāda visas sacīkstes ātrāko apļa laiku, un līdzīgi kā Ruslanam, arī šajā statistikā braucēji agri vai vēlu ir kļuvuši par čempionāta posmu uzvarētājiem. Līderi, protams, Krišs un Andrejs ar 3 ātrākajiem apļiem.</p><p>Tagad par braucieniem. Trīspadsmit reizēs ir aizvadīti nu jau 105 braucieni, visvairāk ir nobraucis Krišs - 74, otro vietu dala Grīnieks un Paiders ar 66, bet ceturto Laipnieks un Sproģis ar 62. Septīto vietu dala Kaspars Ritums ar piecās kausa izcīņās veiktiem 46 braucieniem. Uzvaras ir 23 dalībniekiem - 22 Krišam, 20 Andrejam, nevienam citam nav pat 10. No šīs sacīktes dalībniekiem Moskinam 3, Sproģim 2, bet Zalmans izcīnīja pirmo uzvaru, viņam 1. Nu un top trīs laiki braucienos - to iespējusi mazāk nekā puse dalībnieku, proti, 44. Krišs 50 reizes, Andrejs 42, trešais Kirilovs ar 23. No šīs sacīkstes dalībniekiem Sproģim ir 8 top trīs laiki, Zalmanam 7, Moskinam 5, Glaņenko 4, Ķilkutam 3, Dzenim 2, Ritumam, Grāvītim, Valujevam pa 1 un tagad pievienojās arī Caune ar 2 un Andris Lielgalvis ar 1. Tāda lūk statistika. Ja kāds vēlas papētīt dziļāk, te neliels Excel fails - <a href="https://openkart.lv/system/redactor_assets/documents/389/CUP-STATISTIKA.xlsx">CUP-STATISTIKA.xlsx</a></p>
+<div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+Gads
+	</td>
+<td>
+Trase
+	</td>
+<td>
+Kausa ieguvējs
+		<br/>
+</td>
+<td>
+Otrā vieta
+	</td>
+<td>
+Trešā vieta
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2009/kausa-izcina/1">2009</a>
+</td>
+<td>
+		Viimsi Sisekardirada (Tallina), 05.12.2009
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=126">Dāvis Tobiass</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=111">Raivis Kirilovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=25">Mikus Narvils</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2010/kausa-izcina/1">2010</a>
+</td>
+<td>
+		Triobet Kardikeskus (Tallina), 09.01.2011
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=43"> Lauris Rozenvalds </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=111">Raivis Kirilovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=13"> Daniels Mančinskis </a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2011/kausa-izcina/1">2011</a>
+</td>
+<td>
+		OpenkartCity (Preses nams, Rīga), 13.01.2012
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=148">Andris Orniņš </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=13"> Daniels Mančinskis </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=43"> Lauris Rozenvalds </a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2012/kausa-izcina/1">2012</a>
+</td>
+<td>
+		Triobet Kardikeskus (Tallina), 13.01.2013
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=111">Raivis Kirilovs </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=43"> Lauris Rozenvalds </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=21">Uldis Galdiņš </a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2013/kausa-izcina/1">2013</a>
+</td>
+<td>
+		Triobet Kardikeskus (Tallina), 10.01.2014
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=111">Raivis Kirilovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=43"> Lauris Rozenvalds </a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2014/kausa-izcina/1">2014</a>
+</td>
+<td>
+		Triobet Kardikeskus (Tallina), 11.01.2015
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=266">Mareks Štolcermanis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=521">Kristaps Grīnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2015/kausa-izcina/1">2015</a>
+</td>
+<td>
+		Triobet Kardikeskus (Tallina), 09.01.2016
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1092">Dāniels Lācis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2016/kausa-izcina/1">2016</a>
+</td>
+<td>
+		Triobet Kardikeskus (Tallina), 07.01.2017
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=1092" target="_blank">Dāniels Lācis</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592" target="_blank">Krišs Jaunzemis</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596" target="_blank">Andrejs Laipnieks</a><br/>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2017/kausa-izcina/1">2017</a>
+</td>
+<td>
+		Unibet Kardikeskus (Tallina), 15.01.2018
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=596" target="_blank">Andrejs Laipnieks </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592" target="_blank">Krišs Jaunzemis </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=514" target="_blank">Harijs Cīrulis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2018/kausa-izcina/1">2018</a>
+</td>
+<td>
+		Unibet Kardikeskus (Tallina), 13.01.2019
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=596" target="_blank">Andrejs Laipnieks </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592" target="_blank">Krišs Jaunzemis </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2019/kausa-izcina/1">2019</a>
+</td>
+<td>
+		XL Rīga kartinga nams (Rīga), 16.01.2020
+		<br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=514" target="_blank">Harijs Cīrulis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596" target="_blank">Andrejs Laipnieks </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1131">Kristaps Ķilkuts</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2020/kausa-izcina/1">2020</a>
+</td>
+<td>
+		Sporta komplekss "Rullītis" (Jelgava), 06.09.2021
+		<br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592" target="_blank">Krišs Jaunzemis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=998" target="_blank">Edgars Sproģis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596" target="_blank">Andrejs Laipnieks</a>
+</td>
+</tr>
+<tr>
+<td>
+		2021
+	</td>
+<td>
+		nenotika
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2022/kausa-izcina/1">2022</a>
+</td>
+<td>
+<p>
+			XL Rīga kartinga nams (Rīga), 11.01.2023
+		</p>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596" target="_blank">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=998" target="_blank">Edgars Sproģis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2219">Ruslans Dzenis</a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Reitings un prognožu spēle</h3><p>Šajā sacīkstē pēc trīs gadu pārtraukuma vēl viena tradīcija tika atjaunota, proti, prognožu spēle un dalībnieku reitings, kas piešķir papildu <em>fanu</em> kaua izcīņai. Kas tas ir? Tātad, pirms sacīkstes dalībnieki plus parasti vēl kāds, piemēram, organizātori un Mārcis, un vēl kāds dalībnieks, prognozē kādas vietas kurš ieņems. Reitingu aprēķina, ņemot vidējo katram dalībniekam prognozēto vietu (no šī aprēķina gan tiek ņemta ārā pašam prognozētais rezultāts) un tad pēc šī vidējā rādītāja tiek dalībnieki sarindoti reitingā. </p><p><img loading="lazy" src="https://openkart.lv/system/redactor_assets/pictures/390/WhatsApp_Image_2023-01-11_at_23.38.14.jpeg"/></p><p>Otra lieta ir prognožu spēle. Aprēķins elementārs - par cik vietām katrs ar katru prognozi kļūdījies, tik soda punkti. Un uzvarēja ... Andrejs, pie tam jau otro reizi, iepriekš 2017. gadā. Openkart kaua izcīņā notikuša 6 prognožu spēles - pirmā 2015. gadā, kur uzvarēja Lauris, gadu vēlāk Artūrs Freimanis, tad 2017. un 2022. gadā Andrejs, 2018. gadā Oļegs, bet 2019. gadā Uldis. Šāda tradīcija ir pārņemta no "F1 kluba" Ceļojošā kausa izcīņas, kur prognožu spēli spēlējām no 2006. līdz 2009. gadam. Te šīs sacīkstes rezultāti.</p><p><img loading="lazy" src="https://openkart.lv/system/redactor_assets/pictures/391/WhatsApp_Image_2023-01-12_at_00.23.00.jpeg"/></p>
+<div class="clearfix"></div>
+<div id="articles-list">
+<div class="float-end">
+<a class="btn btn-sm btn-outline-secondary" href="#top">
+<i aria-hidden="true" class="fas fa-arrow-up"></i>
+Uz augšu
+</a>
+</div>
+<h3>Kausa izcīņa</h3>
+<div class="clearfix"></div>
+<ul class="list-unstyled striped articles">
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">30.05.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1688-zalmans-partrauc-laipnieka-dominanci-celojosa-kausa-izcina.html">Zalmans pārtrauc Laipnieka dominanci Ceļojošā kausa izcīņā</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1688_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">30.01.2025</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1577-laipnieks-piekto-reizi-triumfe-openkart-celojosa-kausa-izcina.html">Laipnieks piekto reizi triumfē Openkart Ceļojošā kausa izcīņā</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1577_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">06.03.2024</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1511-gdanska-laipnieks-ceturto-reizi-izcina-openkart-celojoso-kausu-video.html">Gdaņskā Laipnieks ceturto reizi izcīna Openkart Ceļojošo kausu (VIDEO)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1511_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">18.01.2023</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1437-laipnieks-treso-reizi-iegust-openkart-celojoso-kausu.html">Laipnieks trešo reizi iegūst Openkart Ceļojošo kausu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1437_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">06.09.2021</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1375-kriss-jaunzemis-triumfe-atliktaja-celojosa-kausa-izcina-papildinats.html">Krišs Jaunzemis triumfē atliktajā Ceļojošā kausa izcīņā (papildināts)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1375_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">16.01.2020</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1321-dramatiska-cina-harijs-cirulis-pirmo-reizi-izcina-openkart-celojoso-kausu-foto-video-rezultati.html">Dramatiskā cīņā Harijs Cīrulis pirmo reizi izcīna Openkart Ceļojošo kausu (FOTO, VIDEO, REZULTĀTI)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1321_comment_badge">2</span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">13.01.2020</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1320-ceturtdien-16-dot-janvari-xi-openkart-celojosa-kausa-izcina.html">Ceturtdien, 16.janvārī, XI Openkart Ceļojošā kausa izcīņa</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1320_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">16.12.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1317-kausa-izcinas-dalibnieku-sastavs-un-statistika.html">Kausa izcīņas dalībnieku sastāvs un statistika</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1317_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">13.01.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1260-laipnieks-domine-un-celojoso-kausu-patur-uz-vel-vienu-gadu.html">Laipnieks dominē un Ceļojošo kausu patur uz vēl vienu gadu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1260_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">08.01.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1259-apstiprinatais-celojosa-kausa-izcinas-sastavs-un-statistika.html">Apstiprinātais Ceļojošā kausa izcīņas sastāvs un statistika</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1259_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">03.01.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1258-13-janvari-desmito-reizi-notiks-openkart-celojosa-kausa-izcina.html">13. janvārī desmito reizi notiks Openkart Ceļojošā kausa izcīņa </a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1258_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">14.01.2018</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1194-andrejs-laipnieks-iegust-openkart-celojoso-kausu.html">Andrejs Laipnieks iegūst Openkart ceļojošo kausu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1194_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">08.01.2018</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1193-kausa-izcinas-dalibnieku-sastava-izmainas-zugicka-vieta-laipnieks.html">Kausa izcīņas dalībnieku sastāvā izmaiņas - Zuģicka vietā Laipnieks</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1193_comment_badge">1</span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">14.11.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1188-zinami-openkart-celojosa-kausa-dalibnieki-un-tuvakie-rezervisti.html">Zināmi Openkart ceļojošā kausa dalībnieki un tuvākie rezervisti</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1188_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">07.01.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1123-lacis-parspej-jaunzemi-un-izcina-openkart-celojoso-kausu-foto-video.html">Lācis pārspēj Jaunzemi un izcīna Openkart ceļojošo kausu (FOTO, VIDEO)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1123_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<nav><ul class="pagination"><li class="page-item disabled"><span class="page-link">←</span></li> <li class="page-item active"><span class="page-link">1</span></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/kausa-izcina/r/1437-laipnieks-treso-reizi-iegust-openkart-celojoso-kausu?page=2" rel="next">2</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/kausa-izcina/r/1437-laipnieks-treso-reizi-iegust-openkart-celojoso-kausu?page=2" rel="next">→</a></li></ul></nav>
+</div>
+</div>
+<div class="col-md-4">
+<div id="comments">
+<div class="alert alert-danger">
+<b>Komentēt var tikai reģistrēti lietotāji</b>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</main>
+  <footer class="footer">
+    <div class="footer__flag" aria-hidden="true"></div>
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="../assets/img/logo-red.png" alt="Openkart" width="1158" height="246" loading="lazy">
+        <p>Amatieru kartinga kustība. 20 sezonas uz trases.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_2-kontakti.html">Kontakti</a>
+        <a href="../lapas/s_4-par-openkart.html">Par Openkart</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+      </nav>
+      <div class="footer__social">
+        <a href="http://www.facebook.com/pages/Openkart/156203434346" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.4H7.6V14h2.7v8h3.2z"/></svg>
+        </a>
+        <a href="https://instagram.com/openkart.lv/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy wrap">© 2026, openkart.lv. Visas tiesības paturētas</p>
+  </footer>
+
+  <script>window.OK_ROOT = "../";</script>
+  <script src="../assets/js/pages.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

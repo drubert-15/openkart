@@ -1,0 +1,999 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meļķis trešo gadu pēc kārtas uzvar Gada balvas slotkāru sacīkstē — Openkart</title>
+  <meta name="description" content="Openkart — amatieru kartinga kustība Latvijā.">
+  <meta name="theme-color" content="#0b0c0f">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&amp;family=Titillium+Web:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Piekļuves brīdinājums (kā oriģinālajā lapā) -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
+    <div class="gate__card">
+      <div class="gate__flag" aria-hidden="true"></div>
+      <p class="eyebrow">Uzmanību!</p>
+      <h2 id="gate-title">Piekļuve mājas lapai paredzēta tikai Openkart kopienas dalībniekiem</h2>
+      <div class="gate__actions">
+        <button class="btn btn--red" id="gate-ok">Turpināt</button>
+        <a class="btn btn--ghost" href="https://google.com">Iziet</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Augšējā josla -->
+  <div class="topbar">
+    <div class="wrap topbar__in">
+      <span class="topbar__date" id="today">Otrdiena, 03. nov., 2026</span>
+      <div class="topbar__right">
+        <a href="https://openkart.lv/users/sign_in?locale=lv">Autorizēties</a>
+        <a href="https://openkart.lv/users/sign_up?locale=lv" class="topbar__reg">Reģistrēties</a>
+        <span class="lang"><a href="../index.html" class="is-on">LV</a><a href="../index.html">EN</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Galvene -->
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a href="../index.html" class="logo" aria-label="Openkart sākumlapa"><img src="../assets/img/logo-red.png" alt="Openkart 20 — amatieru kartinga kustība" width="1158" height="246"></a>
+      <button class="burger" id="burger" aria-label="Izvēlne" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <a href="../lapas/rezultati.html">Rezultāti</a>
+        <a href="../lapas/kalendars.html">Kalendārs</a>
+        <a href="../lapas/dalibnieki.html">Dalībnieki</a>
+        <a href="../lapas/stats.html">Statistika</a>
+        <div class="dd">
+          <button class="dd__btn" aria-expanded="false">Jaunumi</button>
+          <div class="dd__menu">
+            <a href="../lapas/jaunumi_cempionats_r.html">Čempionāts</a>
+            <a href="../lapas/jaunumi_attistibas-liga_r.html">Attīstības līga</a>
+            <a href="../lapas/jaunumi_xl-riga-junior-cup_r.html">XL Rīga Junior Cup</a>
+            <a href="../lapas/jaunumi_indoor-cup_r.html">Indoor Cup</a>
+            <a href="../lapas/jaunumi_joker-karting-challenge_r.html">Joker Karting Challenge</a>
+            <a href="../lapas/jaunumi_team-race_r.html">Team Race</a>
+            <a href="../lapas/jaunumi_sws-sprint-cup_r.html">SWS Sprint Cup</a>
+            <a href="../lapas/jaunumi_b-liga_r.html">B līga</a>
+            <a href="../lapas/jaunumi_sws-endurance-cup_r.html">SWS Endurance Cup</a>
+            <a href="../lapas/jaunumi_kausa-izcina_r.html">Kausa izcīņa</a>
+            <a href="../lapas/jaunumi_eopenkart-slotcar-racing_r.html">eOpenkart SlotCar Racing</a>
+            <a href="../lapas/jaunumi_uznemumu-kauss_r.html">Uzņēmumu kauss</a>
+            <a href="../lapas/jaunumi_musejie-pasaule_r.html">Mūsējie Pasaulē</a>
+          </div>
+        </div>
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+        <a href="https://www.flickr.com/photos/147056524@N03/albums" class="nav__media">Foto</a>
+        <a href="https://www.youtube.com/@Openkartkustiba/featured" class="nav__media">Video</a>
+        <a href="../index.html#kalendars" class="btn btn--red nav__cta">Pieteikties</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="page">
+  <section class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Jaunumi</p>
+      <h1>Meļķis trešo gadu pēc kārtas uzvar Gada balvas slotkāru sacīkstē</h1>
+    </div>
+  </section>
+  <div class="wrap content">
+<div class="article">
+
+<div class="row">
+<div class="col-md-8">
+
+
+<p class="small">16.02.2019, Uldis Galdiņš</p>
+<a href="https://openkart.lv/uploads/articles/987/WhatsApp_Image_2019-02-15_at_22.33.24_original.jpeg" rel="prettyPhoto[prod_1262]" title="">
+<img class="rounded img-fluid img-bordered" id="image_1262" loading="lazy" src="https://openkart.lv/uploads/articles/987/WhatsApp_Image_2019-02-15_at_22.33.24_normal.jpeg"/>
+</a>
+<div class="row mt-2 mb-3">
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/988/WhatsApp_Image_2019-02-15_at_22.33.37%281%29_original.jpeg" rel="prettyPhoto[prod_1262]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/988/WhatsApp_Image_2019-02-15_at_22.33.37%281%29_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/989/WhatsApp_Image_2019-02-15_at_22.34.27%281%29_original.jpeg" rel="prettyPhoto[prod_1262]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/989/WhatsApp_Image_2019-02-15_at_22.34.27%281%29_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/990/WhatsApp_Image_2019-02-15_at_22.34.27_original.jpeg" rel="prettyPhoto[prod_1262]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/990/WhatsApp_Image_2019-02-15_at_22.34.27_thumb.jpeg"/>
+</a>
+</div>
+</div>
+<p>
+	Piektdien, 15. februārī, Biķerniekos notika Openkart Gada balva, kurā tika sumināti 2018. gada izcilnieki un godalgoto vietu ieguvēji un jau trešo gadu pēc oficiālās daļas notika slotkāru sacīkste trases vadītāja Pētera Dūņa uzraudzībā. Šoreiz sacīkstei pieteicās rekordliels dalībnieku skaits, proti, 23 (iepriekšējos gados 20 un 17), daudziem tā bija pirmā iepazīšanās ar šo sporta veidu, citi jau ar lielāku pieredzi. Starp citu slotkāri nule kā svinēja savu 50. dzimšanas dienu Latvijā.
+</p>
+<p>
+	Bez pārsteigumiem savu trešo uzvaru trīs gados izcīnīja šī sporta veida entuziasts un kūrētājs Alfistu rindās Tāls Meļķis, tiesa gan šoreiz viņa pārsvars bija jau mazāks nekā citus gadus, otrais Sergejs Glaņenko, bet pjedestālu noslēdza Uldis Galdiņš. Interesanti, ka pirmo un trešo vietu visus trīs gadus ieņem vieni un tie paši dalībnieki, bet otro gadu pēc kārtas mazu soli aiz pjedestāla palika Andrejs Laipnieks.
+</p>
+<p>
+	No visiem dalībniekiem, seši piedalījās arī pirms gada, bet četri atgriezās pēc viena gada pauzes.
+</p>
+<p>
+<em>Gada balvas slotkāru sacīkstes rezultāti
+</em></p>
+<div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+		diff
+	</td>
+<td>
+		gap
+	</td>
+<td>
+		Diff %
+	</td>
+<td>
+		laiks
+	</td>
+<td>
+		vieta
+	</td>
+</tr>
+<tr>
+<td>
+		1
+	</td>
+<td>
+		(1)
+	</td>
+<td>
+		Tals Melkis
+	</td>
+<td>
+		87.30
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		100.0%
+	</td>
+<td>
+		7.397
+	</td>
+<td>
+		(3)
+	</td>
+</tr>
+<tr>
+<td>
+		2
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Sergejs Glaņenko
+	</td>
+<td>
+		83.04
+	</td>
+<td>
+		-4.26
+	</td>
+<td>
+		-4.26
+	</td>
+<td>
+		95.1%
+	</td>
+<td>
+		7.488
+	</td>
+<td>
+		(4)
+	</td>
+</tr>
+<tr>
+<td>
+		3
+	</td>
+<td>
+		(3)
+	</td>
+<td>
+		Uldis Galdins
+	</td>
+<td>
+		81.17
+	</td>
+<td>
+		-6.13
+	</td>
+<td>
+		-1.87
+	</td>
+<td>
+		93.0%
+	</td>
+<td>
+		7.568
+	</td>
+<td>
+		(8)
+	</td>
+</tr>
+<tr>
+<td>
+		4
+	</td>
+<td>
+		(4)
+	</td>
+<td>
+		Andrejs Laipnieks
+	</td>
+<td>
+		80.51
+	</td>
+<td>
+		-6.79
+	</td>
+<td>
+		-0.66
+	</td>
+<td>
+		92.2%
+	</td>
+<td>
+		7.499
+	</td>
+<td>
+		(5)
+	</td>
+</tr>
+<tr>
+<td>
+		5
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Alvils Zilemanis
+	</td>
+<td>
+		79.20
+	</td>
+<td>
+		-8.10
+	</td>
+<td>
+		-1.31
+	</td>
+<td>
+		90.7%
+	</td>
+<td>
+		6.556
+	</td>
+<td>
+		(1)
+	</td>
+</tr>
+<tr>
+<td>
+		6
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Mareks Astašovs
+	</td>
+<td>
+		79.17
+	</td>
+<td>
+		-8.13
+	</td>
+<td>
+		-0.03
+	</td>
+<td>
+		90.7%
+	</td>
+<td>
+		7.556
+	</td>
+<td>
+		(7)
+	</td>
+</tr>
+<tr>
+<td>
+		7
+	</td>
+<td>
+		(9)
+	</td>
+<td>
+		Lauris Rozenvalds
+	</td>
+<td>
+		77.21
+	</td>
+<td>
+		-10.09
+	</td>
+<td>
+		-1.96
+	</td>
+<td>
+		88.4%
+	</td>
+<td>
+		7.647
+	</td>
+<td>
+		(10)
+	</td>
+</tr>
+<tr>
+<td>
+		8
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Kaspars Ritums
+	</td>
+<td>
+		76.68
+	</td>
+<td>
+		-10.62
+	</td>
+<td>
+		-0.53
+	</td>
+<td>
+		87.8%
+	</td>
+<td>
+		7.831
+	</td>
+<td>
+		(13)
+	</td>
+</tr>
+<tr>
+<td>
+		9
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Rūdolfs Šmits
+	</td>
+<td>
+		75.75
+	</td>
+<td>
+		-11.55
+	</td>
+<td>
+		-0.93
+	</td>
+<td>
+		86.8%
+	</td>
+<td>
+		7.921
+	</td>
+<td>
+		(17)
+	</td>
+</tr>
+<tr>
+<td>
+		10
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Krišs Jaunzemis
+	</td>
+<td>
+		75.14
+	</td>
+<td>
+		-12.16
+	</td>
+<td>
+		-0.61
+	</td>
+<td>
+		86.1%
+	</td>
+<td>
+		7.690
+	</td>
+<td>
+		(11)
+	</td>
+</tr>
+<tr>
+<td>
+		11
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Edgars Sproģis
+	</td>
+<td>
+		74.79
+	</td>
+<td>
+		-12.51
+	</td>
+<td>
+		-0.35
+	</td>
+<td>
+		85.7%
+	</td>
+<td>
+		7.273
+	</td>
+<td>
+		(2)
+	</td>
+</tr>
+<tr>
+<td>
+		12
+	</td>
+<td>
+		(14)
+	</td>
+<td>
+		Olegs Moskals
+	</td>
+<td>
+		74.36
+	</td>
+<td>
+		-12.94
+	</td>
+<td>
+		-0.43
+	</td>
+<td>
+		85.2%
+	</td>
+<td>
+		7.915
+	</td>
+<td>
+		(16)
+	</td>
+</tr>
+<tr>
+<td>
+		13
+	</td>
+<td>
+		(5)
+	</td>
+<td>
+		Kristaps Grinieks
+	</td>
+<td>
+		73.52
+	</td>
+<td>
+		-13.78
+	</td>
+<td>
+		-0.84
+	</td>
+<td>
+		84.2%
+	</td>
+<td>
+		7.874
+	</td>
+<td>
+		(14)
+	</td>
+</tr>
+<tr>
+<td>
+		14
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Mārcis Jaunzemis
+	</td>
+<td>
+		71.67
+	</td>
+<td>
+		-15.63
+	</td>
+<td>
+		-1.85
+	</td>
+<td>
+		82.1%
+	</td>
+<td>
+		7.933
+	</td>
+<td>
+		(18)
+	</td>
+</tr>
+<tr>
+<td>
+		15
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Jānis Karzjuks
+	</td>
+<td>
+		70.52
+	</td>
+<td>
+		-16.78
+	</td>
+<td>
+		-1.15
+	</td>
+<td>
+		80.8%
+	</td>
+<td>
+		8.374
+	</td>
+<td>
+		(23)
+	</td>
+</tr>
+<tr>
+<td>
+		16
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Emīls Bērziņš
+	</td>
+<td>
+		69.37
+	</td>
+<td>
+		-17.93
+	</td>
+<td>
+		-1.15
+	</td>
+<td>
+		79.5%
+	</td>
+<td>
+		8.070
+	</td>
+<td>
+		(20)
+	</td>
+</tr>
+<tr>
+<td>
+		17
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Jānis Rozenvalds
+	</td>
+<td>
+		69.18
+	</td>
+<td>
+		-18.12
+	</td>
+<td>
+		-0.19
+	</td>
+<td>
+		79.2%
+	</td>
+<td>
+		7.888
+	</td>
+<td>
+		(15)
+	</td>
+</tr>
+<tr>
+<td>
+		18
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Roberts Lakēvics
+	</td>
+<td>
+		69.08
+	</td>
+<td>
+		-18.22
+	</td>
+<td>
+		-0.10
+	</td>
+<td>
+		79.1%
+	</td>
+<td>
+		7.516
+	</td>
+<td>
+		(6)
+	</td>
+</tr>
+<tr>
+<td>
+		19
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Dāvis Zalmans
+	</td>
+<td>
+		67.74
+	</td>
+<td>
+		-19.56
+	</td>
+<td>
+		-1.34
+	</td>
+<td>
+		77.6%
+	</td>
+<td>
+		7.582
+	</td>
+<td>
+		(9)
+	</td>
+</tr>
+<tr>
+<td>
+		20
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Nauris Agafonovs
+	</td>
+<td>
+		67.05
+	</td>
+<td>
+		-20.25
+	</td>
+<td>
+		-0.69
+	</td>
+<td>
+		76.8%
+	</td>
+<td>
+		8.077
+	</td>
+<td>
+		(21)
+	</td>
+</tr>
+<tr>
+<td>
+		21
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Aleksejs Sjomins
+	</td>
+<td>
+		65.31
+	</td>
+<td>
+		-21.99
+	</td>
+<td>
+		-1.74
+	</td>
+<td>
+		74.8%
+	</td>
+<td>
+		8.139
+	</td>
+<td>
+		(22)
+	</td>
+</tr>
+<tr>
+<td>
+		22
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Elvijs Švāģeris
+	</td>
+<td>
+		64.67
+	</td>
+<td>
+		-22.63
+	</td>
+<td>
+		-0.64
+	</td>
+<td>
+		74.1%
+	</td>
+<td>
+		7.782
+	</td>
+<td>
+		(12)
+	</td>
+</tr>
+<tr>
+<td>
+		23
+	</td>
+<td>
+		-
+	</td>
+<td>
+		Jānis Kornis
+	</td>
+<td>
+		62.98
+	</td>
+<td>
+		-24.32
+	</td>
+<td>
+		-1.69
+	</td>
+<td>
+		72.1%
+	</td>
+<td>
+		7.984
+	</td>
+<td>
+		(19)
+	</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Trīs sacīkšu statistika</em></p>
+<div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody><tr><td></td><td></td><td>Labākais rez.</td><td>Sac. Skaits</td><td>15.feb 2019</td><td>08.feb 2018</td><td>25.jan 2017</td></tr><tr><td>1</td><td>Tals Melkis </td><td>1</td><td>3</td><td>1</td><td>1</td><td>1</td></tr><tr><td>2</td><td>Jānis Čudovs</td><td>2</td><td>2</td><td>-</td><td>2</td><td>2</td></tr><tr><td>3</td><td>Sergejs Glaņenko</td><td>2</td><td>1</td><td>2</td><td>-</td><td>-</td></tr><tr><td>4</td><td>Uldis Galdins </td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td></tr><tr><td>5</td><td>Andrejs Laipnieks </td><td>4</td><td>3</td><td>4</td><td>4</td><td>6</td></tr><tr><td>6</td><td>Ričards Freibergs </td><td>4</td><td>1</td><td>-</td><td>-</td><td>4</td></tr><tr><td>7</td><td>Kristaps Grinieks </td><td>5</td><td>3</td><td>13</td><td>5</td><td>13</td></tr><tr><td>8</td><td>Bruno Freibergs </td><td>5</td><td>1</td><td>-</td><td>-</td><td>5</td></tr><tr><td>9</td><td>Alvils Zilemanis</td><td>5</td><td>1</td><td>5</td><td>-</td><td>-</td></tr><tr><td>10</td><td>Ivars Vilkens</td><td>6</td><td>1</td><td>-</td><td>6</td><td>-</td></tr><tr><td>11</td><td>Mareks Astašovs</td><td>6</td><td>1</td><td>6</td><td>-</td><td>-</td></tr><tr><td>12</td><td>Dzintars Raits </td><td>7</td><td>2</td><td>-</td><td>7</td><td>7</td></tr><tr><td>13</td><td>Lauris Rozenvalds </td><td>7</td><td>3</td><td>7</td><td>9</td><td>15</td></tr><tr><td>14</td><td>Kaspars Ritums</td><td>8</td><td>2</td><td>8</td><td>-</td><td>8</td></tr><tr><td>15</td><td>Miķelis Lukša</td><td>8</td><td>1</td><td>-</td><td>8</td><td>-</td></tr><tr><td>16</td><td>Rūdolfs Šmits</td><td>9</td><td>2</td><td>9</td><td>-</td><td>11</td></tr><tr><td>17</td><td>Kaspars Zuģickis</td><td>9</td><td>1</td><td>-</td><td>-</td><td>9</td></tr><tr><td>18</td><td>Renārs Paiders</td><td>10</td><td>2</td><td>-</td><td>10</td><td>14</td></tr><tr><td>19</td><td>Krišs Jaunzemis</td><td>10</td><td>2</td><td>10</td><td>-</td><td>19</td></tr><tr><td>20</td><td>Artūrs Freimanis</td><td>10</td><td>1</td><td>-</td><td>-</td><td>10</td></tr><tr><td>21</td><td>Daniils Verins</td><td>11</td><td>1</td><td>-</td><td>11</td><td>-</td></tr><tr><td>22</td><td>Edgars Sproģis</td><td>11</td><td>1</td><td>11</td><td>-</td><td>-</td></tr><tr><td>23</td><td>Olegs Moskals</td><td>12</td><td>2</td><td>12</td><td>14</td><td>-</td></tr><tr><td>24</td><td>Jurijs Fedorenko </td><td>12</td><td>1</td><td>-</td><td>-</td><td>12</td></tr><tr><td>25</td><td>Daniils Ivančikovs</td><td>12</td><td>1</td><td>-</td><td>12</td><td>-</td></tr><tr><td>26</td><td>Dzintars Trubiņš</td><td>13</td><td>2</td><td>-</td><td>13</td><td>18</td></tr><tr><td>27</td><td>Mārcis Jaunzemis</td><td>14</td><td>2</td><td>14</td><td>-</td><td>16</td></tr><tr><td>28</td><td>Toms Kalnītis</td><td>15</td><td>1</td><td>-</td><td>15</td><td>-</td></tr><tr><td>29</td><td>Jānis Karzjuks</td><td>15</td><td>1</td><td>15</td><td>-</td><td>-</td></tr><tr><td>30</td><td>Deniss Verins</td><td>16</td><td>1</td><td>-</td><td>16</td><td>-</td></tr><tr><td>31</td><td>Emīls Bērziņš</td><td>16</td><td>1</td><td>16</td><td>-</td><td>-</td></tr><tr><td>32</td><td>Gatis Bergmanis </td><td>17</td><td>1</td><td>-</td><td>-</td><td>17</td></tr><tr><td>33</td><td>Gabriels</td><td>17</td><td>1</td><td>-</td><td>17</td><td>-</td></tr><tr><td>34</td><td>Jānis Rozenvalds</td><td>17</td><td>1</td><td>17</td><td>-</td><td>-</td></tr><tr><td>35</td><td>Roberts Lakēvics</td><td>18</td><td>1</td><td>18</td><td>-</td><td>-</td></tr><tr><td>36</td><td>Dāvis Zalmans</td><td>19</td><td>1</td><td>19</td><td>-</td><td>-</td></tr><tr><td>37</td><td>Zane Katrīne Mēnese</td><td>20</td><td>1</td><td>-</td><td>-</td><td>20</td></tr><tr><td>38</td><td>Nauris Agafonovs</td><td>20</td><td>1</td><td>20</td><td>-</td><td>-</td></tr><tr><td>39</td><td>Aleksejs Sjomins</td><td>21</td><td>1</td><td>21</td><td>-</td><td>-</td></tr><tr><td>40</td><td>Elvijs Švāģeris</td><td>22</td><td>1</td><td>22</td><td>-</td><td>-</td></tr><tr><td>41</td><td>Jānis Kornis</td><td>23</td><td>1</td><td>23</td><td>-</td><td>-</td></tr>
+</tbody></table></div>
+<div class="clearfix"></div>
+<div id="articles-list">
+<div class="float-end">
+<a class="btn btn-sm btn-outline-secondary" href="#top">
+<i aria-hidden="true" class="fas fa-arrow-up"></i>
+Uz augšu
+</a>
+</div>
+<h3>eOpenkart SlotCar Racing</h3>
+<div class="clearfix"></div>
+<ul class="list-unstyled striped articles">
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">16.02.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1262-melkis-treso-gadu-pec-kartas-uzvar-gada-balvas-slotkaru-sacikste.html">Meļķis trešo gadu pēc kārtas uzvar Gada balvas slotkāru sacīkstē</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1262_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">07.12.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1190-tals-melkis-klust-par-eopenkart-slotkaru-cempionu.html">Tāls Meļķis kļūst par eOpenkart slotkāru čempionu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1190_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">06.12.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1189-7-dot-decembri-uzzinasim-eopenkart-slotkaru-cempiona-vardu.html">7.decembrī uzzināsim eOpenkart slotkāru čempiona vārdu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1189_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">31.08.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1171-edgars-belakovs-parsteidzosi-uzvar-eopenkart-3-dot-posma.html">Edgars Beļakovs pārsteidzoši uzvar eOpenkart 3.posmā</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1171_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">28.08.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1170-slotkaru-sacensibu-eopenkart-3-dot-posma-brauksim-preteja-virziena.html">Slotkāru sacensību "eOpenkart" 3.posmā brauksim pretējā virzienā</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1170_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">29.06.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1155-ari-otraja-eopenkart-posma-domine-vilkens-un-melkis.html">Arī otrajā eOpenkart posmā dominē Vilkens un Meļķis</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1155_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">26.06.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1153-28-dot-junija-eopenkart-slotkaru-kausa-2-dot-posms.html">28.jūnijā eOpenkart slotkāru kausa 2.posms</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1153_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">27.04.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1140-pirmaja-eopenkart-slotkaru-sacikste-domine-ivars-vilkens.html">Pirmajā eOpenkart slotkāru sacīkstē dominē Ivars Vilkens</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1140_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">20.04.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_eopenkart-slotcar-racing_r_1138-eopenkart-1-dot-posms-26-dot-aprili.html">eOpenkart 1.posms 26.aprīlī</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1138_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-md-4">
+<div id="comments">
+<div class="alert alert-danger">
+<b>Komentēt var tikai reģistrēti lietotāji</b>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</main>
+  <footer class="footer">
+    <div class="footer__flag" aria-hidden="true"></div>
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="../assets/img/logo-red.png" alt="Openkart" width="1158" height="246" loading="lazy">
+        <p>Amatieru kartinga kustība. 20 sezonas uz trases.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_2-kontakti.html">Kontakti</a>
+        <a href="../lapas/s_4-par-openkart.html">Par Openkart</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+      </nav>
+      <div class="footer__social">
+        <a href="http://www.facebook.com/pages/Openkart/156203434346" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.4H7.6V14h2.7v8h3.2z"/></svg>
+        </a>
+        <a href="https://instagram.com/openkart.lv/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy wrap">© 2026, openkart.lv. Visas tiesības paturētas</p>
+  </footer>
+
+  <script>window.OK_ROOT = "../";</script>
+  <script src="../assets/js/pages.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,2185 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slavas zāle — Openkart</title>
+  <meta name="description" content="Openkart — amatieru kartinga kustība Latvijā.">
+  <meta name="theme-color" content="#0b0c0f">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&amp;family=Titillium+Web:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Piekļuves brīdinājums (kā oriģinālajā lapā) -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
+    <div class="gate__card">
+      <div class="gate__flag" aria-hidden="true"></div>
+      <p class="eyebrow">Uzmanību!</p>
+      <h2 id="gate-title">Piekļuve mājas lapai paredzēta tikai Openkart kopienas dalībniekiem</h2>
+      <div class="gate__actions">
+        <button class="btn btn--red" id="gate-ok">Turpināt</button>
+        <a class="btn btn--ghost" href="https://google.com">Iziet</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Augšējā josla -->
+  <div class="topbar">
+    <div class="wrap topbar__in">
+      <span class="topbar__date" id="today">Otrdiena, 03. nov., 2026</span>
+      <div class="topbar__right">
+        <a href="https://openkart.lv/users/sign_in?locale=lv">Autorizēties</a>
+        <a href="https://openkart.lv/users/sign_up?locale=lv" class="topbar__reg">Reģistrēties</a>
+        <span class="lang"><a href="../index.html" class="is-on">LV</a><a href="../index.html">EN</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Galvene -->
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a href="../index.html" class="logo" aria-label="Openkart sākumlapa"><img src="../assets/img/logo-red.png" alt="Openkart 20 — amatieru kartinga kustība" width="1158" height="246"></a>
+      <button class="burger" id="burger" aria-label="Izvēlne" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <a href="../lapas/rezultati.html">Rezultāti</a>
+        <a href="../lapas/kalendars.html">Kalendārs</a>
+        <a href="../lapas/dalibnieki.html">Dalībnieki</a>
+        <a href="../lapas/stats.html">Statistika</a>
+        <div class="dd">
+          <button class="dd__btn" aria-expanded="false">Jaunumi</button>
+          <div class="dd__menu">
+            <a href="../lapas/jaunumi_cempionats_r.html">Čempionāts</a>
+            <a href="../lapas/jaunumi_attistibas-liga_r.html">Attīstības līga</a>
+            <a href="../lapas/jaunumi_xl-riga-junior-cup_r.html">XL Rīga Junior Cup</a>
+            <a href="../lapas/jaunumi_indoor-cup_r.html">Indoor Cup</a>
+            <a href="../lapas/jaunumi_joker-karting-challenge_r.html">Joker Karting Challenge</a>
+            <a href="../lapas/jaunumi_team-race_r.html">Team Race</a>
+            <a href="../lapas/jaunumi_sws-sprint-cup_r.html">SWS Sprint Cup</a>
+            <a href="../lapas/jaunumi_b-liga_r.html">B līga</a>
+            <a href="../lapas/jaunumi_sws-endurance-cup_r.html">SWS Endurance Cup</a>
+            <a href="../lapas/jaunumi_kausa-izcina_r.html">Kausa izcīņa</a>
+            <a href="../lapas/jaunumi_eopenkart-slotcar-racing_r.html">eOpenkart SlotCar Racing</a>
+            <a href="../lapas/jaunumi_uznemumu-kauss_r.html">Uzņēmumu kauss</a>
+            <a href="../lapas/jaunumi_musejie-pasaule_r.html">Mūsējie Pasaulē</a>
+          </div>
+        </div>
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+        <a href="https://www.flickr.com/photos/147056524@N03/albums" class="nav__media">Foto</a>
+        <a href="https://www.youtube.com/@Openkartkustiba/featured" class="nav__media">Video</a>
+        <a href="../index.html#kalendars" class="btn btn--red nav__cta">Pieteikties</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="page">
+  <section class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Openkart</p>
+      <h1>Slavas zāle</h1>
+    </div>
+  </section>
+  <div class="wrap content">
+
+
+
+<hr/><p>
+	Apmeklējiet sadaļu 
+	<a href="https://openkart.lv/lv/s/11-mauzolejs">MAUZOLEJS</a>, lai iepazītos ar B līgas, LeMans, Uzņēmumu kausa un Pirmās formulas līdzjutēju kluba Slavas zāli.
+</p><h3>Čempionāts</h3><p>
+<em data-redactor-tag="em">(no 2009. līdz 2012.gadam "Elites" līga)
+	</em>
+</p><div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+Gads
+	</td>
+<td>
+Čempions
+	</td>
+<td>
+		Vicečempions
+	</td>
+<td>
+		Trešā vieta
+	</td>
+<td>
+4. vieta
+	</td>
+<td>
+5. vieta
+	</td>
+<td>
+6. vieta
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2007/cempionats">2007</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=7"> Aigars Valukevics </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=24">Rūdolfs T. Bērziņš</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=6"> Zintis Grandbergs </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=15">Kristaps Narubins</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=5">Juris Narubins</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=12">Andis Balodis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2008/cempionats">2008</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=67">Artūrs Eversons</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=79">Jurijs Višņakovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=43"> Lauris Rozenvalds </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=21">Uldis Galdiņš</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=6">Zintis Grandbergs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=29">Pēteris Narubins</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2009/cempionats">2009</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=126">Dāvis Tobiass</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=79">Jurijs Višņakovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=6"> Zintis Grandbergs </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=24">Rūdolfs T. Bērziņš</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=111">Raivis Kirilovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=92">Mārtiņš Krūze</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2010/cempionats">2010</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=13"> Daniels Mančinskis </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=126">Dāvis Tobiass </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=43"> Lauris Rozenvalds </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=111">Raivis Kirilovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=175">Ingus Grasmanis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=25">Mikus Narvils</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2011/cempionats">2011</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=6"> Zintis Grandbergs </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=111"> Raivis Kirilovs </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=25">Mikus Narvils</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=13">Daniels Mančinskis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=133">Ivars Strencis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=43">Lauris Rozenvalds</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2012/cempionats">2012</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=111"> Raivis Kirilovs </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=133">Ivars Strencis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=43"> Lauris Rozenvalds </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=6">Zintis Grandbergs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=175">Ingus Grasmanis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=251">Jevgēņijs Stragovs</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2013/cempionats">2013</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=133">Ivars Strencis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=424">Nils Trapāns</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=43"> Lauris Rozenvalds </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=593">Normunds Skreija</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=175">Ingus Grasmanis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2014/cempionats">2014</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=593">Normunds Skreija </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=521">Kristaps Grīnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=514">Harijs Cīrulis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=594">Rūdis Kļaviņš</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2015/cempionats">2015</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=521">Kristaps Grīnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=627">Artūrs Freimanis </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=770">Kaspars Ritums</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=771">Kārlis Kleinhofs</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2016/cempionats">2016</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=997">Jurijs Fedorenko</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=512">Renārs Paiders</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=933">Gatis Bergmanis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=504">Jānis Čudovs</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2017/cempionats">2017</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=521">Kristaps Grīnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=512">Renārs Paiders</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=627">Artūrs Freimanis</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1076">Kaspars Zuģickis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=817">Ričards Freibergs</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2018/cempionats">2018</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=521">Kristaps Grīnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=998">Edgars Sproģis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1131">Kristaps Ķilkuts</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2019/cempionats">2019</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=514">Harijs Cīrulis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=593">Normunds Skreija</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=504">Jānis Čudovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1436">Dāvis Zalmans</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2020/cempionats">2020</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1436">Dāvis Zalmans</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=504">Jānis Čudovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=770">Kaspars Ritums</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1131">Kristaps Ķilkuts</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2021/cempionats">2021</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1436">Dāvis Zalmans</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=514">Harijs Cīrulis</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=705">Māris Grandbergs</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2022/cempionats">2022</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1436">Dāvis Zalmans</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=998">Edgars Sproģis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1620">Didzis Grāvītis </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2586">Aurelijus Skromovas</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2023/cempionats">2023</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1436">Dāvis Zalmans</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=770">Kaspars Ritums</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=998">Edgars Sproģis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2586">Aurelijus Skromovas</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2024/cempionats">2024</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1436">Dāvis Zalmans</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=998">Edgars Sproģis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2219">Ruslans Dzenis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1301">Oļegs Moskals</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=3015">Niks Vucāns</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../lapas/rezultati.html?y=2025&amp;c=cempionats">2025</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1436">Dāvis Zalmans</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2219">Ruslans Dzenis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2614">Orestas Burgaila</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2899">Otīlija Grandberga</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2550">Ričards Alekss Švaglis</a>
+</td>
+</tr>
+</tbody>
+</table></div><h3>
+Komandu ieskaite 
+</h3><div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+Gads
+	</td>
+<td>
+Čempions
+		<br/>
+</td>
+<td>
+		Vicečempions
+	</td>
+<td>
+Trešā vieta
+	</td>
+</tr>
+<tr>
+<td>
+		2007
+	</td>
+<td>
+		"FITTERO RACING"
+		<br/>
+<a href="../lapas/braucejs.html?id=6">Zintis Grandbergs</a>, <br/>
+<a href="../lapas/braucejs.html?id=7">Aigars Valukevics</a>, <br/>
+<a href="../lapas/braucejs.html?id=23">Kaspars Gusārs</a>
+</td>
+<td>
+		"TRAKTORS"
+		<br/>
+<a href="../lapas/braucejs.html?id=5">Juris Narubins</a>, 
+		<br/>
+<a href="../lapas/braucejs.html?id=15">Kristaps Narubins</a>, <br/>
+<a href="../lapas/braucejs.html?id=29">Pēteris Narubins </a>
+</td>
+<td>
+		"R&amp;D"
+		<br/>
+<a href="../lapas/braucejs.html?id=24">Rūdolfs Toms Bērziņš</a>, <br/>
+<a href="../lapas/braucejs.html?id=30">Dace Grosberga</a>
+</td>
+</tr>
+<tr>
+<td>
+		2008
+	</td>
+<td>
+		"SPORTA KLUBS 333"
+		<br/>
+<a href="../lapas/braucejs.html?id=67">Artūrs Eversons</a>, <br/>
+<a href="../lapas/braucejs.html?id=58">Jānis Birznieks</a>, <br/>
+<a href="../lapas/braucejs.html?id=92">Mārtiņš Krūze</a>
+</td>
+<td>
+		"ROT"
+		<br/>
+<a href="../lapas/braucejs.html?id=43">Lauris Rozenvalds</a>, <br/>
+<a href="../lapas/braucejs.html?id=21">Uldis Galdiņš</a>
+</td>
+<td>
+		"FITTERO RACING"
+		<br/>
+<a href="../lapas/braucejs.html?id=6">Zintis Grandbergs</a>, <br/>
+<a href="../lapas/braucejs.html?id=7">Aigars Valukevics</a>, <br/>
+<a href="../lapas/braucejs.html?id=23">Kaspars Gusārs</a>
+</td>
+</tr>
+<tr>
+<td>
+		2009
+	</td>
+<td>
+		"R&amp;D"
+		<br/>
+<a href="../lapas/braucejs.html?id=24">Rūdolfs Toms Bērziņš</a>, <br/>
+<a href="../lapas/braucejs.html?id=30">Dace Grosberga</a>, 
+		<br/>
+<a href="../lapas/braucejs.html?id=13">Daniels Mančinskis</a>
+</td>
+<td>
+		"DREAM TEAM"
+		<br/>
+<a href="../lapas/braucejs.html?id=67">Artūrs Eversons</a>, <br/>
+<a href="../lapas/braucejs.html?id=126">Dāvis Tobiass</a>, <br/>
+<a href="../lapas/braucejs.html?id=92">Mārtiņš Krūze</a>
+</td>
+<td>
+		"AVE LAT SARGS"
+		<br/>
+<a href="../lapas/braucejs.html?id=79">Jurijs Višņakovs</a>, <br/>
+<a href="../lapas/braucejs.html?id=57">Anatolijs Hramovs</a>, <br/>
+<a href="../lapas/braucejs.html?id=103">Vitālijs Kovaļenko</a>
+</td>
+</tr>
+<tr>
+<td>
+		2010
+	</td>
+<td>
+		"MBA RACING TEAM"
+		<br/>
+<a href="../lapas/braucejs.html?id=133">Ivars Strencis</a>, <br/>
+<a href="../lapas/braucejs.html?id=123">Jānis Strencis</a>, <br/>
+<a href="../lapas/braucejs.html?id=111">Raivis Kirilovs </a>
+</td>
+<td>
+		"IZG RACING"
+		<br/>
+<a href="../lapas/braucejs.html?id=6">Zintis Grandbergs</a>, <br/>
+<a href="../lapas/braucejs.html?id=71">Iveta Akmeņkalne</a>, <br/>
+<a href="../lapas/braucejs.html?id=175">Ingus Grasmanis </a>
+</td>
+<td>
+		"KARTINGI.LV"
+		<br/>
+<a href="../lapas/braucejs.html?id=73">Dairis Vīksne</a>, 
+		<br/>
+<a href="../lapas/braucejs.html?id=25">Mikus Narvils</a>, <br/>
+<a href="../lapas/braucejs.html?id=91">Lauris Lapiņš</a>
+</td>
+</tr>
+<tr>
+<td>
+		2011
+	</td>
+<td>
+		"IZG RACING"
+		<br/>
+<a href="../lapas/braucejs.html?id=6">Zintis Grandbergs</a>,
+		<a href="../lapas/braucejs.html?id=175"> </a><br/>
+<a href="../lapas/braucejs.html?id=175">Ingus Grasmanis</a>, <br/>
+<a href="../lapas/braucejs.html?id=243">Normunds Ramanis</a>
+</td>
+<td>
+		"MBA RACING"
+		<br/>
+<a href="../lapas/braucejs.html?id=133">Ivars Strencis</a>, <br/>
+<a href="../lapas/braucejs.html?id=123">Jānis Strencis</a>, <br/>
+<a href="../lapas/braucejs.html?id=111">Raivis Kirilovs</a>
+</td>
+<td>
+		"KARTINGI.LV"
+		<br/>
+<a href="../lapas/braucejs.html?id=73">Dairis Vīksne</a>, 
+		<br/>
+<a href="../lapas/braucejs.html?id=25">Mikus Narvils</a>, <br/>
+<a href="../lapas/braucejs.html?id=91">Lauris Lapiņš</a>
+</td>
+</tr>
+<tr>
+<td>
+		2012
+	</td>
+<td>
+		"OPENKARTCITY RACING TEAM"
+		<br/>
+<a href="../lapas/braucejs.html?id=111">Raivis Kirilovs</a>, <br/>
+<a href="../lapas/braucejs.html?id=133">Ivars Strencis</a>, <br/>
+<a href="../lapas/braucejs.html?id=251">Jevgēņijs Stragovs</a>
+</td>
+<td>
+		"IZG RACING"
+		<br/>
+<a href="../lapas/braucejs.html?id=6">Zintis Grandbergs</a>,<a href="../lapas/braucejs.html?id=175"> </a><br/>
+<a href="../lapas/braucejs.html?id=175">Ingus Grasmanis</a>, <br/>
+<a href="../lapas/braucejs.html?id=103">Vitālijs Kovaļenko</a>
+</td>
+<td>
+		"OSTU DŪMUS ELITE"
+		<br/>
+<a href="../lapas/braucejs.html?id=13">Daniels Mančinskis</a>, <br/>
+<a href="../lapas/braucejs.html?id=424">Nils Trapāns</a>, <br/>
+<a href="../lapas/braucejs.html?id=148">Andris Orniņš</a>
+</td>
+</tr>
+<tr>
+<td>
+		2013
+	</td>
+<td>
+		"ŅAU ŅAU TEAM"
+		<br/>
+<a href="../lapas/braucejs.html?id=521">Kristaps Grīnieks</a>, <br/>
+<a href="../lapas/braucejs.html?id=520">Kārlis Strazdiņš</a>, 
+		<br/>
+<a href="../lapas/braucejs.html?id=6">Zintis Grandbergs</a>
+</td>
+<td>
+		"AUTO ALIANSE RACING"
+		<br/>
+<a href="../lapas/braucejs.html?id=424">Nils Trapāns</a>,<a href="../lapas/braucejs.html?id=175"> </a><br/>
+<a href="../lapas/braucejs.html?id=175">Ingus Grasmanis</a>, <br/>
+<a href="../lapas/braucejs.html?id=243">Normunds Ramanis</a>
+</td>
+<td>
+		"BRUM DRUM"
+		<br/>
+<a href="../lapas/braucejs.html?id=593">Normunds Skreija</a>, <br/>
+<a href="../lapas/braucejs.html?id=607">Dace Damberga</a>, <br/>
+<a href="../lapas/braucejs.html?id=597">Jurģis Brauers</a>
+</td>
+</tr>
+<tr>
+<td>
+		2014
+	</td>
+<td>
+		"SNB RACING"
+		<br/>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>, <br/>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>, <br/>
+<a href="../lapas/braucejs.html?id=599">Zigmārs Lapa</a>
+</td>
+<td>
+		"BALTIE"
+		<br/>
+<a href="../lapas/braucejs.html?id=424">Nils Trapāns</a>, <br/>
+<a href="../lapas/braucejs.html?id=521">Kristaps Grīnieks</a>, <br/>
+<a href="../lapas/braucejs.html?id=520">Kārlis Strazdiņš</a> <br/>
+</td>
+<td>
+		"BRUM DRUM"
+		<br/>
+<a href="../lapas/braucejs.html?id=593">Normunds Skreija</a>, <br/>
+<a href="../lapas/braucejs.html?id=607">Dace Damberga</a>, <br/>
+<a href="../lapas/braucejs.html?id=597">Jurģis Brauers</a>
+</td>
+</tr>
+<tr>
+<td>
+		2015
+	</td>
+<td>
+		"SNB RACING"
+		<br/>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>,<a href="../lapas/braucejs.html?id=596"> </a><br/>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>
+</td>
+<td>
+		"MOVERS.LV"
+		<br/>
+<a href="../lapas/braucejs.html?id=770">Kaspars Ritums</a>, <br/>
+<a href="../lapas/braucejs.html?id=771">Kārlis Kleinhofs</a>, <br/>
+<a href="../lapas/braucejs.html?id=627">Artūrs Freimanis</a>
+</td>
+<td>
+		"BALTIE"
+		<br/>
+<a href="../lapas/braucejs.html?id=424">Nils Trapāns</a>,<a href="../lapas/braucejs.html?id=521"> </a><br/>
+<a href="../lapas/braucejs.html?id=521">Kristaps Grīnieks</a>, <br/>
+<a href="../lapas/braucejs.html?id=514">Harijs Cīrulis</a>
+</td>
+</tr>
+<tr>
+<td>
+		2016
+	</td>
+<td>
+		"SNB RACING"
+		<br/>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>,<a href="../lapas/braucejs.html?id=596"> </a><br/>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>, <br/>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a>
+</td>
+<td>
+		"SPIEDIENS"
+		<br/>
+<a href="../lapas/braucejs.html?id=512">Renārs Paiders</a>, <br/>
+<a href="../lapas/braucejs.html?id=131">Artūrs Bonders</a>, <br/>
+<a href="../lapas/braucejs.html?id=864">Toms Kalnītis</a>
+</td>
+<td>
+		"ZDK"
+		<br/>
+<a href="../lapas/braucejs.html?id=1092">Dāniels Lācis</a>, <br/>
+<a href="../lapas/braucejs.html?id=995">Zane Katrīne Mēnese</a>, <br/>
+<a href="../lapas/braucejs.html?id=996">Kristīne Mēnese</a>
+</td>
+</tr>
+<tr>
+<td>
+		2017
+	</td>
+<td>
+		"MOVERS.LV"
+		<br/>
+<a href="../lapas/braucejs.html?id=627">Artūrs Freimanis</a>,<a href="../lapas/braucejs.html?id=1076"> </a><br/>
+<a href="../lapas/braucejs.html?id=1076">Kaspars Zuģickis</a>, <br/>
+<a href="../lapas/braucejs.html?id=770">Kaspars Ritums</a>
+</td>
+<td>
+		"3PERA"
+		<br/>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a>, <br/>
+<a href="../lapas/braucejs.html?id=504">Jānis Čudovs</a>, <br/>
+<a href="../lapas/braucejs.html?id=998">Edgars Sproģis</a>
+</td>
+<td>
+		"SPIEDIENS"
+		<br/>
+<a href="../lapas/braucejs.html?id=512">Renārs Paiders</a>, <br/>
+<a href="../lapas/braucejs.html?id=1135">Jānis Olle</a>, <br/>
+<a href="../lapas/braucejs.html?id=864">Toms Kalnītis</a>
+</td>
+</tr>
+<tr>
+<td>
+		2018
+	</td>
+<td>
+		"MOVERS.LV"
+		<br/>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>, <br/>
+<a href="../lapas/braucejs.html?id=770">Kaspars Ritums</a>, <br/>
+<a href="../lapas/braucejs.html?id=1436">Dāvis Zalmans</a>
+</td>
+<td>
+		"3PERA"
+		<br/>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a>, <br/>
+<a href="../lapas/braucejs.html?id=504">Jānis Čudovs</a>, <br/>
+<a href="../lapas/braucejs.html?id=998">Edgars Sproģis</a>
+</td>
+<td>
+		"KARTOHOLICS"
+		<br/>
+<a href="../lapas/braucejs.html?id=1131">Kristaps Ķilkuts</a>, <br/>
+<a href="../lapas/braucejs.html?id=584">Sergejs Glaņenko</a>, <br/>
+<a href="../lapas/braucejs.html?id=1301">Oļegs Moskals</a>
+</td>
+</tr>
+<tr>
+<td>
+		2019
+	</td>
+<td>
+		"MOVERS.LV"
+		<br/>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>, <br/>
+<a href="../lapas/braucejs.html?id=770">Kaspars Ritums</a>, <br/>
+<a href="../lapas/braucejs.html?id=1436">Dāvis Zalmans</a>
+</td>
+<td>
+		"3PERA"
+		<br/>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a>, <br/>
+<a href="../lapas/braucejs.html?id=504">Jānis Čudovs</a>, <br/>
+<a href="../lapas/braucejs.html?id=998">Edgars Sproģis</a>
+</td>
+<td>
+		"BALTIE VETERĀNI"
+		<br/>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>,<br/>
+<a href="../lapas/braucejs.html?id=521">Kristaps Grīnieks </a>,<br/>
+<a href="../lapas/braucejs.html?id=514">Harijs Cīrulis</a>
+</td>
+</tr>
+<tr>
+<td>
+		2020
+	</td>
+<td>
+		"MOVERS.LV"
+		<br/>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>, <br/>
+<a href="../lapas/braucejs.html?id=770">Kaspars Ritums</a>, <br/>
+<a href="../lapas/braucejs.html?id=1436">Dāvis Zalmans</a>
+</td>
+<td>
+		"PIRMIE"
+		<br/>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a>, <br/>
+<a href="../lapas/braucejs.html?id=504">Jānis Čudovs</a>, <br/>
+<a href="../lapas/braucejs.html?id=998">Edgars Sproģis</a>
+</td>
+<td>
+		"KARTOHOLICS"
+		<br/>
+<a href="../lapas/braucejs.html?id=1131">Kristaps Ķilkuts</a>, <br/>
+<a href="../lapas/braucejs.html?id=584">Sergejs Glaņenko</a>, <br/>
+<a href="../lapas/braucejs.html?id=1301">Oļegs Moskals</a>
+</td>
+</tr>
+<tr>
+<td>
+		2021
+	</td>
+<td>
+		"MOVERS.LV"
+		<br/>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>, <br/>
+<a href="../lapas/braucejs.html?id=770">Kaspars Ritums</a>, <br/>
+<a href="../lapas/braucejs.html?id=1436">Dāvis Zalmans</a>
+</td>
+<td>
+		"BALTIE VETERĀNI"
+		<br/>
+<a href="../lapas/braucejs.html?id=514">Harijs Cīrulis</a>, <br/>
+<a href="../lapas/braucejs.html?id=1620">Didzis Grāvītis</a>, <br/>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>
+</td>
+<td>
+		"PIRMIE"
+		<br/>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a>, <br/>
+<a href="../lapas/braucejs.html?id=504">Jānis Čudovs</a>, <br/>
+<a href="../lapas/braucejs.html?id=998">Edgars Sproģis</a>
+</td>
+</tr>
+<tr>
+<td>
+		2022
+	</td>
+<td>
+		"MOVERS.LV"
+		<br/>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>, <br/>
+<a href="../lapas/braucejs.html?id=770">Kaspars Ritums</a>, <br/>
+<a href="../lapas/braucejs.html?id=1436">Dāvis Zalmans</a>
+</td>
+<td>
+			"PIRMIE"
+		<br/>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a>, <br/>
+<a href="../lapas/braucejs.html?id=998">Edgars Sproģis</a>, <br/>
+<a href="../lapas/braucejs.html?id=2675">Alex Zemik</a>
+</td>
+<td>
+			"BALTIE VETERĀNI"
+		<br/>
+<a href="../lapas/braucejs.html?id=514">Harijs Cīrulis</a>, <br/>
+<a href="../lapas/braucejs.html?id=1620">Didzis Grāvītis</a>, <br/>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>
+</td>
+</tr>
+<tr>
+<td>
+		2023
+	</td>
+<td>
+		"MOVERS.LV"
+		<br/>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>, <br/>
+<a href="../lapas/braucejs.html?id=770">Kaspars Ritums</a>, <br/>
+<a href="../lapas/braucejs.html?id=1436">Dāvis Zalmans</a>
+</td>
+<td>
+		"PIRMIE"
+		<br/>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a>, <br/>
+<a href="../lapas/braucejs.html?id=998">Edgars Sproģis</a>, <br/>
+<a href="../lapas/braucejs.html?id=2586">Aurelijus Skromovas</a>
+</td>
+<td>
+		"ATKAL UZVARA"
+		<br/>
+<a href="../lapas/braucejs.html?id=1627">Kristofers Caune</a>, <br/>
+<a href="../lapas/braucejs.html?id=2550">Ričards Alekss Švaglis</a>, <br/>
+<a href="../lapas/braucejs.html?id=2500">Viljams Plešs</a>
+</td>
+</tr>
+<tr>
+<td>
+		2024
+	</td>
+<td>
+		"MOVERS.LV"
+		<br/>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>, <br/>
+<a href="../lapas/braucejs.html?id=770">Kaspars Ritums</a>, <br/>
+<a href="../lapas/braucejs.html?id=1436">Dāvis Zalmans</a>
+</td>
+<td>
+		"PIRMIE"
+		<br/>
+<a href="../lapas/braucejs.html?id=998">Edgars Sproģis</a>, <br/>
+<a href="../lapas/braucejs.html?id=2586">Aurelijus Skromovas</a>, <br/>
+<a href="../lapas/braucejs.html?id=1627">Kristofers Caune</a>
+</td>
+<td>
+		"4X4"
+		<br/>
+<a href="../lapas/braucejs.html?id=2219">Ruslans Dzenis</a>, <br/>
+<a href="../lapas/braucejs.html?id=1620">Didzis Grāvītis</a>, <br/>
+<a href="../lapas/braucejs.html?id=2853">Aleksandrs Špatcs</a>
+</td>
+</tr>
+<tr>
+<td>
+		2025
+	</td>
+<td>
+		"MOVERS.LV"
+		<br/>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>, <br/>
+<a href="../lapas/braucejs.html?id=770">Kaspars Ritums</a>, <br/>
+<a href="../lapas/braucejs.html?id=1436">Dāvis Zalmans</a>
+</td>
+<td>
+		"DREAM TEAM"
+		<br/>
+<a href="../lapas/braucejs.html?id=3015">Niks Vucāns</a>, <br/>
+<a href="../lapas/braucejs.html?id=2614">Orestas Burgaila</a>, <br/>
+<a href="../lapas/braucejs.html?id=2550">Ričards Alekss Švaglis</a>
+</td>
+<td>
+		"4X4"
+		<br/>
+<a href="../lapas/braucejs.html?id=2219">Ruslans Dzenis</a>, <br/>
+<a href="../lapas/braucejs.html?id=2853">Aleksandrs Špatcs</a>, <br/>
+<a href="../lapas/braucejs.html?id=998">Edgars Sproģis</a>
+</td>
+</tr>
+</tbody>
+</table></div><h3>
+Izaicinājuma kausa izcīņa
+</h3><div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+Gads
+	</td>
+<td>
+Kausa ieguvējs
+		<br/>
+</td>
+<td>
+Otrā vieta
+	</td>
+<td>
+		Trešā vieta
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2013/izaicinajuma-kauss/">2013</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=593">Normunds Skreija</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=521">Kristaps Grīnieks</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2014/izaicinajuma-kauss/">2014</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=594">Rūdis Kļaviņš</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=627">Artūrs Freimanis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=509">Aleksejs Sjomins</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2015/izaicinajuma-kauss/">2015</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=770">Kaspars Ritums</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=771">Kārlis Kleinhofs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=512">Renārs Paiders</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2016/izaicinajuma-kauss/">2016</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=997">Jurijs Fedorenko</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=512">Renārs Paiders</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=933">Gatis Bergmanis</a><br/>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2017/izaicinajuma-kauss/">2017</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1076">Kaspars Zuģickis</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=817">Ričards Freibergs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=998">Edgars Sproģis</a><br/>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2018/izaicinajuma-kauss/">2018</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=998">Edgars Sproģis</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1131">Kristaps Ķilkuts</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=584">Sergejs Glaņenko</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2019/izaicinajuma-kauss/">2019</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1436">Dāvis Zalmans</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=584">Sergejs Glaņenko</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1620">Didzis Grāvītis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2020/izaicinajuma-kauss/">2020</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1620">Didzis Grāvītis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1301">Oļegs Moskals</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1484">Jānis Kornis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2021/izaicinajuma-kauss/">2021</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=705">Māris Grandbergs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2214">Matīss Valujevs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2219">Ruslans Dzenis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2022/izaicinajuma-kauss/">2022</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2586">Aurelijus Skromovas</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1301">Oļegs Moskals</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2219">Ruslans Dzenis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2023/izaicinajuma-kauss/">2023</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1627">Kristofers Caune</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2550">Ričards Alekss Švaglis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2500">Viljams Plešs</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2024/izaicinajuma-kauss/">2024</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=3015">Niks Vucāns</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2614">Orestas Burgaila</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2550">Ričards Alekss Švaglis</a><br/>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../lapas/rezultati.html?y=2025&amp;c=izaicinajuma-kauss">2025</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2899">
+		Otīlija Grandberga
+		</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2517">
+		Sergejs Ļesiks
+		</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2852">
+		Aleksandrs Špatcs
+		</a><br/>
+</td>
+</tr>
+</tbody>
+</table></div><h3>
+Gada debitants
+</h3><div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+Gads
+	</td>
+<td>
+Gada debitants
+	</td>
+<td>
+		Otrā vieta
+	</td>
+<td>
+		Trešā vieta
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2008/cempionats">2008</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=79">Jurijs Višņakovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=73">Dairis Vīksne</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=92">Mārtiņš Krūze</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2009/cempionats">2009</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=126">Dāvis Tobiass</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=111">Raivis Kirilovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=133">Ivars Strencis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2010/cempionats">2010</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=316">Jānis Strauss</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=280">Jurijs Šestakovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=308">Kristaps Gode</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2011/cempionats">2011</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=437">Pāvils Dāvis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=458">Andrejs Paupers</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=488">Reinis Nitišs</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2012/cempionats">2012</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=513">Ruslans Ivanovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=509">Aleksejs Sjomins</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=516">Sandis Laube</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2013/cempionats">2013</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=593">Normunds Skreija</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=607">Dace Damberga</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2014/cempionats">2014</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=627">Artūrs Freimanis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=512">Renārs Paiders</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=770">Kaspars Ritums</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2015/cempionats">2015</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=864">Toms Kalnītis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=946">Andris Ratkus</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=998">Edgars Sproģis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2016/cempionats">2016</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1076">Kaspars Zuģickis</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1131">Kristaps Ķilkuts</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1128">Artūts Vīķis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2017/cempionats">2017</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1301">Oļegs Moskals</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1192">Daniils Verins</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1321">Daniils Ivančikovs</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2018/cempionats">2018</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1436" target="_blank">Dāvis Zalmans</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1484">Jānis Kornis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1501">Nauris Agafonovs</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2019/cempionats">2019</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1620">Didzis Grāvītis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1633">Luīze Cera</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1674">Edgars Vilcāns</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2020/debitanti">2020</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2219">Ruslans Dzenis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2290">Emīls Mālkalns</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2364">Gatis Šleiņus</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2021/debitanti">2021</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2567">Rolands Svētiņš</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2586">Aurelijus Skromovas</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2550">Ričards Alekss Švaglis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2022/debitanti">2022</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1627">Kristofers Caune</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2664">Mārtiņš Rode</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2675">Alex Zemik</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2023/debitanti">2023</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2903">Elizabete Šulce</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2853">Aleksandrs Špatcs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2905">Rodrigo Kākers</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2024/debitanti">2024</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=3015">Niks Vucāns</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=3035">Laimonas Skrodenis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=3044">Laimonas Starkevičius</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../lapas/rezultati.html?y=2025&amp;c=debitanti">2025</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=3657">
+		Erman Keskin</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=3938">
+		Rem Vasilenko
+		</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=3958">
+		Benas De La Mare
+		</a>
+</td>
+</tr>
+</tbody>
+</table></div><h3>
+95+ ieskaite 
+</h3><p>
+<em>(no 2017. līdz 2019. gadam 90+, no 2020. līdz 2022. gadam 93+)</em>
+</p><div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+Gads
+	</td>
+<td>
+Uzvarētājs
+		<br/>
+</td>
+<td>
+Otrā vieta
+	</td>
+<td>
+Trešā vieta
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2017/93-plus">2017</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1135">Jānis Olle</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=810">Kaspars Cikmačs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=994">Emīls Bērziņš</a><br/>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2018/93-plus">2018</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=994">Emīls Bērziņš</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=988">Alvils Zilemanis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=810">Kaspars Cikmačs</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2019/93-plus">2019</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=770">Kaspars Ritums</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=994">Emīls Bērziņš</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=6">Zintis Grandbergs</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2020/93-plus">2020</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1501">Nauris Agafonovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1570">Rinalds Elksnis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=6">Zintis Grandbergs</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2021/93-plus">2021</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1570">Rinalds Elksnis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1501">Nauris Agafonovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2346">Rolands Žīgurs</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2022/93-plus">2022</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1501">Nauris Agafonovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1570">Rinalds Elksnis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2346">Rolands Žīgurs</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2023/95-plus">2023</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=91">Lauris Lapiņš</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2807">Nils Kūla</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2574">Raivis Liberts</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2024/95-plus">2024</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2574">Raivis Liberts</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2807">Nils Kūla</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=91">Lauris Lapiņš</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../lapas/rezultati.html?y=2025&amp;c=95-plus">2025</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2574">Raivis Liberts</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2807">Nils Kūla</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=3681">
+		Lauris Liberts
+		</a>
+</td>
+</tr>
+</tbody>
+</table></div><h3>
+Junioru ieskaite
+</h3><div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+Gads
+	</td>
+<td>
+Uzvarētājs
+		<br/>
+</td>
+<td>
+Otrā vieta
+	</td>
+<td>
+Trešā vieta
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2023/juniori">2023</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2905">Rodrigo Kākers</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=3005">Jokubas Kaminskas</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2510">Kristaps Tenis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2024/juniori">2024</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2614">Orestas Burgaila</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2899">Otīlija Grandberga</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2905">Rodrigo Kākers</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../lapas/rezultati.html?y=2025&amp;c=juniori">2025</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2899">Otīlija Grandb</a><a href="../lapas/braucejs.html?id=2899">erga</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=3657">
+		Erman Keskin
+		</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=3559">Karlīna Gladiše</a><a href="../lapas/braucejs.html?id=3559">va</a>
+</td>
+</tr>
+</tbody>
+</table></div><h3>Dāmu ieskaite
+</h3><div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+Gads
+	</td>
+<td>
+Uzvarētājs
+		<br/>
+</td>
+<td>
+Otrā vieta
+	</td>
+<td>
+Trešā vieta
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2023/damu-ieskaite">2023</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2903">Elizabete Šulce</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=71">Iveta Akmeņkalne</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2899">Otīlija Grandberga</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2024/damu-ieskaite">2024</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2899">Otīlija Grandberga</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2903">Elizabete Šulce</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=3559">Karlīna Gladiševa</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../lapas/rezultati.html?y=2025&amp;c=damu-ieskaite">2025</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2899">Otīlija Grandberga</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=3559">Karlīna Gladiš</a><a href="../lapas/braucejs.html?id=3559">eva</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=3938">
+		Meda Mickeliūnaitė
+		</a>
+</td>
+</tr>
+</tbody>
+</table></div><h3>
+Ceļojošā kausa izcīņa 
+</h3><div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+Gads
+	</td>
+<td>
+Trase
+	</td>
+<td>
+Kausa ieguvējs
+		<br/>
+</td>
+<td>
+Otrā vieta
+	</td>
+<td>
+Trešā vieta
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2009/kausa-izcina/1">2009</a>
+</td>
+<td>
+		Viimsi Sisekardirada (Tallina), 05.12.2009
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=126">Dāvis Tobiass</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=111">Raivis Kirilovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=25">Mikus Narvils</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2010/kausa-izcina/1">2010</a>
+</td>
+<td>
+		Triobet Kardikeskus (Tallina), 09.01.2011
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=43"> Lauris Rozenvalds </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=111">Raivis Kirilovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=13"> Daniels Mančinskis </a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2011/kausa-izcina/1">2011</a>
+</td>
+<td>
+		OpenkartCity (Rīga), 13.01.2012
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=148">Andris Orniņš </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=13"> Daniels Mančinskis </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=43"> Lauris Rozenvalds </a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2012/kausa-izcina/1">2012</a>
+</td>
+<td>
+		Triobet Kardikeskus (Tallina), 13.01.2013
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=111">Raivis Kirilovs </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=43"> Lauris Rozenvalds </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=21">Uldis Galdiņš </a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2013/kausa-izcina/1">2013</a>
+</td>
+<td>
+		Triobet Kardikeskus (Tallina), 10.01.2014
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=111">Raivis Kirilovs</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=43"> Lauris Rozenvalds </a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2014/kausa-izcina/1">2014</a>
+</td>
+<td>
+		Triobet Kardikeskus (Tallina), 11.01.2015
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=266">Mareks Štolcermanis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=521">Kristaps Grīnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2015/kausa-izcina/1">2015</a>
+</td>
+<td>
+		Triobet Kardikeskus (Tallina), 09.01.2016
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=592">Krišs Jaunzemis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1092">Dāniels Lācis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2016/kausa-izcina/1">2016</a>
+</td>
+<td>
+		Triobet Kardikeskus (Tallina), 07.01.2017
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=1092" target="_blank">Dāniels Lācis</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592" target="_blank">Krišs Jaunzemis</a><br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596" target="_blank">Andrejs Laipnieks</a><br/>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2017/kausa-izcina/1">2017</a>
+</td>
+<td>
+		Unibet Kardikeskus (Tallina), 15.01.2018
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=596" target="_blank">Andrejs Laipnieks </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592" target="_blank">Krišs Jaunzemis </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=514" target="_blank">Harijs Cīrulis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2018/kausa-izcina/1">2018</a>
+</td>
+<td>
+		Unibet Kardikeskus (Tallina), 13.01.2019
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=596" target="_blank">Andrejs Laipnieks </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592" target="_blank">Krišs Jaunzemis </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=988">Rūdolfs Šmits</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2019/kausa-izcina/1">2019</a>
+</td>
+<td>
+		XL Rīga kartinga nams (Rīga), 16.01.2020
+		<br/>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=514" target="_blank">Harijs Cīrulis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596" target="_blank">Andrejs Laipnieks </a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1131">Kristaps Ķilkuts</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2020/kausa-izcina/1">2020</a>
+</td>
+<td>
+		Sporta komplekss "Rullītis" (Jelgava), 06.09.2021
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=592" target="_blank">Krišs Jaunzemis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=998" target="_blank">Edgars Sproģis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596" target="_blank">Andrejs Laipnieks</a>
+</td>
+</tr>
+<tr>
+<td>
+		2021
+	</td>
+<td>
+		nenotika
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2022/kausa-izcina/1">2022</a>
+</td>
+<td>
+			XL Rīga kartinga nams (Rīga), 11.01.2023
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=596" target="_blank">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=998" target="_blank">Edgars Sproģis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2219">Ruslans Dzenis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2023/kausa-izcina/1">2023</a>
+</td>
+<td>
+			E1Gokart (Gdaņska), 02.03.2024
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=596" target="_blank">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=592" target="_blank">Krišs Jaunzemis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=998" target="_blank">Edgars Sproģis</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2024/kausa-izcina/1">2024</a>
+</td>
+<td>
+			Kartings.lv (Rīga), 29.01.2025
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=596" target="_blank">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=2550" target="_blank">Ričards Alekss Švaglis</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=1436" target="_blank">Dāvis Zalmans</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../lapas/rezultati.html?y=2025&amp;c=kausa-izcina&amp;g=1">2025</a>
+</td>
+<td>
+			Kandavas kartodroms (Kandava), 27.05.2026
+	</td>
+<td>
+<a href="../lapas/braucejs.html?id=1436" target="_blank">Dāvis Zalmans</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=596" target="_blank">Andrejs Laipnieks</a>
+</td>
+<td>
+<a href="../lapas/braucejs.html?id=770" target="_blank">Kaspars Ritums</a>
+</td>
+</tr>
+</tbody>
+</table></div>
+
+  </div>
+</main>
+  <footer class="footer">
+    <div class="footer__flag" aria-hidden="true"></div>
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="../assets/img/logo-red.png" alt="Openkart" width="1158" height="246" loading="lazy">
+        <p>Amatieru kartinga kustība. 20 sezonas uz trases.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_2-kontakti.html">Kontakti</a>
+        <a href="../lapas/s_4-par-openkart.html">Par Openkart</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+      </nav>
+      <div class="footer__social">
+        <a href="http://www.facebook.com/pages/Openkart/156203434346" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.4H7.6V14h2.7v8h3.2z"/></svg>
+        </a>
+        <a href="https://instagram.com/openkart.lv/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy wrap">© 2026, openkart.lv. Visas tiesības paturētas</p>
+  </footer>
+
+  <script>window.OK_ROOT = "../";</script>
+  <script src="../assets/js/pages.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

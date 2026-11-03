@@ -18,11 +18,7 @@
   const ROOT = window.OK_ROOT || "";
   const PAGES = window.OK_PAGES || {};
   // openkart.lv ceļš -> vietējā lapa, ja tāda ir, citādi saite uz openkart.lv
-  const href = (path) => {
-    const [p, frag] = path.split("#");
-    if (p === "/lv/results") return href("/lv/results/2026/cempionats");
-    return PAGES[p] ? `${ROOT}lapas/${PAGES[p]}${frag ? "#" + frag : ""}` : BASE + path;
-  };
+  const href = (path) => (window.OK_LINK ? window.OK_LINK(path) : BASE + path);
   const racerUrl = (n) => href(racers[n] ? `/lv/racers/${racers[n]}-${slug(n)}` : "/lv/racers");
 
   const standings = [

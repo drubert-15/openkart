@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XL Rīga Junior Cup sākas 12. novembrī — Openkart</title>
+  <meta name="description" content="Openkart — amatieru kartinga kustība Latvijā.">
+  <meta name="theme-color" content="#0b0c0f">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&amp;family=Titillium+Web:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Piekļuves brīdinājums (kā oriģinālajā lapā) -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
+    <div class="gate__card">
+      <div class="gate__flag" aria-hidden="true"></div>
+      <p class="eyebrow">Uzmanību!</p>
+      <h2 id="gate-title">Piekļuve mājas lapai paredzēta tikai Openkart kopienas dalībniekiem</h2>
+      <div class="gate__actions">
+        <button class="btn btn--red" id="gate-ok">Turpināt</button>
+        <a class="btn btn--ghost" href="https://google.com">Iziet</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Augšējā josla -->
+  <div class="topbar">
+    <div class="wrap topbar__in">
+      <span class="topbar__date" id="today">Otrdiena, 03. nov., 2026</span>
+      <div class="topbar__right">
+        <a href="https://openkart.lv/users/sign_in?locale=lv">Autorizēties</a>
+        <a href="https://openkart.lv/users/sign_up?locale=lv" class="topbar__reg">Reģistrēties</a>
+        <span class="lang"><a href="../index.html" class="is-on">LV</a><a href="../index.html">EN</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Galvene -->
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a href="../index.html" class="logo" aria-label="Openkart sākumlapa"><img src="../assets/img/logo-red.png" alt="Openkart 20 — amatieru kartinga kustība" width="1158" height="246"></a>
+      <button class="burger" id="burger" aria-label="Izvēlne" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <a href="../lapas/rezultati.html">Rezultāti</a>
+        <a href="../lapas/kalendars.html">Kalendārs</a>
+        <a href="../lapas/dalibnieki.html">Dalībnieki</a>
+        <a href="../lapas/stats.html">Statistika</a>
+        <div class="dd">
+          <button class="dd__btn" aria-expanded="false">Jaunumi</button>
+          <div class="dd__menu">
+            <a href="../lapas/jaunumi_cempionats_r.html">Čempionāts</a>
+            <a href="../lapas/jaunumi_attistibas-liga_r.html">Attīstības līga</a>
+            <a href="../lapas/jaunumi_xl-riga-junior-cup_r.html">XL Rīga Junior Cup</a>
+            <a href="../lapas/jaunumi_indoor-cup_r.html">Indoor Cup</a>
+            <a href="../lapas/jaunumi_joker-karting-challenge_r.html">Joker Karting Challenge</a>
+            <a href="../lapas/jaunumi_team-race_r.html">Team Race</a>
+            <a href="../lapas/jaunumi_sws-sprint-cup_r.html">SWS Sprint Cup</a>
+            <a href="../lapas/jaunumi_b-liga_r.html">B līga</a>
+            <a href="../lapas/jaunumi_sws-endurance-cup_r.html">SWS Endurance Cup</a>
+            <a href="../lapas/jaunumi_kausa-izcina_r.html">Kausa izcīņa</a>
+            <a href="../lapas/jaunumi_eopenkart-slotcar-racing_r.html">eOpenkart SlotCar Racing</a>
+            <a href="../lapas/jaunumi_uznemumu-kauss_r.html">Uzņēmumu kauss</a>
+            <a href="../lapas/jaunumi_musejie-pasaule_r.html">Mūsējie Pasaulē</a>
+          </div>
+        </div>
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+        <a href="https://www.flickr.com/photos/147056524@N03/albums" class="nav__media">Foto</a>
+        <a href="https://www.youtube.com/@Openkartkustiba/featured" class="nav__media">Video</a>
+        <a href="../index.html#kalendars" class="btn btn--red nav__cta">Pieteikties</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="page">
+  <section class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Jaunumi</p>
+      <h1>XL Rīga Junior Cup sākas 12. novembrī</h1>
+    </div>
+  </section>
+  <div class="wrap content">
+<div class="article">
+
+<div class="row">
+<div class="col-md-8">
+
+
+<p class="small">01.11.2023, Uldis Galdiņš</p>
+<a href="https://openkart.lv/uploads/articles/1933/WhatsApp_Image_2023-11-02_at_12.59.00%281%29_original.jpeg" rel="prettyPhoto[prod_1490]" title="">
+<img class="rounded img-fluid img-bordered" id="image_1490" loading="lazy" src="https://openkart.lv/uploads/articles/1933/WhatsApp_Image_2023-11-02_at_12.59.00%281%29_normal.jpeg"/>
+</a>
+<div class="row mt-2 mb-3">
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/1934/WhatsApp_Image_2023-11-02_at_12.59.01_original.jpeg" rel="prettyPhoto[prod_1490]" title="">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/1934/WhatsApp_Image_2023-11-02_at_12.59.01_thumb.jpeg"/>
+</a>
+</div>
+</div>
+<p>Svētdien Šauļos noslēdzām <em>Openkart</em> sezonu, līdz nākamajai, astoņpadsmitajai, vēl mēneši gandrīz pieci jāgaida, bet kartings tādēļ neapstājas. Pirms nedaudz vairāk nekā gada <em>XL Rīga</em> kartinga nams sadarbībā ar <em>Openkart</em> atdzīvināja <em>Sodi World Series Junior Cup</em> sacensības Latvijā, kas mums deva divas ceļazīmes uz <em>SWS</em> Pasaules finālu Slovākijā jūlija sākumā, kur Latvijas karogu junioru kategorijā pārstāvēja Kristaps Tenis (<em>Junior</em>) un Rodrigo Kākers (<em>Junior Kids</em>). <a href="https://openkart.lv/lv/jaunumi/starptautiskas-sacensibas/r/1463">VAIRĀK ŠEIT</a>. Pēc drāmas <em>Sprint Cup</em> finālā, kur pirmajā līkumā Andrejs Laipnieks, startējot no <em>pole position</em>,tika izsists riepu sienā, tieši <em>Junior</em> Kids Rodrigo uzrādīja Latvijai augstāko vietu - 22. Otrais labākais bija <em>Sprint Cup</em> Dāvim Zalmanam un junioram Kristapam Tenim.  Šogad Latvijā junioru sacīkstes daudz vairāk tiek rīkotas ar <em>Openkart</em> un <em>DOH</em> pūlēm un jau tagad mums prognozē vismaz divas ceļazīmes junioriem, bet, mazums, iegūsim vēl kādu.</p><p><a href="https://chat.whatsapp.com/HHApjUmJGOo6VFkggiV3w8" target="_blank">PIEVIENOTIES JUNIOR CUP WHATSAPP GRUPAI<br/></a></p><p><a href="https://www.sodiwseries.com/en-gb/become-sws-driver.html">REĢISTRĒT DALĪBNIEKU SODI WORLD SERIES SISTĒMĀ</a></p><p>Progress kādu juniori rāda ir jūtams ar katru sacīksti, tāpēc arī šajā starpsezonā, nedaudz mainītā veidā, <em>XL Rīga</em> rīkos 12 posmu <em>XL Rīga Junior Cup</em> sacīkstes, aizvadot tās pēc klasiskā <em>Openkart</em> kausa izcīņas formāta. <em>Openkart</em> loma būs līdzdarboties organizācijā un informatīvajā atbalstā.</p><p><strong>XL RĪGA JUNIOR CUP NOTEIKUMI<br/></strong></p><p><strong>Dalībnieki un informācija</strong></p><ul><li>2008. gadā dzimuši un jaunāki (sākot no 7
+gadu vecuma).</li><li>Vēlama kaut minimāla pieredze braukšanā ar īres
+kartiem XL RĪGA kartinga nama trasē.</li><li>Dalības maksa 40 EUR</li><li>Treniņi 10 EUR / 7 min</li><li>Pieteikšanās un rezultāti būs organizēti
+informatīvā partnera openkart.lv mājas lapā.</li><li>Pārējā informācija kartinganams.lv,
+openkart.lv un attiecīgajos sociālajos tīklos.</li><li>Kalendāru skatīt zemāk. Paredzēti 12 posmi no
+12. novembra līdz 17. martam.</li></ul><p><strong>Formāts</strong></p><ul><li>6 braucieni pa 4 minūtēm uz ātrākajiem apļa
+laikiem.</li><li>Katrs dalībnieks veic vienu braucienu ar
+katru no 6 kartiem. </li><li>Rezultāts ir visu 6 braucienu labāko apļa laiku
+summa.</li></ul><p><strong>Atsvari</strong></p><ul><li>Dalībniekiem, kas piedalās ar RT8 pieaugušo
+kartiem tiek izlīdzināts var līdz 65 kg.</li><li>Bērnu kartiem svar netiek līdzināts.</li></ul><p><strong>Tehnika</strong></p><ul><li>Dalībnieki veic braucienus ar SODI RT8
+kartiem, ja atbilst vecuma, auguma un meistarības parametriem. Pielaidi veic
+trases personāls. Parasti no 10/11 gadu vecuma, augums vismaz 150 cm, taču katrs
+braucējs tiek izvērtēts atsevišķi, atkarībā no pieredzes un meistarības līmeņa.</li><li>Dalībnieki, kuru vecums, prasmes vai auguma
+parametri vēl neatbilst, lai brauktu ar pieaugušo kartiem, sacensības pēc tāda
+paša formāta veic ar bērnu kartiem SODI LR5 – trasē ir seši šādi karti.</li><li>Laika gaitā dalībniekam ir tiesības pāriet no
+braukšanas ar bērnu kartiem uz pieaugušo kartiem, ja tādu vēlmi izteiks un organizatori
+dos pielaidi, ka dalībnieks tam atbilst.</li></ul><p><strong>Kopvērtējums un ieskaites</strong></p><ul><li>Neatkarīgi no izmantotās tehnikas visi dalībnieki
+piedalās vienotā ieskaitē.</li><li>Dalībniekiem, kuri izmanto bērnu kartus, ir
+atsevišķa apakšieskaite XL RĪGA KIDS CUP.</li></ul><p><strong>Apbalvošana</strong></p><ul><li>TOP3 XL RĪGA JUNIOR CUP</li><li>TOP3 XL RĪGA KIDS CUP</li><li>Ātrākā meitene XL RĪGA JUNIOR CUP</li><li>Ātrākā meitene XL RĪGA KIDS CUP</li></ul><p><strong>Punktu sistēma</strong></p><div class="tablewrap"><table>
+<tbody><tr>
+<td>1 – 35</td>
+<td>6 – 21</td>
+<td>11 – 15</td>
+<td>16 – 10</td>
+<td>21 – 5</td>
+</tr>
+<tr>
+<td>2 – 30</td>
+<td>7 – 19</td>
+<td>12 – 14</td>
+<td>17 – 9</td>
+<td>22 – 4</td>
+</tr>
+<tr>
+<td>3 – 27</td>
+<td>8 – 18</td>
+<td>13 – 13</td>
+<td>18 – 8</td>
+<td>23 – 3</td>
+</tr>
+<tr>
+<td>4 – 25</td>
+<td>9 – 17</td>
+<td>14 – 12</td>
+<td>19 – 7</td>
+<td>24 – 2</td>
+</tr>
+<tr>
+<td>5 – 23</td>
+<td>10 – 16</td>
+<td>15 – 11</td>
+<td>20 – 6</td>
+<td>25 – 2</td>
+</tr>
+</tbody></table></div><ul><li>Sākot no 25. vietas visi dalībnieki saņem 2
+ieskaites punktus, ja veikuši pilnu distanci.</li><li>Kopvērtējumā katram dalībniekam tiek ieskaitīti
+9 labākie rezultāti no 12 posmiem.</li></ul><p><strong>Sodi World Series Junior Cup</strong></p><ul><li>Tāpat kā iepriekš katrs posms būs arī divas
+SWS Junior Cup ieskaites neatkarīgi no tehnikas ar kādu dalībnieks brauc, jo
+formāts visiem ir vienāds.</li><li>Pirmā ieskaite ir ar trim kartiem, kuriem ir
+mazākais starta numurs, otra ieskaite ar kartiem, kuriem ir lielākais starta
+numurs.</li><li>2024. gadā SWS Junior Cup ieskaitē tiks iekļauti
+2009. gadā dzimušie un jaunāki – saskaņā ar Sodi World Series noteikumiem.</li></ul><p><strong>Kalendārs</strong></p><ol><li>posms - 12.11.2023, pulksten 10.00, reģistrācija
+no 9.30, svētdiena</li><li>posms - 26.11.2023, pulksten 10.00, reģistrācija
+no 9.30, svētdiena</li><li>posms - 03.12.2023, pulksten 10.00, reģistrācija
+no 9.30, svētdiena </li><li>posms - 17.12.2023, pulksten 10.00, reģistrācija
+no 9.30, svētdiena</li><li>posms - 26.12.2023, pulksten 15.00, reģistrācija
+no 14.30, otrdiena (svētku diena)</li><li>posms - 07.01.2024, pulksten 10.00, reģistrācija
+no 9.30, svētdiena</li><li>posms - 21.01.2024, pulksten 10.00, reģistrācija
+no 9.30, svētdiena</li><li>posms - 27.01.2024, pulksten 10.00, reģistrācija
+no 9.30, sestdiena</li><li>posms - 04.02.2024, pulksten 10.00, reģistrācija
+no 9.30, svētdiena</li><li>posms - 18.02.2024, pulksten 10.00, reģistrācija
+no 9.30, svētdiena</li><li>posms - 03.03.2024, pulksten 10.00, reģistrācija
+no 9.30, svētdiena</li><li>posms - 17.03.2024, pulksten 10.00, reģistrācija
+no 9.30, svētdiena</li></ol>
+<div class="clearfix"></div>
+<div id="articles-list">
+<div class="float-end">
+<a class="btn btn-sm btn-outline-secondary" href="#top">
+<i aria-hidden="true" class="fas fa-arrow-up"></i>
+Uz augšu
+</a>
+</div>
+<h3>XL Rīga Junior Cup</h3>
+<div class="clearfix"></div>
+<ul class="list-unstyled striped articles">
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">14.02.2024</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_xl-riga-junior-cup_r_1512-svetdien-junioru-kausa-10-posms.html">Svētdien Junioru kausa 10. posms</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1512_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">25.01.2024</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_xl-riga-junior-cup_r_1508-xl-riga-junior-cup-8-posms-soreiz-sestdien-27-janvari.html">XL Rīga Junior Cup 8. posms šoreiz sestdien, 27. janvārī</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1508_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">17.01.2024</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_xl-riga-junior-cup_r_1506-21-janvari-junioru-kausa-7-posms.html">21. janvārī Junioru kausa 7. posms</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1506_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">05.01.2024</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_xl-riga-junior-cup_r_1504-xl-riga-junior-cup-6-posms-liela-sala-del-ir-parcelts-no-7-uz-14-janvari.html">​XL Rīga Junior Cup 6. posms lielā sala dēļ ir pārcelts no 7. uz 14. janvāri</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1504_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">20.12.2023</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_xl-riga-junior-cup_r_1500-lielgalvis-un-lapins-uzvar-otrajos-ziemassvetkos-junioru-kausa-5-posms.html">Lielgalvis un Lapiņš uzvar, otrajos Ziemassvētkos junioru kausa 5. posms</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1500_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">12.12.2023</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_xl-riga-junior-cup_r_1499-junioru-kausa-4-posms-17-decembri.html">Junioru kausa 4. posms 17. decembrī</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1499_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">06.12.2023</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_xl-riga-junior-cup_r_1497-pirmaja-advente-xl-riga-junioru-kausa-uzvara-k-dot-tenim-kidiem-atrakais-hans.html">Pirmajā adventē XL Rīga junioru kausā uzvara K.Tenim, kidiem ātrākais Hāns</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1497_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">28.11.2023</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_xl-riga-junior-cup_r_1495-svetdien-junioru-kausa-33-dalibnieki-uzvar-tenis-un-lapins-3-decembri-3-posms.html">Svētdien Junioru kausā 33 dalībnieki, uzvar Tenis un Lapiņš, 3. decembrī 3. posms</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1495_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">23.11.2023</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_xl-riga-junior-cup_r_1492-svetdien-26-novembri-xl-riga-junior-cup-otrais-posms.html">Svētdien, 26. novembrī, XL Rīga Junior Cup otrais posms</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1492_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">01.11.2023</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_xl-riga-junior-cup_r_1490-xl-riga-junior-cup-sakas-12-novembri.html">XL Rīga Junior Cup sākas 12. novembrī</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1490_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-md-4">
+<div id="comments">
+<div class="alert alert-danger">
+<b>Komentēt var tikai reģistrēti lietotāji</b>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</main>
+  <footer class="footer">
+    <div class="footer__flag" aria-hidden="true"></div>
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="../assets/img/logo-red.png" alt="Openkart" width="1158" height="246" loading="lazy">
+        <p>Amatieru kartinga kustība. 20 sezonas uz trases.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_2-kontakti.html">Kontakti</a>
+        <a href="../lapas/s_4-par-openkart.html">Par Openkart</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+      </nav>
+      <div class="footer__social">
+        <a href="http://www.facebook.com/pages/Openkart/156203434346" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.4H7.6V14h2.7v8h3.2z"/></svg>
+        </a>
+        <a href="https://instagram.com/openkart.lv/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy wrap">© 2026, openkart.lv. Visas tiesības paturētas</p>
+  </footer>
+
+  <script>window.OK_ROOT = "../";</script>
+  <script src="../assets/js/pages.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

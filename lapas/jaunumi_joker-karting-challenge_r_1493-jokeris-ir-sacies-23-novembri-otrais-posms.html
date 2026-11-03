@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jokeris ir sācies, 23. novembrī otrais posms — Openkart</title>
+  <meta name="description" content="Openkart — amatieru kartinga kustība Latvijā.">
+  <meta name="theme-color" content="#0b0c0f">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&amp;family=Titillium+Web:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Piekļuves brīdinājums (kā oriģinālajā lapā) -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
+    <div class="gate__card">
+      <div class="gate__flag" aria-hidden="true"></div>
+      <p class="eyebrow">Uzmanību!</p>
+      <h2 id="gate-title">Piekļuve mājas lapai paredzēta tikai Openkart kopienas dalībniekiem</h2>
+      <div class="gate__actions">
+        <button class="btn btn--red" id="gate-ok">Turpināt</button>
+        <a class="btn btn--ghost" href="https://google.com">Iziet</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Augšējā josla -->
+  <div class="topbar">
+    <div class="wrap topbar__in">
+      <span class="topbar__date" id="today">Otrdiena, 03. nov., 2026</span>
+      <div class="topbar__right">
+        <a href="https://openkart.lv/users/sign_in?locale=lv">Autorizēties</a>
+        <a href="https://openkart.lv/users/sign_up?locale=lv" class="topbar__reg">Reģistrēties</a>
+        <span class="lang"><a href="../index.html" class="is-on">LV</a><a href="../index.html">EN</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Galvene -->
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a href="../index.html" class="logo" aria-label="Openkart sākumlapa"><img src="../assets/img/logo-red.png" alt="Openkart 20 — amatieru kartinga kustība" width="1158" height="246"></a>
+      <button class="burger" id="burger" aria-label="Izvēlne" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <a href="../lapas/rezultati.html">Rezultāti</a>
+        <a href="../lapas/kalendars.html">Kalendārs</a>
+        <a href="../lapas/dalibnieki.html">Dalībnieki</a>
+        <a href="../lapas/stats.html">Statistika</a>
+        <div class="dd">
+          <button class="dd__btn" aria-expanded="false">Jaunumi</button>
+          <div class="dd__menu">
+            <a href="../lapas/jaunumi_cempionats_r.html">Čempionāts</a>
+            <a href="../lapas/jaunumi_attistibas-liga_r.html">Attīstības līga</a>
+            <a href="../lapas/jaunumi_xl-riga-junior-cup_r.html">XL Rīga Junior Cup</a>
+            <a href="../lapas/jaunumi_indoor-cup_r.html">Indoor Cup</a>
+            <a href="../lapas/jaunumi_joker-karting-challenge_r.html">Joker Karting Challenge</a>
+            <a href="../lapas/jaunumi_team-race_r.html">Team Race</a>
+            <a href="../lapas/jaunumi_sws-sprint-cup_r.html">SWS Sprint Cup</a>
+            <a href="../lapas/jaunumi_b-liga_r.html">B līga</a>
+            <a href="../lapas/jaunumi_sws-endurance-cup_r.html">SWS Endurance Cup</a>
+            <a href="../lapas/jaunumi_kausa-izcina_r.html">Kausa izcīņa</a>
+            <a href="../lapas/jaunumi_eopenkart-slotcar-racing_r.html">eOpenkart SlotCar Racing</a>
+            <a href="../lapas/jaunumi_uznemumu-kauss_r.html">Uzņēmumu kauss</a>
+            <a href="../lapas/jaunumi_musejie-pasaule_r.html">Mūsējie Pasaulē</a>
+          </div>
+        </div>
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+        <a href="https://www.flickr.com/photos/147056524@N03/albums" class="nav__media">Foto</a>
+        <a href="https://www.youtube.com/@Openkartkustiba/featured" class="nav__media">Video</a>
+        <a href="../index.html#kalendars" class="btn btn--red nav__cta">Pieteikties</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="page">
+  <section class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Jaunumi</p>
+      <h1>Jokeris ir sācies, 23. novembrī otrais posms</h1>
+    </div>
+  </section>
+  <div class="wrap content">
+<div class="article">
+
+<div class="row">
+<div class="col-md-8">
+
+
+<p class="small">18.11.2023, Uldis Galdiņš</p>
+<a href="https://openkart.lv/uploads/articles/1938/WhatsApp_Image_2023-11-22_at_16.15.42_original.jpeg" rel="prettyPhoto" title="">
+<img class="rounded img-fluid img-bordered" id="image_1493" loading="lazy" src="https://openkart.lv/uploads/articles/1938/WhatsApp_Image_2023-11-22_at_16.15.42_normal.jpeg"/>
+</a>
+<p>Ceturtdien, 16. novembrī, XL Rīga kartinga namā sākām septīto Joker karting Challenge sezonu, jeb precīzāk [starp]sezonu. Vieglas sacīkstes, kur katrs var atrast savu iemeslu piedalīties. Vieni krāj SWS Sprint Cup uzvaras, citi uztur sevi formā, lai izšautu Openkart sezonas sākumā, vēl citi, lai vienkārši satiktos domubiedru pulkā, un vēl citi, lai šajā pulkā ienāktu. Pirmajā posmā uzvara Andrejam Laipniekam, nav brīnums, tomēr septiņkārtējais Openkart čempions. Otrais Andris Lielgalvis, bet trešais Ruslans Dzenis. Fantastiski apļu laiki, fantastiki taktiskie risinājumi, sevišķi cīņā par B fināla uzvaru starp Edgaru Lielgalvi un Mārtiņu Spīķi. Patīkami, ka piedalās ne tikai regulārie openkartisti, bet arī jauni braucēji un arī tādi, kas kādu laiku nebija braukuši.</p><ul><li>23. novembrī notiks otrais posms - <a href="https://openkart.lv/lv/races/1253-2023-joker-karting-challenge-2/race_signups">PIETEIKTIES</a>.</li><li>Te pilni 1. posma <a href="https://openkart.lv/system/redactor_assets/documents/435/JOKER_2023-24_GP01-REZ.pdf">REZULTĀTI</a>.</li><li><a href="https://openkart.lv/lv/results/2023/joker-karting-challenge">KOPVĒRTĒJUMS</a></li></ul><ul><li>Vairāk par Joker KC var izlasīt <a href="../lapas/jaunumi_joker-karting-challenge_r_1491-ceturtdien-sakam-joker-karting-challenge-jauno-starp-sezonu.html">ŠEIT</a>.</li></ul><h3>Dienaskārtība</h3><ul><li>19.00 Reģistrācija</li><li>19.20 Brīvie treniņi 7 min - 10
+ EUR</li><li>20.10 Sapulce</li><li>20.20 Kvalifikācija (6 min + 5 min + 1 apļa kvalifikācija)</li><li>21.30 Fināli (10 apļi, 2 x Joker)</li></ul><p>Dalības maksa maksa 39 EUR.</p>
+<div class="clearfix"></div>
+<div id="articles-list">
+<div class="float-end">
+<a class="btn btn-sm btn-outline-secondary" href="#top">
+<i aria-hidden="true" class="fas fa-arrow-up"></i>
+Uz augšu
+</a>
+</div>
+<h3>Joker Karting Challenge</h3>
+<div class="clearfix"></div>
+<ul class="list-unstyled striped articles">
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">26.11.2025</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_joker-karting-challenge_r_1654-ziema-bus-ko-darit-sakam-gatavoties-openkart-20-sezonai.html">Ziemā būs ko darīt - sākam gatavoties Openkart 20. sezonai</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1654_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">16.02.2024</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_joker-karting-challenge_r_1513-22-februari-joker-dubultposms.html">22. februārī Joker dubultposms</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1513_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">05.02.2024</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_joker-karting-challenge_r_1510-jokera-14-posms-8-februari.html">Jokera 14. posms 8. februārī</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1510_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">29.01.2024</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_joker-karting-challenge_r_1509-joker-un-junior-cup-nosledz-menesi-un-dodas-februara-cinas.html">Joker un Junior Cup noslēdz mēnesi un dodas februāra cīņās</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1509_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">19.01.2024</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_joker-karting-challenge_r_1507-25-janvari-joker-kc-dubultposms.html">25. janvārī Joker KC dubultposms</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1507_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">25.12.2023</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_joker-karting-challenge_r_1501-starp-svetkiem-joker-dubultposms-28-decembri.html">Starp svētkiem Joker dubultposms 28. decembrī</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1501_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">08.12.2023</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_joker-karting-challenge_r_1498-laipnieks-turpina-but-perfekts-14-decembri-6-posms.html">Laipnieks turpina būt perfekts, 14. decembrī 6. posms</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1498_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">05.12.2023</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_joker-karting-challenge_r_1496-7-decembri-jokera-5-posms-ar-klasisku-formatu-un-nelielu-jauninajumu.html">7. decembrī Jokera 5. posms ar klasisku formātu un nelielu jauninājumu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1496_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">28.11.2023</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_joker-karting-challenge_r_1494-ceturtdien-pirmais-joker-sezonas-dubultposms.html">Ceturtdien pirmais Joker sezonas dubultposms</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1494_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">18.11.2023</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_joker-karting-challenge_r_1493-jokeris-ir-sacies-23-novembri-otrais-posms.html">Jokeris ir sācies, 23. novembrī otrais posms</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1493_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">15.11.2023</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_joker-karting-challenge_r_1491-ceturtdien-sakam-joker-karting-challenge-jauno-starp-sezonu.html">Ceturtdien sākam Joker Karting Challenge jauno [starp]sezonu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1491_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">07.11.2022</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_joker-karting-challenge_r_1436-sezona-beigusies-starpsezona-sakusies-joker-karting-challenge-ir-atpakal.html">Sezona beigusies, starpsezona sākusies - Joker karting challenge ir atpakaļ</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1436_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-md-4">
+<div id="comments">
+<div class="alert alert-danger">
+<b>Komentēt var tikai reģistrēti lietotāji</b>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</main>
+  <footer class="footer">
+    <div class="footer__flag" aria-hidden="true"></div>
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="../assets/img/logo-red.png" alt="Openkart" width="1158" height="246" loading="lazy">
+        <p>Amatieru kartinga kustība. 20 sezonas uz trases.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_2-kontakti.html">Kontakti</a>
+        <a href="../lapas/s_4-par-openkart.html">Par Openkart</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+      </nav>
+      <div class="footer__social">
+        <a href="http://www.facebook.com/pages/Openkart/156203434346" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.4H7.6V14h2.7v8h3.2z"/></svg>
+        </a>
+        <a href="https://instagram.com/openkart.lv/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy wrap">© 2026, openkart.lv. Visas tiesības paturētas</p>
+  </footer>
+
+  <script>window.OK_ROOT = "../";</script>
+  <script src="../assets/js/pages.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,2706 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apstiprinātais Ceļojošā kausa izcīņas sastāvs un statistika — Openkart</title>
+  <meta name="description" content="Openkart — amatieru kartinga kustība Latvijā.">
+  <meta name="theme-color" content="#0b0c0f">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&amp;family=Titillium+Web:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Piekļuves brīdinājums (kā oriģinālajā lapā) -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
+    <div class="gate__card">
+      <div class="gate__flag" aria-hidden="true"></div>
+      <p class="eyebrow">Uzmanību!</p>
+      <h2 id="gate-title">Piekļuve mājas lapai paredzēta tikai Openkart kopienas dalībniekiem</h2>
+      <div class="gate__actions">
+        <button class="btn btn--red" id="gate-ok">Turpināt</button>
+        <a class="btn btn--ghost" href="https://google.com">Iziet</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Augšējā josla -->
+  <div class="topbar">
+    <div class="wrap topbar__in">
+      <span class="topbar__date" id="today">Otrdiena, 03. nov., 2026</span>
+      <div class="topbar__right">
+        <a href="https://openkart.lv/users/sign_in?locale=lv">Autorizēties</a>
+        <a href="https://openkart.lv/users/sign_up?locale=lv" class="topbar__reg">Reģistrēties</a>
+        <span class="lang"><a href="../index.html" class="is-on">LV</a><a href="../index.html">EN</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Galvene -->
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a href="../index.html" class="logo" aria-label="Openkart sākumlapa"><img src="../assets/img/logo-red.png" alt="Openkart 20 — amatieru kartinga kustība" width="1158" height="246"></a>
+      <button class="burger" id="burger" aria-label="Izvēlne" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <a href="../lapas/rezultati.html">Rezultāti</a>
+        <a href="../lapas/kalendars.html">Kalendārs</a>
+        <a href="../lapas/dalibnieki.html">Dalībnieki</a>
+        <a href="../lapas/stats.html">Statistika</a>
+        <div class="dd">
+          <button class="dd__btn" aria-expanded="false">Jaunumi</button>
+          <div class="dd__menu">
+            <a href="../lapas/jaunumi_cempionats_r.html">Čempionāts</a>
+            <a href="../lapas/jaunumi_attistibas-liga_r.html">Attīstības līga</a>
+            <a href="../lapas/jaunumi_xl-riga-junior-cup_r.html">XL Rīga Junior Cup</a>
+            <a href="../lapas/jaunumi_indoor-cup_r.html">Indoor Cup</a>
+            <a href="../lapas/jaunumi_joker-karting-challenge_r.html">Joker Karting Challenge</a>
+            <a href="../lapas/jaunumi_team-race_r.html">Team Race</a>
+            <a href="../lapas/jaunumi_sws-sprint-cup_r.html">SWS Sprint Cup</a>
+            <a href="../lapas/jaunumi_b-liga_r.html">B līga</a>
+            <a href="../lapas/jaunumi_sws-endurance-cup_r.html">SWS Endurance Cup</a>
+            <a href="../lapas/jaunumi_kausa-izcina_r.html">Kausa izcīņa</a>
+            <a href="../lapas/jaunumi_eopenkart-slotcar-racing_r.html">eOpenkart SlotCar Racing</a>
+            <a href="../lapas/jaunumi_uznemumu-kauss_r.html">Uzņēmumu kauss</a>
+            <a href="../lapas/jaunumi_musejie-pasaule_r.html">Mūsējie Pasaulē</a>
+          </div>
+        </div>
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+        <a href="https://www.flickr.com/photos/147056524@N03/albums" class="nav__media">Foto</a>
+        <a href="https://www.youtube.com/@Openkartkustiba/featured" class="nav__media">Video</a>
+        <a href="../index.html#kalendars" class="btn btn--red nav__cta">Pieteikties</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="page">
+  <section class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Jaunumi</p>
+      <h1>Apstiprinātais Ceļojošā kausa izcīņas sastāvs un statistika</h1>
+    </div>
+  </section>
+  <div class="wrap content">
+<div class="article">
+
+<div class="row">
+<div class="col-md-8">
+
+
+<p class="small">08.01.2019, Uldis Galdiņš</p>
+<a href="https://openkart.lv/uploads/articles/983/39980043774_011e28ca8f_k_original.jpg" rel="prettyPhoto" title="Dalībnieku sastāvs pirms gada">
+<img class="rounded img-fluid img-bordered" id="image_1259" loading="lazy" src="https://openkart.lv/uploads/articles/983/39980043774_011e28ca8f_k_normal.jpg"/>
+</a>
+<p>
+	Esam finalizējuši 2018.gada sezonas Openkart Ceļojošā kausa galējo sastāvu un piedāvajam arī iepazīties uz statistiku pirms gaidāmās sacīkstes. No 20 dalībniekiem, kuri bija izcīnījuši ceļazīmi uz sacīksti, četri nestartēs, un tas ir visai normāls rādītājs. Viņu vietas ieņems rezervisti, kas šoreiz gana aktīvi pieņēma šo iespēju un neveins neatteica, un kā pēdējais savu dalību ar 20. kārtas numuru apstiprināja Jānis Olle.
+</p>
+<p>
+	Sešiem dalībniekiem šī būs debija kausa izcīņā, tiesa gan starp viņiem ir tikai divi sezonas debitanti - Dāvis Zalmans un Jānis Kornis, pirmā reize kausa izcīņā un pirmo reizi tādas tiesības izcīnītas Daniilam Ivančikovam un Mārim Grandbergam, kurš bija pirmais no rezervistiem, savukārt Rūdolfs Šmits un Emīls Bērziņš, kuriem bija iespēja startēt arī iepriekš, dažādu iemeslu dēļ netika un arī viņiem pirmais starts kausā. Trase  apstiprināja, ka būs pieejam 10 kartingi, kas nozīmē, ka dalībnieki būs divās grupās, pirmie brauks B grupa (11-20 starta secības numurs), bet otrie A grupa (1-10 starta secības numurs, kas skaitās lielie favorīti). No sešiem debitantiem divi (Šmits un Zalmans) ir iekļuvuši A grupā, pārējie B grupā.
+</p>
+<p>
+	Openkart Ceļojošais kauss notiks 10. reizi un no pašreizējiem dalībniekiem pieredzējušākais ir Kristaps Grīnieks, kuram šī būs 7. kausa izcīņa un tas ir atkārtots leģendārā Ivara Strenča rekords, sesto reizi uz starta izies Krišs Jaunzemis, kuram vienīgajam divas uzvaras, bet piektā reize Renāram Paideram un Aleksejam Sjominam. Pašreizējam kausa turētājam Andrejam Laipniekam šis būs ceturtais starts, tāpat kā arī veterānam Zintim Grandbergam, kurš ir vienīgais, kas piedalījās pirmājā un tai sekojošās divās nākamajās kausa izcīnās. Ceturtā reize būs arī Edgaras Sproģim un Jurģim Braueram. Kopumā aizvadītajos deviņos gados kausa izcīņā ir piedalījušies 80 braucēji, no tiem nedaudz vairāk nekā puse, jeb 44 dalībnieki ir piedalījušies atkārtoti.
+</p>
+<p>
+	Desmit dalībnieki piedalījās iepriekšējā kausa izcīņā, bet četriem tās būs atgriešanās šajās sacensībās - Sjominam pēc viena gada pauzes, Normundam Skreijam un Braueram pēc divu gadu pauzes, bet Zintis Grandbergs kausa izcīņā atgriezīsies pēc sešu sacīkšu izlaišanas. Zintis un Māris ir pirmais gadījums kausa izcīņas vēsturē, kad sacīkstē piedalīsies tēvs un dēls.
+</p>
+<p>
+	Kā jau iepriekš minējām, tad divi dalībnieki šogad ir no debitantu ieskaites, trīs no 90+ ieskaites, bet no Izaicinājuma kausa 11.
+</p>
+<p>
+<em>Kausa ieguvēji, godalgotās vietas un tās sezonas Openkart čempioni
+	</em>
+</p>
+<div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+<strong>
+		Gads
+		</strong>
+</td>
+<td>
+</td>
+<td>
+<strong>
+		Datums
+		</strong>
+</td>
+<td>
+<strong>
+		Trase
+		</strong>
+</td>
+<td>
+<strong>
+		Kausa ieguvējs
+		</strong>
+</td>
+<td>
+<strong>
+		Otrā vieta
+		</strong>
+</td>
+<td>
+<strong>
+		Trešā vieta
+		</strong>
+</td>
+<td>
+<strong>
+		Sezonas čempions
+		</strong>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2009/kausa-izcina/1">2009</a><br/>
+</td>
+<td>
+		I
+	</td>
+<td>
+		05.12.2009
+	</td>
+<td>
+		Viimsi sisekardirada (Tallina)
+	</td>
+<td>
+		Dāvis Tobiass
+	</td>
+<td>
+		Raivis Kirilovs
+	</td>
+<td>
+		Mikus Narvils
+	</td>
+<td>
+		Dāvis Tobiass
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2010/kausa-izcina/1" target="_blank">2010</a><br/>
+</td>
+<td>
+		II
+	</td>
+<td>
+		09.01.2011
+	</td>
+<td>
+		Triobet kardikeskus (Tallina)
+	</td>
+<td>
+		Lauris Rozenvalds
+	</td>
+<td>
+		Raivis Kirilovs
+	</td>
+<td>
+		Daniels Mančinskis
+	</td>
+<td>
+		Daniels Mančinskis
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2011/kausa-izcina/1" target="_blank">2011</a><br/>
+</td>
+<td>
+		III
+	</td>
+<td>
+		13.01.2012
+	</td>
+<td>
+		OpenkartCity (Rīga)
+	</td>
+<td>
+		Andris Orniņš
+	</td>
+<td>
+		Daniels Mančinskis
+	</td>
+<td>
+		Lauris Rozenvalds
+	</td>
+<td>
+		Zintis Grandbergs
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2012/kausa-izcina/1" target="_blank">2012</a><br/>
+</td>
+<td>
+		IV
+	</td>
+<td>
+		13.01.2013
+	</td>
+<td>
+		Triobet kardikeskus (Tallina)
+	</td>
+<td>
+		Raivis Kirilovs
+	</td>
+<td>
+		Lauris Rozenvalds
+	</td>
+<td>
+		Uldis Galdiņš
+	</td>
+<td>
+		Raivis Kirilovs
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2013/kausa-izcina/1" target="_blank">2013</a><br/>
+</td>
+<td>
+		V
+	</td>
+<td>
+		10.01.2014
+	</td>
+<td>
+		Triobet kardikeskus (Tallina)
+	</td>
+<td>
+		Krišs Jaunzemis
+	</td>
+<td>
+		Raivis Kirilovs
+	</td>
+<td>
+		Lauris Rozenvalds
+	</td>
+<td>
+		Ivars Strencis
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2014/kausa-izcina/1" target="_blank">2014</a><br/>
+</td>
+<td>
+		VI
+	</td>
+<td>
+		11.01.2015
+	</td>
+<td>
+		Triobet kardikeskus (Tallina)
+	</td>
+<td>
+		Mareks Štolcermanis
+	</td>
+<td>
+		Kristaps Grīnieks
+	</td>
+<td>
+		Krišs Jaunzemis
+		<br/>
+</td>
+<td>
+		Krišs Jaunzemis
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2015/kausa-izcina/1" target="_blank">2015</a><br/>
+</td>
+<td>
+		VII
+	</td>
+<td>
+		09.01.2016
+	</td>
+<td>
+		Triobet kardikeskus (Tallina)
+	</td>
+<td>
+		Krišs Jaunzemis
+	</td>
+<td>
+		Andrejs Laipnieks
+	</td>
+<td>
+		Dāniels Lācis
+	</td>
+<td>
+		Andrejs Laipnieks
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2016/kausa-izcina/1" target="_blank">2016</a><br/>
+</td>
+<td>
+		VIII
+	</td>
+<td>
+		07.01.2017
+	</td>
+<td>
+		Triobet kardikeskus (Tallina)
+	</td>
+<td>
+		Dāniels Lācis
+	</td>
+<td>
+		Krišs Jaunzemis
+	</td>
+<td>
+		Andrejs Laipnieks
+	</td>
+<td>
+		Krišs Jaunzemis
+	</td>
+</tr>
+<tr>
+<td>
+<a href="https://openkart.lv/lv/results/2017/kausa-izcina/1" target="_blank">2017</a><br/>
+</td>
+<td>
+		IX
+		<br/>
+</td>
+<td>
+		14.01.2018
+	</td>
+<td>
+		Unibet kardikeskus (Tallina)
+	</td>
+<td>
+		Andrejs Laipnieks
+	</td>
+<td>
+		Krišs Jaunzemis
+	</td>
+<td>
+		Harijs Cīrulis
+	</td>
+<td>
+		Kristaps Grīnieks
+	</td>
+</tr>
+</tbody>
+</table></div>
+<h3></h3>
+<h3>2018. gada Openkart Ceļojošā kausa dalībnieku sastāvs un vietas pa gadiem
+</h3>
+<p>
+	CC - Izaicinājuma kauss, D - debitants, 90+ - smago ieskaite, DNS - nestartēja
+</p>
+<div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td>
+		RACES
+	</td>
+<td>
+		BEST
+	</td>
+<td>
+		2017
+	</td>
+<td>
+		2016
+	</td>
+<td>
+		2015
+	</td>
+<td>
+		2014
+	</td>
+<td>
+		2013
+	</td>
+<td>
+		2012
+	</td>
+<td>
+		2011
+	</td>
+<td>
+		2010
+	</td>
+<td>
+		2009
+	</td>
+</tr>
+<tr>
+<td>
+		1
+	</td>
+<td>
+		Andrejs Laipnieks
+	</td>
+<td>
+		3
+	</td>
+<td>
+		1
+	</td>
+<td>
+		1
+	</td>
+<td>
+		3
+	</td>
+<td>
+		2
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		2
+	</td>
+<td>
+		Kristaps Grīnieks
+	</td>
+<td>
+		6
+	</td>
+<td>
+		2
+	</td>
+<td>
+		6
+	</td>
+<td>
+		4
+	</td>
+<td>
+		6
+	</td>
+<td>
+		2
+	</td>
+<td>
+		10
+	</td>
+<td>
+		10
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		3
+	</td>
+<td>
+		Krišs Jaunzemis
+	</td>
+<td>
+		5
+	</td>
+<td>
+		1
+	</td>
+<td>
+		2
+	</td>
+<td>
+		2
+	</td>
+<td>
+		1
+	</td>
+<td>
+		3
+	</td>
+<td>
+		1
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		4
+	</td>
+<td>
+		Edgars Sproģis, CC
+	</td>
+<td>
+		3
+	</td>
+<td>
+		7
+	</td>
+<td>
+		12
+	</td>
+<td>
+		7
+	</td>
+<td>
+		13
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		5
+	</td>
+<td>
+		Rūdolfs Šmits
+	</td>
+<td>
+		DNS
+	</td>
+<td>
+		-<br/>
+</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		6
+	</td>
+<td>
+		Kristaps Ķilkuts, CC
+	</td>
+<td>
+		1
+	</td>
+<td>
+		10
+	</td>
+<td>
+		10
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		7
+	</td>
+<td>
+		Sergejs Glanenko, CC
+	</td>
+<td>
+		1
+	</td>
+<td>
+		16
+	</td>
+<td>
+		16
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		8
+	</td>
+<td>
+		Kaspars Ritums
+	</td>
+<td>
+		2
+	</td>
+<td>
+		17
+	</td>
+<td>
+		17
+	</td>
+<td>
+		17
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		9
+	</td>
+<td>
+		Dāvis Zalmans, D, CC
+	</td>
+<td>
+		DNS
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		10
+	</td>
+<td>
+		Oļegs Moskals, CC
+	</td>
+<td>
+		1
+	</td>
+<td>
+		19
+	</td>
+<td>
+		19
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		11
+	</td>
+<td>
+		Daniils Ivančikovs, CC
+	</td>
+<td>
+		DNS
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		12
+	</td>
+<td>
+		Normunds Skreija
+	</td>
+<td>
+		2
+	</td>
+<td>
+		4
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		4
+	</td>
+<td>
+		4
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		13
+	</td>
+<td>
+		Aleksejs Sjomins, CC
+	</td>
+<td>
+		4
+	</td>
+<td>
+		14
+	</td>
+<td>
+		-
+	</td>
+<td>
+		19
+	</td>
+<td>
+		-
+	</td>
+<td>
+		14
+	</td>
+<td>
+		15
+	</td>
+<td>
+		18
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		14
+	</td>
+<td>
+		Jānis Kornis, D, CC
+	</td>
+<td>
+		DNS
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		15
+	</td>
+<td>
+		Renārs Paiders
+	</td>
+<td>
+		4
+	</td>
+<td>
+		4
+	</td>
+<td>
+		4
+	</td>
+<td>
+		5
+	</td>
+<td>
+		5
+	</td>
+<td>
+		8
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		16
+	</td>
+<td>
+		Jurģis Brauers
+	</td>
+<td>
+		3
+	</td>
+<td>
+		13
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		18
+	</td>
+<td>
+		13
+	</td>
+<td>
+		14
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		17
+	</td>
+<td>
+		Māris Grandbergs, CC
+	</td>
+<td>
+		DNS
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		18
+	</td>
+<td>
+		Emīls Bērziņš, CC, 90+
+	</td>
+<td>
+		DNS
+	</td>
+<td>
+		-<br/>
+</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+<tr>
+<td>
+		19
+	</td>
+<td>
+		Zintis Grandbergs, 90+
+	</td>
+<td>
+		3
+	</td>
+<td>
+		5
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		8
+	</td>
+<td>
+		5
+	</td>
+<td>
+		10
+	</td>
+</tr>
+<tr>
+<td>
+		20
+	</td>
+<td>
+		Jānis Olle, CC, 90+
+	</td>
+<td>
+		1
+	</td>
+<td>
+		11
+	</td>
+<td>
+		11
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Dalībnieku statistikas rādītāji</h3>
+<p>
+	PTS - punkti čempionātā, PL - vieta čempionātā, RANK - vieta kausa izcīņas rangā, C - kausa izcīņu skaits, W - uzvaras, P - pjedestāli, FL - ātrākie apļi, T6 - TOP6 finiši, T10 - TOP10 finiši, BEST - labākais finišs kausa izcīņā, H - aizvadītie hīti, HW - uzvaras hītos, HP - top trīs finiši hītos, HT6 - top seši finiši hītos, HT10 - top 10 finiši hītos, HBEST - labākais finišs hītos.
+</p>
+<p>
+	Paskaidrošu, ka RANK ir rangs starp 80 kausa izcīņā startējušajiem, pēc vienkāršas sistēmas, jo augstāku vietu spējis braucējs izcīnīt, jo augstāk viņš ir, ja kāds vēl tādu vietu izcīnījis, skatās pēc otra labākā rezultāta un tā tālāk. Tās kolonnas, kur ir H burtiņš priekšā attiecas jau uz braucieniem. Kopā deviņos gados tādu ir bijis 73, pirmajos trīs 5 vai 6, tad divus gadus 8, bet nu jau piekto reizi sacīkste ir īpaši intensīva un prasīga pret fizisko sagatavotību ar 10 braucieniem, klāt pieskaitam vēl vienu oficiālo treniņu un sanāk 11 braucieni un ar viena brauciena pauzi tikai.
+</p>
+<div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td>
+		PTS
+	</td>
+<td>
+		PL
+	</td>
+<td>
+		RANK
+	</td>
+<td>
+		R
+	</td>
+<td>
+		W
+	</td>
+<td>
+		P
+	</td>
+<td>
+		FL
+	</td>
+<td>
+		T6
+	</td>
+<td>
+		T10
+	</td>
+<td>
+		BEST
+	</td>
+<td>
+		H
+	</td>
+<td>
+		HW
+	</td>
+<td>
+		HP
+	</td>
+<td>
+		HT6
+	</td>
+<td>
+		HT10
+	</td>
+<td>
+		BEST
+	</td>
+</tr>
+<tr>
+<td>
+		1
+	</td>
+<td>
+		Andrejs Laipnieks
+	</td>
+<td>
+		580
+	</td>
+<td>
+		1
+	</td>
+<td>
+		4
+	</td>
+<td>
+		3
+	</td>
+<td>
+		1
+	</td>
+<td>
+		3
+	</td>
+<td>
+		2
+	</td>
+<td>
+		3
+	</td>
+<td>
+		3
+	</td>
+<td>
+		1
+	</td>
+<td>
+		30
+	</td>
+<td>
+		8
+	</td>
+<td>
+		19
+	</td>
+<td>
+		28
+	</td>
+<td>
+		30
+	</td>
+<td>
+		1
+	</td>
+</tr>
+<tr>
+<td>
+		2
+	</td>
+<td>
+		Kristaps Grīnieks
+	</td>
+<td>
+		497
+	</td>
+<td>
+		2
+	</td>
+<td>
+		10
+	</td>
+<td>
+		6
+	</td>
+<td>
+		-
+	</td>
+<td>
+		1
+	</td>
+<td>
+</td>
+<td>
+		4
+	</td>
+<td>
+		6
+	</td>
+<td>
+		2
+	</td>
+<td>
+		56
+	</td>
+<td>
+		2
+	</td>
+<td>
+		13
+	</td>
+<td>
+		34
+	</td>
+<td>
+		50
+	</td>
+<td>
+		1
+	</td>
+</tr>
+<tr>
+<td>
+		3
+	</td>
+<td>
+		Krišs Jaunzemis
+	</td>
+<td>
+		495
+	</td>
+<td>
+		3
+	</td>
+<td>
+		1
+	</td>
+<td>
+		5
+	</td>
+<td>
+		2
+	</td>
+<td>
+		5
+	</td>
+<td>
+		2
+	</td>
+<td>
+		5
+	</td>
+<td>
+		5
+	</td>
+<td>
+		1
+	</td>
+<td>
+		48
+	</td>
+<td>
+		18
+	</td>
+<td>
+		36
+	</td>
+<td>
+		41
+	</td>
+<td>
+		45
+	</td>
+<td>
+		1
+	</td>
+</tr>
+<tr>
+<td>
+		4
+	</td>
+<td>
+		Edgars Sproģis
+	</td>
+<td>
+		463
+	</td>
+<td>
+		4
+	</td>
+<td>
+		28
+	</td>
+<td>
+		3
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		1
+	</td>
+<td>
+		7
+	</td>
+<td>
+		30
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		6
+	</td>
+<td>
+		15
+	</td>
+<td>
+		4
+	</td>
+</tr>
+<tr>
+<td>
+		5
+	</td>
+<td>
+		Rūdolfs Šmits
+	</td>
+<td>
+		456
+	</td>
+<td>
+		5
+	</td>
+<td>
+		DNS
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+</tr>
+<tr>
+<td>
+		6
+	</td>
+<td>
+		Kristaps Ķilkuts
+	</td>
+<td>
+		386
+	</td>
+<td>
+		6
+	</td>
+<td>
+		40
+	</td>
+<td>
+		1
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		1
+	</td>
+<td>
+		10
+	</td>
+<td>
+		10
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		2
+	</td>
+<td>
+		5
+	</td>
+<td>
+		4
+	</td>
+</tr>
+<tr>
+<td>
+		7
+	</td>
+<td>
+		Sergejs Glanenko
+	</td>
+<td>
+		356
+	</td>
+<td>
+		7
+	</td>
+<td>
+		66
+	</td>
+<td>
+		1
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		16
+	</td>
+<td>
+		10
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		3
+	</td>
+<td>
+		7
+	</td>
+</tr>
+<tr>
+<td>
+		8
+	</td>
+<td>
+		Kaspars Ritums
+	</td>
+<td>
+		325
+	</td>
+<td>
+		8
+	</td>
+<td>
+		67
+	</td>
+<td>
+		2
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		17
+	</td>
+<td>
+		20
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		11
+	</td>
+</tr>
+<tr>
+<td>
+		9
+	</td>
+<td>
+		Dāvis Zalmans
+	</td>
+<td>
+		325
+	</td>
+<td>
+		9
+	</td>
+<td>
+		DNS
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+</tr>
+<tr>
+<td>
+		10
+	</td>
+<td>
+		Oļegs Moskals
+	</td>
+<td>
+		287
+	</td>
+<td>
+		12
+	</td>
+<td>
+		77
+	</td>
+<td>
+		1
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		19
+	</td>
+<td>
+		10
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		12
+	</td>
+</tr>
+<tr>
+<td>
+		11
+	</td>
+<td>
+		Daniils Ivančikovs
+	</td>
+<td>
+		265
+	</td>
+<td>
+		14
+	</td>
+<td>
+		DNS
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+</tr>
+<tr>
+<td>
+		12
+	</td>
+<td>
+		Normunds Skreija
+	</td>
+<td>
+		251
+	</td>
+<td>
+		15
+	</td>
+<td>
+		14
+	</td>
+<td>
+		2
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		2
+	</td>
+<td>
+		2
+	</td>
+<td>
+		4
+	</td>
+<td>
+		20
+	</td>
+<td>
+		2
+	</td>
+<td>
+		5
+	</td>
+<td>
+		14
+	</td>
+<td>
+		19
+	</td>
+<td>
+		1
+	</td>
+</tr>
+<tr>
+<td>
+		13
+	</td>
+<td>
+		Aleksejs Sjomins
+	</td>
+<td>
+		207
+	</td>
+<td>
+		16
+	</td>
+<td>
+		53
+	</td>
+<td>
+		4
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		14
+	</td>
+<td>
+		36
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		4
+	</td>
+<td>
+		9
+	</td>
+</tr>
+<tr>
+<td>
+		14
+	</td>
+<td>
+		Jānis Kornis
+	</td>
+<td>
+		192
+	</td>
+<td>
+		18
+	</td>
+<td>
+		DNS
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+</tr>
+<tr>
+<td>
+		15
+	</td>
+<td>
+		Renārs Paiders
+	</td>
+<td>
+		181
+	</td>
+<td>
+		19
+	</td>
+<td>
+		15
+	</td>
+<td>
+		4
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		3
+	</td>
+<td>
+		4
+	</td>
+<td>
+		4
+	</td>
+<td>
+		40
+	</td>
+<td>
+		-
+	</td>
+<td>
+		7
+	</td>
+<td>
+		20
+	</td>
+<td>
+		35
+	</td>
+<td>
+		2
+	</td>
+</tr>
+<tr>
+<td>
+		16
+	</td>
+<td>
+		Jurģis Brauers
+	</td>
+<td>
+		155
+	</td>
+<td>
+		20
+	</td>
+<td>
+		48
+	</td>
+<td>
+		3
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		13
+	</td>
+<td>
+		28
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		5
+	</td>
+<td>
+		8
+	</td>
+</tr>
+<tr>
+<td>
+		17
+	</td>
+<td>
+		Māris Grandbergs
+	</td>
+<td>
+		145
+	</td>
+<td>
+		21
+	</td>
+<td>
+		DNS
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+</tr>
+<tr>
+<td>
+		18
+	</td>
+<td>
+		Emīls Bērziņš
+	</td>
+<td>
+		145
+	</td>
+<td>
+		22
+	</td>
+<td>
+		DNS
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+<td>
+		…
+	</td>
+</tr>
+<tr>
+<td>
+		19
+	</td>
+<td>
+		Zintis Grandbergs
+	</td>
+<td>
+		143
+	</td>
+<td>
+		23
+	</td>
+<td>
+		20
+	</td>
+<td>
+		3
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		1
+	</td>
+<td>
+		3
+	</td>
+<td>
+		5
+	</td>
+<td>
+		17
+	</td>
+<td>
+		-
+	</td>
+<td>
+		2
+	</td>
+<td>
+		7
+	</td>
+<td>
+		11
+	</td>
+<td>
+		2
+	</td>
+</tr>
+<tr>
+<td>
+		20
+	</td>
+<td>
+		Jānis Olle
+	</td>
+<td>
+		134
+	</td>
+<td>
+		24
+	</td>
+<td>
+		45
+	</td>
+<td>
+		1
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		11
+	</td>
+<td>
+		10
+	</td>
+<td>
+		-
+	</td>
+<td>
+		-
+	</td>
+<td>
+		2
+	</td>
+<td>
+		5
+	</td>
+<td>
+		5
+	</td>
+</tr>
+</tbody>
+</table></div>
+<h3>
+Kausa izcīņas kopējā statistika
+</h3><p>C - kausa izcīņu skaits, W - uzvaras, P - pjedestāli, FL - ātrākie apļi, H - aizvadītie hīti, HW - uzvaras hītos, HP - top trīs finiši hītos</p>
+<div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody><tr><td>C</td><td></td><td></td><td></td><td>W</td><td></td><td></td><td></td><td>H</td><td></td><td></td><td></td><td>HW</td></tr><tr><td>1. </td><td>Ivars Strencis</td><td>7</td><td></td><td>1. </td><td>Krišs Jaunzemis</td><td>2</td><td></td><td>1. </td><td>Kristaps Grīnieks</td><td>56</td><td></td><td>1. </td><td>Krišs Jaunzemis</td><td>18</td></tr><tr><td>2. </td><td>Kristaps Grīnieks</td><td>6</td><td></td><td>2. </td><td>Dāvis Tobiass</td><td>1</td><td></td><td>2. </td><td>Ivars Strencis</td><td>53</td><td></td><td>2. </td><td>Raivis Kirilovs</td><td>9</td></tr><tr><td>3. </td><td>Ingus Grasmanis</td><td>6</td><td></td><td>3. </td><td>Lauris Rozenvalds</td><td>1</td><td></td><td>3. </td><td>Krišs Jaunzemis</td><td>48</td><td></td><td>3. </td><td>Dāniels Lācis</td><td>9</td></tr><tr><td>4. </td><td>Krišs Jaunzemis</td><td>5</td><td></td><td>4. </td><td>Andris Orniņš</td><td>1</td><td></td><td>4. </td><td>Ingus Grasmanis</td><td>43</td><td></td><td>4. </td><td>Lauris Rozenvalds</td><td>8</td></tr><tr><td>5. </td><td>Lauris Rozenvalds</td><td>5</td><td></td><td>5. </td><td>Raivis Kirilovs</td><td>1</td><td></td><td>5. </td><td>Renārs Paiders</td><td>40</td><td></td><td>5. </td><td>Andrejs Laipnieks</td><td>8</td></tr><tr><td>6. </td><td>Daniels Mančinskis</td><td>5</td><td></td><td>6. </td><td>Mareks Štolcermanis</td><td>1</td><td></td><td>6. </td><td>Artūrs Freimanis</td><td>40</td><td></td><td>6. </td><td>Daniels Mančinskis</td><td>3</td></tr><tr><td>7. </td><td>Uldis Galdiņš</td><td>5</td><td></td><td>7. </td><td>Dāniels Lācis</td><td>1</td><td></td><td>7. </td><td>Aleksejs Sjomins</td><td>36</td><td></td><td>7. </td><td>Mareks Štolcermanis</td><td>3</td></tr><tr><td>8. </td><td>Jānis Strencis</td><td>5</td><td></td><td>8. </td><td>Andrejs Laipnieks</td><td>1</td><td></td><td>8. </td><td>Vilnis Kepe</td><td>36</td><td></td><td>8. </td><td>Kristaps Grīnieks</td><td>2</td></tr><tr><td>9. </td><td>Raivis Kirilovs</td><td>4</td><td></td><td></td><td></td><td></td><td></td><td>9. </td><td>Lauris Rozenvalds</td><td>33</td><td></td><td>9. </td><td>Normunds Skreija</td><td>2</td></tr><tr><td>10. </td><td>Renārs Paiders</td><td>4</td><td></td><td>P</td><td></td><td></td><td></td><td>10. </td><td>Daniels Mančinskis</td><td>33</td><td></td><td>10. </td><td>Dāvis Tobiass</td><td>2</td></tr><tr><td>11. </td><td>Artūrs Freimanis</td><td>4</td><td></td><td>1. </td><td>Krišs Jaunzemis</td><td>5</td><td></td><td>11. </td><td>Uldis Galdiņš</td><td>33</td><td></td><td>11. </td><td>Kristaps Narubins</td><td>2</td></tr><tr><td>12. </td><td>Aleksejs Sjomins</td><td>4</td><td></td><td>2. </td><td>Raivis Kirilovs</td><td>4</td><td></td><td>12. </td><td>Jānis Strencis</td><td>33</td><td></td><td>12. </td><td>Mārtiņš Krūze</td><td>2</td></tr><tr><td>13. </td><td>Lauris Lapiņš</td><td>4</td><td></td><td>3. </td><td>Lauris Rozenvalds</td><td>4</td><td></td><td>13. </td><td>Ivars Gailis</td><td>31</td><td></td><td>13. </td><td>Harijs Cīrulis</td><td>1</td></tr><tr><td>14. </td><td>Ivars Gailis</td><td>4</td><td></td><td>4. </td><td>Andrejs Laipnieks</td><td>3</td><td></td><td>14. </td><td>Andrejs Laipnieks</td><td>30</td><td></td><td>14. </td><td>Uldis Galdiņš</td><td>1</td></tr><tr><td>15. </td><td>Vilnis Kepe</td><td>4</td><td></td><td>5. </td><td>Daniels Mančinskis</td><td>2</td><td></td><td>15. </td><td>Dāniels Lācis</td><td>30</td><td></td><td>15. </td><td>Artūrs Freimanis</td><td>1</td></tr><tr><td>16. </td><td>Andrejs Laipnieks</td><td>3</td><td></td><td>6. </td><td>Dāniels Lācis</td><td>2</td><td></td><td>16. </td><td>Edgars Sproģis</td><td>30</td><td></td><td>16. </td><td>Dace Damberga</td><td>1</td></tr><tr><td>17. </td><td>Dāniels Lācis</td><td>3</td><td></td><td>7. </td><td>Andris Orniņš</td><td>1</td><td></td><td>17. </td><td>Ričards Freibergs</td><td>30</td><td></td><td>17. </td><td>Rūdis Memens</td><td>1</td></tr><tr><td>18. </td><td>Andris Orniņš</td><td>3</td><td></td><td>8. </td><td>Dāvis Tobiass</td><td>1</td><td></td><td>18. </td><td>Jānis Čudovs</td><td>30</td></tr><tr><td>19. </td><td>Harijs Cīrulis</td><td>3</td><td></td><td>9. </td><td>Mareks Štolcermanis</td><td>1</td><td></td><td>19. </td><td>Toms Kalnītis</td><td>30</td><td></td><td>HP</td></tr><tr><td>20. </td><td>Nils Trapāns</td><td>3</td><td></td><td>10. </td><td>Kristaps Grīnieks</td><td>1</td><td></td><td>20. </td><td>Lauris Lapiņš</td><td>29</td><td></td><td>1. </td><td>Krišs Jaunzemis</td><td>36</td></tr><tr><td>21. </td><td>Zintis Grandbergs</td><td>3</td><td></td><td>11. </td><td>Uldis Galdiņš</td><td>1</td><td></td><td>21. </td><td>Raivis Kirilovs</td><td>28</td><td></td><td>2. </td><td>Raivis Kirilovs</td><td>23</td></tr><tr><td>22. </td><td>Edgars Sproģis</td><td>3</td><td></td><td>12. </td><td>Mikus Narvils</td><td>1</td><td></td><td>22. </td><td>Harijs Cīrulis</td><td>28</td><td></td><td>3. </td><td>Lauris Rozenvalds</td><td>21</td></tr><tr><td>23. </td><td>Jevgēņijs Stragovs</td><td>3</td><td></td><td>13. </td><td>Harijs Cīrulis</td><td>1</td><td></td><td>23. </td><td>Jurģis Brauers</td><td>28</td><td></td><td>4. </td><td>Andrejs Laipnieks</td><td>19</td></tr><tr><td>24. </td><td>Ričards Freibergs</td><td>3</td><td></td><td></td><td></td><td></td><td></td><td>24. </td><td>Nils Trapāns</td><td>26</td><td></td><td>5. </td><td>Dāniels Lācis</td><td>19</td></tr><tr><td>25. </td><td>Jānis Čudovs</td><td>3</td><td></td><td>FL</td><td></td><td></td><td></td><td>25. </td><td>Didzis Apinis</td><td>23</td><td></td><td>6. </td><td>Kristaps Grīnieks</td><td>13</td></tr><tr><td>26. </td><td>Kristians Gozēns</td><td>3</td><td></td><td>1. </td><td>Raivis Kirilovs</td><td>2</td><td></td><td>26. </td><td>Normunds Skreija</td><td>20</td><td></td><td>7. </td><td>Daniels Mančinskis</td><td>9</td></tr><tr><td>27. </td><td>Jurģis Brauers</td><td>3</td><td></td><td>2. </td><td>Krišs Jaunzemis</td><td>2</td><td></td><td>27. </td><td>Artūrs Bonders</td><td>20</td><td></td><td>8. </td><td>Harijs Cīrulis</td><td>8</td></tr><tr><td>28. </td><td>Toms Kalnītis</td><td>3</td><td></td><td>3. </td><td>Andrejs Laipnieks</td><td>2</td><td></td><td>28. </td><td>Jurijs Fedorenko</td><td>20</td><td></td><td>9. </td><td>Uldis Galdiņš</td><td>8</td></tr><tr><td>29. </td><td>Didzis Apinis</td><td>3</td><td></td><td>4. </td><td>Dāvis Tobiass</td><td>1</td><td></td><td>29. </td><td>Zane Katrīne Mēnese</td><td>20</td><td></td><td>10. </td><td>Mareks Štolcermanis</td><td>7</td></tr><tr><td>30. </td><td>Normunds Skreija</td><td>2</td><td></td><td>5. </td><td>Uldis Galdiņš</td><td>1</td><td></td><td>30. </td><td>Gatis Bergmanis</td><td>20</td><td></td><td>11. </td><td>Renārs Paiders</td><td>7</td></tr><tr><td>31. </td><td>Kārlis Strazdiņš</td><td>2</td><td></td><td>6. </td><td>Lauris Rozenvalds</td><td>1</td><td></td><td>31. </td><td>Kārlis Kleinhofs</td><td>20</td><td></td><td>12. </td><td>Andris Orniņš</td><td>5</td></tr><tr><td>32. </td><td>Artūrs Bonders</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td>32. </td><td>Kaspars Ritums</td><td>20</td><td></td><td>13. </td><td>Normunds Skreija</td><td>5</td></tr><tr><td>33. </td><td>Jurijs Fedorenko</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td>33. </td><td>Jevgēņijs Stragovs</td><td>19</td><td></td><td>14. </td><td>Ivars Strencis</td><td>4</td></tr><tr><td>34. </td><td>Rūdis Memens</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td>34. </td><td>Kārlis Strazdiņš</td><td>18</td><td></td><td>15. </td><td>Nils Trapāns</td><td>4</td></tr><tr><td>35. </td><td>Zane Katrīne Mēnese</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td>35. </td><td>Rūdis Memens</td><td>18</td><td></td><td>16. </td><td>Artūrs Freimanis</td><td>4</td></tr><tr><td>36. </td><td>Gatis Bergmanis</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td>36. </td><td>Ruslans Ivanovs</td><td>18</td><td></td><td>17. </td><td>Dāvis Tobiass</td><td>3</td></tr><tr><td>37. </td><td>Juris Narubins</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td>37. </td><td>Jānis Braželis</td><td>18</td><td></td><td>18. </td><td>Kristaps Narubins</td><td>3</td></tr><tr><td>38. </td><td>Ruslans Ivanovs</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td>38. </td><td>Andris Orniņš</td><td>17</td><td></td><td>19. </td><td>Dace Damberga</td><td>3</td></tr><tr><td>39. </td><td>Jānis Braželis</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td>39. </td><td>Zintis Grandbergs</td><td>17</td><td></td><td>20. </td><td>Mārtiņš Krūze</td><td>3</td></tr><tr><td>40. </td><td>Vitālijs Kovaļenko</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td>40. </td><td>Kristians Gozēns</td><td>17</td><td></td><td>21. </td><td>Mikus Narvils</td><td>2</td></tr><tr><td>41. </td><td>Kārlis Kleinhofs</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td>41. </td><td>Vitālijs Kovaļenko</td><td>13</td><td></td><td>22. </td><td>Oļegs Gribanovs</td><td>2</td></tr><tr><td>42. </td><td>Jānis Strauss</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td>42. </td><td>Juris Narubins</td><td>12</td><td></td><td>23. </td><td>Zintis Grandbergs</td><td>2</td></tr><tr><td>43. </td><td>Mārtiņš Sestulis</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td>43. </td><td>Mārtiņš Sestulis</td><td>12</td><td></td><td>24. </td><td>Artūrs Bonders</td><td>2</td></tr><tr><td>44. </td><td>Kaspars Ritums</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td>44. </td><td>Jānis Strauss</td><td>11</td><td></td><td>25. </td><td>Rūdis Memens</td><td>2</td></tr><tr><td>45. </td><td>Dāvis Tobiass</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>45. </td><td>Mareks Štolcermanis</td><td>10</td><td></td><td>26. </td><td>Kārlis Strazdiņš</td><td>1</td></tr><tr><td>46. </td><td>Mareks Štolcermanis</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>46. </td><td>Dace Damberga</td><td>10</td><td></td><td>27. </td><td>Jānis Strencis</td><td>1</td></tr><tr><td>47. </td><td>Mikus Narvils</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>47. </td><td>Mariss Kalniņš</td><td>10</td><td></td><td>28. </td><td>Zane Katrīne Mēnese</td><td>1</td></tr><tr><td>48. </td><td>Kristaps Narubins</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>48. </td><td>Kristaps Ķilkuts</td><td>10</td><td></td><td>29. </td><td>Gatis Bergmanis</td><td>1</td></tr><tr><td>49. </td><td>Oļegs Gribanovs</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>49. </td><td>Jānis Olle</td><td>10</td><td></td><td>30. </td><td>Kristians Gozēns</td><td>1</td></tr><tr><td>50. </td><td>Dace Damberga</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>50. </td><td>Kristaps Mietulis</td><td>10</td></tr><tr><td>51. </td><td>Mārtiņš Krūze</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>51. </td><td>Artūrs Vīķis</td><td>10</td></tr><tr><td>52. </td><td>Pāvils Dāvis</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>52. </td><td>Kristīne Mēnese</td><td>10</td></tr><tr><td>53. </td><td>Gunārs Kepe</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>53. </td><td>Sergejs Glanenko</td><td>10</td></tr><tr><td>54. </td><td>Mariss Kalniņš</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>54. </td><td>Andris Ratkus</td><td>10</td></tr><tr><td>55. </td><td>Reinis Frīdbergs</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>55. </td><td>Kaspars Cikmačs</td><td>10</td></tr><tr><td>56. </td><td>Kristaps Ķilkuts</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>56. </td><td>Oļegs Moskals</td><td>10</td></tr><tr><td>57. </td><td>Jānis Olle</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>57. </td><td>Daniils Verins</td><td>10</td></tr><tr><td>58. </td><td>Rūdolfs Toms Bērziņš</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>58. </td><td>Oļegs Gribanovs</td><td>8</td></tr><tr><td>59. </td><td>Miks Kancāns</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>59. </td><td>Gunārs Kepe</td><td>8</td></tr><tr><td>60. </td><td>Raivis Biezais</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>60. </td><td>Raivis Biezais</td><td>8</td></tr><tr><td>61. </td><td>Kristaps Mietulis</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>61. </td><td>Anatolijs Hramovs</td><td>8</td></tr><tr><td>62. </td><td>Juris Pavlovičs</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>62. </td><td>Agris Biezais</td><td>8</td></tr><tr><td>63. </td><td>Iveta Grandberga</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>63. </td><td>Dāvis Tobiass</td><td>6</td></tr><tr><td>64. </td><td>Artūrs Vīķis</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>64. </td><td>Mikus Narvils</td><td>6</td></tr><tr><td>65. </td><td>Dairis Vīksne</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>65. </td><td>Kristaps Narubins</td><td>6</td></tr><tr><td>66. </td><td>Anatolijs Hramovs</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>66. </td><td>Mārtiņš Krūze</td><td>6</td></tr><tr><td>67. </td><td>Oskars Killo</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>67. </td><td>Rūdolfs Toms Bērziņš</td><td>6</td></tr><tr><td>68. </td><td>Kristīne Mēnese</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>68. </td><td>Miks Kancāns</td><td>6</td></tr><tr><td>69. </td><td>Sergejs Glanenko</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>69. </td><td>Juris Pavlovičs</td><td>6</td></tr><tr><td>70. </td><td>Gatis Mednis</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>70. </td><td>Iveta Grandberga</td><td>6</td></tr><tr><td>71. </td><td>Agris Biezais</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>71. </td><td>Dairis Vīksne</td><td>6</td></tr><tr><td>72. </td><td>Andris Ratkus</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>72. </td><td>Dace Grosberga</td><td>6</td></tr><tr><td>73. </td><td>Dace Grosberga</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>73. </td><td>Normunds Ramanis</td><td>6</td></tr><tr><td>74. </td><td>Normunds Ramanis</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>74. </td><td>Gatis Bērziņš</td><td>6</td></tr><tr><td>75. </td><td>Kaspars Cikmačs</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>75. </td><td>Vadims Daraškevičs</td><td>6</td></tr><tr><td>76. </td><td>Gatis Bērziņš</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>76. </td><td>Pāvils Dāvis</td><td>5</td></tr><tr><td>77. </td><td>Oļegs Moskals</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>77. </td><td>Reinis Frīdbergs</td><td>5</td></tr><tr><td>78. </td><td>Vadims Daraškevičs</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>78. </td><td>Oskars Killo</td><td>5</td></tr><tr><td>79. </td><td>Dainis Rasa</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>79. </td><td>Gatis Mednis</td><td>5</td></tr><tr><td>80. </td><td>Daniils Verins</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>80. </td><td>Dainis Rasa</td><td>5</td></tr>
+</tbody></table></div>
+<div class="clearfix"></div>
+<div id="articles-list">
+<div class="float-end">
+<a class="btn btn-sm btn-outline-secondary" href="#top">
+<i aria-hidden="true" class="fas fa-arrow-up"></i>
+Uz augšu
+</a>
+</div>
+<h3>Kausa izcīņa</h3>
+<div class="clearfix"></div>
+<ul class="list-unstyled striped articles">
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">30.05.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1688-zalmans-partrauc-laipnieka-dominanci-celojosa-kausa-izcina.html">Zalmans pārtrauc Laipnieka dominanci Ceļojošā kausa izcīņā</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1688_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">30.01.2025</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1577-laipnieks-piekto-reizi-triumfe-openkart-celojosa-kausa-izcina.html">Laipnieks piekto reizi triumfē Openkart Ceļojošā kausa izcīņā</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1577_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">06.03.2024</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1511-gdanska-laipnieks-ceturto-reizi-izcina-openkart-celojoso-kausu-video.html">Gdaņskā Laipnieks ceturto reizi izcīna Openkart Ceļojošo kausu (VIDEO)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1511_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">18.01.2023</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1437-laipnieks-treso-reizi-iegust-openkart-celojoso-kausu.html">Laipnieks trešo reizi iegūst Openkart Ceļojošo kausu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1437_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">06.09.2021</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1375-kriss-jaunzemis-triumfe-atliktaja-celojosa-kausa-izcina-papildinats.html">Krišs Jaunzemis triumfē atliktajā Ceļojošā kausa izcīņā (papildināts)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1375_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">16.01.2020</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1321-dramatiska-cina-harijs-cirulis-pirmo-reizi-izcina-openkart-celojoso-kausu-foto-video-rezultati.html">Dramatiskā cīņā Harijs Cīrulis pirmo reizi izcīna Openkart Ceļojošo kausu (FOTO, VIDEO, REZULTĀTI)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1321_comment_badge">2</span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">13.01.2020</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1320-ceturtdien-16-dot-janvari-xi-openkart-celojosa-kausa-izcina.html">Ceturtdien, 16.janvārī, XI Openkart Ceļojošā kausa izcīņa</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1320_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">16.12.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1317-kausa-izcinas-dalibnieku-sastavs-un-statistika.html">Kausa izcīņas dalībnieku sastāvs un statistika</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1317_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">13.01.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1260-laipnieks-domine-un-celojoso-kausu-patur-uz-vel-vienu-gadu.html">Laipnieks dominē un Ceļojošo kausu patur uz vēl vienu gadu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1260_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">08.01.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1259-apstiprinatais-celojosa-kausa-izcinas-sastavs-un-statistika.html">Apstiprinātais Ceļojošā kausa izcīņas sastāvs un statistika</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1259_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">03.01.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1258-13-janvari-desmito-reizi-notiks-openkart-celojosa-kausa-izcina.html">13. janvārī desmito reizi notiks Openkart Ceļojošā kausa izcīņa </a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1258_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">14.01.2018</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1194-andrejs-laipnieks-iegust-openkart-celojoso-kausu.html">Andrejs Laipnieks iegūst Openkart ceļojošo kausu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1194_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">08.01.2018</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1193-kausa-izcinas-dalibnieku-sastava-izmainas-zugicka-vieta-laipnieks.html">Kausa izcīņas dalībnieku sastāvā izmaiņas - Zuģicka vietā Laipnieks</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1193_comment_badge">1</span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">14.11.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1188-zinami-openkart-celojosa-kausa-dalibnieki-un-tuvakie-rezervisti.html">Zināmi Openkart ceļojošā kausa dalībnieki un tuvākie rezervisti</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1188_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">07.01.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_kausa-izcina_r_1123-lacis-parspej-jaunzemi-un-izcina-openkart-celojoso-kausu-foto-video.html">Lācis pārspēj Jaunzemi un izcīna Openkart ceļojošo kausu (FOTO, VIDEO)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1123_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<nav><ul class="pagination"><li class="page-item disabled"><span class="page-link">←</span></li> <li class="page-item active"><span class="page-link">1</span></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/kausa-izcina/r/1259-apstiprinatais-celojosa-kausa-izcinas-sastavs-un-statistika?page=2" rel="next">2</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/kausa-izcina/r/1259-apstiprinatais-celojosa-kausa-izcinas-sastavs-un-statistika?page=2" rel="next">→</a></li></ul></nav>
+</div>
+</div>
+<div class="col-md-4">
+<div id="comments">
+<div class="alert alert-danger">
+<b>Komentēt var tikai reģistrēti lietotāji</b>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</main>
+  <footer class="footer">
+    <div class="footer__flag" aria-hidden="true"></div>
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="../assets/img/logo-red.png" alt="Openkart" width="1158" height="246" loading="lazy">
+        <p>Amatieru kartinga kustība. 20 sezonas uz trases.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_2-kontakti.html">Kontakti</a>
+        <a href="../lapas/s_4-par-openkart.html">Par Openkart</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+      </nav>
+      <div class="footer__social">
+        <a href="http://www.facebook.com/pages/Openkart/156203434346" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.4H7.6V14h2.7v8h3.2z"/></svg>
+        </a>
+        <a href="https://instagram.com/openkart.lv/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy wrap">© 2026, openkart.lv. Visas tiesības paturētas</p>
+  </footer>
+
+  <script>window.OK_ROOT = "../";</script>
+  <script src="../assets/js/pages.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>B līga 17.posms: kvalifikācijas sesijas — Openkart</title>
+  <meta name="description" content="Openkart — amatieru kartinga kustība Latvijā.">
+  <meta name="theme-color" content="#0b0c0f">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&amp;family=Titillium+Web:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Piekļuves brīdinājums (kā oriģinālajā lapā) -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
+    <div class="gate__card">
+      <div class="gate__flag" aria-hidden="true"></div>
+      <p class="eyebrow">Uzmanību!</p>
+      <h2 id="gate-title">Piekļuve mājas lapai paredzēta tikai Openkart kopienas dalībniekiem</h2>
+      <div class="gate__actions">
+        <button class="btn btn--red" id="gate-ok">Turpināt</button>
+        <a class="btn btn--ghost" href="https://google.com">Iziet</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Augšējā josla -->
+  <div class="topbar">
+    <div class="wrap topbar__in">
+      <span class="topbar__date" id="today">Otrdiena, 03. nov., 2026</span>
+      <div class="topbar__right">
+        <a href="https://openkart.lv/users/sign_in?locale=lv">Autorizēties</a>
+        <a href="https://openkart.lv/users/sign_up?locale=lv" class="topbar__reg">Reģistrēties</a>
+        <span class="lang"><a href="../index.html" class="is-on">LV</a><a href="../index.html">EN</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Galvene -->
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a href="../index.html" class="logo" aria-label="Openkart sākumlapa"><img src="../assets/img/logo-red.png" alt="Openkart 20 — amatieru kartinga kustība" width="1158" height="246"></a>
+      <button class="burger" id="burger" aria-label="Izvēlne" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <a href="../lapas/rezultati.html">Rezultāti</a>
+        <a href="../lapas/kalendars.html">Kalendārs</a>
+        <a href="../lapas/dalibnieki.html">Dalībnieki</a>
+        <a href="../lapas/stats.html">Statistika</a>
+        <div class="dd">
+          <button class="dd__btn" aria-expanded="false">Jaunumi</button>
+          <div class="dd__menu">
+            <a href="../lapas/jaunumi_cempionats_r.html">Čempionāts</a>
+            <a href="../lapas/jaunumi_attistibas-liga_r.html">Attīstības līga</a>
+            <a href="../lapas/jaunumi_xl-riga-junior-cup_r.html">XL Rīga Junior Cup</a>
+            <a href="../lapas/jaunumi_indoor-cup_r.html">Indoor Cup</a>
+            <a href="../lapas/jaunumi_joker-karting-challenge_r.html">Joker Karting Challenge</a>
+            <a href="../lapas/jaunumi_team-race_r.html">Team Race</a>
+            <a href="../lapas/jaunumi_sws-sprint-cup_r.html">SWS Sprint Cup</a>
+            <a href="../lapas/jaunumi_b-liga_r.html">B līga</a>
+            <a href="../lapas/jaunumi_sws-endurance-cup_r.html">SWS Endurance Cup</a>
+            <a href="../lapas/jaunumi_kausa-izcina_r.html">Kausa izcīņa</a>
+            <a href="../lapas/jaunumi_eopenkart-slotcar-racing_r.html">eOpenkart SlotCar Racing</a>
+            <a href="../lapas/jaunumi_uznemumu-kauss_r.html">Uzņēmumu kauss</a>
+            <a href="../lapas/jaunumi_musejie-pasaule_r.html">Mūsējie Pasaulē</a>
+          </div>
+        </div>
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+        <a href="https://www.flickr.com/photos/147056524@N03/albums" class="nav__media">Foto</a>
+        <a href="https://www.youtube.com/@Openkartkustiba/featured" class="nav__media">Video</a>
+        <a href="../index.html#kalendars" class="btn btn--red nav__cta">Pieteikties</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="page">
+  <section class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Jaunumi</p>
+      <h1>B līga 17.posms: kvalifikācijas sesijas</h1>
+    </div>
+  </section>
+  <div class="wrap content">
+<div class="article">
+
+<div class="row">
+<div class="col-md-8">
+
+
+<p class="small">26.10.2012, Uldis Galdiņš</p>
+<h3>
+Q1 <br/></h3>
+<div class="tablewrap"><table class="gray_table">
+<tbody>
+<tr>
+<td>﻿1</td>
+<td>Renārs Vinokurovs </td>
+<td>-</td>
+<td>1:08,560</td>
+<td>-</td>
+<td>-</td>
+<td>8</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Rihards Baumanis </td>
+<td>-</td>
+<td>1:08,710</td>
+<td>+0,150</td>
+<td>+0,150</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Normunds Ramanis </td>
+<td>-</td>
+<td>1:08,854</td>
+<td>+0,294</td>
+<td>+0,144</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Nils Trapāns </td>
+<td>ELPO DŪMUS</td>
+<td>1:09,555</td>
+<td>+0,995</td>
+<td>+0,701</td>
+<td>9</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Kārlis Strazdiņš </td>
+<td>B-OKK TEAM</td>
+<td>1:09,631</td>
+<td>+1,071</td>
+<td>+0,076</td>
+<td>3</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Garijs Rožkalns</td>
+<td>-</td>
+<td>1:10,305</td>
+<td>+1,745</td>
+<td>+0,674</td>
+<td>12</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Ingus Grasmanis </td>
+<td>ELPO DŪMUS</td>
+<td>1:10,418</td>
+<td>+1,858</td>
+<td>+0,113</td>
+<td>4</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Ivars Strencis </td>
+<td>MBA RACING TEAM</td>
+<td>1:10,477</td>
+<td>+1,917</td>
+<td>+0,059</td>
+<td>5</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Iveta Grandberga </td>
+<td>IZG RACING</td>
+<td>1:10,513</td>
+<td>+1,953</td>
+<td>+0,036</td>
+<td>2</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Harijs Cīrulis </td>
+<td>-</td>
+<td>1:10,974</td>
+<td>+2,414</td>
+<td>+0,461</td>
+<td>6</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Kristaps Grīnieks </td>
+<td>B-OKK TEAM</td>
+<td>1:11,376</td>
+<td>+2,816</td>
+<td>+0,402</td>
+<td>12</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Krišjānis Rolis </td>
+<td>-</td>
+<td>1:12,356</td>
+<td>+3,796</td>
+<td>+0,980</td>
+<td>11</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Mihails Timofejevs</td>
+<td>FATHERS RACING TEAM</td>
+<td>1:12,500</td>
+<td>+3,940</td>
+<td>+0,144</td>
+<td>9</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vilnis Kepe </td>
+<td>-</td>
+<td>1:12,516</td>
+<td>+3,956</td>
+<td>+0,016</td>
+<td>16</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Didzis Apinis </td>
+<td>AK RACING</td>
+<td>1:12,862</td>
+<td>+4,302</td>
+<td>+0,346</td>
+<td>6</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Dzintars Trubiņš </td>
+<td>IZG RACING</td>
+<td>1:12,866</td>
+<td>+4,306</td>
+<td>+0,004</td>
+<td>1</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Ernests Bitenieks </td>
+<td>FATHERS RACING TEAM</td>
+<td>1:13,723</td>
+<td>+5,163</td>
+<td>+0,857</td>
+<td>16</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Āris Vasaraudzis </td>
+<td>-</td>
+<td>1:14,358</td>
+<td>+5,798</td>
+<td>+0,635</td>
+<td>2</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Ivars Gailis </td>
+<td>IGJ RACING</td>
+<td>1:14,380</td>
+<td>+5,820</td>
+<td>+0,022</td>
+<td>8</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Aleksejs Sjomins </td>
+<td>-</td>
+<td>1:16,237</td>
+<td>+7,677</td>
+<td>+1,857</td>
+<td>1</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Ruslans Ivanovs </td>
+<td>GT RACING</td>
+<td>1:18,322</td>
+<td>+9,762</td>
+<td>+2,085</td>
+<td>11</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Q2<br/></h3>
+<div class="tablewrap"><table class="gray_table">
+<tbody>
+<tr>
+<td>﻿1</td>
+<td>Ivars Strencis </td>
+<td>MBA RACING TEAM</td>
+<td>1:08,832</td>
+<td>-</td>
+<td>-</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Renārs Vinokurovs </td>
+<td>-</td>
+<td>1:08,996</td>
+<td>+0,164</td>
+<td>+0,164</td>
+<td>6</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Krišjānis Rolis </td>
+<td>-</td>
+<td>1:09,213</td>
+<td>+0,381</td>
+<td>+0,217</td>
+<td>9</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Rihards Baumanis </td>
+<td>-</td>
+<td>1:09,421</td>
+<td>+0,589</td>
+<td>+0,208</td>
+<td>2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Normunds Ramanis </td>
+<td>-</td>
+<td>1:09,577</td>
+<td>+0,745</td>
+<td>+0,156</td>
+<td>4</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Kārlis Strazdiņš </td>
+<td>B-OKK TEAM</td>
+<td>1:10,024</td>
+<td>+1,192</td>
+<td>+0,447</td>
+<td>16</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Garijs Rožkalns</td>
+<td>-</td>
+<td>1:10,220</td>
+<td>+1,388</td>
+<td>+0,196</td>
+<td>9</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Ingus Grasmanis </td>
+<td>ELPO DŪMUS</td>
+<td>1:10,320</td>
+<td>+1,488</td>
+<td>+0,100</td>
+<td>12</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Nils Trapāns </td>
+<td>ELPO DŪMUS</td>
+<td>1:10,836</td>
+<td>+2,004</td>
+<td>+0,516</td>
+<td>10</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Harijs Cīrulis </td>
+<td>-</td>
+<td>1:11,045</td>
+<td>+2,213</td>
+<td>+0,209</td>
+<td>5</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Kristaps Grīnieks </td>
+<td>B-OKK TEAM</td>
+<td>1:11,153</td>
+<td>+2,321</td>
+<td>+0,108</td>
+<td>2</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Iveta Grandberga </td>
+<td>IZG RACING</td>
+<td>1:11,464</td>
+<td>+2,632</td>
+<td>+0,311</td>
+<td>1</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Ruslans Ivanovs </td>
+<td>GT RACING</td>
+<td>1:11,694</td>
+<td>+2,862</td>
+<td>+0,230</td>
+<td>3</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Aleksejs Sjomins </td>
+<td>-</td>
+<td>1:12,594</td>
+<td>+3,762</td>
+<td>+0,900</td>
+<td>16</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Mihails Timofejevs</td>
+<td>FATHERS RACING TEAM</td>
+<td>1:12,915</td>
+<td>+4,083</td>
+<td>+0,321</td>
+<td>4</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Āris Vasaraudzis </td>
+<td>-</td>
+<td>1:13,004</td>
+<td>+4,172</td>
+<td>+0,089</td>
+<td>6</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Ivars Gailis </td>
+<td>IGJ RACING</td>
+<td>1:13,888</td>
+<td>+5,056</td>
+<td>+0,884</td>
+<td>12</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Didzis Apinis </td>
+<td>AK RACING</td>
+<td>1:14,259</td>
+<td>+5,427</td>
+<td>+0,371</td>
+<td>11</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Dzintars Trubiņš </td>
+<td>IZG RACING</td>
+<td>1:14,374</td>
+<td>+5,542</td>
+<td>+0,115</td>
+<td>5</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Ernests Bitenieks </td>
+<td>FATHERS RACING TEAM</td>
+<td>1:16,023</td>
+<td>+7,191</td>
+<td>+1,649</td>
+<td>10</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Vilnis Kepe </td>
+<td>-</td>
+<td>1:16,433</td>
+<td>+7,601</td>
+<td>+0,410</td>
+<td>8</td>
+</tr>
+</tbody>
+</table></div>
+<p> </p><br/><br/>
+<div class="clearfix"></div>
+<div id="articles-list">
+<div class="float-end">
+<a class="btn btn-sm btn-outline-secondary" href="#top">
+<i aria-hidden="true" class="fas fa-arrow-up"></i>
+Uz augšu
+</a>
+</div>
+<h3>B līga</h3>
+<div class="clearfix"></div>
+<ul class="list-unstyled striped articles">
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">03.12.2012</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_b-liga_r_711-b-liga-20-dot-posms-komandas.html">B līga 20.posms: komandas</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_711_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">03.12.2012</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_b-liga_r_710-b-liga-20-dot-posms-kvalifikacijas-sesijas.html">B līga 20.posms: kvalifikācijas sesijas</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_710_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">15.11.2012</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_b-liga_r_701-gribanovam-tresa-uzvara-strencim-tresais-tituls.html">Gribanovam trešā uzvara, Strencim trešais tituls</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_701_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">15.11.2012</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_b-liga_r_700-b-liga-19-dot-posms-komandas.html">B līga 19.posms: komandas</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_700_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">15.11.2012</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_b-liga_r_699-b-liga-19-dot-posms-kvalifikacijas-sesijas.html">B līga 19.posms: kvalifikācijas sesijas</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_699_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">12.11.2012</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_b-liga_r_698-tresdien-b-ligai-priekspedejais-posms-at-goplanet.html">Trešdien B līgai priekšpēdējais posms @GoPlanet</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_698_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">05.11.2012</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_b-liga_r_694-b-liga-18-dot-posms-komandas.html">B līga 18.posms: komandas</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_694_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">05.11.2012</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_b-liga_r_693-b-liga-18-dot-posms-kvalifikacijas-sesijas.html">B līga 18.posms: kvalifikācijas sesijas</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_693_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">26.10.2012</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_b-liga_r_691-dramatiskos-apstaklos-uzvar-vinokurovs-vadibu-parnem-strencis.html">Dramatiskos apstākļos uzvar Vinokurovs, vadību pārņem Strencis</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_691_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">26.10.2012</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_b-liga_r_690-b-liga-17-dot-posms-komandas.html">B līga 17.posms: komandas</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_690_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">26.10.2012</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_b-liga_r_689-b-liga-17-dot-posms-kvalifikacijas-sesijas.html">B līga 17.posms: kvalifikācijas sesijas</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_689_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">23.10.2012</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_b-liga_r_688-ceturtdien-b-ligas-17-dot-posms-at-sk333.html">Ceturtdien B līgas 17.posms @sk333</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_688_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">14.10.2012</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_b-liga_r_686-b-liga-16-dot-posms-komandas.html">B līga 16.posms: komandas</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_686_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">14.10.2012</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_b-liga_r_685-b-liga-16-dot-posms-kvalifikacijas-sesijas.html">B līga 16.posms: kvalifikācijas sesijas</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_685_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">30.09.2012</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_b-liga_r_679-b-liga-15-dot-posms-kvalifikacijas-sesijas.html">B līga 15.posms: kvalifikācijas sesijas</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_679_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<nav><ul class="pagination"><li class="page-item disabled"><span class="page-link">←</span></li> <li class="page-item active"><span class="page-link">1</span></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/b-liga/r/689-b-liga-17-dot-posms-kvalifikacijas-sesijas?page=2" rel="next">2</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/b-liga/r/689-b-liga-17-dot-posms-kvalifikacijas-sesijas?page=3">3</a></li> <li class="page-item disabled"><i class="page-link">…</i></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/b-liga/r/689-b-liga-17-dot-posms-kvalifikacijas-sesijas?page=14">14</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/b-liga/r/689-b-liga-17-dot-posms-kvalifikacijas-sesijas?page=15">15</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/b-liga/r/689-b-liga-17-dot-posms-kvalifikacijas-sesijas?page=16">16</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/b-liga/r/689-b-liga-17-dot-posms-kvalifikacijas-sesijas?page=2" rel="next">→</a></li></ul></nav>
+</div>
+</div>
+<div class="col-md-4">
+<div id="comments">
+<div class="alert alert-danger">
+<b>Komentēt var tikai reģistrēti lietotāji</b>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</main>
+  <footer class="footer">
+    <div class="footer__flag" aria-hidden="true"></div>
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="../assets/img/logo-red.png" alt="Openkart" width="1158" height="246" loading="lazy">
+        <p>Amatieru kartinga kustība. 20 sezonas uz trases.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_2-kontakti.html">Kontakti</a>
+        <a href="../lapas/s_4-par-openkart.html">Par Openkart</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+      </nav>
+      <div class="footer__social">
+        <a href="http://www.facebook.com/pages/Openkart/156203434346" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.4H7.6V14h2.7v8h3.2z"/></svg>
+        </a>
+        <a href="https://instagram.com/openkart.lv/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy wrap">© 2026, openkart.lv. Visas tiesības paturētas</p>
+  </footer>
+
+  <script>window.OK_ROOT = "../";</script>
+  <script src="../assets/js/pages.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

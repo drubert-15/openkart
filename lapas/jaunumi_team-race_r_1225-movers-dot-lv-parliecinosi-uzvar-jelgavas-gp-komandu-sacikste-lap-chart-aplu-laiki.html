@@ -1,0 +1,974 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movers.lv pārliecinoši uzvar Jelgavas GP komandu sacīkstē (Lap Chart, Apļu laiki) — Openkart</title>
+  <meta name="description" content="Openkart — amatieru kartinga kustība Latvijā.">
+  <meta name="theme-color" content="#0b0c0f">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&amp;family=Titillium+Web:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Piekļuves brīdinājums (kā oriģinālajā lapā) -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
+    <div class="gate__card">
+      <div class="gate__flag" aria-hidden="true"></div>
+      <p class="eyebrow">Uzmanību!</p>
+      <h2 id="gate-title">Piekļuve mājas lapai paredzēta tikai Openkart kopienas dalībniekiem</h2>
+      <div class="gate__actions">
+        <button class="btn btn--red" id="gate-ok">Turpināt</button>
+        <a class="btn btn--ghost" href="https://google.com">Iziet</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Augšējā josla -->
+  <div class="topbar">
+    <div class="wrap topbar__in">
+      <span class="topbar__date" id="today">Otrdiena, 03. nov., 2026</span>
+      <div class="topbar__right">
+        <a href="https://openkart.lv/users/sign_in?locale=lv">Autorizēties</a>
+        <a href="https://openkart.lv/users/sign_up?locale=lv" class="topbar__reg">Reģistrēties</a>
+        <span class="lang"><a href="../index.html" class="is-on">LV</a><a href="../index.html">EN</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Galvene -->
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a href="../index.html" class="logo" aria-label="Openkart sākumlapa"><img src="../assets/img/logo-red.png" alt="Openkart 20 — amatieru kartinga kustība" width="1158" height="246"></a>
+      <button class="burger" id="burger" aria-label="Izvēlne" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <a href="../lapas/rezultati.html">Rezultāti</a>
+        <a href="../lapas/kalendars.html">Kalendārs</a>
+        <a href="../lapas/dalibnieki.html">Dalībnieki</a>
+        <a href="../lapas/stats.html">Statistika</a>
+        <div class="dd">
+          <button class="dd__btn" aria-expanded="false">Jaunumi</button>
+          <div class="dd__menu">
+            <a href="../lapas/jaunumi_cempionats_r.html">Čempionāts</a>
+            <a href="../lapas/jaunumi_attistibas-liga_r.html">Attīstības līga</a>
+            <a href="../lapas/jaunumi_xl-riga-junior-cup_r.html">XL Rīga Junior Cup</a>
+            <a href="../lapas/jaunumi_indoor-cup_r.html">Indoor Cup</a>
+            <a href="../lapas/jaunumi_joker-karting-challenge_r.html">Joker Karting Challenge</a>
+            <a href="../lapas/jaunumi_team-race_r.html">Team Race</a>
+            <a href="../lapas/jaunumi_sws-sprint-cup_r.html">SWS Sprint Cup</a>
+            <a href="../lapas/jaunumi_b-liga_r.html">B līga</a>
+            <a href="../lapas/jaunumi_sws-endurance-cup_r.html">SWS Endurance Cup</a>
+            <a href="../lapas/jaunumi_kausa-izcina_r.html">Kausa izcīņa</a>
+            <a href="../lapas/jaunumi_eopenkart-slotcar-racing_r.html">eOpenkart SlotCar Racing</a>
+            <a href="../lapas/jaunumi_uznemumu-kauss_r.html">Uzņēmumu kauss</a>
+            <a href="../lapas/jaunumi_musejie-pasaule_r.html">Mūsējie Pasaulē</a>
+          </div>
+        </div>
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+        <a href="https://www.flickr.com/photos/147056524@N03/albums" class="nav__media">Foto</a>
+        <a href="https://www.youtube.com/@Openkartkustiba/featured" class="nav__media">Video</a>
+        <a href="../index.html#kalendars" class="btn btn--red nav__cta">Pieteikties</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="page">
+  <section class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Jaunumi</p>
+      <h1>Movers.lv pārliecinoši uzvar Jelgavas GP komandu sacīkstē (Lap Chart, Apļu laiki)</h1>
+    </div>
+  </section>
+  <div class="wrap content">
+<div class="article">
+
+<div class="row">
+<div class="col-md-8">
+
+
+<p class="small">13.07.2018, Uldis Galdiņš</p>
+<a href="https://openkart.lv/uploads/articles/894/IMG_3259_original.jpg" rel="prettyPhoto" title="">
+<img class="rounded img-fluid img-bordered" id="image_1225" loading="lazy" src="https://openkart.lv/uploads/articles/894/IMG_3259_normal.jpg"/>
+</a>
+<p>
+	Ar "Movers.lv" komandas pārliecinošu pirmo LeMans uzvaru ceturtdien, 12.jūlijā, sporta kompleksā "Rullītis" noslēdzās Openkart komandu spirnta sacensības Jelgavas Grand Prix. Komanda startēja divu dalībnieku sastāva ar Openkart čempionāta līderi Andreju Laipnieku un komandas bosu Kasparu Ritumu ierindā. Mūveri uzvarēja abās 45 minūšu ilgajās sacīkšu daļās, bija ātrākie kvalifikācijā un arī uzstādījā ātrāko sacīkšu apli. Otrie, no līderiem abu daļu summā atpaliekot gandrīz pusotru minūti lēģendārie "Baltie Endurance" ļoti tradicionālajā sastāvā - Krišs Jaunzemis, Kristaps Grīnieks un Harijs Cīrulis. Negaidīti labs sniegums un pārsteidzoša trešā vieta tēva un dēla Zinta un Māra Grandbergu veidotajai "Grand Racing" vienībai - ja par Zinta varējumu sarežģītos slapjos laikapstākļos šaubu nekad nav bijis, tad Māra lieliskais sniegums bija ļoti pārsteidzošs. Ja pirmās divas vietas bija savā līgā, tad cīņa par pārējām vietām pie pjedestāla bija ļoti sīva un izšķīrās tikai otrās daļas pēdējā stintā, kad ceturto vietu izrāva jauno kartingistu veidotā "Red Bull" komanda ar Tomasu Štolcermani, Emīlu Akmeni un Nauri Danenbergu sastāvā, kurus no pjedestāla šķīra vien 11 sekundes, bet divas sekundes aiz viņiem "Enigma" (Andrejs Vainutis, Māris Pučeta, Ivars Freibergs), bet pirmo sešinieku 14 komandu konkurencē noslēdza "Panda Racing" - Dmitrijs Moskins, Ruslans Dzenis un Raitis Dzenis.
+</p>
+<p>
+	Sacīkste notika ne bez sarežģījumiem, jo trešā treniņbrauciena laikā sākās pamatīgas lietusgāzes, kas pārpludināja trasi un uz stundu aizkavēja sacīkstes. Var tikai pateikties dabai, ka šāds joks tai padomā nebija pirms nedēļas, kad uz čempionāta posmu bija pulcējušies 69 dalībnieki un, kas noteikti sacīkstes norisē radītu palielu haosu. Šoreiz, lai arī neplānota pauze nekada nav labi, tomēr viss notika normas robežās, beigās, lai ātrāk novadītu lieko lietusūdeni no trases, pat tika palaistas vairākas automašīnas, kas šo procesu sekmēja.
+</p>
+<p>
+	Openkart LeMans komandu sprinat sacīkstes notiek jau kopš 2009.gada, viens gads - 2012., tika izlaists, bet tad no 2013. līdz 2016. gadam tas bija aktīvs seriāls ar 5-7 sacīkstēm gadā. Pēdējā laikā dalībnieku interese par komandu sacīkstēm gan ir kritusies, tāpēc 2017.gadā notika tikai viens posms Kandavā, bet šogad Jelgavā. Iespējams rudens pusē sarīkosim vēl kādu sacīksti. Bet saskaņā ar Openkart nolikumu, ja sezonā notiek vismaz 3 posmi, tad tiek veidots arī sezonas kopvērtējums, par posmu piešķiramie punkti ir redzami rezultātos.
+</p>
+<ul><li>
+	LeMans 1.posms - Jelgavas GP 
+	<a href="https://openkart.lv/lv/results/2018/lemans/1" target="_blank">REZULTĀTI<br/></a></li><li><a href="https://openkart.lv/uploads/pdfs/895/2018-LM1-LapCharts_original.pdf" target="_blank">Apļu diagrammas</a> (Lap Chart)</li><li><a href="https://openkart.lv/uploads/pdfs/896/2018-LM1-LapTimes-Part-1_original.pdf" target="_blank">Apļu laiki - 1.daļa</a></li><li><a href="https://openkart.lv/uploads/pdfs/897/2018-LM1-LapTimes-Part-2_original.pdf" target="_blank">Apļu laiki - 2.daļa</a><a href="https://openkart.lv/lv/results/2018/lemans/1" target="_blank"></a>
+</li></ul>
+<p>
+<em>Jelgavas GP kopējie rezultāti</em>
+</p>
+<div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+		1
+	</td>
+<td>
+		MOVERS.LV
+	</td>
+<td>
+		Kaspars Ritums, Andrejs Laipnieks
+	</td>
+<td>
+		71 aplis
+	</td>
+<td>
+		22
+	</td>
+</tr>
+<tr>
+<td>
+		2
+	</td>
+<td>
+		BALTIE ENDURANCE
+	</td>
+<td>
+		Kristaps Grīnieks, Harijs Cīrulis, Krišs Jaunzemis
+	</td>
+<td>
+		+1:24,165
+	</td>
+<td>
+		16
+	</td>
+</tr>
+<tr>
+<td>
+		3
+	</td>
+<td>
+		GRAND RACING
+	</td>
+<td>
+		Zintis Grandbergs, Māris Grandbergs
+	</td>
+<td>
+		+2:50,193
+	</td>
+<td>
+		14
+	</td>
+</tr>
+<tr>
+<td>
+		4
+	</td>
+<td>
+		RED BULL
+	</td>
+<td>
+		Tomass Štolcermanis, Emīls Akmens, Nauris Danenbergs
+	</td>
+<td>
+		+3:01,362
+	</td>
+<td>
+		12
+	</td>
+</tr>
+<tr>
+<td>
+		5
+	</td>
+<td>
+		ENIGMA
+	</td>
+<td>
+		Ivars Freibergs, Māris Pučeta, Andrejs Vainutis
+	</td>
+<td>
+		+3:03,232
+	</td>
+<td>
+		10
+	</td>
+</tr>
+<tr>
+<td>
+		6
+	</td>
+<td>
+		PANDA RACING
+	</td>
+<td>
+		Ruslans Dzenis, Raitis Dzenis, Dmitrijs Moskins
+	</td>
+<td>
+		+3:35,073
+	</td>
+<td>
+		8
+	</td>
+</tr>
+<tr>
+<td>
+		7
+	</td>
+<td>
+		JTSVC TEAM
+	</td>
+<td>
+		Jānis Braželis, Ēriks Gasparovičs, Rūdis Kļaviņš
+	</td>
+<td>
+		+3:44,239
+	</td>
+<td>
+		6
+	</td>
+</tr>
+<tr>
+<td>
+		8
+	</td>
+<td>
+		KARTOHOLICS
+	</td>
+<td>
+		Oļegs Moskals, Sergejs Glanenko, Kristaps Ķilkuts
+	</td>
+<td>
+		+3:53,878
+	</td>
+<td>
+		5
+	</td>
+</tr>
+<tr>
+<td>
+		9
+	</td>
+<td>
+		BRUM DRUM
+	</td>
+<td>
+		Normunds Skreija, Andris Ratkus
+	</td>
+<td>
+		+4:37,525
+	</td>
+<td>
+		4
+	</td>
+</tr>
+<tr>
+<td>
+		10
+	</td>
+<td>
+		RD SCUDERIA
+	</td>
+<td>
+		Rūdolfs Toms Bērziņš, Daniels Bērziņš, Ģirts Lapškalns
+	</td>
+<td>
+		+4:38,039
+	</td>
+<td>
+		3
+	</td>
+</tr>
+<tr>
+<td>
+		11
+	</td>
+<td>
+		WESS DRIVE
+	</td>
+<td>
+		Jānis Mūrmanis, Ilmārs Beikmanis, Jurijs Šestakovs
+	</td>
+<td>
+		+5:07,677
+	</td>
+<td>
+		2
+	</td>
+</tr>
+<tr>
+<td>
+		12
+	</td>
+<td>
+		EŠKERE
+	</td>
+<td>
+		Daniils Ivančikovs, Daniils Verins, Artjoms Šestakovs
+	</td>
+<td>
+		+5:15,860
+	</td>
+<td>
+		1
+	</td>
+</tr>
+<tr>
+<td>
+		13
+	</td>
+<td>
+		SK SALACA
+	</td>
+<td>
+		Gatis Bišers, Reinis Lilienšteins
+	</td>
+<td>
+		+6:16,559
+	</td>
+<td>
+		0
+	</td>
+</tr>
+<tr>
+<td>
+		14
+	</td>
+<td>
+		DAUGMALE BJC
+	</td>
+<td>
+		Vasilijs Prosverjakovs, Armands Vonda
+	</td>
+<td>
+		+12:57,332
+	</td>
+<td>
+		0
+	</td>
+</tr>
+</tbody>
+</table></div>
+<p>
+<em>1.daļas rezultāti</em>
+</p>
+<div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody>
+<tr>
+<td>
+		Vieta
+	</td>
+<td>
+		Komanda
+	</td>
+<td>
+		Sastāvs
+	</td>
+<td>
+		Distance
+	</td>
+<td>
+		Karts
+	</td>
+<td>
+		Laiks
+	</td>
+<td>
+</td>
+<td>
+		Sodi
+	</td>
+</tr>
+<tr>
+<td>
+		1
+	</td>
+<td>
+		MOVERS.LV
+	</td>
+<td>
+		Kaspars Ritums, Andrejs Laipnieks
+	</td>
+<td>
+		34 apļi
+	</td>
+<td>
+		11
+	</td>
+<td>
+		1:17,128
+	</td>
+<td>
+		(1)
+	</td>
+</tr>
+<tr>
+<td>
+		2
+	</td>
+<td>
+		BALTIE ENDURANCE
+	</td>
+<td>
+		Kristaps Grīnieks, Harijs Cīrulis, Krišs Jaunzemis
+	</td>
+<td>
+		+53,385
+	</td>
+<td>
+		81
+	</td>
+<td>
+		1:18,070
+	</td>
+<td>
+		(3)
+	</td>
+</tr>
+<tr>
+<td>
+		3
+	</td>
+<td>
+		GRAND RACING
+	</td>
+<td>
+		Zintis Grandbergs, Māris Grandbergs
+	</td>
+<td>
+		+1:33,588
+	</td>
+<td>
+		4
+	</td>
+<td>
+		1:18,672
+	</td>
+<td>
+		(4)
+	</td>
+</tr>
+<tr>
+<td>
+		4
+	</td>
+<td>
+		ENIGMA
+	</td>
+<td>
+		Ivars Freibergs, Māris Pučeta, Andrejs Vainutis
+	</td>
+<td>
+		+1:35,002
+	</td>
+<td>
+		7
+	</td>
+<td>
+		1:19,298
+	</td>
+<td>
+		(9)
+	</td>
+<td>
+		+15 s
+	</td>
+</tr>
+<tr>
+<td>
+		5
+	</td>
+<td>
+		RED BULL
+	</td>
+<td>
+		Tomass Štolcermanis, Emīls Akmens, Nauris Danenbergs
+	</td>
+<td>
+		+1:47,480
+	</td>
+<td>
+		16
+	</td>
+<td>
+		1:17,874
+	</td>
+<td>
+		(2)
+	</td>
+</tr>
+<tr>
+<td>
+		6
+	</td>
+<td>
+		PANDA RACING
+	</td>
+<td>
+		Ruslans Dzenis, Raitis Dzenis, Dmitrijs Moskins
+	</td>
+<td>
+		+1:59,587
+	</td>
+<td>
+		10
+	</td>
+<td>
+		1:18,837
+	</td>
+<td>
+		(5)
+	</td>
+</tr>
+<tr>
+<td>
+		7
+	</td>
+<td>
+		KARTOHOLICS
+	</td>
+<td>
+		Oļegs Moskals, Sergejs Glanenko, Kristaps Ķilkuts
+	</td>
+<td>
+		+2:08,135
+	</td>
+<td>
+		15
+	</td>
+<td>
+		1:19,960
+	</td>
+<td>
+		(11)
+	</td>
+</tr>
+<tr>
+<td>
+		8
+	</td>
+<td>
+		JTSVC TEAM
+	</td>
+<td>
+		Jānis Braželis, Ēriks Gasparovičs, Rūdis Kļaviņš
+	</td>
+<td>
+		+2:26,200
+	</td>
+<td>
+		5
+	</td>
+<td>
+		1:19,837
+	</td>
+<td>
+		(10)
+	</td>
+<td>
+		+5 s
+	</td>
+</tr>
+<tr>
+<td>
+		9
+	</td>
+<td>
+		EŠKERE
+	</td>
+<td>
+		Daniils Ivančikovs, Daniils Verins, Artjoms Šestakovs
+	</td>
+<td>
+		+2:35,131
+	</td>
+<td>
+		3
+	</td>
+<td>
+		1:19,133
+	</td>
+<td>
+		(6)
+	</td>
+</tr>
+<tr>
+<td>
+		10
+	</td>
+<td>
+		WESS DRIVE
+	</td>
+<td>
+		Jānis Mūrmanis, Ilmārs Beikmanis, Jurijs Šestakovs
+	</td>
+<td>
+		+2:51,571
+	</td>
+<td>
+		14
+	</td>
+<td>
+		1:20,434
+	</td>
+<td>
+		(12)
+	</td>
+</tr>
+<tr>
+<td>
+		11
+	</td>
+<td>
+		RD SCUDERIA
+	</td>
+<td>
+		Rūdolfs Toms Bērziņš, Daniels Bērziņš, Ģirts Lapškalns
+	</td>
+<td>
+		+2:53,801
+	</td>
+<td>
+		172
+	</td>
+<td>
+		1:19,133
+	</td>
+<td>
+		(6)
+	</td>
+<td>
+		+5 s
+	</td>
+</tr>
+<tr>
+<td>
+		12
+	</td>
+<td>
+		BRUM DRUM
+	</td>
+<td>
+		Normunds Skreija, Andris Ratkus
+	</td>
+<td>
+		+3:04,186
+	</td>
+<td>
+		12
+	</td>
+<td>
+		1:19,155
+	</td>
+<td>
+		(8)
+	</td>
+</tr>
+<tr>
+<td>
+		13
+	</td>
+<td>
+		SK SALACA
+	</td>
+<td>
+		Gatis Bišers, Reinis Lilienšteins
+	</td>
+<td>
+		+3:38,555
+	</td>
+<td>
+		8
+	</td>
+<td>
+		1:22,131
+	</td>
+<td>
+		(13)
+	</td>
+</tr>
+<tr>
+<td>
+		14
+	</td>
+<td>
+		DAUGMALE BJC
+	</td>
+<td>
+		Vasilijs Prosverjakovs, Armands Vonda
+	</td>
+<td>
+		+7:41,551
+	</td>
+<td>
+		9
+	</td>
+<td>
+		1:25,194
+	</td>
+<td>
+		(14)
+	</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>2.daļas rezultāti</em></p>
+<div class="tablewrap"><table class="table table-condensed table-striped table-results">
+<tbody><tr><td>Vieta</td><td>Komanda</td><td>Sastāvs</td><td>Distance</td><td>Karts</td><td>Laiks</td><td></td><td>Sodi</td></tr><tr><td>1</td><td>MOVERS.LV</td><td>Kaspars Ritums, Andrejs Laipnieks</td><td>46 apļi</td><td>15</td><td>1:07,885</td><td>(1)</td></tr><tr><td>2</td><td>BALTIE ENDURANCE</td><td>Kristaps Grīnieks, Harijs Cīrulis, Krišs Jaunzemis</td><td>+30,780</td><td>5</td><td>1:08,812</td><td>(3)</td></tr><tr><td>3</td><td>RED BULL</td><td>Tomass Štolcermanis, Emīls Akmens, Nauris Danenbergs</td><td>+1:13,882</td><td>14</td><td>1:08,099</td><td>(2)</td></tr><tr><td>4</td><td>GRAND RACING</td><td>Zintis Grandbergs, Māris Grandbergs</td><td>+1:16,605</td><td>3</td><td>1:10,008</td><td>(8)</td></tr><tr><td>5</td><td>JTSVC TEAM</td><td>Jānis Braželis, Ēriks Gasparovičs, Rūdis Kļaviņš</td><td>+1:18,039</td><td>10</td><td>1:09,702</td><td>(7)</td><td>+5 s</td></tr><tr><td>6</td><td>ENIGMA</td><td>Ivars Freibergs, Māris Pučeta, Andrejs Vainutis</td><td>+1:28,230</td><td>8</td><td>1:10,516</td><td>(13)</td></tr><tr><td>7</td><td>BRUM DRUM</td><td>Normunds Skreija, Andris Ratkus</td><td>+1:33,339</td><td>7</td><td>1:09,538</td><td>(5)</td></tr><tr><td>8</td><td>PANDA RACING</td><td>Ruslans Dzenis, Raitis Dzenis, Dmitrijs Moskins</td><td>+1:35,486</td><td>9</td><td>1:09,222</td><td>(4)</td><td>+10 s</td></tr><tr><td>9</td><td>RD SCUDERIA</td><td>Rūdolfs Toms Bērziņš, Daniels Bērziņš, Ģirts Lapškalns</td><td>+1:44,238</td><td>172</td><td>1:09,567</td><td>(6)</td></tr><tr><td>10</td><td>KARTOHOLICS</td><td>Oļegs Moskals, Sergejs Glanenko, Kristaps Ķilkuts</td><td>+1:45,743</td><td>81</td><td>1:10,320</td><td>(11)</td></tr><tr><td>11</td><td>WESS DRIVE</td><td>Jānis Mūrmanis, Ilmārs Beikmanis, Jurijs Šestakovs</td><td>+2:16,106</td><td>4</td><td>1:10,232</td><td>(10)</td></tr><tr><td>12</td><td>SK SALACA</td><td>Gatis Bišers, Reinis Lilienšteins</td><td>+2:37,004</td><td>16</td><td>1:10,497</td><td>(12)</td></tr><tr><td>13</td><td>EŠKERE</td><td>Daniils Ivančikovs, Daniils Verins, Artjoms Šestakovs</td><td>+2:40,729</td><td>12</td><td>1:10,114</td><td>(9)</td></tr><tr><td>14</td><td>DAUGMALE BJC</td><td>Vasilijs Prosverjakovs, Armands Vonda</td><td>+5:15,781</td><td>11</td><td>1:11,540</td><td>(14)</td></tr>
+</tbody></table></div>
+<div class="clearfix"></div>
+<div id="articles-list">
+<div class="float-end">
+<a class="btn btn-sm btn-outline-secondary" href="#top">
+<i aria-hidden="true" class="fas fa-arrow-up"></i>
+Uz augšu
+</a>
+</div>
+<h3>Team Race</h3>
+<div class="clearfix"></div>
+<ul class="list-unstyled striped articles">
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">02.09.2022</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1427-baciunai-6-hrs-sws-endurance-cup-sacikste-saulos-24-dot-09.html">Baciunai 6 HRS SWS Endurance Cup sacīkste Šauļos 24.09</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1427_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">24.09.2020</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1346-dramatiski-episka-team-race-sacikste-uzvar-pirmie-foto-papildu-statistika.html">Dramatiski episkā Team Race sacīkstē uzvar "Pirmie" (foto, papildu statistika)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1346_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">21.09.2020</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1345-23-septembri-333-openkart-team-race.html">23. septembrī "333" Openkart Team Race</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1345_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">06.10.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1305-baltie-veterani-uzvar-un-izcina-celazimi-uz-dubaiju-visi-aplu-laiki.html">"Baltie Veterāni" uzvar un izcīna ceļazīmi uz Dubaiju (visi apļu laiki)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1305_comment_badge">1</span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">02.10.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1304-6-oktobri-rulliti-tresas-openkart-team-race-sacensibas-nolikums-sws-pieteiksanas.html">6. oktobrī "Rullītī" trešās Openkart Team Race sacensības (Nolikums, SWS pieteikšanās)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1304_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">19.08.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1297-baltie-veterani-tuvu-celazimei-uz-sws-endurance-cup-pasaules-finalu-papildinats-ar-mainu-statistiku.html">"Baltie Veterāni" tuvu ceļazīmei uz SWS Endurance Cup Pasaules finālu (papildināts ar maiņu statistiku)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1297_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">08.08.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1296-svetdien-18-augusta-openkart-team-race-2-un-sws-endurance-sacikste-333.html">Svētdien, 18. augustā, Openkart Team Race 2 un SWS Endurance sacīkste "333" </a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1296_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">08.07.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1290-team-race-pirmaja-sacikste-triumfe-movers-dot-lv-bildes-rezultati.html">Team Race pirmajā sacīkstē triumfē "Movers.lv" (bildes, rezultāti)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1290_comment_badge">2</span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">04.07.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1289-svetdien-openkart-team-race-un-sws-endurance-sacikste-333.html">Svētdien Openkart Team Race un SWS Endurance sacīkste "333"</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1289_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">16.06.2019</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1285-openkart-team-race-un-sws-endurance-cup-7-julija-333.html">Openkart Team Race un SWS Endurance Cup 7. jūlijā "333"</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1285_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">13.07.2018</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1225-movers-dot-lv-parliecinosi-uzvar-jelgavas-gp-komandu-sacikste-lap-chart-aplu-laiki.html">Movers.lv pārliecinoši uzvar Jelgavas GP komandu sacīkstē (Lap Chart, Apļu laiki)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1225_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">18.06.2018</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1221-12-dot-julija-lemans-komandu-sacikste-jelgavas-grand-prix-konfiguracija.html">12.jūlijā LeMans komandu sacīkste Jelgavas Grand Prix (konfigurācija)</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1221_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">23.07.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1160-lemans-kandavas-grand-prix-triumfe-jtsvc.html">LeMans Kandavas Grand Prix triumfē JTSVC</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1160_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">12.07.2017</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1159-23-dot-julija-lemans-komandu-sprinta-sacikste-kandavas-grand-prix.html">23.jūlijā LeMans komandu sprinta sacīkste Kandavas Grand Prix</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1159_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">22.09.2016</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_team-race_r_1107-baltie-spraiga-cina-uzvar-un-saglaba-realas-izredzes-uz-cempiontitulu.html">Baltie spraigā cīņā uzvar un saglabā reālas izredzes uz čempiontitulu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1107_comment_badge">1</span>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<nav><ul class="pagination"><li class="page-item disabled"><span class="page-link">←</span></li> <li class="page-item active"><span class="page-link">1</span></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/team-race/r/1225-movers-dot-lv-parliecinosi-uzvar-jelgavas-gp-komandu-sacikste-lap-chart-aplu-laiki?page=2" rel="next">2</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/team-race/r/1225-movers-dot-lv-parliecinosi-uzvar-jelgavas-gp-komandu-sacikste-lap-chart-aplu-laiki?page=3">3</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/team-race/r/1225-movers-dot-lv-parliecinosi-uzvar-jelgavas-gp-komandu-sacikste-lap-chart-aplu-laiki?page=4">4</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/team-race/r/1225-movers-dot-lv-parliecinosi-uzvar-jelgavas-gp-komandu-sacikste-lap-chart-aplu-laiki?page=5">5</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/team-race/r/1225-movers-dot-lv-parliecinosi-uzvar-jelgavas-gp-komandu-sacikste-lap-chart-aplu-laiki?page=6">6</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/team-race/r/1225-movers-dot-lv-parliecinosi-uzvar-jelgavas-gp-komandu-sacikste-lap-chart-aplu-laiki?page=2" rel="next">→</a></li></ul></nav>
+</div>
+</div>
+<div class="col-md-4">
+<div id="comments">
+<div class="alert alert-danger">
+<b>Komentēt var tikai reģistrēti lietotāji</b>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</main>
+  <footer class="footer">
+    <div class="footer__flag" aria-hidden="true"></div>
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="../assets/img/logo-red.png" alt="Openkart" width="1158" height="246" loading="lazy">
+        <p>Amatieru kartinga kustība. 20 sezonas uz trases.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_2-kontakti.html">Kontakti</a>
+        <a href="../lapas/s_4-par-openkart.html">Par Openkart</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+      </nav>
+      <div class="footer__social">
+        <a href="http://www.facebook.com/pages/Openkart/156203434346" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.4H7.6V14h2.7v8h3.2z"/></svg>
+        </a>
+        <a href="https://instagram.com/openkart.lv/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy wrap">© 2026, openkart.lv. Visas tiesības paturētas</p>
+  </footer>
+
+  <script>window.OK_ROOT = "../";</script>
+  <script src="../assets/js/pages.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laipnieks uzvar Kandavā un desmito reizi kļūst par Openkart čempionu — Openkart</title>
+  <meta name="description" content="Openkart — amatieru kartinga kustība Latvijā.">
+  <meta name="theme-color" content="#0b0c0f">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&amp;family=Titillium+Web:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Piekļuves brīdinājums (kā oriģinālajā lapā) -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
+    <div class="gate__card">
+      <div class="gate__flag" aria-hidden="true"></div>
+      <p class="eyebrow">Uzmanību!</p>
+      <h2 id="gate-title">Piekļuve mājas lapai paredzēta tikai Openkart kopienas dalībniekiem</h2>
+      <div class="gate__actions">
+        <button class="btn btn--red" id="gate-ok">Turpināt</button>
+        <a class="btn btn--ghost" href="https://google.com">Iziet</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Augšējā josla -->
+  <div class="topbar">
+    <div class="wrap topbar__in">
+      <span class="topbar__date" id="today">Otrdiena, 03. nov., 2026</span>
+      <div class="topbar__right">
+        <a href="https://openkart.lv/users/sign_in?locale=lv">Autorizēties</a>
+        <a href="https://openkart.lv/users/sign_up?locale=lv" class="topbar__reg">Reģistrēties</a>
+        <span class="lang"><a href="../index.html" class="is-on">LV</a><a href="../index.html">EN</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Galvene -->
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a href="../index.html" class="logo" aria-label="Openkart sākumlapa"><img src="../assets/img/logo-red.png" alt="Openkart 20 — amatieru kartinga kustība" width="1158" height="246"></a>
+      <button class="burger" id="burger" aria-label="Izvēlne" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <a href="../lapas/rezultati.html">Rezultāti</a>
+        <a href="../lapas/kalendars.html">Kalendārs</a>
+        <a href="../lapas/dalibnieki.html">Dalībnieki</a>
+        <a href="../lapas/stats.html">Statistika</a>
+        <div class="dd">
+          <button class="dd__btn" aria-expanded="false">Jaunumi</button>
+          <div class="dd__menu">
+            <a href="../lapas/jaunumi_cempionats_r.html">Čempionāts</a>
+            <a href="../lapas/jaunumi_attistibas-liga_r.html">Attīstības līga</a>
+            <a href="../lapas/jaunumi_xl-riga-junior-cup_r.html">XL Rīga Junior Cup</a>
+            <a href="../lapas/jaunumi_indoor-cup_r.html">Indoor Cup</a>
+            <a href="../lapas/jaunumi_joker-karting-challenge_r.html">Joker Karting Challenge</a>
+            <a href="../lapas/jaunumi_team-race_r.html">Team Race</a>
+            <a href="../lapas/jaunumi_sws-sprint-cup_r.html">SWS Sprint Cup</a>
+            <a href="../lapas/jaunumi_b-liga_r.html">B līga</a>
+            <a href="../lapas/jaunumi_sws-endurance-cup_r.html">SWS Endurance Cup</a>
+            <a href="../lapas/jaunumi_kausa-izcina_r.html">Kausa izcīņa</a>
+            <a href="../lapas/jaunumi_eopenkart-slotcar-racing_r.html">eOpenkart SlotCar Racing</a>
+            <a href="../lapas/jaunumi_uznemumu-kauss_r.html">Uzņēmumu kauss</a>
+            <a href="../lapas/jaunumi_musejie-pasaule_r.html">Mūsējie Pasaulē</a>
+          </div>
+        </div>
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+        <a href="https://www.flickr.com/photos/147056524@N03/albums" class="nav__media">Foto</a>
+        <a href="https://www.youtube.com/@Openkartkustiba/featured" class="nav__media">Video</a>
+        <a href="../index.html#kalendars" class="btn btn--red nav__cta">Pieteikties</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="page">
+  <section class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Jaunumi</p>
+      <h1>Laipnieks uzvar Kandavā un desmito reizi kļūst par Openkart čempionu</h1>
+    </div>
+  </section>
+  <div class="wrap content">
+<div class="article">
+
+<div class="row">
+<div class="col-md-8">
+
+
+<p class="small">07.09.2026, Uldis Galdiņš</p>
+<a href="https://openkart.lv/uploads/articles/3140/01-TOP3_original.jpeg" rel="prettyPhoto[prod_1712]" title="1 Laipnieks 2 Šics 3 De La Mare">
+<img class="rounded img-fluid img-bordered" id="image_1712" loading="lazy" src="https://openkart.lv/uploads/articles/3140/01-TOP3_normal.jpeg"/>
+</a>
+<div class="row mt-2 mb-3">
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/3141/02-TEAMS_original.jpeg" rel="prettyPhoto[prod_1712]" title="1 Movers.lv 2 Vilniai Racing 3 Movers.lv Juniori">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/3141/02-TEAMS_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/3142/03-CC_original.jpeg" rel="prettyPhoto[prod_1712]" title="Izaicinājuma kauss 1 Šics 2 De La Mare 3 Veršickas">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/3142/03-CC_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/3143/04-ROOKS_original.jpeg" rel="prettyPhoto[prod_1712]" title="Debitanti 1 Veršickas 2 Tions 3 Tams">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/3143/04-ROOKS_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/3144/05-95PLUS_original.jpeg" rel="prettyPhoto[prod_1712]" title="95+ 1 Liberts 2 Tūcis 3 Kūla">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/3144/05-95PLUS_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/3145/06-JUN_original.jpeg" rel="prettyPhoto[prod_1712]" title="Juniori 1 Šics 2 Grandberga 3 Tions">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/3145/06-JUN_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/3146/07-LADIES_original.jpeg" rel="prettyPhoto[prod_1712]" title="Dāmas 1 Grandberga 2 Gisiča 3 Vanaga">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/3146/07-LADIES_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/3147/08-B_original.jpeg" rel="prettyPhoto[prod_1712]" title="B Tions">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/3147/08-B_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/3148/09-C_original.jpeg" rel="prettyPhoto[prod_1712]" title="C Zalmans">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/3148/09-C_thumb.jpeg"/>
+</a>
+</div>
+<div class="col-2 mb-2">
+<a href="https://openkart.lv/uploads/articles/3149/10-D_original.jpeg" rel="prettyPhoto[prod_1712]" title="D Kornis">
+<img class="rounded img-fluid img-bordered" loading="lazy" src="https://openkart.lv/uploads/articles/3149/10-D_thumb.jpeg"/>
+</a>
+</div>
+</div>
+<p>Svētdien, 6. septembrī, Kandavas kartodromā Openkart čempionāta 15. posmā savu 87. uzvaru izcīnīja Andrejs Laipnieks (Movers.lv), kas viņam atnesa desmito Openkart čempiona titulu. Pretējā virzienā otro vietu izcīnīja Mover.lv Juniori komandas līderis Ādams Šics, bet trešais finišēja Vilniai Racing braucējs Benas De La Mare. Cetrutajā un sestajā vietā ADTS Racing līderi Sergejs Ļesiks un Otīlija Grandberga, bet starp viņiem iespraucās jaunais lietuvietis un Benas komandas biedrs Simas Veršickas.</p><p><strong>Laipnieka sasniegums ir unikāls, īpaši īres kartingā, kur parasti daudz atkarīgs no veiksmes, bet būt tās 0,1-0,2 sekundes ātrākam par citiem ar tiem pašiem kartingiem</strong><strong>, strādāt ar sevi gan fiziski, gan mentāli, tad veiksmes faktors vairs nespēlē tik ļoti lielu lomu. Debitējis 2013. gada sezonā, kad tā jau bija pāri pusei, debijā 14. vieta, nākamajā reizē jau pjedestāls, bet trešajā sacīkstē pirmā uzvara. Andrejs aizvada 13. sezonu, no tām 12. pilnu sezonu, un desmit reizes kļuvis par čempionu - puse no Openkart, vienīgās divas reizes viņu pārspēja Krišs Jaunzemis, kurš arī debitēja 2013. gada sezonā. Andrejs ir vairāk nekā pārliecinošs līderis visās iespējamās Openkart statistikas ailēs un tuvojas pamazām arī 100 uzvaru slieksnim, kas liekas kaut kas neticams. Pat ja Openkart notiktu vēl 20 vai 50 gadus diez vai vēl būtu kāds, kurš to varētu pārspēt.</strong></p><p>Komandām, tiesa gan vēl pirms oficiālajiem rezultātiem, nebijusi situācijas - pirmās četras vietas tikai divu punktu atstatumā. Uzvara Movers.lv (Laipnieks, Zalmans) ar 110 punktiem, bet tik arī Vilniai Racing (De La Mare, Veršickas, Kvedaravičius), tomēr priekšā <em>mūveri</em>, jo uzvara Andrejam, trešie Movers.lv Juniori (Šics, Narvaišs, Elsbergs) ar 109 punktiem, bet aiz pjdestāla ar 108 punktiem ADTS Racing (Ļesiks, Grandberga, Mednis). </p><p>Izaicinājuma kausā uzvara Ādamam, otrais Benas, bet trešais Simas, šajā ieskaitē 15 posmos 11 dažādi uzvarētāji. Debitantiem septītā uzvara Simas, otrais Adrians Tions, bet trešais Olivers Tams (XL Rīga AL Racing). Papildieskaitēs 95+ uzvara Raivim Libertam (Sēļu Zeme), otrais Artūrs Tūcis (Crazy Racing Heavy), bet trešais kopvērtējuma līderis Nils Kūla (AXIS Racing). Nilam pret Raivi šobrīd uzvaras 7 pret 6, un ir tikai jautājums vai Raivis kļūs par trīskārtējo ieskaites uzvarētāju, vai beidzot pēc trīs gadiem otrajā vietā uzvarēs Nils. Junioriem uzvara Ādamam, otrā vieta Otīlijai, bet trešais Tions. Dāmām kārtējais hetriks Otīlijai, otrā vieta Sofijai Annai Gisičai (Carzy Racing), kura pēc neveiksmīgas kvalifikācijas burtiski pēdējā aplī pārspēja strauji progresējošo Elīzu Vanagu (Indoor Masters). </p><p>D finālā uzvara Jānis Kornim ( F1 Fani), C finālā Zalmanam, B uzvarēja Tions. Kavlifikācijā uzvara Andrejam, otrais Sergejs, bet trešais Ādams. Ātrākais aplis pirmo reizi Ādmam, bet otrs ātrākais aplis Dāvim.</p><p>Drona video <a href="https://www.youtube.com/playlist?list=PLW3cncl7TiLE">PLAYLIST</a></p><p>Nākamais posms 20. septembrī, daudzu braucēju iemīļotājā Madonas Kartinga trasē, kur bieži piedzīvoti lieli pārsteigumi un braucēju pirmās uzvaras - <a href="../lapas/races_1603-2026-cempionats-16_race_signups.html">PIETEIKTIES</a>.</p><h3>15. posma rezultāti </h3><ul><li><a href="../lapas/rezultati.html?y=2026&amp;c=cempionats&amp;g=15" target="_blank">REZULTĀTI</a></li><li>Izaicinājuma kausa <a href="../lapas/rezultati.html?y=2026&amp;c=izaicinajuma-kauss&amp;g=15" target="_blank">REZULTĀTI</a></li><li>Debitantu ieskaites <a href="../lapas/rezultati.html?y=2026&amp;c=debitanti&amp;g=15" target="_blank">REZULTĀTI</a></li><li>95+ ieskaites <a href="../lapas/rezultati.html?y=2026&amp;c=95-plus&amp;g=15">REZU</a><a href="../lapas/rezultati.html?y=2026&amp;c=95-plus&amp;g=15">LTĀ</a><a href="../lapas/rezultati.html?y=2026&amp;c=95-plus&amp;g=14">TI</a></li><li>Junioru ieskaites <a href="../lapas/rezultati.html?y=2026&amp;c=juniori&amp;g=15" target="_blank">REZULTĀTI</a></li><li>Dāmu ieskaite <a href="../lapas/rezultati.html?y=2026&amp;c=damu-ieskaite&amp;g=15" target="_blank">REZULTĀTI</a></li></ul><h3>Kopvērtējums</h3><ul><li><a href="../lapas/rezultati.html?y=2026&amp;c=cempionats" target="_blank">KOPVĒRTĒJUMS (kopējā un komandas)</a></li><li>Izaicinājuma kausa <a href="../lapas/rezultati.html?y=2026&amp;c=izaicinajuma-kauss" target="_blank">KOPVĒRTĒJUMS</a></li><li>Debitantu ieskaites <a href="../lapas/rezultati.html?y=2026&amp;c=debitanti" target="_blank">KOPVĒRTĒJUMS</a></li><li>95+ ieskaites <a href="../lapas/rezultati.html?y=2026&amp;c=95-plus" target="_blank">KOPVĒRTĒJUMS</a></li><li>Junioru ieskaites <a href="../lapas/rezultati.html?y=2026&amp;c=juniori" target="_blank">KOPVĒRTĒJUMS</a></li><li>Dāmu ieskaite <a href="../lapas/rezultati.html?y=2026&amp;c=damu-ieskaite" target="_blank">KOPVĒRTĒJUMS</a></li></ul><p><br/></p><p><br/></p>
+<div class="clearfix"></div>
+<div id="articles-list">
+<div class="float-end">
+<a class="btn btn-sm btn-outline-secondary" href="#top">
+<i aria-hidden="true" class="fas fa-arrow-up"></i>
+Uz augšu
+</a>
+</div>
+<h3>Čempionāts</h3>
+<div class="clearfix"></div>
+<ul class="list-unstyled striped articles">
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">25.10.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_cempionats_r_1722-laipnieks-uzvar-vucans-openkart-aizsardzibas-ministrs.html">Laipnieks uzvar, Vucāns Openkart aizsardzības ministrs</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1722_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">21.10.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_cempionats_r_1720-sestdien-24-oktobri-jelgavas-rulliti-19-posms.html">Sestdien, 24. oktobrī, Jelgavas Rullītī 19. posms</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1720_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">20.10.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_cempionats_r_1719-versickas-ar-savu-pirmo-uzvaru-nodrosina-gada-debitanta-titulu.html">Veršickas ar savu pirmo uzvaru nodrošina Gada debitanta titulu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1719_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">15.10.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_cempionats_r_1718-svetdien-rudenigs-posms-ar-pusfinalu-formatu-serbentu-kartodroma-saulos.html">Svētdien rudenīgs posms ar pusfinālu formātu Serbentu kartodromā Šauļos</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1718_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">05.10.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_cempionats_r_1717-grandbergai-kandava-otra-uzvara-karjera-movers-dot-lv-desmito-reizi-cempioni.html">Grandbergai Kandavā otrā uzvara karjerā, Movers.lv desmito reizi čempioni</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1717_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">02.10.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_cempionats_r_1716-svetdien-sezonas-nosledzosa-vizite-kandava.html">Svētdien sezonas noslēdzošā vizīte Kandavā</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1716_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">21.09.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_cempionats_r_1714-sezonas-pirmaja-pilna-lietus-sacikste-ar-hetriku-uzvar-laipnieks.html">Sezonas pirmajā pilnā lietus sacīkstē ar hetriku uzvar Laipnieks</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1714_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">21.09.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_cempionats_r_1715-16-posma-slavas-zale-hall-of-fame-round-16.html">16. posma Slavas zāle | Hall of Fame Round 16</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1715_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">15.09.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_cempionats_r_1713-svetdien-16-posms-madonas-kartinga-trase.html">Svētdien 16. posms Madonas Kartinga trasē</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1713_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">07.09.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_cempionats_r_1712-laipnieks-uzvar-kandava-un-desmito-reizi-klust-par-openkart-cempionu.html">Laipnieks uzvar Kandavā un desmito reizi kļūst par Openkart čempionu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1712_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">04.09.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_cempionats_r_1710-svetdien-uz-kandavu.html">Svētdien uz Kandavu</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1710_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">04.09.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_cempionats_r_1711-14-posma-slavas-zale-hall-of-fame-of-round-14.html">14. posma Slavas Zāle | Hall of Fame of Round 14</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1711_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">31.08.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_cempionats_r_1709-salvets-klust-par-pirmo-igauni-openkart-cempionata-posma-uzvaretaju.html">Salvets kļūst par pirmo igauni Openkart čempionāta posma uzvarētāju</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1709_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">26.08.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_cempionats_r_1708-svetdien-izbaraukuma-posms-igaunija-lieliskaja-laitse-rallypark-trase.html">Svētdien izbaraukuma posms Igaunijā lieliskajā Laitse RallyPark trasē</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1708_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="col-md-2">
+<div class="date">17.08.2026</div>
+</div>
+<div class="col-md-10">
+<div class="name">
+<a href="../lapas/jaunumi_cempionats_r_1707-burgaila-savas-majas-izcina-treso-openkart-uzvaru.html">Burgaila savās mājās izcīna trešo Openkart uzvaru</a>
+<span class="ms-2 translate-middle badge rounded-pill text-bg-warning comment-badge" id="article_1707_comment_badge"></span>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<nav><ul class="pagination"><li class="page-item disabled"><span class="page-link">←</span></li> <li class="page-item active"><span class="page-link">1</span></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/cempionats/r/1712-laipnieks-uzvar-kandava-un-desmito-reizi-klust-par-openkart-cempionu?page=2" rel="next">2</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/cempionats/r/1712-laipnieks-uzvar-kandava-un-desmito-reizi-klust-par-openkart-cempionu?page=3">3</a></li> <li class="page-item disabled"><i class="page-link">…</i></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/cempionats/r/1712-laipnieks-uzvar-kandava-un-desmito-reizi-klust-par-openkart-cempionu?page=75">75</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/cempionats/r/1712-laipnieks-uzvar-kandava-un-desmito-reizi-klust-par-openkart-cempionu?page=76">76</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/cempionats/r/1712-laipnieks-uzvar-kandava-un-desmito-reizi-klust-par-openkart-cempionu?page=77">77</a></li> <li class="page-item"><a class="page-link" href="https://openkart.lv/lv/jaunumi/cempionats/r/1712-laipnieks-uzvar-kandava-un-desmito-reizi-klust-par-openkart-cempionu?page=2" rel="next">→</a></li></ul></nav>
+</div>
+</div>
+<div class="col-md-4">
+<div id="comments">
+<div class="alert alert-danger">
+<b>Komentēt var tikai reģistrēti lietotāji</b>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</main>
+  <footer class="footer">
+    <div class="footer__flag" aria-hidden="true"></div>
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="../assets/img/logo-red.png" alt="Openkart" width="1158" height="246" loading="lazy">
+        <p>Amatieru kartinga kustība. 20 sezonas uz trases.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="../lapas/s_7-nolikums.html">Nolikums</a>
+        <a href="../lapas/s_2-kontakti.html">Kontakti</a>
+        <a href="../lapas/s_4-par-openkart.html">Par Openkart</a>
+        <a href="../lapas/s_6-slavas-zale.html">Slavas zāle</a>
+      </nav>
+      <div class="footer__social">
+        <a href="http://www.facebook.com/pages/Openkart/156203434346" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.4H7.6V14h2.7v8h3.2z"/></svg>
+        </a>
+        <a href="https://instagram.com/openkart.lv/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy wrap">© 2026, openkart.lv. Visas tiesības paturētas</p>
+  </footer>
+
+  <script>window.OK_ROOT = "../";</script>
+  <script src="../assets/js/pages.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
