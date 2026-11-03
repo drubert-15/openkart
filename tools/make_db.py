@@ -223,7 +223,7 @@ def main():
             print(y, "nepilnīgs — izlaists", flush=True)
             continue
         os.makedirs(os.path.join(DATA, "y", y), exist_ok=True)
-        json.dump(cal, open(os.path.join(DATA, "y", y, "_cal.json"), "w"), ensure_ascii=False, separators=(",", ":"))
+        json.dump(cal, open(os.path.join(DATA, "y", y, "cal.json"), "w"), ensure_ascii=False, separators=(",", ":"))
         index["years"].append(y)
         index["seasons"][y] = season
         print(y, len(season), "ieskaites", flush=True)

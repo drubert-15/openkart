@@ -141,7 +141,7 @@
     loading();
     const idx = await get("index.json");
     const y = idx.seasons[qs.get("y")] ? qs.get("y") : idx.years[0];
-    const cal = await get(`y/${y}/_cal.json`);
+    const cal = await get(`y/${y}/cal.json`);
     setTitle(`Kalendārs ${y}`, "Kalendārs");
     let body = `<div class="picker card card-header">${select("s-y", "Sezona", idx.years.map((v) => [v, v]), y, (v) => (location.href = L(`/lv/races/year/${v}`)))}</div>`;
     const champs = Object.keys(cal);
