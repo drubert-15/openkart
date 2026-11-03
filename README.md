@@ -12,7 +12,7 @@ Vietne darbojas kā statiska lapa (piem., GitHub Pages).
   - `index.json`: gadi, ieskaites, posmi
   - `racers.json`: visi braucēji
   - `y/<gads>/<ieskaite>.json`: kopvērtējums un visu posmu rezultāti
-  - `y/<gads>/_cal.json`: kalendārs
+  - `y/<gads>/cal.json`: kalendārs
   - `r/<id>.json`: braucēja statistika (aprēķināta no rezultātiem)
 - `assets/`: dizains (CSS), JavaScript, attēli
 
